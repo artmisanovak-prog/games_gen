@@ -102,6 +102,12 @@ Generuje situace, v nichž se vlastní znak pozorovatele změní v univerzální
 - [Otevřít Páva v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/pav/)
 - [Zdrojový soubor Páv](doma/pav/index.html)
 
+### 17 · Čáp — latentní možnosti a nevlastnitelný vznik
+Generuje situace, v nichž nositel nepřináší hotový výsledek, ale nerealizované možnosti, fragmenty a budoucí příběhy. Odděluje očekávaného původce od skutečného vzniku, zkoumá nárok na vlastnictví a rozlišuje péči o možnost od jejího přivlastnění. Pracuje také s dvojhlasem a s předáváním nedokončených fragmentů dalším tvůrcům. Vychází z pohádky **O čápovi, který nenosí to, co se čeká**.
+
+- [Otevřít Čápa v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/cap/)
+- [Zdrojový soubor Čáp](doma/cap/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -121,9 +127,10 @@ Generuje situace, v nichž se vlastní znak pozorovatele změní v univerzální
 - `doma/lemur/` — samostatný generátor Lemur.
 - `doma/osel/` — samostatný generátor Osel.
 - `doma/pav/` — samostatný generátor Páv.
+- `doma/cap/` — samostatný generátor Čáp.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel a Páv jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv a Čáp jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
