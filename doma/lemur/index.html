@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lemur — paradox nenápadnosti</title>
+<style>
+:root{--bg:#19191b;--panel:#252529;--ink:#efedf0;--muted:#aaa6ad;--line:#4c4850;--violet:#b6a0c8;--lime:#c1bd83;--pink:#c58d9d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,serif}main{max-width:1080px;margin:auto;padding:28px 18px 70px}.eyebrow{font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--violet)}h1{font-size:clamp(40px,7vw,76px);font-weight:400;line-height:.98;margin:12px 0}h2{font-size:24px;font-weight:400;margin:0 0 14px}.lead{max-width:790px;color:var(--muted);font-size:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.panel{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:3px}.wide{grid-column:1/-1}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{display:block;font:12px Arial,sans-serif;color:var(--violet);margin:0 0 6px}input,select,textarea{width:100%;padding:11px;background:#19191c;color:var(--ink);border:1px solid var(--line);font:15px Georgia,serif;border-radius:2px}textarea{min-height:76px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}button{border:0;padding:11px 16px;background:var(--violet);color:#201a25;font-weight:bold;cursor:pointer;border-radius:2px}button.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}.muted{font-size:13px;color:var(--muted)}.output{background:#1c1c20;border-left:3px solid var(--violet);padding:12px 15px;margin:11px 0}.output h3{font-size:17px;font-weight:400;color:var(--lime);margin:0 0 5px}.output p{margin:0}.barrow{display:grid;grid-template-columns:120px 1fr 35px;gap:9px;align-items:center;margin:10px 0;font:12px Arial,sans-serif;color:var(--muted)}.bar{height:8px;background:#111114}.bar span{display:block;height:100%;background:var(--violet)}.entry{border:1px solid var(--line);padding:11px;margin:8px 0}.entry small{color:var(--muted)}.entry p{margin:4px 0}@media(max-width:680px){.grid,.fields{grid-template-columns:1fr}.wide{grid-column:auto}main{padding:22px 13px 50px}.barrow{grid-template-columns:95px 1fr 28px}}
+</style></head><body><main>
+<div class="eyebrow">GAMES_GEN / NARATIVNÍ OPERACE 14</div>
+<h1>Lemur,<br>který nebyl nápadný</h1>
+<p class="lead">Laboratoř paradoxu nenápadnosti. Čím víc se postava snaží nebýt vidět, tím víc upozorňuje na vlastní snahu. Zkoumej rozdíl mezi skutečnou viditelností, úsilím o její potlačení a pozorností, kterou toto úsilí samo vyrábí.</p>
+<div class="grid">
+<section class="panel"><h2>Situace a postava</h2><div class="fields">
+<div><label for="subject">Kdo se snaží nebýt vidět?</label><input id="subject" value="lemur"></div>
+<div><label for="setting">Prostředí</label><input id="setting" value="tichá místnost, kout"></div>
+<div><label for="trait">Co je na něm přirozeně nápadné?</label><input id="trait" value="svítící oči, vztyčený ocas, výrazná srst"></div>
+<div><label for="goal">Čeho chce dosáhnout?</label><select id="goal"><option>nebýt pozorován</option><option>nebýt hodnocen</option><option>nevyčnívat ze skupiny</option><option>nebýt zapamatován</option><option>nebýt předmětem očekávání</option></select></div>
+<div><label for="strategy">Strategie potlačení</label><select id="strategy"><option>skrývání a zakrývání</option><option>zmenšování vlastního projevu</option><option>napodobování pozadí</option><option>předstírání nezájmu</option><option>neustálá kontrola vlastního chování</option><option>vysvětlování, že nejsem nápadný</option></select></div>
+<div><label for="observer">Kdo se dívá?</label><select id="observer"><option>lhostejný pozorovatel</option><option>zvědavé okolí</option><option>kritický hodnotitel</option><option>blízká osoba</option><option>skupina, která očekává výkon</option></select></div>
+<div><label for="effort">Intenzita snahy</label><select id="effort"><option value="1">1 · sotva patrná</option><option value="2" selected>2 · soustavná</option><option value="3">3 · křečovitá</option></select></div>
+<div><label for="pressure">Tlak okolí</label><select id="pressure"><option value="1">Nízký</option><option value="2" selected>Střední</option><option value="3">Vysoký</option></select></div>
+</div><label for="note" style="margin-top:12px">Co postava dělá, aby zakryla svou nápadnost?</label><textarea id="note" placeholder="Konkrétní gesto, věta nebo strategie…"></textarea>
+<div class="actions"><button id="run">Spustit paradox</button><button class="alt" id="reset">Obnovit příklad</button></div>
+</section>
+<section class="panel"><h2>Dvě vrstvy viditelnosti</h2>
+<div class="output"><h3>Vlastnost</h3><p>Co je na postavě skutečně vidět, slyšet nebo vnímat ještě před jakoukoli snahou o skrytí.</p></div>
+<div class="output"><h3>Výkon nenápadnosti</h3><p>Všechny úpravy, kontroly a signály, kterými postava oznamuje, že nechce být zaznamenána.</p></div>
+<div class="output"><h3>Pozornost okolí</h3><p>Pozorovatel může přestat sledovat samotnou vlastnost a začít sledovat snahu ji potlačit.</p></div>
+<p class="muted">Model není měřením skutečné pozornosti lidí. Číselné hodnoty jsou orientační herní proměnné pro porovnání konfigurací.</p>
+</section>
+<section class="panel wide" id="result" aria-live="polite"><h2>Výsledek</h2><p class="muted">Nastav situaci a spusť simulaci.</p></section>
+<section class="panel wide"><h2>Archiv pokusů</h2><div id="archive"><p class="muted">Zatím bez záznamů.</p></div><div class="actions"><button class="alt" id="export">Exportovat JSON</button><button class="alt" id="clear">Smazat místní archiv</button></div><p class="muted">Záznamy se ukládají pouze do localStorage tohoto prohlížeče.</p></section>
+</div></main><script>
+const $=id=>document.getElementById(id),KEY='lemur_paradox_denik';
+function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function read(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function archive(){const a=read();$('archive').innerHTML=a.length?a.slice().reverse().map(x=>'<div class="entry"><small>'+esc(x.date)+'</small><p><b>'+esc(x.subject)+'</b> · '+esc(x.strategy)+'</p><p>'+esc(x.conclusion)+'</p></div>').join(''):'<p class="muted">Zatím bez záznamů.</p>'}
+function run(){
+const d={subject:$('subject').value.trim()||'postava',setting:$('setting').value.trim()||'neurčené prostředí',trait:$('trait').value.trim()||'výrazná vlastnost',goal:$('goal').value,strategy:$('strategy').value,observer:$('observer').value,effort:+$('effort').value,pressure:+$('pressure').value,note:$('note').value.trim()};
+const natural=25+d.effort*7;
+const performance=12+d.effort*24+(d.strategy.includes('vysvětlování')?13:0)+(d.strategy.includes('kontrola')?9:0);
+const attention=Math.min(100,Math.round(natural+performance*(.55+d.pressure*.13)));
+const released=Math.max(5,Math.round(natural*.72+(d.pressure-1)*5));
+const effortLabel=['nízké','soustavné','křečovité'][d.effort-1];
+const paradox=d.effort===3?'Potlačování se stalo výraznější událostí než původní vlastnost. Okolí už sleduje především výkon nenápadnosti.':d.effort===2?'Snaha o skrytí přidává další signály. Postava je viditelná nejen tím, jaká je, ale také tím, jak se snaží nebýt.':'Potlačování je slabé, ale i drobná kontrola může upozornit na něco, čeho by si okolí jinak nevšimlo.';
+const audience=d.observer==='lhostejný pozorovatel'?'Pozorovatel nemusí věnovat pozornost ani vlastnosti, ani snaze.':d.observer==='kritický hodnotitel'?'Pozorovatel může číst každou úpravu jako důkaz, že postava něco skrývá.':d.observer==='skupina, která očekává výkon'?'Skupina může nenápadnost proměnit v další roli, kterou má postava plnit.':'Pozorovatel si všímá rozporu mezi přirozeným projevem a jeho potlačováním.';
+const conclusion='Když '+d.subject+' přestane aktivně vyrábět nenápadnost, nezmizí jeho vlastnosti („'+d.trait+'“). Zmizí však dodatečný signál, že je nutné je skrýt. Pozornost se může přesunout jinam.';
+const test='Kdyby postava přestala kontrolovat, zda je vidět, co by okolí skutečně zaznamenalo? A kdo potřebuje, aby byla nenápadná: ona sama, nebo pozorovatel?';
+const rec={...d,date:new Date().toLocaleString('cs-CZ'),attention,conclusion,paradox};
+const bars=[['Přirozená stopa',natural],['Výkon skrývání',Math.min(100,performance)],['Pozornost při snaze',attention],['Pozornost po uvolnění',released]];
+$('result').innerHTML='<h2>Výsledek: paradox nenápadnosti</h2>'+bars.map(([n,v])=>'<div class="barrow"><span>'+n+'</span><div class="bar"><span style="width:'+v+'%"></span></div><span>'+v+'</span></div>').join('')+'<div class="output"><h3>1 / Přirozená viditelnost</h3><p>'+esc(d.subject)+' je v prostředí '+esc(d.setting)+' nápadný/á díky: '+esc(d.trait)+'. To existuje ještě před snahou cokoli skrýt.</p></div><div class="output"><h3>2 / Strategie potlačení</h3><p>Postava chce: '+esc(d.goal)+'. Používá: '+esc(d.strategy)+'. Intenzita snahy je '+effortLabel+'.</p></div><div class="output"><h3>3 / Vedlejší signál</h3><p>'+esc(paradox)+' '+esc(audience)+'</p></div><div class="output"><h3>4 / Uvolnění kontroly</h3><p>'+esc(conclusion)+'</p></div><div class="output"><h3>5 / Test</h3><p>'+esc(test)+'</p></div><p class="muted">Indexy 0–100 jsou ilustrativní, nikoli psychologická diagnostika. Poznámka: '+esc(d.note||'bez poznámky')+'</p>';
+let a=read();a.push(rec);localStorage.setItem(KEY,JSON.stringify(a));archive();
+}
+$('run').addEventListener('click',run);
+$('reset').addEventListener('click',()=>{const vals={subject:'lemur',setting:'tichá místnost, kout',trait:'svítící oči, vztyčený ocas, výrazná srst',note:''};Object.entries(vals).forEach(([k,v])=>$(k).value=v);$('goal').selectedIndex=0;$('strategy').selectedIndex=0;$('observer').selectedIndex=0;$('effort').value='2';$('pressure').value='2';$('result').innerHTML='<h2>Výsledek</h2><p class="muted">Nastav situaci a spusť simulaci.</p>'});
+$('export').addEventListener('click',()=>{const b=new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='lemur-paradox-archiv.json';a.click();URL.revokeObjectURL(u)});
+$('clear').addEventListener('click',()=>{if(confirm('Smazat celý místní archiv?')){localStorage.removeItem(KEY);archive()}});
+archive();
+</script></body></html>
