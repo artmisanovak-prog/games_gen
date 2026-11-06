@@ -62,7 +62,9 @@ Generuje postupné jazykové poruchy z vlastní vstupní věty. Pracuje se zvuko
 - `doma/ryba/` — samostatný generátor Ryba.
 - `doma/dracek/` — samostatný generátor Dráček.
 - `doma/tygr/` — samostatný generátor Tygr.
-- `doma/kozel/` — samostatný generátor Kozel.\n- `doma/morsky-konik/` — samostatný generátor Mořský koník.
+- `doma/kozel/` — samostatný generátor Kozel.
+- `doma/morsky-konik/` — samostatný generátor Mořský koník.
+- `doma/kravy/` — samostatný generátor Krávy.
 
 ## Technické poznámky
 
