@@ -114,6 +114,12 @@ Generuje situace, v nichž malý viditelný cíl zastupuje mnohem větší touhu
 - [Otevřít Slona v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/slon/)
 - [Zdrojový soubor Slon](doma/slon/index.html)
 
+### 19 · Želva — oběh důvodů a pohlednic
+Generuje situace, v nichž dvě různé činnosti vzájemně udržují svůj smysl: jeden účastník běží, druhý píše. Pohlednice přenášejí místa a možnosti přes časový odstup, mění směr příjemce a zároveň dávají pisateli důvod pokračovat. Nástroj sleduje reciprocitu, proměnu zprávy v čase, přerušení spojení a otázku, zda si účastníci dokážou uchovat vlastní důvod i bez druhého. Vychází z pohádky **O želvě, která běží závod, a zajíci, který posílá pohlednice**.
+
+- [Otevřít Želvu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/zelva/)
+- [Zdrojový soubor Želva](doma/zelva/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -135,9 +141,10 @@ Generuje situace, v nichž malý viditelný cíl zastupuje mnohem větší touhu
 - `doma/pav/` — samostatný generátor Páv.
 - `doma/cap/` — samostatný generátor Čáp.
 - `doma/slon/` — samostatný generátor Slon.
+- `doma/zelva/` — samostatný generátor Želva.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp a Slon jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon a Želva jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
