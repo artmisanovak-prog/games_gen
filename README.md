@@ -222,6 +222,12 @@ Zkoumá stádo, které pokračuje v pohybu i po ztrátě původního cíle. Jedn
 - [Otevřít Berana v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/beran/)
 - [Zdrojový HTML soubor Beran](doma/beran/index.html)
 
+### 37 · Chameleon — adaptace, odraz a ztráta vlastní reference
+Zkoumá subjekt, který se přizpůsobuje různým očekáváním tak dlouho, až přestane rozlišovat vlastní podobu od obrazů vracených okolím. Více zrcadel nepřináší automaticky více pravdy: mohou vytvářet protichůdné obrazy a tlak na nekonečné přepínání. Generátor rozlišuje zdroj odrazu, strategii adaptace, konflikt očekávání, cenu proměny a možné invarianty identity, které nemusí spočívat v neměnné barvě.
+
+- [Otevřít Chameleona v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/chameleon/)
+- [Zdrojový HTML soubor Chameleon](doma/chameleon/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -261,9 +267,10 @@ Zkoumá stádo, které pokračuje v pohybu i po ztrátě původního cíle. Jedn
 - `doma/vrabec/` — samostatný generátor Vrabec.
 - `doma/kohout/` — samostatný generátor Kohout.
 - `doma/beran/` — samostatný generátor Beran.
+- `doma/chameleon/` — samostatný generátor Chameleon.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout a Beran jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran a Chameleon jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
