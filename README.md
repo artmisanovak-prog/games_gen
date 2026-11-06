@@ -192,6 +192,12 @@ Zkoumá, jak se odmítnutí a marnost mění ve sdílenou touhu, synchronizovan�
 - [Otevřít Klíště v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/kliste/)
 - [Zdrojový HTML soubor Klíště](doma/kliste/index.html)
 
+### 32 · Žížala — rozklad jako růst a dvojí původ
+Zkoumá rozdělení jednoho celku na dvě pokračující větve, z nichž každá si může nárokovat původní identitu. Sleduje divergenci jejich trajektorií, kontinuitu bez zachování původní formy, podzemní komunikaci a prostředí jako nositele stop. Rozklad zde nemusí znamenat konec: může uvolnit podmínky pro další růst.
+
+- [Otevřít Žížalu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/zizala/)
+- [Zdrojový HTML soubor Žížala](doma/zizala/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -226,9 +232,10 @@ Zkoumá, jak se odmítnutí a marnost mění ve sdílenou touhu, synchronizovan�
 - `doma/panda/` — samostatný generátor Panda.
 - `doma/vlk/` — samostatný generátor Vlk.
 - `doma/kliste/` — samostatný generátor Klíště.
+- `doma/zizala/` — samostatný generátor Žížala.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk a Klíště jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště a Žížala jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
