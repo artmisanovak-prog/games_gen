@@ -168,6 +168,12 @@ Zkoumá nesoulad mezi vnitřním stavem a veřejným signálem. Sleduje, jak se 
 - [Otevřít Hyeny v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/hyeny/)
 - [Zdrojový HTML soubor Hyeny](doma/hyeny/index.html)
 
+### 28 · Husy — kolektivní „já“ a krize reference
+Zkoumá, jak se sebeoznačení jednotlivce mění opakováním, ozvěnou a skupinovým tlakem. Rozlišuje počet hlasů, jistotu identity, posluchače, rozpoznání, uspořádání hejna a rozdíly mezi jednotlivými mluvčími. Sleduje okamžik, kdy mnoho hlasů vytvoří kolektivní singular a přestane být jasné, kdo právě říká „já“.
+
+- [Otevřít Husy v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/husy/)
+- [Zdrojový HTML soubor Husy](doma/husy/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -198,9 +204,10 @@ Zkoumá nesoulad mezi vnitřním stavem a veřejným signálem. Sleduje, jak se 
 - `doma/prase/` — samostatný generátor Prasátko.
 - `doma/hvezdice/` — samostatný generátor Hvězdice.
 - `doma/hyeny/` — samostatný generátor Hyeny.
+- `doma/husy/` — samostatný generátor Husy.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice a Hyeny jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny a Husy jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
