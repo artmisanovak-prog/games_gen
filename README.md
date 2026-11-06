@@ -120,6 +120,12 @@ Generuje situace, v nichž dvě různé činnosti vzájemně udržují svůj smy
 - [Otevřít Želvu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/zelva/)
 - [Zdrojový soubor Želva](doma/zelva/index.html)
 
+### 20 · Motýl — záměna potřeby za symbol
+Generuje situace, v nichž člověk žádá konkrétní naplnění, ale dostává symbolický dar, obraz nebo interpretaci. Rozlišuje skutečnou potřebu, předloženou nabídku, obhajobu dárce a reálný účinek na příjemce. Sleduje také tlak na vděčnost, cenu odmítnutí a okamžik, kdy se krásné gesto začne vydávat za funkční náhradu. Vychází z pohádky **O motýlech, kterých se nenajíš**.
+
+- [Otevřít Motýla v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/motyl/)
+- [Zdrojový soubor Motýl](doma/motyl/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -142,9 +148,10 @@ Generuje situace, v nichž dvě různé činnosti vzájemně udržují svůj smy
 - `doma/cap/` — samostatný generátor Čáp.
 - `doma/slon/` — samostatný generátor Slon.
 - `doma/zelva/` — samostatný generátor Želva.
+- `doma/motyl/` — samostatný generátor Motýl.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon a Želva jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva a Motýl jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
