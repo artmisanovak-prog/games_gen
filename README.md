@@ -84,6 +84,12 @@ Generuje situace, v nichž nevyřčené věty, nevyřešené konflikty, odložen
 - [Otevřít Pavouka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/pavouk/)
 - [Zdrojový soubor Pavouk](doma/pavouk/index.html)
 
+### 14 · Lemur — paradox nenápadnosti a viditelnost snahy
+Generuje situace, v nichž snaha potlačit vlastní nápadnost vytváří další signály a přitahuje pozornost k samotnému skrývání. Odděluje přirozenou viditelnost postavy od výkonu, kterým ji chce potlačit, a sleduje, jak pozorovatel začne číst právě tento rozpor. Zkoumá také změnu po uvolnění kontroly: postava nezmizí, ale přestane vysílat signál, že se musí skrýt. Vychází z pohádky **O lemurovi, který nebyl nápadný**.
+
+- [Otevřít Lemura v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/lemur/)
+- [Zdrojový soubor Lemur](doma/lemur/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -100,9 +106,10 @@ Generuje situace, v nichž nevyřčené věty, nevyřešené konflikty, odložen
 - `doma/liska/` — samostatný generátor Liška.
 - `doma/zajic/` — samostatný generátor Zaječice.
 - `doma/pavouk/` — samostatný generátor Pavouk.
+- `doma/lemur/` — samostatný generátor Lemur.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice a Pavouk jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk a Lemur jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
