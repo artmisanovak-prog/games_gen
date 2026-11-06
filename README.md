@@ -246,6 +246,12 @@ Obrazová hra bez doprovodné pohádky. Dívka je současně postavou a stromov�
 - [Otevřít hru Chyby nehledej! Nejsou. v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/chyby-nejsou/)
 - [Zdrojový HTML soubor](doma/chyby-nejsou/index.html)
 
+### 41 · Psí smečka — „Sorry, mám poslední“
+Obrazová hra o omezeném zdroji, nároku a pravidlech distribuce. Jedna osoba drží poslední kus, zatímco smečka představuje skupinu zájemců. Hráč porovnává přidělení podle vlastnictví, pořadí, potřeby, losování, sdílení nebo odmítnutí. Hra odhaluje skryté předpoklady těchto pravidel a rozlišuje skutečný nedostatek od nedostatku vytvořeného informací či kontrolou zásob.
+
+- [Otevřít hru Psí smečka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/psi-smecka/)
+- [Zdrojový HTML soubor](doma/psi-smecka/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -289,9 +295,10 @@ Obrazová hra bez doprovodné pohádky. Dívka je současně postavou a stromov�
 - `doma/snek/` — samostatný generátor Šnek.
 - `doma/moucha/` — samostatný generátor Moucha.
 - `doma/chyby-nejsou/` — obrazová hra Chyby nehledej! Nejsou.
+- `doma/psi-smecka/` — obrazová hra Psí smečka.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran, Chameleon, Šnek a Moucha jsou samostatné lokální nástroje; Chyby nehledej! Nejsou je samostatná lokální hra bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran, Chameleon, Šnek a Moucha jsou samostatné lokální nástroje; Chyby nehledej! Nejsou a Psí smečka jsou samostatné lokální hry bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
