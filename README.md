@@ -186,6 +186,12 @@ Zkoumá rozdíl mezi přímým vjemem, naučeným pojmenováním a funkčním po
 - [Otevřít Vlka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/vlk/)
 - [Zdrojový HTML soubor Vlk](doma/vlk/index.html)
 
+### 31 · Klíště — kolektivní sen a vznik hostitele
+Zkoumá, jak se odmítnutí a marnost mění ve sdílenou touhu, synchronizovaný sen a alternativní realitu. Sleduje dvojí přání klíštěte: získat hostitele jako zdroj a současně se jím samo stát. Analyzuje projekci laně, rozštěpení skutečnosti, původ nové bytosti a paradox vztahu mezi tím, kdo potřebuje, a tím, kdo je potřebován.
+
+- [Otevřít Klíště v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/kliste/)
+- [Zdrojový HTML soubor Klíště](doma/kliste/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -219,9 +225,10 @@ Zkoumá rozdíl mezi přímým vjemem, naučeným pojmenováním a funkčním po
 - `doma/husy/` — samostatný generátor Husy.
 - `doma/panda/` — samostatný generátor Panda.
 - `doma/vlk/` — samostatný generátor Vlk.
+- `doma/kliste/` — samostatný generátor Klíště.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda a Vlk jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk a Klíště jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
