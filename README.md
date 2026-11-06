@@ -210,6 +210,12 @@ Zkoumá, jak se dostupná jistota může změnit v neovladatelný mentální obs
 - [Otevřít Vrabce v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/vrabec/)
 - [Zdrojový HTML soubor Vrabec](doma/vrabec/index.html)
 
+### 35 · Kohout — sázka o Slunce a falešná symetrie
+Zkoumá záměnu zdroje, signálu a autority. Faraon vsadí Slunce, ale skutečný střet probíhá mezi kohoutím hlasem a budíkem. Deklarovaný poměr 50 : 50 zakrývá asymetrii jejich podmínek: budík závisí na bateriích a nastavení, kohout na biologickém rytmu. Generátor sleduje selhání prostředníka, mylné připsání příčiny a ztrátu legitimity.
+
+- [Otevřít Kohouta v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/kohout/)
+- [Zdrojový HTML soubor Kohout](doma/kohout/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -247,9 +253,10 @@ Zkoumá, jak se dostupná jistota může změnit v neovladatelný mentální obs
 - `doma/zizala/` — samostatný generátor Žížala.
 - `doma/parohy/` — samostatný generátor Parohy.
 - `doma/vrabec/` — samostatný generátor Vrabec.
+- `doma/kohout/` — samostatný generátor Kohout.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy a Vrabec jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec a Kohout jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
