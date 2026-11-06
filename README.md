@@ -234,6 +234,12 @@ Zkoumá pomalý proces, jehož pohyb z dálky mizí, ale zblízka se odhaluje ja
 - [Otevřít Šneka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/snek/)
 - [Zdrojový HTML soubor Šnek](doma/snek/index.html)
 
+### 39 · Moucha — cizí průser jako příležitost a signál latentního problému
+Zkoumá prostředí vzniklé akumulací drobných odkladů, které zůstává dlouho přehlížené. Jeho hodnota se liší podle aktéra: pro lidi je zdrojem hanby a nákladů, pro mouchu zdrojem potravy a života. Moucha problém nezpůsobuje, její nepatrné bzučení pouze naruší režim přehlížení. Úklid pak odhaluje „geologii“ odložených rozhodnutí. Generátor sleduje vznik vrstev, rozdílné perspektivy, signál, rozpoznání struktury a proměnu prostředí.
+
+- [Otevřít Mouchu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/moucha/)
+- [Zdrojový HTML soubor Moucha](doma/moucha/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -275,9 +281,10 @@ Zkoumá pomalý proces, jehož pohyb z dálky mizí, ale zblízka se odhaluje ja
 - `doma/beran/` — samostatný generátor Beran.
 - `doma/chameleon/` — samostatný generátor Chameleon.
 - `doma/snek/` — samostatný generátor Šnek.
+- `doma/moucha/` — samostatný generátor Moucha.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran, Chameleon a Šnek jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran, Chameleon, Šnek a Moucha jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
