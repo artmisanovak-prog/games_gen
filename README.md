@@ -240,6 +240,12 @@ Zkoumá prostředí vzniklé akumulací drobných odkladů, které zůstává dl
 - [Otevřít Mouchu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/moucha/)
 - [Zdrojový HTML soubor Moucha](doma/moucha/index.html)
 
+### 40 · Chyby nehledej! Nejsou. — větvení, pravidla a důsledky
+Obrazová hra bez doprovodné pohádky. Dívka je současně postavou a stromovým prostředím, dvě opice zkoušejí různé větve. Hráč rozhoduje, zda odchylku zakáže jako chybu, ponechá k prozkoumání, nebo podle situace upraví pravidlo. Hra zkoumá rozdíl mezi odchylkou a selháním, náklady zákazů, souběh aktérů a důsledky absolutního tvrzení, že chyby neexistují.
+
+- [Otevřít hru Chyby nehledej! Nejsou. v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/chyby-nejsou/)
+- [Zdrojový HTML soubor](doma/chyby-nejsou/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -282,9 +288,10 @@ Zkoumá prostředí vzniklé akumulací drobných odkladů, které zůstává dl
 - `doma/chameleon/` — samostatný generátor Chameleon.
 - `doma/snek/` — samostatný generátor Šnek.
 - `doma/moucha/` — samostatný generátor Moucha.
+- `doma/chyby-nejsou/` — obrazová hra Chyby nehledej! Nejsou.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran, Chameleon, Šnek a Moucha jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran, Chameleon, Šnek a Moucha jsou samostatné lokální nástroje; Chyby nehledej! Nejsou je samostatná lokální hra bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
