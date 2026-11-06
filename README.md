@@ -174,6 +174,18 @@ Zkoumá, jak se sebeoznačení jednotlivce mění opakováním, ozvěnou a skupi
 - [Otevřít Husy v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/husy/)
 - [Zdrojový HTML soubor Husy](doma/husy/index.html)
 
+### 29 · Panda — relativita barevnosti a připsaný znak
+Zkoumá, jak se barevnost a výjimečnost mění podle pozorovatele a použitého kritéria. Rozlišuje vzhled, smyslovou zkušenost, jazykovou kategorii a společenské hodnocení. Sleduje, jak jediný darovaný znak může přepsat sebeobraz a jak nadšení jednoho aktéra motivuje druhého k vlastní tvorbě.
+
+- [Otevřít Pandu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/panda/)
+- [Zdrojový HTML soubor Panda](doma/panda/index.html)
+
+### 30 · Vlk — smyslový překlad a alternativní reprezentace
+Zkoumá rozdíl mezi přímým vjemem, naučeným pojmenováním a funkčním použitím znaku. Sleduje, jak lze význam převést mezi odlišnými smyslovými zkušenostmi a jak piktogramy či jiné grafické reprezentace obejdou závislost na barvě a běžném textu. Úspěch překladu ověřuje podle toho, zda příjemce dokáže podle znaku jednat.
+
+- [Otevřít Vlka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/vlk/)
+- [Zdrojový HTML soubor Vlk](doma/vlk/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -205,9 +217,11 @@ Zkoumá, jak se sebeoznačení jednotlivce mění opakováním, ozvěnou a skupi
 - `doma/hvezdice/` — samostatný generátor Hvězdice.
 - `doma/hyeny/` — samostatný generátor Hyeny.
 - `doma/husy/` — samostatný generátor Husy.
+- `doma/panda/` — samostatný generátor Panda.
+- `doma/vlk/` — samostatný generátor Vlk.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny a Husy jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda a Vlk jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
