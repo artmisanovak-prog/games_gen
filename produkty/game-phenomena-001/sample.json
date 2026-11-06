@@ -1,0 +1,27 @@
+{
+  "id": "GP-001",
+  "title": "Voda, která si přivlastní píseň",
+  "category": "promena-prostredi",
+  "source_tool": "doma/ryba",
+  "premise": "Ryba zazpívá a voda nejprve melodii zopakuje. Potom začne odpovídat vlastním rytmem a nakonec zpívá i bez ryby.",
+  "trigger": "Ryba vyšle opakovaný zvukový motiv.",
+  "world_change": "Voda mění proud podle rytmu a vytváří nové průchody.",
+  "player_actions": [
+    "měnit rytmus",
+    "zastavit zvuk",
+    "sledovat proud",
+    "odpovědět vodě"
+  ],
+  "consequences": [
+    "otevře se skrytá cesta",
+    "proud přemístí překážku",
+    "voda přivolá tvory z hlubin"
+  ],
+  "rule": "Prostředí může převzít signál a rozvinout ho nezávisle na jeho původci.",
+  "game_uses": [
+    "průzkum",
+    "hádanka",
+    "živé prostředí"
+  ],
+  "intensity": 3
+}
