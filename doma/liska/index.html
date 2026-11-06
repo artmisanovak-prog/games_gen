@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liška — rozebrání celku</title>
+<style>
+:root{--bg:#171714;--panel:#22221e;--ink:#eee9dc;--muted:#aaa392;--line:#514b3e;--accent:#d58a4c;--red:#a85c48;--gold:#d7bd78}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,serif}main{max-width:1080px;margin:auto;padding:28px 20px 70px}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.18em;font:11px Arial,sans-serif}h1{font-size:clamp(38px,7vw,76px);font-weight:400;line-height:.98;margin:12px 0}h2{font-size:25px;font-weight:400;margin:0 0 14px}p{margin:8px 0;color:#d4cebf}.intro{max-width:760px;color:var(--muted);font-size:18px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.panel{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:4px}.wide{grid-column:1/-1}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}label{display:block;color:var(--gold);font:12px Arial,sans-serif;letter-spacing:.04em;margin-bottom:6px}input,select,textarea{width:100%;background:#151512;border:1px solid var(--line);color:var(--ink);padding:11px;font:15px Georgia,serif;border-radius:2px}textarea{min-height:76px;resize:vertical}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button{background:var(--accent);color:#1b1711;border:0;padding:11px 17px;font-weight:bold;cursor:pointer;border-radius:2px}button.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}.output{border-left:3px solid var(--accent);padding:12px 16px;background:#191916;margin:12px 0}.output h3{margin:0 0 6px;font-size:17px;color:var(--gold);font-weight:400}.muted{color:var(--muted);font-size:13px}.sequence{display:grid;gap:8px}.step{padding:12px;border:1px solid var(--line);background:#1b1b17}.step b{color:var(--accent);font:11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}.step p{margin:4px 0 0}.archive{display:grid;gap:8px}.entry{border:1px solid var(--line);padding:12px}.entry small{color:var(--muted)}.entry p{margin:4px 0}.danger{color:#d58b78}@media(max-width:680px){.grid,.fields{grid-template-columns:1fr}.wide{grid-column:auto}main{padding:22px 14px 50px}}
+</style></head>
+<body><main>
+<div class="eyebrow">GAMES_GEN / NARATIVNÍ OPERACE 11</div>
+<h1>Liška,<br>která byla z části</h1>
+<p class="intro">Laboratoř rozebírání celku. Sleduj, co se stane, když někdo odebere části živého systému, přisoudí jim cenu a přenese je do cizího kontextu. Část může zůstat fyzicky zachovaná, a přesto ztratit svou původní funkci.</p>
+<div class="grid">
+<section class="panel">
+<h2>Vstupní celek</h2>
+<div class="fields">
+<div><label for="whole">Co je původní celek?</label><input id="whole" value="živá bytost"></div>
+<div><label for="context">Vztah celku k okolí</label><select id="context"><option>žije ve vlastním prostředí</option><option>je součástí společenství</option><option>je závislý na okolním systému</option><option>je považován za samozřejmost</option></select></div>
+<div><label for="part">Která část je odebrána?</label><input id="part" value="ochranný povrch"></div>
+<div><label for="value">Jakou hodnotu jí přisoudí okolí?</label><input id="value" value="luxus a prestiž"></div>
+<div><label for="actor">Kdo ji odebírá?</label><input id="actor" value="obchodník"></div>
+<div><label for="motive">Motiv odebrání</label><select id="motive"><option>zisk a směna</option><option>moc a kontrola</option><option>obdiv a estetika</option><option>strach z neznámého</option><option>údajná záchrana</option><option>vědecké poznání</option></select></div>
+<div><label for="intensity">Míra zásahu</label><select id="intensity"><option value="1">1 · povrchový</option><option value="2" selected>2 · zásadní</option><option value="3">3 · nevratný</option></select></div>
+<div><label for="transfer">Nové prostředí části</label><input id="transfer" value="trh / cizí vlastnictví"></div>
+</div>
+<label for="note" style="margin-top:12px">Poznámka k situaci</label><textarea id="note" placeholder="Co se v původním celku nedá nahradit?"></textarea>
+<div class="actions"><button id="run">Provést odebrání</button><button class="secondary" id="reset">Obnovit příklad</button></div>
+</section>
+<section class="panel">
+<h2>Operace</h2>
+<div class="sequence">
+<div class="step"><b>01 / Vyčlenění</b><p>Část je oddělena od vztahů, které jí dávaly funkci.</p></div>
+<div class="step"><b>02 / Přecenění</b><p>Okolí jí přidělí novou hodnotu, často bez ohledu na původní význam.</p></div>
+<div class="step"><b>03 / Přenos</b><p>Část vstoupí do cizího prostředí a začne být používána jinak.</p></div>
+<div class="step"><b>04 / Rozpad ekvivalence</b><p>Ukáže se, že vlastnit část neznamená vlastnit její původní funkci.</p></div>
+<div class="step"><b>05 / Proměna celku</b><p>Původní celek hledá jiný způsob existence, který už není založený na odebrané části.</p></div>
+<div class="step"><b>06 / Návrat následku</b><p>Nový vlastník zjišťuje, že vytržená část není zaměnitelná za původní celek.</p></div>
+</div>
+<p class="muted">Nejde o automatickou odplatu. Následek vzniká z chybného předpokladu, že hodnota části zůstane stejná i po přerušení vztahů.</p>
+</section>
+<section class="panel wide" id="result" aria-live="polite">
+<h2>Výsledek experimentu</h2><p class="muted">Nastav vstupní situaci a spusť odebrání.</p>
+</section>
+<section class="panel wide">
+<h2>Deník experimentů</h2><div id="archive" class="archive"><p class="muted">Zatím bez záznamů.</p></div>
+<div class="actions"><button class="secondary" id="export">Exportovat JSON</button><button class="secondary" id="clear">Smazat místní deník</button></div>
+<p class="muted">Záznamy zůstávají pouze v tomto prohlížeči (localStorage). Export je přenositelný soubor.</p>
+</section></div></main>
+<script>
+const $=id=>document.getElementById(id), KEY='liska_rozebrani_denik';
+const ops=[
+['Vyčlenění','Část se oddělí od vztahů, které jí dávaly původní funkci.'],
+['Přecenění','Okolí přepíše význam části podle vlastního zájmu.'],
+['Přenos','Část je vložena do nového prostředí, které nezná její původní souvislosti.'],
+['Ztráta funkce','Vlastník získá předmět, nikoli schopnost, kterou část měla v celku.'],
+['Proměna celku','Původní celek musí nalézt jiný režim existence.'],
+['Návrat následku','Nové prostředí odhalí, že vytržená část není plnohodnotnou náhradou původního vztahu.']
+];
+function read(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderArchive(){let a=read();$('archive').innerHTML=a.length?a.slice().reverse().map(x=>'<div class="entry"><small>'+esc(x.date)+'</small><p><b>'+esc(x.whole)+'</b> · odebráno: '+esc(x.part)+' · '+esc(x.actor)+'</p><p>'+esc(x.consequence)+'</p></div>').join(''):'<p class="muted">Zatím bez záznamů.</p>'}
+function run(){
+const d={whole:$('whole').value.trim()||'celek',context:$('context').value,part:$('part').value.trim()||'část',value:$('value').value.trim()||'nová hodnota',actor:$('actor').value.trim()||'původce zásahu',motive:$('motive').value,intensity:+$('intensity').value,transfer:$('transfer').value.trim()||'nové prostředí',note:$('note').value.trim()};
+const depth=['Původní vazba je narušena, ale celek může část nahradit.','Zásah mění organizaci celku a vytváří trvalou ztrátu funkce.','Zásah je nevratný: původní uspořádání už nelze obnovit pouhým vrácením části.'][d.intensity-1];
+const consequence=' '+d.part+' získá v prostředí „'+d.transfer+'“ podobu '+d.value+', ale ztrácí kontext '+d.context+'. '+d.actor+' získává oddělenou věc, nikoli původní funkci celku.';
+const changed=' '+d.whole+' po odebrání '+d.part+' přestává fungovat původním způsobem. Musí přejít od původní tělesné/organizační funkce k jiné formě přítomnosti. '+depth;
+const test='Pokud by byla část vrácena, obnovil by se původní celek? Pokud ne, co přesně bylo zničeno: materiál, vztah, funkce, nebo možnost návratu?';
+const record={...d,date:new Date().toLocaleString('cs-CZ'),consequence,changed,test};
+$('result').innerHTML='<h2>Výsledek experimentu</h2><div class="output"><h3>Co získává nový vlastník</h3><p>'+esc(consequence)+'</p></div><div class="output"><h3>Co ztrácí původní celek</h3><p>'+esc(changed)+'</p></div><div class="output"><h3>Mechanismus návratu</h3><p>'+esc(d.motive)+' nevrací původní vztahy. Část je přeceněna, ale hodnota vytvořená původním celkem se nepřenáší automaticky.</p></div><div class="output"><h3>Test nevratnosti</h3><p>'+esc(test)+'</p></div>'+(d.note?'<p class="muted">Poznámka: '+esc(d.note)+'</p>':'');
+let a=read();a.push(record);localStorage.setItem(KEY,JSON.stringify(a));renderArchive();
+}
+$('run').addEventListener('click',run);
+$('reset').addEventListener('click',()=>{['whole','part','value','actor','transfer','note'].forEach((id,i)=>$(id).value=['živá bytost','ochranný povrch','luxus a prestiž','obchodník','trh / cizí vlastnictví',''][i]);$('context').selectedIndex=0;$('motive').selectedIndex=0;$('intensity').value='2';$('result').innerHTML='<h2>Výsledek experimentu</h2><p class="muted">Nastav vstupní situaci a spusť odebrání.</p>'});
+$('export').addEventListener('click',()=>{let b=new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='liska-denik.json';a.click();URL.revokeObjectURL(u)});
+$('clear').addEventListener('click',()=>{if(confirm('Opravdu smazat všechny místní záznamy?')){localStorage.removeItem(KEY);renderArchive()}});
+renderArchive();
+</script></body></html>
