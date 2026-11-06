@@ -156,6 +156,12 @@ Zkoumá situaci, kdy je skutečná potřeba přeložena do cizí kategorie a spo
 - [Otevřít Prasátko v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/prase/)
 - [Zdrojový HTML soubor Prasátko](doma/prase/index.html)
 
+### 26 · Hvězdice — paměť dopadu
+Zkoumá následky události, které se šíří dál než původní impuls. Rozlišuje původce a sílu dopadu, zasažené vrstvy prostředí, šíření následků, viditelnost a paměť stopy. Sleduje rozdíl mezi uklidněním povrchu a skutečným návratem do původního stavu, včetně částečné nápravy a nevratných změn.
+
+- [Otevřít Hvězdici v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/hvezdice/)
+- [Zdrojový HTML soubor Hvězdice](doma/hvezdice/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -184,9 +190,10 @@ Zkoumá situaci, kdy je skutečná potřeba přeložena do cizí kategorie a spo
 - `doma/veverka/` — samostatný generátor Veverka.
 - `doma/had/` — samostatný generátor Had.
 - `doma/prase/` — samostatný generátor Prasátko.
+- `doma/hvezdice/` — samostatný generátor Hvězdice.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had a Prasátko jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko a Hvězdice jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
