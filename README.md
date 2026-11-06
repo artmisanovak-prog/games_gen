@@ -78,6 +78,12 @@ Generuje narativní řetězce, v nichž nečekané přežití získá dodatečn�
 - [Otevřít Zaječici v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/zajic/)
 - [Zdrojový soubor Zaječice](doma/zajic/index.html)
 
+### 13 · Pavouk — neuzavřené stavy a tuhnutí možností
+Generuje situace, v nichž nevyřčené věty, nevyřešené konflikty, odložené omluvy a neuskutečněné události zůstávají „viset“ a postupně mění své okolí. Sleduje délku odkladu, důvod nečinnosti, narůstající napětí, tuhnutí původně otevřené možnosti a rozdíl mezi vnějším pohybem a skutečným rozuzlením. Nabízí tahy jako ponechání, uvolnění, rozmotání, přiznání či přestřižení vazby. Vychází z pohádky **O pavoukovi, který věšel věci, co se nedají držet**.
+
+- [Otevřít Pavouka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/pavouk/)
+- [Zdrojový soubor Pavouk](doma/pavouk/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -93,9 +99,10 @@ Generuje narativní řetězce, v nichž nečekané přežití získá dodatečn�
 - `doma/jednorozec/` — samostatný generátor Jednorožec.
 - `doma/liska/` — samostatný generátor Liška.
 - `doma/zajic/` — samostatný generátor Zaječice.
+- `doma/pavouk/` — samostatný generátor Pavouk.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška a Zaječice jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice a Pavouk jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
