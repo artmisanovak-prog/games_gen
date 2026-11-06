@@ -198,6 +198,12 @@ Zkoumá rozdělení jednoho celku na dvě pokračující větve, z nichž každ�
 - [Otevřít Žížalu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/zizala/)
 - [Zdrojový HTML soubor Žížala](doma/zizala/index.html)
 
+### 33 · Parohy — fotografická paměť a falešná přítomnost
+Zkoumá, jak opakované fotografické záblesky vytvářejí archiv, který přerůstá v identitu. Rozlišuje zachycený výraz a jeho příčinu, obraz a prožitek, počet záznamů a pravdivost vzpomínky. Každá fotografie přidává větev parohů: subjekt se stává živým albem, jehož minulost se může začít tvářit jako přítomnost.
+
+- [Otevřít Parohy v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/parohy/)
+- [Zdrojový HTML soubor Parohy](doma/parohy/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -233,9 +239,10 @@ Zkoumá rozdělení jednoho celku na dvě pokračující větve, z nichž každ�
 - `doma/vlk/` — samostatný generátor Vlk.
 - `doma/kliste/` — samostatný generátor Klíště.
 - `doma/zizala/` — samostatný generátor Žížala.
+- `doma/parohy/` — samostatný generátor Parohy.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště a Žížala jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala a Parohy jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
