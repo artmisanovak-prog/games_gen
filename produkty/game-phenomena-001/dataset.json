@@ -1,0 +1,272 @@
+{
+  "dataset_id": "GAME-PHENOMENA-001",
+  "title": "Game Phenomena 001",
+  "version": "0.1.0",
+  "language": "cs",
+  "status": "prototype_sample",
+  "description": "Ukázková kolekce herních jevů odvozených z principů generátorů games_gen. Nejde o hotový produkční obsah ani ověřený benchmark.",
+  "created": "2026-11-06",
+  "records": [
+    {
+      "id": "GP-001",
+      "title": "Voda, která si přivlastní píseň",
+      "category": "promena-prostredi",
+      "source_tool": "doma/ryba",
+      "premise": "Ryba zazpívá a voda nejprve melodii zopakuje. Potom začne odpovídat vlastním rytmem a nakonec zpívá i bez ryby.",
+      "trigger": "Ryba vyšle opakovaný zvukový motiv.",
+      "world_change": "Voda mění proud podle rytmu a vytváří nové průchody.",
+      "player_actions": [
+        "měnit rytmus",
+        "zastavit zvuk",
+        "sledovat proud",
+        "odpovědět vodě"
+      ],
+      "consequences": [
+        "otevře se skrytá cesta",
+        "proud přemístí překážku",
+        "voda přivolá tvory z hlubin"
+      ],
+      "rule": "Prostředí může převzít signál a rozvinout ho nezávisle na jeho původci.",
+      "game_uses": [
+        "průzkum",
+        "hádanka",
+        "živé prostředí"
+      ],
+      "intensity": 3
+    },
+    {
+      "id": "GP-002",
+      "title": "Páv, který počítá oči, která nemá",
+      "category": "vysetrovani",
+      "source_tool": "doma/mys",
+      "premise": "Páv tvrdí, že má stále stejný počet očí na peří. Po každém otočení se ale počet v odrazu změní.",
+      "trigger": "Hráč se pokusí spočítat oka přímým pohledem.",
+      "world_change": "Přímé pozorování jev zastaví; změny zůstávají viditelné v odrazech a stínech.",
+      "player_actions": [
+        "porovnat odrazy",
+        "požádat svědky o popis",
+        "pozorovat nepřímo"
+      ],
+      "consequences": [
+        "odhalí se skryté oko",
+        "svědectví se začnou rozcházet",
+        "páv začne počítat pozorovatele"
+      ],
+      "rule": "Způsob pozorování ovlivňuje, jaké informace jsou dostupné.",
+      "game_uses": [
+        "detektivní úkol",
+        "hádanka",
+        "práce s perspektivou"
+      ],
+      "intensity": 2
+    },
+    {
+      "id": "GP-003",
+      "title": "Chameleon, který se stal všemi ostatními",
+      "category": "promena-postavy",
+      "source_tool": "doma/chameleon",
+      "premise": "Chameleon kopíruje podobu každého, kdo se na něj podívá. Po čase už nedokáže určit, která podoba byla jeho vlastní.",
+      "trigger": "Do místnosti vstoupí nová postava s odlišným očekáváním.",
+      "world_change": "Chameleon mění vzhled, hlas i způsob jednání podle posledního pozorovatele.",
+      "player_actions": [
+        "představit mu různé role",
+        "přestat ho hodnotit",
+        "požádat ho o vlastní volbu"
+      ],
+      "consequences": [
+        "získá přístup do různých skupin",
+        "ztratí důvěru předchozích známých",
+        "vytvoří podobu, kterou nikdo nečekal"
+      ],
+      "rule": "Opakované přizpůsobení může změnit nejen vzhled, ale i dostupné jednání.",
+      "game_uses": [
+        "sociální hádanka",
+        "NPC",
+        "větvený příběh"
+      ],
+      "intensity": 3
+    },
+    {
+      "id": "GP-004",
+      "title": "Zajíc, který utekl před ohněm, který ještě nevznikl",
+      "category": "casova-anomalie",
+      "source_tool": "doma/mys",
+      "premise": "Zajíc má popálené uši a voní po kouři, ale v okolí dosud nic nehořelo.",
+      "trigger": "Hráč najde popel na místě bez známek požáru.",
+      "world_change": "Stopy budoucí události se objevují dříve než její příčina.",
+      "player_actions": [
+        "sledovat popel",
+        "varovat obyvatele",
+        "pokusit se změnit místo vzniku ohně"
+      ],
+      "consequences": [
+        "požár vznikne jinde",
+        "zajíc si vzpomene na jinou verzi události",
+        "zabránění požáru vytvoří novou stopu"
+      ],
+      "rule": "Následek může předcházet příčině a zásah do příčiny nemusí odstranit stopu.",
+      "game_uses": [
+        "časová hádanka",
+        "quest",
+        "průzkum"
+      ],
+      "intensity": 4
+    },
+    {
+      "id": "GP-005",
+      "title": "Kocour, který spolkl konec věty",
+      "category": "jazykova-anomalie",
+      "source_tool": "doma/mys",
+      "premise": "Kocour spolkl tečku. Věty v jeho okolí přestaly končit a přecházejí do dalších rozhovorů.",
+      "trigger": "Postava vysloví větu v blízkosti kocoura.",
+      "world_change": "Konec jednoho sdělení se připojí k následujícímu dialogu.",
+      "player_actions": [
+        "vrátit tečku",
+        "přerušit rozhovor",
+        "spojit dvě věty záměrně"
+      ],
+      "consequences": [
+        "dialog se uzavře",
+        "příkaz se přenese na jinou postavu",
+        "vznikne nový význam spojením dvou výpovědí"
+      ],
+      "rule": "Odstranění drobného jazykového prvku mění hranice mezi sděleními.",
+      "game_uses": [
+        "jazyková hádanka",
+        "dialogový systém",
+        "quest"
+      ],
+      "intensity": 3
+    },
+    {
+      "id": "GP-006",
+      "title": "Místnost, která si pamatuje hráče",
+      "category": "prostorova-anomalie",
+      "source_tool": "doma/mys",
+      "premise": "Místnost při každém návratu obsahuje předměty z míst, která hráč už navštívil.",
+      "trigger": "Hráč opustí místnost a později se vrátí.",
+      "world_change": "Prostor přeskupí předměty podle předchozí trasy hráče.",
+      "player_actions": [
+        "vrátit předmět na původní místo",
+        "přinést nový předmět",
+        "změnit pořadí návštěv"
+      ],
+      "consequences": [
+        "otevře se průchod",
+        "zmizí známý předmět",
+        "místnost vytvoří vzpomínku na dosud nenavštívené místo"
+      ],
+      "rule": "Prostor ukládá historii průchodů a používá ji k vlastní proměně.",
+      "game_uses": [
+        "průzkum",
+        "prostorová hádanka",
+        "environmentální příběh"
+      ],
+      "intensity": 3
+    },
+    {
+      "id": "GP-007",
+      "title": "Stín, který dorazí o krok dřív",
+      "category": "casova-anomalie",
+      "source_tool": "doma/netopyr",
+      "premise": "Stín postavy se pohne dříve, než se pohne její tělo.",
+      "trigger": "Postava vstoupí do světla.",
+      "world_change": "Stín předvádí příští pohyb nebo pohyb, který postava odmítne udělat.",
+      "player_actions": [
+        "sledovat stín",
+        "napodobit jeho pohyb",
+        "změnit zdroj světla"
+      ],
+      "consequences": [
+        "stín odhalí skrytou cestu",
+        "postava ztratí kontrolu nad pohybem",
+        "světlo vytvoří několik soupeřících stínů"
+      ],
+      "rule": "Obraz může předcházet události a stát se samostatným zdrojem informace.",
+      "game_uses": [
+        "stealth",
+        "hádanka",
+        "práce se světlem"
+      ],
+      "intensity": 3
+    },
+    {
+      "id": "GP-008",
+      "title": "Dvě postavy si vymění způsob vidění",
+      "category": "vymena-perspektivy",
+      "source_tool": "doma/kozel",
+      "premise": "Dvě postavy si vymění nejen oči, ale i to, co považují za důležité.",
+      "trigger": "Postavy si vymění předměty, které symbolizují jejich role.",
+      "world_change": "Každá postava začne vnímat prostředí podle pravidel té druhé.",
+      "player_actions": [
+        "přepínat mezi pohledy",
+        "porovnat rozdílné stopy",
+        "vrátit nebo odmítnout výměnu"
+      ],
+      "consequences": [
+        "odhalí se dříve neviditelný objekt",
+        "jedna postava přehlédne vlastní nebezpečí",
+        "výměna zanechá trvalou stopu"
+      ],
+      "rule": "Stejné prostředí nabízí různé informace podle perspektivy pozorovatele.",
+      "game_uses": [
+        "kooperativní puzzle",
+        "průzkum",
+        "příběhová volba"
+      ],
+      "intensity": 2
+    },
+    {
+      "id": "GP-009",
+      "title": "Komín, který čeká na nesprávného adresáta",
+      "category": "narativni-anomalie",
+      "source_tool": "doma/mys",
+      "premise": "Čáp zapomněl, koho měl donést. Na každém komíně někdo čeká, ale každý očekává jinou osobu.",
+      "trigger": "Hráč dorazí s nedoručenou zásilkou.",
+      "world_change": "Místa si pamatují přílet, ale ztrácejí jméno příjemce.",
+      "player_actions": [
+        "vyslechnout čekající",
+        "doručit zásilku",
+        "vrátit se po trase"
+      ],
+      "consequences": [
+        "zásilka změní majitele",
+        "čekající postava odejde",
+        "objeví se příjemce, který dosud neexistoval"
+      ],
+      "rule": "Zpráva může mít trasu a následky, i když ztratí svého adresáta.",
+      "game_uses": [
+        "questový řetězec",
+        "sociální hádanka",
+        "větvený příběh"
+      ],
+      "intensity": 3
+    },
+    {
+      "id": "GP-010",
+      "title": "Ticho, které přesune proud",
+      "category": "promena-prostredi",
+      "source_tool": "doma/ryba",
+      "premise": "Ryba přestane hrát. Voda přestane přenášet běžné vibrace a odhalí pohyb, který zvuk dosud zakrýval.",
+      "trigger": "Hráč nebo ryba přeruší opakovaný zvukový signál.",
+      "world_change": "Ticho změní způsob, jakým se ve vodě šíří informace a pohyb.",
+      "player_actions": [
+        "zůstat potichu",
+        "vytvořit slabý signál",
+        "sledovat bubliny"
+      ],
+      "consequences": [
+        "odhalí se skrytý tvor",
+        "proud se zastaví",
+        "voda začne reagovat na pohyb místo zvuku"
+      ],
+      "rule": "Absence signálu může být aktivním zásahem, nikoli prázdným stavem.",
+      "game_uses": [
+        "stealth",
+        "průzkum",
+        "hádanka"
+      ],
+      "intensity": 2
+    }
+  ]
+}
