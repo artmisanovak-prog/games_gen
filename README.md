@@ -204,6 +204,12 @@ Zkoumá, jak opakované fotografické záblesky vytvářejí archiv, který pře
 - [Otevřít Parohy v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/parohy/)
 - [Zdrojový HTML soubor Parohy](doma/parohy/index.html)
 
+### 34 · Vrabec — od jistoty k obsazení hlavy
+Zkoumá, jak se dostupná jistota může změnit v neovladatelný mentální obsah. Vrabec uniká z hrsti, přesouvá se na hlavu a staví hnízdo z pochybností, opakování a cizích komentářů. Generátor rozlišuje držení a kontrolu, blízkost a bezpečí, objekt a myšlenku a sleduje, jak se původní přísloví obrátí proti vlastnímu doporučení.
+
+- [Otevřít Vrabce v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/vrabec/)
+- [Zdrojový HTML soubor Vrabec](doma/vrabec/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -240,9 +246,10 @@ Zkoumá, jak opakované fotografické záblesky vytvářejí archiv, který pře
 - `doma/kliste/` — samostatný generátor Klíště.
 - `doma/zizala/` — samostatný generátor Žížala.
 - `doma/parohy/` — samostatný generátor Parohy.
+- `doma/vrabec/` — samostatný generátor Vrabec.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala a Parohy jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy a Vrabec jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
