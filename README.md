@@ -90,6 +90,12 @@ Generuje situace, v nichž snaha potlačit vlastní nápadnost vytváří dalš�
 - [Otevřít Lemura v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/lemur/)
 - [Zdrojový soubor Lemur](doma/lemur/index.html)
 
+### 15 · Osel — implicitní pravidla a falešná orientace
+Generuje situace, v nichž se od aktéra očekává správná volba, ale kritérium správnosti zůstává nevyslovené, nejednoznačné nebo přístupné jen ostatním. Sleduje rozdíl mezi skutečným pokynem, domnělým pravidlem, náhradním vodítkem a sociálním potvrzením. Zkoumá, jak plynulé jednání vytváří zdání kompetence, přestože aktér neví, podle čeho se orientuje, a kdo nese odpovědnost za nejasnou instrukci. Vychází z pohádky **O oslovi, který šel vlevo, ale myslel si, že jde vpravo**.
+
+- [Otevřít Osla v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/osel/)
+- [Zdrojový soubor Osel](doma/osel/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -107,9 +113,10 @@ Generuje situace, v nichž snaha potlačit vlastní nápadnost vytváří dalš�
 - `doma/zajic/` — samostatný generátor Zaječice.
 - `doma/pavouk/` — samostatný generátor Pavouk.
 - `doma/lemur/` — samostatný generátor Lemur.
+- `doma/osel/` — samostatný generátor Osel.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk a Lemur jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur a Osel jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
