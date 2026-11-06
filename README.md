@@ -24,7 +24,13 @@ Generuje herní situace o střetu přání s tradicí, souhlasu s proměnou, pr�
 - [Otevřít Tygra v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/tygr/)
 - [Zdrojový soubor Tygr](doma/tygr/index.html)
 
-### 04 · Ryba — hudba jako zásah do prostředí
+### 04 · Dráček — pravidlo, které vytvoří přestupek
+Generuje situace, v nichž klasifikace změní neutrální jev v problém. Pracuje se vznikem přestupku, kontextem pravidla, kruhovou příčinou, jevem jako řečí, vymáháním a původem zákazu. Vychází z pohádky **O dráčkovi, který chrchlal**.
+
+- [Otevřít Dráčka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/dracek/)
+- [Zdrojový soubor Dráček](doma/dracek/index.html)
+
+### 05 · Ryba — hudba jako zásah do prostředí
 Generuje herní situace, v nichž hudební princip mění vlastnosti vody: proudy, vlnění, barvy, hloubku i způsoby vnímání. Voda není pasivní kulisa; odpovídá vlastním tahem. Pracuje se šesti operacemi: přesměrování proudů, proměna barev a hloubky, rytmus a vlnění, odpověď vody, překlad mezi druhy a aktivní ticho.
 
 - [Otevřít Rybu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/ryba/)
@@ -35,12 +41,12 @@ Generuje herní situace, v nichž hudební princip mění vlastnosti vody: proud
 - `doma/` — pracovní prostor generátorů.
 - `doma/mys/` — samostatný generátor Myš.
 - `doma/netopyr/` — samostatný generátor Netopýr.
-- `doma/ryba/` — samostatný generátor Ryba.
+- `doma/ryba/` — samostatný generátor Ryba.\n- `doma/dracek/` — samostatný generátor Dráček.
 - `doma/tygr/` — samostatný generátor Tygr.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr a Ryba jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba a Dráček jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
