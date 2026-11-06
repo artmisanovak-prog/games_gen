@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Osel — navigace podle nevyslovených pravidel</title>
+<style>
+:root{--bg:#191916;--panel:#25251f;--ink:#eeebdf;--muted:#aaa697;--line:#514d40;--accent:#c7ae79;--second:#8eaaa2;--warn:#c77d66}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,serif}main{max-width:1080px;margin:auto;padding:28px 18px 70px}.eyebrow{font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}h1{font-size:clamp(40px,7vw,76px);font-weight:400;line-height:.98;margin:12px 0}h2{font-size:24px;font-weight:400;margin:0 0 14px}.lead{max-width:790px;color:var(--muted);font-size:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.panel{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:3px}.wide{grid-column:1/-1}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{display:block;font:12px Arial,sans-serif;color:var(--accent);margin:0 0 6px}input,select,textarea{width:100%;padding:11px;background:#191a16;color:var(--ink);border:1px solid var(--line);font:15px Georgia,serif;border-radius:2px}textarea{min-height:76px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}button{border:0;padding:11px 16px;background:var(--accent);color:#211d14;font-weight:bold;cursor:pointer;border-radius:2px}button.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}.muted{font-size:13px;color:var(--muted)}.output{background:#1b1c18;border-left:3px solid var(--accent);padding:12px 15px;margin:11px 0}.output h3{font-size:17px;font-weight:400;color:var(--second);margin:0 0 5px}.output p{margin:0}.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px}.side{border:1px solid var(--line);padding:13px;background:#1c1d19}.side h3{font-weight:400;color:var(--accent);margin:0 0 6px;font-size:17px}.entry{border:1px solid var(--line);padding:11px;margin:8px 0}.entry small{color:var(--muted)}.entry p{margin:4px 0}@media(max-width:680px){.grid,.fields,.compare{grid-template-columns:1fr}.wide{grid-column:auto}main{padding:22px 13px 50px}}
+</style></head><body><main>
+<div class="eyebrow">GAMES_GEN / NARATIVNÍ OPERACE 15</div>
+<h1>Osel,<br>který šel vlevo</h1>
+<p class="lead">Laboratoř implicitních pravidel a falešné orientace. Situace, v níž všichni očekávají správný postup, ale nikdo neřekl, podle čeho se správnost pozná. Zkoumej, jak si aktér domyslí chybějící pravidlo, jak se z náhodného vodítka stane autorita a jak může vypadat jistota bez skutečné znalosti.</p>
+<div class="grid">
+<section class="panel"><h2>Situace a nevyřčené pravidlo</h2><div class="fields">
+<div><label for="actor">Kdo se orientuje?</label><input id="actor" value="osel"></div>
+<div><label for="task">Co má udělat?</label><input id="task" value="vybrat správnou cestu"></div>
+<div><label for="options">Možnosti, mezi nimiž vybírá</label><input id="options" value="levá / pravá; seno / sláma"></div>
+<div><label for="expectation">Co okolí očekává?</label><input id="expectation" value="že zvolí správnou možnost"></div>
+<div><label for="rule">Skutečné pravidlo</label><select id="rule"><option>nikdo ho neurčil</option><option>pravidlo zná jen někdo jiný</option><option>pravidlo se mění podle situace</option><option>existuje více souběžných pravidel</option><option>pravidlo je v rozporu s pokynem</option></select></div>
+<div><label for="signal">Dostupné vodítko</label><select id="signal"><option>nejasná cedulka</option><option>protichůdné pokyny</option><option>směr určený jiným člověkem</option><option>opakovaný zvyk skupiny</option><option>zdánlivě odborný symbol</option><option>žádné vodítko</option></select></div>
+<div><label for="authority">Kdo vodítko potvrzuje?</label><select id="authority"><option>nikdo</option><option>autorita / nadřízený</option><option>většina skupiny</option><option>náhodný svědek</option><option>samotný aktér</option></select></div>
+<div><label for="ambiguity">Míra nejednoznačnosti</label><select id="ambiguity"><option value="1">Nízká</option><option value="2" selected>Střední</option><option value="3">Vysoká</option></select></div>
+</div><label for="note" style="margin-top:12px">Co se stane, když se aktér zeptá na pravidlo?</label><textarea id="note" placeholder="Například: dostane další nejasný pokyn, nebo se ukáže, že pravidlo nikdo nezná…"></textarea>
+<div class="actions"><button id="run">Vytvořit orientační situaci</button><button class="alt" id="reset">Obnovit příklad</button></div></section>
+<section class="panel"><h2>Co nástroj odděluje</h2>
+<div class="output"><h3>Pokyn</h3><p>Co bylo skutečně řečeno nebo ukázáno.</p></div>
+<div class="output"><h3>Domnělé pravidlo</h3><p>Co si aktér odvodil, aby mohl pokračovat.</p></div>
+<div class="output"><h3>Očekávání okolí</h3><p>Co ostatní považují za samozřejmé, přestože to nevyslovili.</p></div>
+<div class="output"><h3>Zdání kompetence</h3><p>Jak plynulé jednání zakryje, že aktér vlastně neví, podle čeho postupuje.</p></div>
+<p class="muted">Klíčový rozdíl: postupovat podle cedulky není totéž jako rozumět cestě.</p></section>
+<section class="panel wide" id="result" aria-live="polite"><h2>Výsledek</h2><p class="muted">Nastav situaci a spusť generování.</p></section>
+<section class="panel wide"><h2>Deník orientačních omylů</h2><div id="archive"><p class="muted">Zatím bez záznamů.</p></div><div class="actions"><button class="alt" id="export">Exportovat JSON</button><button class="alt" id="clear">Smazat místní deník</button></div><p class="muted">Historie se ukládá pouze v tomto prohlížeči (localStorage).</p></section>
+</div></main><script>
+const $=id=>document.getElementById(id),KEY='osel_implicitni_pravidla_denik';
+function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function read(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function archive(){const a=read();$('archive').innerHTML=a.length?a.slice().reverse().map(x=>'<div class="entry"><small>'+esc(x.date)+'</small><p><b>'+esc(x.actor)+'</b> · '+esc(x.task)+'</p><p>'+esc(x.conclusion)+'</p></div>').join(''):'<p class="muted">Zatím bez záznamů.</p>'}
+function run(){
+const d={actor:$('actor').value.trim()||'aktér',task:$('task').value.trim()||'splnit úkol',options:$('options').value.trim()||'možnost A / možnost B',expectation:$('expectation').value.trim()||'správný výsledek',rule:$('rule').value,signal:$('signal').value,authority:$('authority').value,ambiguity:+$('ambiguity').value,note:$('note').value.trim()};
+const inferred=d.rule==='nikdo ho neurčil'?'Aktér musí pravidlo domyslet z okolností. Jakýkoli výběr pak může vypadat jako rozhodnutí podle systému, který ve skutečnosti neexistuje.':d.rule==='pravidlo zná jen někdo jiný'?'Aktér nemá přístup ke kritériu, podle něhož bude jeho volba později hodnocena.':'Aktér skládá několik neúplných nebo proměnlivých pravidel do jedné domnělé instrukce.';
+const cue=d.signal==='žádné vodítko'?'Chybí ověřitelné vodítko. Volba bude stát na odhadu.':d.signal+' se stává náhradou za chybějící pravidlo.';
+const social=d.authority==='nikdo'?'Nikdo domněnku nepotvrzuje; aktér si ji musí potvrdit sám.':d.authority+' dodává vodítku váhu, ale nepotvrzuje, že je správné.';
+const confidence=d.ambiguity===3?'Vysoká nejednoznačnost umožňuje několik stejně přesvědčivých výkladů. Plynulost postupu může být zaměněna za znalost.':d.ambiguity===2?'Část situace je čitelná, rozhodující kritérium však zůstává skryté.':'Situace působí čitelně, ale i malá nevyřčená podmínka může změnit hodnocení volby.';
+const conclusion=d.actor+' pokračuje podle vodítka „'+d.signal+'“, nikoli podle ověřeného pravidla. Okolí může jeho postup považovat za kompetentní, protože se pohybuje bez zaváhání.';
+const test='Kdyby se po dokončení ukázalo, že volba byla špatná, kdo by měl nést odpovědnost: aktér, autor pokynu, nebo systém, který kritérium nevyslovil? Jaké jediné doplnění instrukce by odstranilo nejistotu?';
+const rec={...d,date:new Date().toLocaleString('cs-CZ'),conclusion,inferred,cue,social,confidence,test};
+$('result').innerHTML='<h2>Výsledek: navigace bez mapy</h2><div class="compare"><div class="side"><h3>Co je skutečně známo</h3><p>'+esc(d.task)+'. Možnosti: '+esc(d.options)+'. Pravidlo: '+esc(d.rule)+'.</p></div><div class="side"><h3>Co se předpokládá</h3><p>Očekávání: '+esc(d.expectation)+'. '+esc(inferred)+'</p></div></div><div class="output"><h3>1 / Náhradní vodítko</h3><p>'+esc(cue)+'</p></div><div class="output"><h3>2 / Sociální potvrzení</h3><p>'+esc(social)+'</p></div><div class="output"><h3>3 / Zdání správnosti</h3><p>'+esc(confidence)+' '+esc(conclusion)+'</p></div><div class="output"><h3>4 / Co by se stalo při kontrole?</h3><p>'+esc(d.note||'Aktér by musel požádat o výslovné kritérium a porovnat ho s dosavadním postupem.')+'</p></div><div class="output"><h3>5 / Test odpovědnosti</h3><p>'+esc(test)+'</p></div>';
+let a=read();a.push(rec);localStorage.setItem(KEY,JSON.stringify(a));archive();
+}
+$('run').addEventListener('click',run);
+$('reset').addEventListener('click',()=>{const vals={actor:'osel',task:'vybrat správnou cestu',options:'levá / pravá; seno / sláma',expectation:'že zvolí správnou možnost',note:''};Object.entries(vals).forEach(([k,v])=>$(k).value=v);$('rule').selectedIndex=0;$('signal').selectedIndex=0;$('authority').selectedIndex=0;$('ambiguity').value='2';$('result').innerHTML='<h2>Výsledek</h2><p class="muted">Nastav situaci a spusť generování.</p>'});
+$('export').addEventListener('click',()=>{const b=new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='osel-denik-orientace.json';a.click();URL.revokeObjectURL(u)});
+$('clear').addEventListener('click',()=>{if(confirm('Smazat celý místní deník?')){localStorage.removeItem(KEY);archive()}});
+archive();
+</script></body></html>
