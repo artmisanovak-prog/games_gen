@@ -108,6 +108,12 @@ Generuje situace, v nichž nositel nepřináší hotový výsledek, ale nerealiz
 - [Otevřít Čápa v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/cap/)
 - [Zdrojový soubor Čáp](doma/cap/index.html)
 
+### 18 · Slon — motivační motor nedosažitelného cíle
+Generuje situace, v nichž malý viditelný cíl zastupuje mnohem větší touhu. Sleduje, jak příslib odměny udržuje pohyb, jak nedosažitelnost může být součástí motivačního mechanismu a co se stane, když je cíl splněn, zmizí nebo změní podmínky. Odděluje předmět touhy od jejího skrytého významu a zkoumá cenu pokračování i otázku, co zůstane po skončení honby. Vychází z pohádky **O slonovi, který běžel za třešní**.
+
+- [Otevřít Slona v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/slon/)
+- [Zdrojový soubor Slon](doma/slon/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -128,9 +134,10 @@ Generuje situace, v nichž nositel nepřináší hotový výsledek, ale nerealiz
 - `doma/osel/` — samostatný generátor Osel.
 - `doma/pav/` — samostatný generátor Páv.
 - `doma/cap/` — samostatný generátor Čáp.
+- `doma/slon/` — samostatný generátor Slon.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv a Čáp jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp a Slon jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
