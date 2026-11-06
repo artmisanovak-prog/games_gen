@@ -72,6 +72,12 @@ Generuje situace, v nichž je živý nebo organizační celek rozebrán na čás
 - [Otevřít Lišku v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/liska/)
 - [Zdrojový soubor Liška](doma/liska/index.html)
 
+### 12 · Zaječice — náhoda, která se promění v legendu
+Generuje narativní řetězce, v nichž nečekané přežití získá dodatečné vysvětlení a stane se příběhem o výjimečnosti. Odděluje skutečný mechanismus události od výkladu svědků, sleduje šíření a přikrášlování legendy a zkoumá, jak veřejný příběh začne zpětně formovat identitu i budoucí chování toho, komu se událost přihodila. Vychází z pohádky **O zaječici, která skočila do plamenů a neshořela**.
+
+- [Otevřít Zaječici v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/zajic/)
+- [Zdrojový soubor Zaječice](doma/zajic/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -86,9 +92,10 @@ Generuje situace, v nichž je živý nebo organizační celek rozebrán na čás
 - `doma/krokodyl/` — samostatný generátor Krokodýl.
 - `doma/jednorozec/` — samostatný generátor Jednorožec.
 - `doma/liska/` — samostatný generátor Liška.
+- `doma/zajic/` — samostatný generátor Zaječice.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec a Liška jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška a Zaječice jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
