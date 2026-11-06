@@ -66,6 +66,12 @@ Generuje rozpory, v nichž bytost vznikne ze skutečných složek, ale jejich ex
 - [Otevřít Jednorožce v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/jednorozec/)
 - [Zdrojový soubor Jednorožec](doma/jednorozec/index.html)
 
+### 11 · Liška — rozebrání celku a ztráta původní funkce
+Generuje situace, v nichž je živý nebo organizační celek rozebrán na části, které okolí oddělí, ocení a přenese do vlastního prostředí. Sleduje rozdíl mezi vlastnictvím části a zachováním její původní funkce, proměnu celku po odebrání a následky vytržení z původních vztahů. Nejde o prostou ztrátu: nástroj zkoumá, proč se hodnota části nepřenáší automaticky mimo celek, který jí ji dával.
+
+- [Otevřít Lišku v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/liska/)
+- [Zdrojový soubor Liška](doma/liska/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -79,9 +85,10 @@ Generuje rozpory, v nichž bytost vznikne ze skutečných složek, ale jejich ex
 - `doma/kravy/` — samostatný generátor Krávy.
 - `doma/krokodyl/` — samostatný generátor Krokodýl.
 - `doma/jednorozec/` — samostatný generátor Jednorožec.
+- `doma/liska/` — samostatný generátor Liška.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl a Jednorožec jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec a Liška jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
