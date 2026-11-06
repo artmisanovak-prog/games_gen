@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171a19"><title>Kozel · půjčovna perspektiv</title>
+<style>
+:root{color-scheme:dark;--bg:#171a19;--panel:#222725;--line:#414943;--ink:#eee9dc;--muted:#a9afa5;--accent:#d6b878;--green:#a9c0a5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#30382f 0,transparent 42%),var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+main{max-width:980px;margin:auto;padding:24px 16px 60px}.hero{padding:30px 0 22px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--accent);letter-spacing:.16em;text-transform:uppercase;font-size:.72rem}.hero h1{font:clamp(2.5rem,8vw,5rem)/.95 Georgia,serif;margin:12px 0}.hero p{max-width:650px;color:var(--muted);font:1.15rem/1.5 Georgia,serif}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:22px 0}.panel{background:#222725d9;border:1px solid var(--line);border-radius:15px;padding:17px}.panel h2{font:1.25rem Georgia,serif;margin:0 0 12px;color:var(--accent)}label{display:block;color:var(--muted);font-size:.85rem;margin:12px 0 5px}select,input,textarea{width:100%;background:#151918;color:var(--ink);border:1px solid #505951;border-radius:9px;padding:11px;font:inherit}textarea{min-height:76px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0}button{background:var(--accent);color:#1c201d;border:0;border-radius:9px;padding:11px 16px;font-weight:700;font-size:.94rem}button.secondary{background:#303832;color:var(--ink);border:1px solid var(--line)}button:active{transform:translateY(1px)}.output{border:1px solid #776744;background:linear-gradient(135deg,#292b24,#202622);border-radius:16px;padding:20px;margin-top:18px}.output h2{font:1.6rem Georgia,serif;color:var(--accent);margin:0 0 12px}.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.result{border-top:1px solid #50554a;padding-top:10px}.result b{display:block;color:var(--green);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}.result p{margin:0}.quote{font:1.35rem/1.35 Georgia,serif;color:#f1e5c8;margin:18px 0}.small{font-size:.82rem;color:var(--muted)}.history{margin-top:26px}.history-item{padding:12px 0;border-bottom:1px solid var(--line)}.history-item strong{color:var(--accent)}.foot{color:var(--muted);font-size:.8rem;margin-top:28px}
+</style></head>
+<body><main>
+<header class="hero"><div class="eyebrow">Doma / generátor 06</div><h1>KOZEL</h1><p>Půjčovna perspektiv. „Ty budeš já a já budu tvá.“ Zkusit si roli není zrada. Ale co se stane, když si na chvíli půjčíš cizí pohled a vrátíš ho trochu změněný?</p></header>
+<section class="grid">
+<div class="panel"><h2>01 · Kdo si koho půjčuje</h2>
+<label for="a">První účastník</label><input id="a" value="Myš">
+<label for="b">Druhý účastník</label><input id="b" value="Kozel">
+<label for="mode">Typ výměny</label><select id="mode"><option value="eyes">Výměna pohledů</option><option value="voice">Výměna hlasu a mlčení</option><option value="role">Dočasná záměna rolí</option><option value="inside">Pohled dovnitř druhého</option><option value="mirror">Setkání se svou cizí verzí</option><option value="unequal">Nerovnoměrná výměna</option></select>
+<label for="scene">Situace / prostředí</label><input id="scene" value="Na návsi se všichni ptají: Kdo jsi?">
+</div>
+<div class="panel"><h2>02 · Podmínky půjčky</h2>
+<label for="duration">Doba výměny</label><select id="duration"><option>Jeden okamžik</option><option>Do konce rozhovoru</option><option>Jeden celý den</option><option>Dokud se něco nezmění</option><option>Bez předem určeného konce</option></select>
+<label for="depth">Hloubka vcítění</label><select id="depth"><option value="1">Na povrchu · gesto</option><option value="2" selected>Střední · způsob vnímání</option><option value="3">Hluboká · vnitřní pravidla</option></select>
+<label for="consent">Souhlas a hranice</label><select id="consent"><option value="both">Oba souhlasí</option><option value="ask">Souhlas je třeba vyjednat</option><option value="limit">Jeden stanoví hranici</option><option value="none">Výměna proběhne bez dohody</option></select>
+<label for="note">Vlastní prvek</label><textarea id="note" placeholder="Co se nesmí ztratit, nebo co má výměna odhalit?"></textarea>
+</div></section>
+<div class="actions"><button id="generate">Vyměnit perspektivy</button><button class="secondary" id="save">Uložit situaci</button><button class="secondary" id="export">Exportovat deník JSON</button><button class="secondary" id="clear">Vymazat deník</button></div>
+<section class="output" id="output" aria-live="polite"><h2>Čeká se na výměnu</h2><p>Vyber účastníky a podmínky. Generátor nebude vyrábět převleky. Zkusí změnit pravidla, podle kterých postavy vidí a vykládají svět.</p></section>
+<section class="history"><h2 style="font:1.4rem Georgia,serif;color:var(--accent)">Záznamy půjčených pohledů</h2><div id="history" class="small">Zatím bez záznamů.</div></section>
+<p class="foot">Offline nástroj · data zůstávají v tomto prohlížeči · žádné AI API ani server.</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const modes={
+eyes:{name:"Pohled není vlastnictví",a:"Začneš si všímat toho, co druhý považuje za samozřejmé.",b:"To, co jsi dosud přehlížel, se stane hlavní stopou.",test:"Každý popíše tutéž věc, ale nesmí použít vlastní obvyklé vysvětlení."},
+voice:{name:"Hlas a mlčení",a:"Převezmeš způsob, jakým druhý mluví, včetně jeho pauz.",b:"Druhý musí jednat bez svého obvyklého hlasu.",test:"Vyměňte si jednu větu. Potom ji každý přeloží zpět do svého jazyka."},
+role:{name:"Role není převlek",a:"Dostaneš pravomoc i omezení druhého.",b:"Druhý zakusí důsledky tvých rozhodnutí.",test:"Rozhodněte o jedné společné věci z opačných pozic. Sledujte, co se změní v argumentech."},
+inside:{name:"Cizí vnitřní pravidlo",a:"Na chvíli přijmeš důvod, který druhého vede, i když mu nerozumíš.",b:"Tvůj čin se začne jevit jako odpověď na něco, co jsi neviděl.",test:"Každý vysloví jedno pravidlo, podle kterého jedná. Druhý ho musí použít v nové situaci."},
+mirror:{name:"Cizí verze sebe",a:"Potkáš podobu sebe, která vyrostla z pohledu druhého.",b:"Uvidíš, co z tebe druhý zachytil a co si domyslel.",test:"Každý popíše druhého jako sebe. Pak označí jednu věc, která nesedí."},
+unequal:{name:"Výměna není symetrická",a:"Půjčíš víc, než dostaneš zpět. Rozdíl se musí pojmenovat.",b:"Získáš cizí pohled, ale ne všechny jeho zkušenosti.",test:"Sepište, co kdo předal, co získal a co zůstalo nepřenosné."}
+};
+let current=null;let log=JSON.parse(localStorage.getItem("kozel_denik")||"[]");
+function choose(arr){return arr[Math.floor(Math.random()*arr.length)]}
+function generate(){
+ const a=$("a").value.trim()||"První";const b=$("b").value.trim()||"Druhý";const m=modes[$("mode").value];const d=+$("depth").value;const c=$("consent").value;const scene=$("scene").value.trim()||"Neurčené místo";const duration=$("duration").value;const note=$("note").value.trim();
+ const consent=c==="both"?"Výměna je dobrovolná. Oba mohou kdykoli říct, co si ponechají.":c==="ask"?"Výměna se zastaví, dokud si obě strany nevyjednají podmínky.":c==="limit"?"Jeden účastník stanoví hranici: některé části zkušenosti zůstávají nepřístupné.":"Výměna bez dohody vytváří konflikt. Získaný pohled není automaticky oprávněním jednat za druhého.";
+ const depth=d===1?"Změní se gesto, zvyk nebo vnější způsob jednání.":d===2?"Promění se pozornost: každý začne považovat za důležité něco jiného.":"Promění se vnitřní pravidlo. Postava musí chvíli jednat podle cizí logiky, ne ji jen napodobit.";
+ const residue=choose(["Zůstane drobný návyk, který už nejde úplně odložit.","Jedna věta druhého se začne ozývat ve vlastních myšlenkách.","Původní pohled se vrátí, ale už nedokáže některé věci přehlédnout.","Zůstane slepé místo: něco z druhého se přenést nedalo.","Oba si odnesou vzpomínku, kterou každý vypráví jinak."]);
+ const conflict=choose(["Okolí zamění změnu perspektivy za změnu identity.","Jeden začne mluvit jménem druhého, aniž by k tomu měl oprávnění.","Půjčený pohled odhalí rozpor, který původní role udržovala skrytý.","Po návratu se ukáže, že oba čekali něco jiného.","Někdo odmítne přijmout, že se člověk může změnit a přitom zůstat sám sebou."]);
+ const ending=choose(["Výměna skončí, ale vlastnictví pohledu už nelze vrátit do původního stavu.","Oba si ponechají jednu cizí otázku, nikoli cizí odpověď.","Jeden vrátí roli přesně, druhý vrátí jen její obrys.","Okolí žádá, aby se oba vrátili do původních rolí. Ani jeden už neví, co přesně to znamená."]);
+ current={time:new Date().toISOString(),a,b,mode:m.name,scene,duration,depth:d,consent,note,output:{depth,residue,conflict,ending}};
+ $("output").innerHTML='<h2>'+m.name+'</h2><div class="quote">„'+a+' bude na chvíli '+b+'; '+b+' zkusí vidět svět jako '+a+'.“</div><div class="result-grid"><div class="result"><b>Výchozí situace</b><p>'+esc(scene)+'</p></div><div class="result"><b>Co se přenese</b><p>'+m.a+' '+m.b+'</p></div><div class="result"><b>Hloubka proměny</b><p>'+depth+'</p></div><div class="result"><b>Hranice a souhlas</b><p>'+consent+'</p></div><div class="result"><b>Test výměny</b><p>'+m.test+'</p></div><div class="result"><b>Co se nepřenese</b><p>'+residue+'</p></div><div class="result"><b>Konflikt</b><p>'+conflict+'</p></div><div class="result"><b>Následek</b><p>'+ending+'</p></div></div><p class="quote">„Já jsem ten, kdo se ptá. Já jsem ten, kdo se dívá.“</p><p class="small">'+(note?"Vlastní prvek: "+esc(note):"")+'</p>';
+}
+function esc(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function render(){if(!log.length){$("history").textContent="Zatím bez záznamů.";return}$("history").innerHTML=log.slice().reverse().map((x,i)=>'<div class="history-item"><strong>'+esc(x.a)+' ⇄ '+esc(x.b)+'</strong><div>'+esc(x.mode)+' · '+esc(x.scene)+'</div><div class="small">'+new Date(x.time).toLocaleString("cs-CZ")+'</div></div>').join("")}
+$("generate").onclick=generate;
+$("save").onclick=()=>{if(!current)generate();log.push(current);localStorage.setItem("kozel_denik",JSON.stringify(log));render()};
+$("export").onclick=()=>{const blob=new Blob([JSON.stringify(log,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="kozel-denik.json";a.click();URL.revokeObjectURL(a.href)};
+$("clear").onclick=()=>{if(confirm("Opravdu vymazat místní deník?")){log=[];localStorage.removeItem("kozel_denik");render()}};
+render();generate();
+</script></body></html>
