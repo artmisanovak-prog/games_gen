@@ -54,6 +54,12 @@ Generuje postupné jazykové poruchy z vlastní vstupní věty. Pracuje se zvuko
 - [Otevřít Krávy v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/kravy/)
 - [Zdrojový soubor Krávy](doma/kravy/index.html)
 
+### 09 · Krokodýl — komercializace prožitku a výprodej významu
+Generuje scénáře převodu živého jevu, emoce nebo symbolu na prodejní produkt. Sleduje, jak obal, cenovka, sleva, masová dostupnost a opakovatelné použití mění vztah k původnímu obsahu. Rozlišuje skutečnost prožitku, jeho veřejnou interpretaci a obchodní podobu. Pracuje také s kontrolou jazyka a s okamžikem, kdy produkt začne nahrazovat to, co měl původně zastupovat. Vychází z pohádky **O krokodýlovi, který šel do výprodeje**.
+
+- [Otevřít Krokodýla v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/krokodyl/)
+- [Zdrojový soubor Krokodýl](doma/krokodyl/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -65,9 +71,10 @@ Generuje postupné jazykové poruchy z vlastní vstupní věty. Pracuje se zvuko
 - `doma/kozel/` — samostatný generátor Kozel.
 - `doma/morsky-konik/` — samostatný generátor Mořský koník.
 - `doma/kravy/` — samostatný generátor Krávy.
+- `doma/krokodyl/` — samostatný generátor Krokodýl.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník a Krávy jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy a Krokodýl jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
