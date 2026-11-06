@@ -144,6 +144,12 @@ Zkoumá opakované jednání, jeho kumulativní účinek a rozdíl mezi skutečn
 - [Otevřít Veverku v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/veverka/)
 - [Zdrojový HTML soubor Veverka](doma/veverka/index.html)
 
+### 24 · Had — jazyk mezi řádky
+Zkoumá přenos významu přes porušený nebo proměnlivý jazyk. Odděluje záměr mluvčího, jazykovou formu, přenosový kanál, interpretaci posluchače a stopu, která přežije původní sdělení. Pracuje s deformací řeči, nedořečeností, víceznačností, střetem protikladů a hledáním nových cest dorozumění. Sleduje také okamžik, kdy posluchač převezme autorství nad významem a začne vydávat vlastní rekonstrukci za původní výrok.
+
+- [Otevřít Hada v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/had/)
+- [Zdrojový HTML soubor Had](doma/had/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -170,9 +176,10 @@ Zkoumá opakované jednání, jeho kumulativní účinek a rozdíl mezi skutečn
 - `doma/plamenak/` — samostatný generátor Plameňák.
 - `doma/zralok/` — samostatný generátor Žralok.
 - `doma/veverka/` — samostatný generátor Veverka.
+- `doma/had/` — samostatný generátor Had.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok a Veverka jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka a Had jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
