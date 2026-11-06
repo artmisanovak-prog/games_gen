@@ -48,6 +48,12 @@ Generuje situace, v nichž zpráva nemusí být přečtena, aby změnila okolí.
 - [Otevřít Mořského koníka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/morsky-konik/)
 - [Zdrojový soubor Mořský koník](doma/morsky-konik/index.html)
 
+### 08 · Krávy — rozvolnění významu opakováním a zvukem
+Generuje postupné jazykové poruchy z vlastní vstupní věty. Pracuje se zvukovým vpádem „bu“, opakováním, deformací slov, vytržením z kontextu a obrácením pozice mluvčího a posluchače. Nejde o náhodné vkládání nesmyslů: nástroj sleduje jednotlivé průchody, v nichž se mění rytmus, čitelnost i jistota původního významu. Vychází z pohádky **O krávách, které blbnou hlavy**.
+
+- [Otevřít Krávy v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/kravy/)
+- [Zdrojový soubor Krávy](doma/kravy/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -60,6 +66,6 @@ Generuje situace, v nichž zpráva nemusí být přečtena, aby změnila okolí.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel a Mořský koník jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník a Krávy jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
