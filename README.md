@@ -126,6 +126,12 @@ Generuje situace, v nichž člověk žádá konkrétní naplnění, ale dostáv�
 - [Otevřít Motýla v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/motyl/)
 - [Zdrojový soubor Motýl](doma/motyl/index.html)
 
+### 21 · Plameňák — směr bez orientace
+Zkoumá pohyb, který si plete směr s orientací. Postava může mít silný pocit letu, přestože padá, nezná svou polohu vůči cíli a zaměňuje intenzitu pohybu za pokrok. Generátor rozlišuje deklarovaný cíl, směr, orientaci, skutečnou trajektorii, prožitek, zpětnou vazbu okolí a reakci na hranici. Zvláštní pozornost věnuje vytváření „nového dna“, kterým systém po každém dosaženém limitu obnovuje nekonečné pokračování.
+
+- [Otevřít Plameňáka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/plamenak/)
+- [Zdrojový HTML soubor Plameňák](doma/plamenak/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -149,9 +155,10 @@ Generuje situace, v nichž člověk žádá konkrétní naplnění, ale dostáv�
 - `doma/slon/` — samostatný generátor Slon.
 - `doma/zelva/` — samostatný generátor Želva.
 - `doma/motyl/` — samostatný generátor Motýl.
+- `doma/plamenak/` — samostatný generátor Plameňák.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva a Motýl jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl a Plameňák jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
