@@ -42,6 +42,12 @@ Generuje situace, v nichž si dvě postavy dočasně vymění způsob vnímání
 - [Otevřít Kozla v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/kozel/)
 - [Zdrojový soubor Kozel](doma/kozel/index.html)
 
+### 07 · Mořský koník — účinek nedoručeného sdělení
+Generuje situace, v nichž zpráva nemusí být přečtena, aby změnila okolí. Pracuje s praskající bublinou, stopou po neudálosti, skládáním nesmyslů do soukromé pointy, zbytečným důvodem k činu, předáním zprávy vodě a návratem beze zjevné změny. Sleduje rozdíl mezi obsahem zprávy, jejím přenosem a následkem, který po ní zůstane. Vychází z pohádky **O mořském koníkovi: neposlaná zpráva, probdělý sen, pointa nesmyslů, zbytečný důvod**.
+
+- [Otevřít Mořského koníka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/morsky-konik/)
+- [Zdrojový soubor Mořský koník](doma/morsky-konik/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -50,10 +56,10 @@ Generuje situace, v nichž si dvě postavy dočasně vymění způsob vnímání
 - `doma/ryba/` — samostatný generátor Ryba.
 - `doma/dracek/` — samostatný generátor Dráček.
 - `doma/tygr/` — samostatný generátor Tygr.
-- `doma/kozel/` — samostatný generátor Kozel.
+- `doma/kozel/` — samostatný generátor Kozel.\n- `doma/morsky-konik/` — samostatný generátor Mořský koník.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček a Kozel jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel a Mořský koník jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
