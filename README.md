@@ -162,6 +162,12 @@ Zkoumá následky události, které se šíří dál než původní impuls. Rozl
 - [Otevřít Hvězdici v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/hvezdice/)
 - [Zdrojový HTML soubor Hvězdice](doma/hvezdice/index.html)
 
+### 27 · Hyeny — obranný smích a sankce ticha
+Zkoumá nesoulad mezi vnitřním stavem a veřejným signálem. Sleduje, jak se smích může změnit z projevu na obrannou masku, skupinovou normu a povinný rituál. Generátor rozlišuje skrytý prožitek, vnější projev, interpretaci okolí, reakci na přerušení signálu, tlak skupiny a cenu dlouhodobého maskování.
+
+- [Otevřít Hyeny v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/hyeny/)
+- [Zdrojový HTML soubor Hyeny](doma/hyeny/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -191,9 +197,10 @@ Zkoumá následky události, které se šíří dál než původní impuls. Rozl
 - `doma/had/` — samostatný generátor Had.
 - `doma/prase/` — samostatný generátor Prasátko.
 - `doma/hvezdice/` — samostatný generátor Hvězdice.
+- `doma/hyeny/` — samostatný generátor Hyeny.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko a Hvězdice jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice a Hyeny jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
