@@ -132,6 +132,12 @@ Zkoumá pohyb, který si plete směr s orientací. Postava může mít silný po
 - [Otevřít Plameňáka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/plamenak/)
 - [Zdrojový HTML soubor Plameňák](doma/plamenak/index.html)
 
+### 22 · Žralok — poměr viditelnosti a skrytí
+Zkoumá řízené vynořování a ponořování jako režim správy vlastní viditelnosti. Poměr nad : pod = 1 : 1 může vypadat jako spravedlivá rovnováha, ale může se změnit v identitní zákon, který subjekt nesmí porušit. Generátor rozlišuje číselný poměr, motiv vynoření, reakci pozorovatelů, kontrolu okamžiku zahlédnutí, cenu skrytí a důsledky odchylky. Sleduje také rozdíl mezi viditelným obrazem a neviděnou částí subjektu.
+
+- [Otevřít Žraloka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/zralok/)
+- [Zdrojový HTML soubor Žralok](doma/zralok/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -156,9 +162,10 @@ Zkoumá pohyb, který si plete směr s orientací. Postava může mít silný po
 - `doma/zelva/` — samostatný generátor Želva.
 - `doma/motyl/` — samostatný generátor Motýl.
 - `doma/plamenak/` — samostatný generátor Plameňák.
+- `doma/zralok/` — samostatný generátor Žralok.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl a Plameňák jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák a Žralok jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
