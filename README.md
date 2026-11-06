@@ -4,6 +4,14 @@ Pracovní katalog samostatných herních generátorů. Každý generátor vychá
 
 Toto README zatím slouží jako **pracovní rozcestník** pro průběžné prohlížení nástrojů. Konečný hlavní index a společné rozhraní vzniknou až později, až bude jasné, jaké generátory a funkce skutečně máme.
 
+## Datový produkt: GAME PHENOMENA 001
+
+Ukázková kolekce herních jevů odvozených z principů generátorů v tomto repozitáři. Obsahuje 10 strukturovaných záznamů, interaktivní katalog, datový slovník a licenční podmínky. Jde o prototyp datového produktu, nikoli o hotovou hru.
+
+- [Otevřít katalog v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/produkty/game-phenomena-001/)
+- [README datového balíčku](produkty/game-phenomena-001/README.md)
+- [Dataset JSON](produkty/game-phenomena-001/dataset.json)
+
 ## Samostatné generátory
 
 ### 01 · Myš — přehlédnuté jevy a jejich následky
