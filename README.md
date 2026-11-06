@@ -19,7 +19,10 @@ Generuje herní akty, v nichž se stejná událost v noci a ve dne interpretuje 
 - [Zdrojový soubor Netopýr](doma/netopyr/index.html)
 
 ### 03 · Tygr — překlad přání a právo na vlastní podobu
-Připravovaný samostatný generátor vychází z pohádky o žábě, která nechce být princem, ale tygrem. Jeho mechanikou je střet přání s tradicí, souhlas s proměnou, právo vykládat cizí přání a důsledky nové podoby. **Zatím není nahrán do tohoto repozitáře.**
+Generuje herní situace o střetu přání s tradicí, souhlasu s proměnou, právu vykládat cizí přání a důsledcích nové podoby. Pracuje také s vývojem přání v čase: pulec chtěl přeskočit vývojovou fázi a stát se tygrem rovnou. Vychází z pohádky **O tygrovi, princezně a žábě, která chtěla být tygrem**.
+
+- [Otevřít Tygra v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/tygr/)
+- [Zdrojový soubor Tygr](doma/tygr/index.html)
 
 ### 04 · Ryba — hudba jako zásah do prostředí
 Generuje herní situace, v nichž hudební princip mění vlastnosti vody: proudy, vlnění, barvy, hloubku i způsoby vnímání. Voda není pasivní kulisa; odpovídá vlastním tahem. Pracuje se šesti operacemi: přesměrování proudů, proměna barev a hloubky, rytmus a vlnění, odpověď vody, překlad mezi druhy a aktivní ticho.
@@ -33,11 +36,11 @@ Generuje herní situace, v nichž hudební princip mění vlastnosti vody: proud
 - `doma/mys/` — samostatný generátor Myš.
 - `doma/netopyr/` — samostatný generátor Netopýr.
 - `doma/ryba/` — samostatný generátor Ryba.
+- `doma/tygr/` — samostatný generátor Tygr.
 
 ## Technické poznámky
 
-Myš, Netopýr a Ryba jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr a Ryba jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
-Tygr je zatím koncepční položka katalogu; jeho předchozí prototyp nebyl do repozitáře zapsán.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
