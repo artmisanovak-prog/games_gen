@@ -60,6 +60,12 @@ Generuje scénáře převodu živého jevu, emoce nebo symbolu na prodejní prod
 - [Otevřít Krokodýla v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/krokodyl/)
 - [Zdrojový soubor Krokodýl](doma/krokodyl/index.html)
 
+### 10 · Jednorožec — obrana identity popřením skutečného původu
+Generuje rozpory, v nichž bytost vznikne ze skutečných složek, ale jejich existenci začne popírat, protože přijetí původu ohrožuje její představu o vlastní nemožnosti a výjimečnosti. Pracuje se šesti obrannými tahy: zapření, zrušení minulosti, zneplatnění důkazu, zpochybnění, znejistění hranice reality a zamluvení. Sleduje řetězec vzniku, návrat důkazů a konflikt mezi skutečností původu a identitou, která ho odmítá. Vychází z pohádky **O jednorožci, který nevěřil na delfíny ani na lední medvědy**.
+
+- [Otevřít Jednorožce v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/jednorozec/)
+- [Zdrojový soubor Jednorožec](doma/jednorozec/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -72,9 +78,10 @@ Generuje scénáře převodu živého jevu, emoce nebo symbolu na prodejní prod
 - `doma/morsky-konik/` — samostatný generátor Mořský koník.
 - `doma/kravy/` — samostatný generátor Krávy.
 - `doma/krokodyl/` — samostatný generátor Krokodýl.
+- `doma/jednorozec/` — samostatný generátor Jednorožec.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy a Krokodýl jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl a Jednorožec jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
