@@ -36,17 +36,24 @@ Generuje herní situace, v nichž hudební princip mění vlastnosti vody: proud
 - [Otevřít Rybu v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/ryba/)
 - [Zdrojový soubor Ryba](doma/ryba/index.html)
 
+### 06 · Kozel — půjčování perspektiv a pohyblivé „já“
+Generuje situace, v nichž si dvě postavy dočasně vymění způsob vnímání, hlas, roli nebo vnitřní pravidlo. Sleduje souhlas a hranice výměny, její asymetrii, to, co nelze přenést, a stopu, která zůstane po návratu do původních rolí. Vychází z pohádky **O kozlovi: Ty budeš já a já budu tvá**.
+
+- [Otevřít Kozla v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/kozel/)
+- [Zdrojový soubor Kozel](doma/kozel/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
 - `doma/mys/` — samostatný generátor Myš.
 - `doma/netopyr/` — samostatný generátor Netopýr.
-- `doma/ryba/` — samostatný generátor Ryba.\n- `doma/dracek/` — samostatný generátor Dráček.
+- `doma/ryba/` — samostatný generátor Ryba.
+- `doma/dracek/` — samostatný generátor Dráček.
 - `doma/tygr/` — samostatný generátor Tygr.
+- `doma/kozel/` — samostatný generátor Kozel.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba a Dráček jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
-
+Myš, Netopýr, Tygr, Ryba, Dráček a Kozel jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
