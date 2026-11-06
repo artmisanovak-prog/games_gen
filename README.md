@@ -150,6 +150,12 @@ Zkoumá přenos významu přes porušený nebo proměnlivý jazyk. Odděluje zá
 - [Otevřít Hada v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/had/)
 - [Zdrojový HTML soubor Had](doma/had/index.html)
 
+### 25 · Prasátko — přebytek a záměna funkce
+Zkoumá situaci, kdy je skutečná potřeba přeložena do cizí kategorie a společenské rozpaky oddálí pomoc. Pracuje s rozdílem mezi tělesnou potřebou, předmětem, platebním rozhraním a společenskou rolí. Sleduje, jak se přebytek mění ve směnu, dar nebo odpad a jak nečekané gesto může vytvořit funkční rozhraní tam, kde instituce či služba chybí.
+
+- [Otevřít Prasátko v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/prase/)
+- [Zdrojový HTML soubor Prasátko](doma/prase/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -177,9 +183,10 @@ Zkoumá přenos významu přes porušený nebo proměnlivý jazyk. Odděluje zá
 - `doma/zralok/` — samostatný generátor Žralok.
 - `doma/veverka/` — samostatný generátor Veverka.
 - `doma/had/` — samostatný generátor Had.
+- `doma/prase/` — samostatný generátor Prasátko.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka a Had jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had a Prasátko jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
