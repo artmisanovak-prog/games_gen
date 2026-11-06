@@ -138,6 +138,12 @@ Zkoumá řízené vynořování a ponořování jako režim správy vlastní vid
 - [Otevřít Žraloka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/zralok/)
 - [Zdrojový HTML soubor Žralok](doma/zralok/index.html)
 
+### 23 · Veverka — modli se činy
+Zkoumá opakované jednání, jeho kumulativní účinek a rozdíl mezi skutečnou praxí a jejím napodobováním. Sleduje, jak se drobné úkony ukládají do zásoby, návyku nebo připravenosti, která se může projevit až v budoucí situaci. Rozlišuje funkční opakování, mechanický automatismus, uchování výsledku, přenos principu a výrobu symbolického významu bez odpovídající činnosti.
+
+- [Otevřít Veverku v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/veverka/)
+- [Zdrojový HTML soubor Veverka](doma/veverka/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -163,9 +169,10 @@ Zkoumá řízené vynořování a ponořování jako režim správy vlastní vid
 - `doma/motyl/` — samostatný generátor Motýl.
 - `doma/plamenak/` — samostatný generátor Plameňák.
 - `doma/zralok/` — samostatný generátor Žralok.
+- `doma/veverka/` — samostatný generátor Veverka.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák a Žralok jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok a Veverka jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
