@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171916">
+<title>NETOPÝR · generátor dvojí pravdy</title>
+<style>
+:root{color-scheme:dark;--bg:#171916;--panel:#22251f;--panel2:#2c3028;--ink:#f0eee5;--muted:#a9ad9e;--line:#41473b;--acid:#c8dc83;--night:#a9a0d5;--day:#e2b77f;--rust:#d99a76}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1080px;margin:auto;padding:22px 16px 56px}.top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:18px}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--night)}h1{font-size:clamp(32px,7vw,58px);line-height:1;margin:9px 0 12px;letter-spacing:-.045em}h2{font-size:19px;margin:0 0 12px}p{margin:7px 0}.muted{color:var(--muted)}.small{font-size:13px;color:var(--muted)}.tag{border:1px solid var(--line);border-radius:30px;padding:5px 10px;color:var(--night);font-size:12px;white-space:nowrap}
+.layout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:16px;margin-top:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px;min-width:0}
+label{display:block;font-size:13px;color:var(--muted);margin:13px 0 5px}select,input{width:100%;background:#171a16;color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:11px;font:inherit}
+button{border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--ink);padding:10px 13px;font:600 14px system-ui;cursor:pointer}button.primary{background:var(--night);color:#1d1a2b;border-color:var(--night)}button:hover{filter:brightness(1.08)}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--night);outline-offset:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.output{min-height:260px}.result-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.result-title{font-size:24px;line-height:1.15;margin:4px 0 8px}.type{color:var(--night);font-size:11px;text-transform:uppercase;letter-spacing:.13em}
+.section{border-top:1px solid var(--line);padding-top:12px;margin-top:13px}.section h3{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--night);margin:0 0 6px}.section p{white-space:pre-wrap}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}.state{border:1px solid var(--line);border-radius:11px;padding:12px;min-width:0}.state.night{background:#252333}.state.day{background:#302920}.state h3{font-size:13px;margin:0 0 7px;letter-spacing:.08em;text-transform:uppercase}.night h3{color:var(--night)}.day h3{color:var(--day)}.state p{font-size:14px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.chip{font-size:12px;border:1px solid var(--line);padding:4px 8px;border-radius:20px;color:var(--muted)}
+.history-item{border-top:1px solid var(--line);padding:10px 0;display:flex;justify-content:space-between;gap:10px;align-items:center}.history-item strong{display:block;font-size:14px}.history-item span{font-size:12px;color:var(--muted)}.empty{color:var(--muted);padding:28px 4px}
+.notice{border-left:3px solid var(--day);padding:8px 11px;background:#2a241f;border-radius:0 8px 8px 0;margin-top:13px;font-size:13px}.footer{margin-top:18px;color:var(--muted);font-size:12px}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.top{display:block}.tag{display:inline-block;margin-top:10px}.panel{padding:14px}.dual{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main>
+<header class="top"><div><div class="kicker">games_gen / narativní operace 02</div><h1>NETOPÝR</h1><p class="muted">Generátor herních aktů mezi dvěma režimy pravdy.</p></div><span class="tag">offline · lokální záznam</span></header>
+<div class="layout">
+<section class="panel">
+<h2>Vstupní nastavení</h2>
+<p class="small">Co je v jednom režimu krásné, může být v druhém nepatřičné. Událost se ale nestává nepravdivou jen proto, že změnilo světlo.</p>
+<label for="act">Typ herního aktu</label><select id="act">
+<option value="transition">Přechod noci do rána</option><option value="reconcile">Konfrontace dvou výkladů</option><option value="carry">Přenesení noční zkušenosti</option><option value="memory">Rekonstrukce popřené události</option><option value="choice">Rozhodnutí, co zachovat</option><option value="world">Svět se dvěma režimy pravidel</option>
+</select>
+<label for="experience">Co se v noci stalo</label><select id="experience">
+<option value="auto">Nech generátor vybrat</option><option value="words">Padla slova, která za dne nikdo nechce uznat</option><option value="touch">Došlo k doteku, který změnil vztah</option><option value="promise">Byl vysloven slib, který ráno ztratil platnost</option><option value="meeting">Setkali se lidé, kteří se ve dne neznají</option><option value="beauty">Něco nebo někdo se ukázal v nečekané kráse</option><option value="confession">Někdo přiznal něco, co ráno popře</option><option value="rule">Na chvíli přestalo platit běžné pravidlo</option>
+</select>
+<label for="conflict">Hlavní konflikt</label><select id="conflict"><option value="denial">Popření: „Tohle jsem nebyl.“</option><option value="proof">Důkaz: „Dokaž, že se to stalo.“</option><option value="translation">Překlad: „V noci to znamenalo něco jiného.“</option><option value="cost">Cena: „Když to uznáme, něco ztratíme.“</option><option value="identity">Identita: „Která verze mě je pravá?“</option></select>
+<label for="player">Role hráče</label><select id="player"><option value="witness">Svědek události</option><option value="bat">Netopýr, který si pamatuje</option><option value="mediator">Prostředník mezi režimy</option><option value="denier">Ten, kdo ráno popírá</option><option value="archivist">Sběratel stop a záznamů</option></select>
+<label for="scale">Rozsah následků</label><select id="scale"><option value="personal">Osobní · jedna postava</option><option value="relational" selected>Vztahový · dvě až tři postavy</option><option value="social">Společenský · skupina nebo komunita</option><option value="systemic">Systémový · pravidla celé lokace</option></select>
+<label for="constraint">Dodatečné zadání (nepovinné)</label><input id="constraint" placeholder="Např. bez romantiky, pro detektivní hru…">
+<div class="actions"><button class="primary" id="generate">Vytvořit herní akt</button><button id="surprise">Překvap mě</button></div>
+<div class="notice">Základní mechanismus: změna režimu mění interpretaci, možnosti jednání a sociální přijatelnost. Nevymaže však samotnou událost.</div>
+</section>
+<section class="panel output" aria-live="polite"><div id="result" class="empty">Zatím tu nic není. Vyber noční zkušenost a sleduj, co s ní udělá ráno.</div><div class="actions" id="resultActions" hidden><button id="save">Uložit do záznamu</button><button id="copy">Kopírovat JSON</button></div></section>
+</div>
+<section class="panel" style="margin-top:16px">
+<div class="result-head"><div><h2>Záznamová stopa</h2><p class="small">Uložené generace v tomto prohlížeči. Každý záznam zachovává oba režimy, pravidla i následky.</p></div><span class="tag" id="count">0 záznamů</span></div>
+<div id="historyList"><p class="empty">Záznam je zatím prázdný.</p></div>
+<div class="actions"><button id="export">Exportovat JSON</button><button id="clear">Vymazat místní záznam</button></div>
+</section>
+<p class="footer">NETOPÝR / verze 0.1 · vychází z pohádky „O netopýrovi a kráse, která ráno se už nehodí“. Lokální generování, bez AI API a bez serveru.</p>
+</main>
+<script>
+(function(){
+'use strict';const $=id=>document.getElementById(id);
+const experiences={
+words:{name:'Slova, která ráno neplatí',night:'V noci postava vyslovila větu, kterou by za dne nikdy neřekla. V nočním režimu věta otevřela možnost, kterou ostatní přijali.',day:'Ráno mluvčí označí větu za omyl, vtip nebo cizí hlas. Ostatní se tváří, že ji neslyšeli.',trace:'Věta se zachovala v reakci někoho, kdo podle denní verze události vůbec nebyl přítomen.',carry:'Hráč může větu zachovat jako závazek, ale musí najít způsob, jak ji přeložit do denního jazyka.'},
+touch:{name:'Dotek, který změnil vztah',night:'Dva lidé překročili hranici, kterou ve dne považují za nepřekročitelnou. V noci byl dotek srozumitelný a přirozený.',day:'Ráno se stejný dotek jeví jako trapnost, nedorozumění nebo něco, co se nemělo stát.',trace:'Obě postavy si pamatují stejný okamžik, ale každá popírá jiný jeho význam.',carry:'Hráč musí rozhodnout, zda zachová vztah, vysvětlení, nebo samotnou vzpomínku.'},
+promise:{name:'Slib bez denní platnosti',night:'Byl vysloven slib a noční svět jej přijal jako skutečnou dohodu.',day:'Ráno se slib rozpadá na neurčité formulace. Jedna postava tvrdí, že šlo jen o atmosféru okamžiku.',trace:'Slib má hmatatelný následek: někdo podle něj změnil své jednání.',carry:'Hráč může vynutit splnění, odhalit cenu slibu, nebo vytvořit nový překlad, který obě strany unesou.'},
+meeting:{name:'Setkání, které nemá denního svědka',night:'Setkaly se dvě postavy, které se ve dne neznají. V noci si rozuměly bez vysvětlování.',day:'Ráno jedna z nich popře, že druhou kdy viděla. Veřejné záznamy setkání nepotvrzují.',trace:'Na obou místech zůstala stejná drobná změna, kterou nelze vysvětlit náhodou.',carry:'Hráč musí propojit dvě oddělené denní reality, aniž by zničil noční zkušenost.'},
+beauty:{name:'Krása, která se ráno nehodí',night:'Postava nebo místo získalo v noci krásu, která nebyla dekorací, ale změnila chování všech přítomných.',day:'Za denního světla se krása jeví jako směšná, unavená nebo nevhodná. Někteří chtějí odstranit její stopy.',trace:'Jeden detail zůstává krásný i ráno, ale nikdo jej nechce pojmenovat.',carry:'Hráč rozhoduje, zda krásu přenese do denního světa, uchová ji skrytě, nebo přijme její proměnu.'},
+confession:{name:'Přiznání, které ráno zmizelo',night:'Někdo vyslovil pravdu, která změnila vztah mezi postavami. V noci nebylo třeba ji obhajovat.',day:'Mluvčí tvrdí, že nic takového necítil ani neřekl. Druhá postava zůstává s následkem bez uznané příčiny.',trace:'Přiznání změnilo rozhodnutí, které už nelze vzít zpět.',carry:'Hráč může hledat důkaz, chránit svědka, nebo umožnit, aby pravda zůstala bez veřejného uznání.'},
+rule:{name:'Pravidlo, které platilo jen v noci',night:'Na určitou dobu přestalo platit běžné pravidlo světa. Postavy podle nového pravidla jednaly a dosáhly výsledku.',day:'Ráno se svět vrátí k původnímu řádu a noční řešení začne vypadat nemožně.',trace:'Výsledek nočního jednání přetrval, přestože pravidlo, které jej umožnilo, už neplatí.',carry:'Hráč musí zjistit, zda lze noční pravidlo znovu vyvolat, nebo přenést jeho důsledek jinou cestou.'}
+};
+const conflicts={denial:'Postava popírá vlastní účast. Hráč nesmí zaměnit popření za důkaz, že událost neproběhla.',proof:'Událost nemá běžný důkaz. Je třeba sestavit řetězec následků, které by bez ní nevznikly.',translation:'Oba režimy popisují stejnou událost jiným jazykem. Doslovný překlad selže; je nutné zachovat funkci a význam.',cost:'Uznání události něco stojí: pověst, vztah, bezpečí nebo dosavadní identitu.',identity:'Postava musí rozhodnout, zda je její noční jednání součástí její identity, nebo cizí výjimkou.'};
+const acts={
+transition:{title:'Ráno přepíše pravidla',steps:[['Zachyť okamžik','Urči, co se stalo v noci ještě předtím, než se objeví denní výklad.'],['Sleduj přechod','Všimni si, který detail se při rozednění změní jako první: slovo, gesto, vztah nebo pravidlo.'],['Odděl událost od výkladu','Najdi, co se skutečně stalo a co k tomu ráno přidali svědkové.'],['Rozhodni o přenosu','Vyber jednu část noční zkušenosti, která musí přežít změnu režimu.']]},
+reconcile:{title:'Dvě verze jedné události',steps:[['Získej noční výpověď','Zaznamenej, jak událost popisuje její účastník v nočním režimu.'],['Získej denní výpověď','Zjisti, jak tutéž událost vysvětluje ráno.'],['Najdi společné jádro','Odstraň rozdílné hodnocení, ale zachovej konkrétní jednání a jeho následky.'],['Vytvoř překlad','Navrhni třetí popis, který nezruší ani jednu zkušenost.']]},
+carry:{title:'Přenést noc do dne',steps:[['Vyber nositele','Rozhodni, kdo si zkušenost pamatuje a kdo ji potřebuje slyšet.'],['Najdi nosič','Zvol předmět, gesto, větu nebo změněné pravidlo, které přenese význam.'],['Ověř ztrátu','Zjisti, co se při přenosu nedá zachovat a kdo tuto ztrátu pocítí.'],['Uveď zkušenost do dne','Přenesený prvek musí změnit konkrétní rozhodnutí v denním světě.']]},
+memory:{title:'Rekonstrukce popřené noci',steps:[['Najdi následek','Začni změnou, která přetrvala, ne tvrzením svědka.'],['Slož časovou osu','Propoj nejméně tři stopy do pořadí, v němž mohly vzniknout.'],['Odhal popření','Zjisti, kdo potřebuje, aby událost nebyla pravdivá, a co tím chrání.'],['Rozhodni o svědectví','Zvol, zda událost zveřejníš, uchováš soukromě, nebo ponecháš bez uznání.']]},
+choice:{title:'Co z noci smí zůstat?',steps:[['Urči cenu','Zjisti, co postava ztratí, pokud noční zkušenost přizná.'],['Odděl vzpomínku a pověst','Rozhodni, zda je důležitější uchovat pravdu, nebo chránit jejího nositele.'],['Zvol podobu pokračování','Uchovej událost jako závazek, soukromou vzpomínku, nový vztah nebo změnu pravidla.'],['Přijmi neúplný výsledek','Něco zůstane nevyřčeno. Neúspěch nesmí automaticky vymazat prožitou zkušenost.']]},
+world:{title:'Lokace se dvěma režimy',steps:[['Definuj noční pravidlo','Urči, co je v noci možné, krásné nebo srozumitelné.'],['Definuj denní pravidlo','Urči, co se po rozednění stane nepřijatelným, neviditelným nebo neuvěřitelným.'],['Vlož přetrvávající stopu','Něco z nočního režimu musí zůstat i ve dne a ovlivňovat hratelnost.'],['Vytvoř průchod','Hráč musí umět přecházet mezi režimy a využívat rozdíl, nikoli pouze čekat na noc.']]}
+};
+const roles={witness:'Svědek události',bat:'Netopýr, který si pamatuje',mediator:'Prostředník mezi režimy',denier:'Ten, kdo ráno popírá',archivist:'Sběratel stop'};
+const scales={personal:'Osobní',relational:'Vztahový',social:'Společenský',systemic:'Systémový'};
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+let current=null;
+function generate(){
+ let ek=$('experience').value;if(ek==='auto')ek=pick(Object.keys(experiences));
+ const e=experiences[ek],ak=$('act').value,cf=$('conflict').value,pl=$('player').value,sc=$('scale').value,note=$('constraint').value.trim(),act=acts[ak];
+ const scaleEffect={personal:'Následek zůstane v paměti a jednání jedné postavy.',relational:'Následek změní důvěru nebo závazek mezi několika postavami.',social:'Komunita vytvoří neformální pravidlo, které oddělí noční a denní svědectví.',systemic:'Obě denní doby mají odlišné herní možnosti a přechod mezi nimi mění pravidla lokace.'}[sc];
+ const outcomes={denial:'Událost zůstane skutečná, i když ji její účastník popře. Hráč musí pracovat s následkem, ne s přiznáním.',proof:'Hráč získá důkaz v podobě změněného jednání nebo předmětu. Důkaz ale nevynutí souhlas všech svědků.',translation:'Vznikne třetí jazyk, který přenese část nočního významu do dne. Některé nuance zůstanou nepřeložitelné.',cost:'Hráč uchová zkušenost, ale zaplatí konkrétní cenu. Výsledek nesmí být beztrestný.',identity:'Postava přijme, že obě verze patří k ní. Nemusí je však veřejně spojit.'};
+ current={id:'NET-'+Date.now().toString(36).toUpperCase(),created_at:new Date().toISOString(),source:'O netopýrovi a kráse, která ráno se už nehodí',experience:ek,experience_label:e.name,act:ak,act_label:act.title,conflict:cf,conflict_label:conflicts[cf],player:pl,player_label:roles[pl],scale:sc,scale_label:scales[sc],night:e.night,day:e.day,trace:e.trace,carry:e.carry,steps:act.steps.map((s,i)=>({step:i+1,title:s[0],action:s[1]})),rule:'Změna režimu mění interpretaci a dostupné jednání. Nevymaže událost ani její následky.',conflict_mechanic:conflicts[cf],outcome:outcomes[cf],scale_effect:scaleEffect,question:'Která část zkušenosti musí zůstat pravdivá, i když se její význam změní?',note,tags:['dvojí režim','překlad významu','popření','paměť','přetrvávající následek']};
+ render(current);
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function section(t,b){return '<div class="section"><h3>'+esc(t)+'</h3><p>'+esc(b)+'</p></div>'}
+function render(a){
+ $('result').className='';
+ $('result').innerHTML='<div class="result-head"><div><div class="type">'+esc(a.act_label)+' · '+esc(a.id)+'</div><div class="result-title">'+esc(a.experience_label)+'</div><p class="muted">Hlavní konflikt: '+esc(a.conflict_label)+'</p></div><span class="tag">'+esc(a.player_label)+'</span></div>'+
+ '<div class="dual"><div class="state night"><h3>☾ Noční režim</h3><p>'+esc(a.night)+'</p></div><div class="state day"><h3>☀ Denní režim</h3><p>'+esc(a.day)+'</p></div></div>'+
+ section('Přetrvávající stopa',a.trace)+section('Co lze přenést',a.carry)+
+ '<div class="section"><h3>Průběh herního aktu</h3><ol>'+a.steps.map(s=>'<li><strong>'+esc(s.title)+':</strong> '+esc(s.action)+'</li>').join('')+'</ol></div>'+
+ section('Operační pravidlo',a.rule)+section('Mechanika konfliktu',a.conflict_mechanic)+section('Možný následek',a.outcome)+section('Rozsah dopadu',a.scale_effect)+section('Otázka pro hráče',a.question)+(a.note?section('Dodatečné zadání',a.note):'')+
+ '<div class="chips">'+a.tags.map(t=>'<span class="chip">'+esc(t)+'</span>').join('')+'</div>';
+ $('resultActions').hidden=false;
+}
+function logRead(){try{return JSON.parse(localStorage.getItem('games_gen_netopyr_log')||'[]')}catch(e){return []}}
+function drawLog(){const log=logRead();$('count').textContent=log.length+' záznamů';$('historyList').innerHTML=log.length?log.slice().reverse().map((a,i)=>'<div class="history-item"><div><strong>'+esc(a.act_label)+' · '+esc(a.experience_label)+'</strong><span>'+new Date(a.created_at).toLocaleString('cs-CZ')+' · '+esc(a.id)+'</span></div><button data-index="'+(log.length-1-i)+'">Načíst</button></div>').join(''):'<p class="empty">Záznam je zatím prázdný.</p>'}
+function save(){if(!current)return;const l=logRead();if(!l.some(x=>x.id===current.id)){l.push(current);localStorage.setItem('games_gen_netopyr_log',JSON.stringify(l));drawLog();$('save').textContent='Uloženo';setTimeout(()=>$('save').textContent='Uložit do záznamu',1100)}}
+function copy(){if(!current)return;const t=JSON.stringify(current,null,2);if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(()=>$('copy').textContent='Zkopírováno').catch(()=>fallback(t));else fallback(t)}
+function fallback(t){const x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove()}
+$('generate').addEventListener('click',generate);
+$('surprise').addEventListener('click',()=>{$('act').value=pick(Object.keys(acts));$('experience').value='auto';$('conflict').value=pick(Object.keys(conflicts));$('player').value=pick(Object.keys(roles));$('scale').value=pick(Object.keys(scales));generate()});
+$('save').addEventListener('click',save);$('copy').addEventListener('click',copy);
+$('historyList').addEventListener('click',e=>{const b=e.target.closest('button[data-index]');if(!b)return;current=logRead()[Number(b.dataset.index)];render(current)});
+$('export').addEventListener('click',()=>{const data={schema:'games_gen.netopyr.log.v1',exported_at:new Date().toISOString(),records:logRead()};const u=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='games_gen-netopyr-zaznam.json';a.click();URL.revokeObjectURL(u)});
+$('clear').addEventListener('click',()=>{if(confirm('Opravdu vymazat všechny místní záznamy netopýra?')){localStorage.removeItem('games_gen_netopyr_log');drawLog()}});
+drawLog();
+})();
+</script></body></html>
