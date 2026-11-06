@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171916">
+<title>MYŠ · generátor herních aktů</title>
+<style>
+:root{color-scheme:dark;--bg:#171916;--panel:#22251f;--panel2:#2c3028;--ink:#f0eee5;--muted:#a9ad9e;--line:#41473b;--acid:#c8dc83;--rust:#d99a76;--blue:#9dbbc0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1040px;margin:auto;padding:22px 16px 56px}.top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:18px}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--acid)}h1{font-size:clamp(32px,7vw,58px);line-height:1;margin:9px 0 12px;letter-spacing:-.045em}h2{font-size:19px;margin:0 0 12px}p{margin:7px 0}.muted{color:var(--muted)}.small{font-size:13px;color:var(--muted)}
+.tag{border:1px solid var(--line);border-radius:30px;padding:5px 10px;color:var(--acid);font-size:12px;white-space:nowrap}
+.layout{display:grid;grid-template-columns:minmax(0, .9fr) minmax(0,1.1fr);gap:16px;margin-top:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px;min-width:0}
+label{display:block;font-size:13px;color:var(--muted);margin:13px 0 5px}select,input,textarea{width:100%;background:#171a16;color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:11px;font:inherit}
+button{border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--ink);padding:10px 13px;font:600 14px system-ui;cursor:pointer}
+button.primary{background:var(--acid);color:#1c2115;border-color:var(--acid)}button:hover{filter:brightness(1.08)}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--acid);outline-offset:2px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.output{min-height:230px}.result-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.result-title{font-size:24px;line-height:1.15;margin:4px 0 8px}.type{color:var(--acid);font-size:11px;text-transform:uppercase;letter-spacing:.13em}
+.section{border-top:1px solid var(--line);padding-top:12px;margin-top:13px}.section h3{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin:0 0 6px}.section p{white-space:pre-wrap}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.chip{font-size:12px;border:1px solid var(--line);padding:4px 8px;border-radius:20px;color:var(--muted)}
+ol{padding-left:21px;margin:7px 0}li{padding:3px 0}.empty{color:var(--muted);padding:28px 4px}.history{margin-top:16px}.history-item{border-top:1px solid var(--line);padding:10px 0;display:flex;justify-content:space-between;gap:10px;align-items:center}.history-item strong{display:block;font-size:14px}.history-item span{font-size:12px;color:var(--muted)}
+.footer{margin-top:18px;color:var(--muted);font-size:12px}.notice{border-left:3px solid var(--rust);padding:8px 11px;background:#2a241f;border-radius:0 8px 8px 0;margin-top:13px;font-size:13px}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.top{display:block}.tag{display:inline-block;margin-top:10px}.panel{padding:14px}}
+</style>
+</head>
+<body>
+<main>
+<header class="top">
+ <div><div class="kicker">games_gen / narativní operace 01</div><h1>MYŠ</h1><p class="muted">Generátor herních aktů z přehlédnutých jevů.</p></div>
+ <span class="tag">offline · lokální záznam</span>
+</header>
+<div class="layout">
+<section class="panel">
+ <h2>Vstupní nastavení</h2>
+ <p class="small">Myš nevyrábí náhodná dobrodružství. Zachycuje něco, čeho si ostatní nevšimli, a sleduje, co se stane, když se toho někdo dotkne.</p>
+ <label for="mode">Typ herního aktu</label>
+ <select id="mode">
+  <option value="investigation">Vyšetřování anomálie</option>
+  <option value="quest">Questový řetězec</option>
+  <option value="choice">Rozhodovací situace</option>
+  <option value="world">Událost měnící svět</option>
+ </select>
+ <label for="focus">Výchozí jev</label>
+ <select id="focus">
+  <option value="auto">Nech myš objevit jev</option>
+  <option value="sentence">Věta, která se ve vzduchu zadrhne</option>
+  <option value="peacock">Páv, který přepočítává svá oka</option>
+  <option value="stork">Čáp, který zapomene, koho měl donést</option>
+  <option value="hare">Zajíc s popálenými ušima a vůní kouře</option>
+  <option value="cat">Kocour, který spolkl tečku</option>
+  <option value="elephant">Slon s třešněmi, které nikdy nedozrají</option>
+  <option value="lemur">Lemur, který se dívá tam, kde nic není</option>
+  <option value="silence">Zápis do ticha a skulin mezi slovy</option>
+ </select>
+ <label for="pressure">Intenzita zásahu</label>
+ <select id="pressure"><option value="subtle">Jemná · změna je skoro neviditelná</option><option value="medium" selected>Střední · jev ovlivní okolí</option><option value="high">Vysoká · jev přepíše pravidla situace</option></select>
+ <label for="role">Role hráče</label>
+ <select id="role"><option value="observer">Pozorovatel</option><option value="investigator">Vyšetřovatel</option><option value="carrier">Ten, kdo nese zprávu</option><option value="witness">Svědek, kterému nikdo nevěří</option><option value="editor">Ten, kdo může příběh přepsat</option></select>
+ <label for="seed">Vlastní poznámka / omezení (nepovinné)</label>
+ <input id="seed" placeholder="Např. bez boje, pro 2 hráče, městské prostředí…">
+ <div class="actions"><button class="primary" id="generate">Vytvořit herní akt</button><button id="surprise">Překvap mě</button></div>
+ <div class="notice">Výstup je návrh hratelné situace, ne hotový scénář. Každý výsledek se ukládá pouze v tomto prohlížeči.</div>
+</section>
+<section class="panel output" aria-live="polite">
+ <div id="result" class="empty">Zatím tu nic není. Vyber nastavení a nech myš něco zaznamenat.</div>
+ <div class="actions" id="resultActions" hidden><button id="save">Uložit do záznamu</button><button id="copy">Kopírovat text</button></div>
+</section>
+</div>
+<section class="panel history">
+ <div class="result-head"><div><h2>Záznamová stopa</h2><p class="small">Historie generování v tomto zařízení. Data se nikam neposílají.</p></div><span class="tag" id="count">0 záznamů</span></div>
+ <div id="historyList"><p class="empty">Záznam je zatím prázdný.</p></div>
+ <div class="actions"><button id="export">Exportovat JSON</button><button id="clear">Vymazat místní záznam</button></div>
+</section>
+<p class="footer">MYŠ / verze 0.1 · pravidla vycházejí z pohádky „O myši a o tom, co se stane, když si jí nevšimneš“. Generování probíhá lokálně, bez AI API a bez připojení k serveru.</p>
+</main>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const motifs={
+ sentence:{name:'Zadrhnutá věta',signal:'Ve vzduchu se zadrhne věta. Nikdo nedokáže určit, která část měla následovat.',trace:'Na jednom místě se opakují nedokončené věty, ale jejich začátky patří různým lidem.',risk:'Když hráč větu dokončí, může tím nechtěně vložit cizí konec do nesprávného příběhu.',clue:'Někdo v okolí začne odpovídat na otázku, která ještě nebyla položena.'},
+ peacock:{name:'Páv počítá oči',signal:'Páv si přepočítává svá oka právě ve chvíli, kdy se nikdo nedívá.',trace:'Po každém přepočítání se počet liší, ale páv tvrdí, že chyba je v pozorovateli.',risk:'Přímé pozorování jev zastaví. Hráč musí zjistit, co se děje mimo pohled.',clue:'Jedno oko se objevuje v odrazu, nikoli na pavím peru.'},
+ stork:{name:'Zapomenutý adresát',signal:'Čáp přistane na komíně a zapomene, koho měl donést.',trace:'Zůstala po něm trasa, ale na každém místě někdo čeká na jiného příjemce.',risk:'Doručení nesprávné osoby spustí řetězec omylů; vrátit zásilku není totéž jako vrátit čas.',clue:'Komín si pamatuje přílet, ale ne jméno.'},
+ hare:{name:'Uši po kouři',signal:'Zajíc má popálené uši a voní po kouři, ale nikdo neví, kde se oheň vzal.',trace:'Popel se objevuje na místech, kde nic nehořelo.',risk:'Když hráč označí zajíce za viníka, okolí začne hledat oheň místo příčiny.',clue:'Zajíc se bojí zvuku praskání, nikoli plamenů.'},
+ cat:{name:'Spolknutá tečka',signal:'Kocour se dusí smíchem, protože spolkl tečku.',trace:'V okolních textech chybí konce vět. Některé věty pokračují přes hranice dialogů.',risk:'Vrácení tečky ukončí i rozhovor, který ještě potřeboval zaznít.',clue:'Kocour se zasměje pokaždé, když někdo řekne „konec“.'},
+ elephant:{name:'Nedozrávající třešně',signal:'Slon nese v chobotu třešně, které nikdy nedozrají.',trace:'Všechno kolem nich stárne, jen plody zůstávají ve stejné fázi.',risk:'Zrychlení času nepomůže; může naopak zestárnout nositel nebo okolní svět.',clue:'Jedna třešeň má uvnitř drobnou vzpomínku na budoucnost.'},
+ lemur:{name:'Místo, kde nic není',signal:'Lemur se dívá stranou, kde nic není, a přesto nepřestává sledovat.',trace:'Postavy uhýbají z cesty prázdnému místu.',risk:'Když hráč prázdné místo zaplní, zmizí orientační bod, podle kterého se ostatní řídili.',clue:'Ve stopách je vidět, že se někdo prázdnému místu vyhýbal.'},
+ silence:{name:'Zápis do ticha',signal:'Myš zapisuje do ticha, do koutů a do skulin mezi slovy.',trace:'Poznámky nejsou na papíře. Objevují se jako mezery v rozhovorech a změny v chování svědků.',risk:'Přímé vyslovení poznámky ji může zničit; je třeba ji rekonstruovat z okolních reakcí.',clue:'Dvě nesouvisející postavy vynechají stejné slovo.'}
+};
+const roles={observer:'Pozorovatel',investigator:'Vyšetřovatel',carrier:'Posel',witness:'Svědek',editor:'Přepisovač'};
+const modes={investigation:'Vyšetřování anomálie',quest:'Questový řetězec',choice:'Rozhodovací situace',world:'Událost měnící svět'};
+let current=null;
+const rand=a=>a[Math.floor(Math.random()*a.length)];
+function pickFocus(){const keys=Object.keys(motifs);return keys[Math.floor(Math.random()*keys.length)]}
+function build(){
+ let key=$('focus').value;if(key==='auto')key=pickFocus();
+ const m=motifs[key],mode=$('mode').value,pressure=$('pressure').value,role=$('role').value,note=$('seed').value.trim();
+ const force=pressure==='subtle'?'Jev zůstává téměř skrytý; změna se projeví nejprve v drobném detailu.':pressure==='high'?'Jev začne měnit pravidla celé lokace a zasáhne i postavy, které o něm nevědí.':'Jev ovlivní několik postav a jednu vlastnost prostředí.';
+ const openings=[
+ 'Myš si všimla nesrovnalosti dřív než kdokoli jiný. Nezasáhla. Zapsala ji do ticha.',
+ 'Na místě se všichni chovají, jako by se nic nestalo. Jen jeden detail odmítá zapadnout.',
+ 'Hráč přichází ve chvíli, kdy už se následky šíří, ale původní událost nikdo neviděl.'
+ ];
+ const investigation=[
+ ['Zachyť stopu','Najdi dvě místa, kde se anomálie projevila. Jedno je skutečná stopa, druhé její napodobenina.'],
+ ['Vyslechni svědka','Každý svědek popisuje pravdivý detail, ale skládá z něj chybný závěr. Zjisti, co přesně viděl.'],
+ ['Ověř nepřítomnost','Zjisti, co chybí: slovo, adresát, pohled nebo konec. Nepřítomnost je důkaz, ne prázdné místo.'],
+ ['Rozhodni o zásahu','Změň jednu podmínku a sleduj, zda anomálie zmizí, přesune se, nebo začne působit jinde.']
+ ];
+ const quest=[
+ ['Záznam','Myš zachytí první odchylku a uloží její přesný okamžik.'],
+ ['Svědek','Najdi zvíře, které nese následek, ale neumí vysvětlit jeho původ.'],
+ ['Spojení','Propoj nejméně dvě zdánlivě nesouvisející stopy. Jedna z nich musí být chybným výkladem.'],
+ ['Zkouška','Proveď malý zásah. Výsledek musí ověřit hypotézu, ne jen potvrdit očekávání.'],
+ ['Cena','Zvol, co zůstane zachováno a co se změní. Úspěch nesmí vymazat všechny následky.']
+ ];
+ const choice=[
+ ['Přehlédnout','Nechat jev být. Získáš čas, ale anomálie se rozšíří do další situace.'],
+ ['Pojmenovat','Vyslovit, co se děje. Získáš spolupracovníka, ale ztratíš část původní stopy.'],
+ ['Přepsat','Změnit výklad události. Svět se přizpůsobí nové verzi, svědek si však pamatuje původní.']
+ ];
+ const world=[
+ ['První porucha','Jev se projeví jen v jednom detailu lokace.'],
+ ['Přenos','Další postavy začnou reagovat, přestože příčinu neznají.'],
+ ['Nové pravidlo','Pro danou oblast začne platit nová podmínka. Hráč ji může využít, ale nemůže ji bez následků vypnout.'],
+ ['Zbytek','Po odeznění jevu zůstane stopa, kterou lze objevit v jiné části hry.']
+ ];
+ const steps=mode==='investigation'?investigation:mode==='quest'?quest:mode==='choice'?choice:world;
+ const outcome=pressure==='subtle'?'Anomálie se stáhne, ale zůstane zaznamenaná v chování jedné postavy.':pressure==='high'?'Pravidlo se rozšíří do celé lokace. Další akt musí počítat s novou skutečností.':'Anomálie změní jednu vazbu mezi postavami a zanechá konkrétní stopu.';
+ const title=mode==='investigation'?'Kdo si všiml jako první?':mode==='quest'?'Zápis, který nikdo nečetl':mode==='choice'?'Chceš myš?': 'Místo, kde se něco stalo';
+ current={id:'MYS-'+Date.now().toString(36).toUpperCase(),created_at:new Date().toISOString(),source:'O myši a o tom, co se stane, když si jí nevšimneš',source_motif:key,mode,mode_label:modes[mode],intensity:pressure,role,role_label:roles[role],note,signal:m.signal,trace:m.trace,risk:m.risk,clue:m.clue,steps:steps.map((s,i)=>({step:i+1,title:s[0],action:s[1]})),opening:rand(openings),pressure_rule:force,outcome,player_question:'Co se stane, když si toho všimneš — a co se stane, když ne?',tags:['přehlédnutý jev','anomálie','svědek','následek','interpretace']};
+ render(current);
+}
+function render(a){
+ $('result').className='';
+ $('result').innerHTML='<div class="result-head"><div><div class="type">'+esc(a.mode_label)+' · '+esc(a.id)+'</div><div class="result-title">'+esc(a.source_motif==='silence'?'Zápis do ticha':motifs[a.source_motif].name)+'</div><p class="muted">'+esc(a.opening)+'</p></div><span class="tag">'+esc(a.role_label)+'</span></div>'+
+ section('Jev',a.signal)+section('Stopy',a.trace)+section('Riziko zásahu',a.risk)+section('Skrytá indicie',a.clue)+
+ '<div class="section"><h3>Průběh herního aktu</h3><ol>'+a.steps.map(s=>'<li><strong>'+esc(s.title)+':</strong> '+esc(s.action)+'</li>').join('')+'</ol></div>'+
+ section('Pravidlo intenzity',a.pressure_rule)+section('Možný následek',a.outcome)+section('Otázka pro hráče',a.player_question)+
+ (a.note?section('Dodatečné zadání',a.note):'')+
+ '<div class="chips">'+a.tags.map(t=>'<span class="chip">'+esc(t)+'</span>').join('')+'</div>';
+ $('resultActions').hidden=false;
+}
+function section(title,body){return '<div class="section"><h3>'+esc(title)+'</h3><p>'+esc(body)+'</p></div>'}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function readLog(){try{return JSON.parse(localStorage.getItem('games_gen_mys_log')||'[]')}catch(e){return []}}
+function writeLog(log){localStorage.setItem('games_gen_mys_log',JSON.stringify(log));drawLog()}
+function drawLog(){const log=readLog();$('count').textContent=log.length+' záznamů';$('historyList').innerHTML=log.length?log.slice().reverse().map((a,i)=>'<div class="history-item"><div><strong>'+esc(a.mode_label)+' · '+esc(motifs[a.source_motif].name)+'</strong><span>'+new Date(a.created_at).toLocaleString('cs-CZ')+' · '+esc(a.id)+'</span></div><button data-index="'+(log.length-1-i)+'">Načíst</button></div>').join(''):'<p class="empty">Záznam je zatím prázdný.</p>'}
+$('generate').addEventListener('click',build);
+$('surprise').addEventListener('click',()=>{ $('focus').value='auto';$('mode').value=rand(Object.keys(modes));$('pressure').value=rand(['subtle','medium','high']);$('role').value=rand(Object.keys(roles));build()});
+$('save').addEventListener('click',()=>{if(!current)return;const log=readLog();if(!log.some(x=>x.id===current.id)){log.push(current);writeLog(log);$('save').textContent='Uloženo';setTimeout(()=>$('save').textContent='Uložit do záznamu',1200)}});
+$('copy').addEventListener('click',()=>{if(!current)return;const text=JSON.stringify(current,null,2);if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text).then(()=>$('copy').textContent='Zkopírováno').catch(()=>fallbackCopy(text));else fallbackCopy(text)});
+function fallbackCopy(t){const x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove()}
+$('historyList').addEventListener('click',e=>{const b=e.target.closest('button[data-index]');if(!b)return;current=readLog()[Number(b.dataset.index)];render(current)});
+$('export').addEventListener('click',()=>{const data={schema:'games_gen.mys.log.v1',exported_at:new Date().toISOString(),records:readLog()};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='games_gen-mys-zaznam.json';a.click();URL.revokeObjectURL(url)});
+$('clear').addEventListener('click',()=>{if(confirm('Opravdu vymazat všechny místní záznamy myši?')){localStorage.removeItem('games_gen_mys_log');drawLog()}});
+drawLog();
+})();
+</script>
+</body>
+</html>
