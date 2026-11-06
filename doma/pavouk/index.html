@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pavouk — síť neuzavřených stavů</title>
+<style>
+:root{--bg:#17191b;--panel:#222629;--ink:#e9e8e2;--muted:#a9afb0;--line:#465052;--web:#a9c1bd;--amber:#d3a16c;--red:#bf786d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,serif}main{max-width:1080px;margin:auto;padding:28px 18px 70px}.eyebrow{font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--web)}h1{font-size:clamp(38px,7vw,74px);font-weight:400;line-height:.98;margin:12px 0}h2{font-size:24px;font-weight:400;margin:0 0 14px}.lead{max-width:790px;font-size:18px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.panel{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:3px}.wide{grid-column:1/-1}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{display:block;font:12px Arial,sans-serif;color:var(--web);margin-bottom:6px}input,select,textarea{width:100%;padding:11px;background:#171b1d;color:var(--ink);border:1px solid var(--line);font:15px Georgia,serif;border-radius:2px}textarea{min-height:76px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}button{border:0;padding:11px 16px;background:var(--web);color:#18201f;font-weight:bold;cursor:pointer;border-radius:2px}button.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}.muted{font-size:13px;color:var(--muted)}.output{background:#191e20;border-left:3px solid var(--web);padding:12px 15px;margin:11px 0}.output h3{font-size:17px;font-weight:400;color:var(--amber);margin:0 0 5px}.output p{margin:0}.network{display:grid;gap:8px}.thread{border:1px solid var(--line);padding:12px;background:#1b2022}.thread b{font:11px Arial,sans-serif;letter-spacing:.1em;color:var(--web);text-transform:uppercase}.thread p{margin:5px 0 0}.entry{border:1px solid var(--line);padding:11px;margin:8px 0}.entry small{color:var(--muted)}.entry p{margin:4px 0}.meter{height:7px;background:#111719;margin-top:7px}.meter span{display:block;height:100%;background:var(--amber)}@media(max-width:680px){.grid,.fields{grid-template-columns:1fr}.wide{grid-column:auto}main{padding:22px 13px 50px}}
+</style></head><body><main>
+<div class="eyebrow">GAMES_GEN / NARATIVNÍ OPERACE 13</div>
+<h1>Pavouk,<br>který byl jen Jen Tak. Tak.</h1>
+<p class="lead">Laboratoř neuzavřených stavů. Co zůstává viset, protože nikdo nechce rozhodnout, zda to pustit, dokončit, nebo přiznat? Sleduj, jak se možnost mění v závazek, jak čas zvyšuje tuhost a jak síť reaguje na pohyb, který nic nevyřeší.</p>
+<div class="grid">
+<section class="panel"><h2>Co visí v síti</h2>
+<div class="fields">
+<div><label for="kind">Typ neuzavřeného stavu</label><select id="kind"><option>nevyřčená omluva</option><option>nepřiznaný pocit</option><option>otázka bez odpovědi</option><option>neuskutečněná událost</option><option>nevyřešený konflikt</option><option>slib bez pokračování</option><option>věta, která předstírá klid</option><option>vztah bez jasného konce</option><option>rozhodnutí, které nikdo neudělal</option></select></div>
+<div><label for="content">Konkrétní obsah</label><input id="content" value="Promiň, že jsem…"></div>
+<div><label for="holder">Kdo / co stav drží?</label><input id="holder" value="dva lidé"></div>
+<div><label for="age">Jak dlouho visí?</label><select id="age"><option value="1">Právě vznikl</option><option value="2" selected>Nějakou dobu</option><option value="3">Dlouho</option><option value="4">Tak dlouho, že ztvrdl</option></select></div>
+<div><label for="reason">Proč to nikdo neuvolnil?</label><select id="reason"><option>strach z následků</option><option>čekání na správný okamžik</option><option>nikdo neví, kdo má začít</option><option>možnost je příjemnější než výsledek</option><option>obava, že po pádu už nebude návrat</option><option>stav se stal součástí každodennosti</option></select></div>
+<div><label for="dependency">Na čem stav závisí?</label><input id="dependency" value="na první vyslovené větě"></div>
+<div><label for="wind">Vnější zásah</label><select id="wind"><option>žádný</option><option>náhodná připomínka</option><option>někdo se zeptá</option><option>změní se okolnosti</option><option>přijde další člověk</option><option>časová lhůta</option></select></div>
+<div><label for="tension">Citlivost / napětí</label><select id="tension"><option value="1">Nízká</option><option value="2" selected>Střední</option><option value="3">Vysoká</option></select></div>
+</div>
+<label for="note" style="margin-top:12px">Co se stane, když se nic nezmění?</label><textarea id="note" placeholder="Důsledek dalšího čekání…"></textarea>
+<div class="actions"><button id="run">Napnout síť</button><button class="alt" id="reset">Obnovit příklad</button></div>
+</section>
+<section class="panel"><h2>Možné tahy</h2><div class="network">
+<div class="thread"><b>01 / Nechat viset</b><p>Možnost zůstává otevřená, ale spotřebovává pozornost a prostor.</p></div>
+<div class="thread"><b>02 / Uvolnit</b><p>Stav spadne do minulosti. Zmizí možnost, vznikne skutečný následek.</p></div>
+<div class="thread"><b>03 / Rozmotat</b><p>Rozlišit jednotlivá vlákna: co bylo řečeno, co se nestalo a co si kdo domyslel.</p></div>
+<div class="thread"><b>04 / Přiznat</b><p>Vyslovit obsah, který síť dosud držela beze slov.</p></div>
+<div class="thread"><b>05 / Přestřihnout</b><p>Ukončit vazbu bez úplného vysvětlení. Některé konce zůstanou nečitelné.</p></div>
+<div class="thread"><b>06 / Přidat další nit</b><p>Nový neuzavřený stav zvýší zatížení celé sítě.</p></div>
+</div><p class="muted">Pohyb sítě není automaticky změna. Vítr může rozkývat všechna vlákna a přesto žádné neuvolnit.</p></section>
+<section class="panel wide" id="result" aria-live="polite"><h2>Výsledek</h2><p class="muted">Zadej stav a spusť simulaci.</p></section>
+<section class="panel wide"><h2>Archiv sítě</h2><div id="archive"><p class="muted">Zatím bez záznamů.</p></div><div class="actions"><button class="alt" id="export">Exportovat JSON</button><button class="alt" id="clear">Smazat místní archiv</button></div><p class="muted">Historie se ukládá pouze v tomto prohlížeči (localStorage).</p></section>
+</div></main><script>
+const $=id=>document.getElementById(id),KEY='pavouk_site_denik';
+const stages=['Vznik stavu','Zavěšení','Odkládání','Tuhnutí','Zásah bez rozuzlení','Bod rozhodnutí'];
+function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function read(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function archive(){const a=read();$('archive').innerHTML=a.length?a.slice().reverse().map(x=>'<div class="entry"><small>'+esc(x.date)+'</small><p><b>'+esc(x.kind)+'</b>: '+esc(x.content)+'</p><p>'+esc(x.outcome)+'</p></div>').join(''):'<p class="muted">Zatím bez záznamů.</p>'}
+function run(){
+const d={kind:$('kind').value,content:$('content').value.trim()||'nepojmenovaný stav',holder:$('holder').value.trim()||'neznámý nositel',age:+$('age').value,reason:$('reason').value,dependency:$('dependency').value.trim()||'neznámá vazba',wind:$('wind').value,tension:+$('tension').value,note:$('note').value.trim()};
+const stiffness=['Vlákno je pružné. Uvolnění je stále snadné a případný pád nemusí znamenat definitivní konec.','Vlákno už drží opakované odklady. Uvolnění vyžaduje vědomý zásah a může změnit vztah mezi účastníky.','Vlákno začíná tuhnout. Původní obsah se mísí s domněnkami a lidé už reagují spíš na jeho nahromaděnou historii.','Vlákno ztvrdlo. Nelze ho jednoduše rozmotat; pokus o návrat k původnímu okamžiku už sám vytváří další problém.'][d.age-1];
+const load=['Nízké napětí: stav zabírá málo pozornosti.','Střední napětí: stav se připomíná v konkrétních situacích.','Vysoké napětí: stav ovlivňuje i věci, které s ním původně nesouvisely.'][d.tension-1];
+const wind=d.wind==='žádný'?'Síť zůstává bez vnějšího zásahu.':'Přichází zásah: '+d.wind+'. Vlákno se rozhýbe, ale samo se neuvolní.';
+const outcome=d.age>=4?'Stav se stal strukturou. Už neurčuje jen to, co se nestalo, ale i to, co si účastníci dovolí udělat nyní.':d.age>=3?'Odklad začíná měnit původní obsah. Část napětí už pochází z délky čekání, ne z původní události.':'Možnost zůstává otevřená, ale její otevřenost má cenu: pozornost, energii a omezení dalších kroků.';
+const options=d.age>=3?'Rozmotat jednotlivá vlákna nebo přiznat, že původní okamžik už nelze obnovit.':'Vyslovit obsah, vědomě ho uvolnit, nebo stanovit konkrétní podmínku, za níž se k němu vrátit.';
+const test='Kdyby se zítra stav sám vyřešil, co by se změnilo? A co by zůstalo viset jen proto, že se z neuzavřenosti mezitím stal zvyk?';
+const rec={...d,date:new Date().toLocaleString('cs-CZ'),outcome,stiffness,load,wind,options,test};
+$('result').innerHTML='<h2>Výsledek: stav sítě</h2><div class="output"><h3>1 / Co visí</h3><p>'+esc(d.kind)+': „'+esc(d.content)+'“. Drží to: '+esc(d.holder)+'. Závislost: '+esc(d.dependency)+'.</p></div><div class="output"><h3>2 / Tuhnutí v čase</h3><p>'+esc(stiffness)+'</p></div><div class="output"><h3>3 / Zatížení</h3><p>'+esc(load)+' Důvod odkladu: '+esc(d.reason)+'.</p></div><div class="output"><h3>4 / Pohyb bez změny</h3><p>'+esc(wind)+' '+esc(outcome)+'</p></div><div class="output"><h3>5 / Možný zásah</h3><p>'+esc(options)+'</p></div><div class="output"><h3>6 / Test nečinnosti</h3><p>'+esc(test)+'</p></div>'+(d.note?'<p class="muted">Předpokládaný následek: '+esc(d.note)+'</p>':'');
+let a=read();a.push(rec);localStorage.setItem(KEY,JSON.stringify(a));archive();
+}
+$('run').addEventListener('click',run);
+$('reset').addEventListener('click',()=>{const vals={content:'Promiň, že jsem…',holder:'dva lidé',dependency:'na první vyslovené větě',note:''};Object.entries(vals).forEach(([k,v])=>$(k).value=v);$('kind').selectedIndex=0;$('age').value='2';$('reason').selectedIndex=0;$('wind').selectedIndex=0;$('tension').value='2';$('result').innerHTML='<h2>Výsledek</h2><p class="muted">Zadej stav a spusť simulaci.</p>'});
+$('export').addEventListener('click',()=>{const b=new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='pavouk-archiv-site.json';a.click();URL.revokeObjectURL(u)});
+$('clear').addEventListener('click',()=>{if(confirm('Opravdu smazat celý místní archiv?')){localStorage.removeItem(KEY);archive()}});
+archive();
+</script></body></html>
