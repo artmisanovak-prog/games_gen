@@ -96,6 +96,12 @@ Generuje situace, v nichž se od aktéra očekává správná volba, ale kritér
 - [Otevřít Osla v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/osel/)
 - [Zdrojový soubor Osel](doma/osel/index.html)
 
+### 16 · Páv — projekce vlastní identity na celý svět
+Generuje situace, v nichž se vlastní znak pozorovatele změní v univerzální klasifikační měřítko. Sleduje, jak jsou odlišné bytosti překládány do jediné kategorie, jak systém pohlcuje protidůkazy a jak odstranění vlastního znaku nemusí odstranit naučený způsob výkladu. Vychází z pohádky **O pávovi: oko za okem, páv za pávem**.
+
+- [Otevřít Páva v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/pav/)
+- [Zdrojový soubor Páv](doma/pav/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -114,9 +120,10 @@ Generuje situace, v nichž se od aktéra očekává správná volba, ale kritér
 - `doma/pavouk/` — samostatný generátor Pavouk.
 - `doma/lemur/` — samostatný generátor Lemur.
 - `doma/osel/` — samostatný generátor Osel.
+- `doma/pav/` — samostatný generátor Páv.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur a Osel jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel a Páv jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
