@@ -228,6 +228,12 @@ Zkoumá subjekt, který se přizpůsobuje různým očekáváním tak dlouho, a�
 - [Otevřít Chameleona v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/chameleon/)
 - [Zdrojový HTML soubor Chameleon](doma/chameleon/index.html)
 
+### 38 · Šnek — měřítko pozorování a nekonečno zblízka
+Zkoumá pomalý proces, jehož pohyb z dálky mizí, ale zblízka se odhaluje jako trvání. Přiblížení nemění rychlost objektu, nýbrž rozlišení pozorovatele. Stopa uchovává paměť dotyku místo prosté směrové informace, ulita stáčí kontinuitu do spirály, která se vrací bez přesného opakování. Generátor sleduje časové rozlišení, proměnu místa, spirálovou kontinuitu, relativní viditelnost za deště a poznávání prostředí dotykem.
+
+- [Otevřít Šneka v GitHub Pages](https://artmisanovak-prog.github.io/games_gen/doma/snek/)
+- [Zdrojový HTML soubor Šnek](doma/snek/index.html)
+
 ## Pracovní struktura
 
 - `doma/` — pracovní prostor generátorů.
@@ -268,9 +274,10 @@ Zkoumá subjekt, který se přizpůsobuje různým očekáváním tak dlouho, a�
 - `doma/kohout/` — samostatný generátor Kohout.
 - `doma/beran/` — samostatný generátor Beran.
 - `doma/chameleon/` — samostatný generátor Chameleon.
+- `doma/snek/` — samostatný generátor Šnek.
 
 ## Technické poznámky
 
-Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran a Chameleon jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
+Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran, Chameleon a Šnek jsou samostatné lokální nástroje bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
