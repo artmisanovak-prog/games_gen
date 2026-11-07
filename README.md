@@ -4,6 +4,13 @@ Pracovní katalog samostatných herních generátorů. Každý generátor vychá
 
 Toto README zatím slouží jako **pracovní rozcestník** pro průběžné prohlížení nástrojů. Konečný hlavní index a společné rozhraní vzniknou až později, až bude jasné, jaké generátory a funkce skutečně máme.
 
+## ÚHLO_GEN · polární pracovní prostor MOUSE
+
+Nástroje pro rozklad konkrétního významu do perspektiv, jejich polární uspořádání, mapování vztahů a zachycení toho, co se ukáže až díky nové konfiguraci. Nejde o detektor chyb ani o pevnou taxonomii 12 úhlů.
+
+- [Otevřít ÚHLO_GEN](doma/uhlo_gen/index.html)
+- [Dokumentace ÚHLO_GEN](doma/uhlo_gen/README.md)
+
 ## Datový produkt: GAME PHENOMENA 001
 
 Ukázková kolekce herních jevů odvozených z principů generátorů v tomto repozitáři. Obsahuje 10 strukturovaných záznamů, interaktivní katalog, datový slovník a licenční podmínky. Jde o prototyp datového produktu, nikoli o hotovou hru.
