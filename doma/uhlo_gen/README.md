@@ -15,3 +15,8 @@ Nástroje nic automaticky nevyhodnocují jako chybu a samy netvrdí, že objevil
 Vše běží lokálně v prohlížeči. Stav se ukládá do localStorage; export/import JSON přenáší práci mezi zařízeními. Žádná data se neposílají na server.
 
 [Otevřít ÚHLO_GEN](./index.html)
+
+## Datová struktura
+
+- [JSON Schema pracovního záznamu](./data-schema.json)
+- Exportovaný JSON obsahuje zdroj, referenční bod, perspektivy, jejich polární souřadnice, vztahy a nová pozorování.
