@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ÚHLO_GEN · pracovní záznam MOUSE",
+  "type": "object",
+  "required": [
+    "version",
+    "title",
+    "source",
+    "reference",
+    "perspectives",
+    "relations",
+    "discoveries"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "perspectives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "angle",
+          "radius",
+          "layer"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string"
+          },
+          "observation": {
+            "type": "string"
+          },
+          "angle": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 359
+          },
+          "radius": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "layer": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "a",
+          "b",
+          "kind",
+          "effect",
+          "open"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "a": {
+            "type": "string"
+          },
+          "b": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "string"
+          },
+          "open": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "discoveries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "claim",
+          "basis",
+          "status",
+          "open"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "open": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
