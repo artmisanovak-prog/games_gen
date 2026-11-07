@@ -12,7 +12,7 @@ Ukázková kolekce herních jevů odvozených z principů generátorů v tomto r
 - [README datového balíčku](produkty/game-phenomena-001/README.md)
 - [Dataset JSON](produkty/game-phenomena-001/dataset.json)
 
-## Samostatné generátory
+## MOUSE LAB · experimentální laboratoř vztahů\n\nPrvní funkční modul pro práci s uzly, vztahy a jejich strukturou. Offline-first, s importem a exportem JSON.\n\n- [Otevřít MOUSE LAB · GRAPH](mouse_-lab/)\n- [Dokumentace MOUSE LAB](mouse_-lab/README.md)\n\n## Samostatné generátory
 
 ### 01 · Myš — přehlédnuté jevy a jejich následky
 Generuje vyšetřování anomálií, questové řetězce, rozhodovací situace a události měnící svět. Vychází z pohádky **O myši a o tom, co se stane, když si jí nevšimneš**.
