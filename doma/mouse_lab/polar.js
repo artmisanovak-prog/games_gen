@@ -4,7 +4,7 @@ const ANGLES=[
 let BASE=[];
 const KEY="mouse:polar:edits";let edits=window.MOUSE?.read("polar:edits",JSON.parse(localStorage.getItem("mouse_polar_edits_v1")||"{}"))||{};const $=id=>document.getElementById(id);let active="mys";let CARD_API=null;
 function current(){const base=BASE.find(x=>x.id===active);const edit=edits[active]||{};return {...base,layers:edit.layers||base.layers,r:edit.r||base.r};}
-function save(){if(window.MOUSE)MOUSE.write("polar:edits",edits);localStorage.setItem("mouse_polar_edits_v1",JSON.stringify(edits));$("status").textContent="Uloženo lokálně. Správa a záloha: Paměť / LocalStorage.";}
+function save(){if(window.MOUSE){MOUSE.write("polar:edits",edits);localStorage.removeItem("mouse_polar_edits_v1");}$("status").textContent="Uloženo lokálně. Správa a záloha: Paměť / LocalStorage.";}
 function point(angle,rad){const a=(angle-90)*Math.PI/180;const rr=48+rad*205;return{x:300+Math.cos(a)*rr,y:300+Math.sin(a)*rr};}
 function renderWheel(updateList=true){const d=current(),filter=$("layerFilter").value,labels=$("showLabels").checked;let s=[];s.push('<circle cx="300" cy="300" r="255" fill="#111d25" stroke="#526873" stroke-width="1.5"/>');[.25,.5,.75,1].forEach(v=>{const rr=48+v*205;s.push('<circle cx="300" cy="300" r="'+rr+'" fill="none" stroke="#42545e" stroke-dasharray="3 6"/>');s.push('<text x="307" y="'+(300-rr+13)+'" fill="#82969e" font-size="10">'+v.toFixed(2)+'</text>')});s.push('<circle cx="300" cy="300" r="4" fill="#d9b879"/>');
 ANGLES.forEach((a,i)=>{const p=point(a[1],1);s.push('<line x1="300" y1="300" x2="'+p.x+'" y2="'+p.y+'" stroke="#50636d" stroke-width="1"/>');const lp=point(a[1],1.16);s.push('<text x="'+lp.x+'" y="'+(lp.y+4)+'" fill="#d2dcde" font-size="11" text-anchor="middle">'+a[1]+'°</text>');});
