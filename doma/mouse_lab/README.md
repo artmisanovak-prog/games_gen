@@ -34,3 +34,12 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 5. Zpřesňování instrukcí MOUSE na základě skutečných běhů.
 
 Toto je pracovní laboratoř, nikoli hotový produkt ani tvrzení, že MOUSE již automaticky řeší externí problémy.
+
+
+## Polární konfigurace entit
+
+- [Otevřít polární úhloměr](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/polar.html)
+- Samostatné pracovní konfigurace: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak a Klíště. Panda a Vlk jsou dvě entity ve společném zdrojovém příběhu.
+- Vizuální model: úhel = směr perspektivy; vrstva = samostatná souřadnice 1–12; poloměr = pracovní odchylka od reference.
+- Počáteční přiřazení vrstev a poloměrů jsou hypotézy odvozené z textů. Nejde o potvrzené autorské souřadnice. Uživatel je může upravit; změny se ukládají lokálně a lze je exportovat do JSON.
+- Každá konfigurace obsahuje všech 12 úhlů a používá každou vrstvu právě jednou.
