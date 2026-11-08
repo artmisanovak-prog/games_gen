@@ -324,3 +324,11 @@ Obrazová hra o omezeném zdroji, nároku a pravidlech distribuce. Jedna osoba d
 Myš, Netopýr, Tygr, Ryba, Dráček, Kozel, Mořský koník, Krávy, Krokodýl, Jednorožec, Liška, Zaječice, Pavouk, Lemur, Osel, Páv, Čáp, Slon, Želva, Motýl, Plameňák, Žralok, Veverka, Had, Prasátko, Hvězdice, Hyeny, Husy, Panda, Vlk, Klíště, Žížala, Parohy, Vrabec, Kohout, Beran, Chameleon, Šnek a Moucha jsou samostatné lokální nástroje; Chyby nehledej! Nejsou a Psí smečka jsou samostatné lokální hry bez serveru a bez AI API. Historii ukládají do místního úložiště konkrétního prohlížeče a umožňují export záznamů do JSON. Záznamy se automaticky nesynchronizují mezi zařízeními.
 
 Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, případné sdílené datové formáty a napojení AI modelu se navrhnou až podle toho, co se při vývoji jednotlivých nástrojů ukáže jako skutečně potřebné.
+
+
+## Sdílené nástroje MOUSE
+
+- [MOUSE LAB](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/)
+- [Polární konfigurace](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/polar.html)
+- [Paměť / LocalStorage](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/storage/)
+- [Karta API a sdílené jádro](doma/mouse_lab/data/karty.json) · [shared core](doma/shared/mouse-core.js) · [shared navigation](doma/shared/nav.js)
