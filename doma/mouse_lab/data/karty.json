@@ -1,0 +1,15 @@
+{
+  "schema":"mouse-card-api/1.0",
+  "description":"Karta je samostatný zdrojový objekt. Nástroje si z ní čtou jen pole, která potřebují. Entity Panda a Vlk sdílejí jeden text, ale mají vlastní entitní pohledy.",
+  "sourceRepository":"https://github.com/artmisanovak-prog/abstrakce_ai/tree/main/doma/narativy",
+  "cards":[
+    {"id":"mys","title":"Myš","sourceFile":"mys.txt","sourceUrl":"https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/mys.txt","entities":[{"id":"mys","name":"Myš","focus":"Pozorování přehlíženého, záznam do ticha a skulin. Myš není původce všech jevů."}]},
+    {"id":"kocour","title":"Kocour","sourceFile":"kocour.txt","sourceUrl":"https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/kocour.txt","entities":[{"id":"kocour","name":"Kocour","focus":"Předčasné ukončování cizích vět, návrat spolknutých konců, tečka předběhne větu."}]},
+    {"id":"ryba","title":"Ryba","sourceFile":"ryba.txt","sourceUrl":"https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/ryba.txt","entities":[{"id":"ryba","name":"Ryba","focus":"Rytmus a flow mění vlastnosti vody, proudy a kruhy. Zvuk se překládá do vjemu tělem a okem."}]},
+    {"id":"zelva","title":"Želva","sourceFile":"zelva.txt","sourceUrl":"https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/zelva.txt","entities":[{"id":"zelva","name":"Želva","focus":"Trvání, pohlednice jako směry a možnosti, vzájemná motivace dvou činností."}]},
+    {"id":"panda-vlk","title":"Panda a Vlk","sourceFile":"panda.txt","sourceUrl":"https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/panda.txt","entities":[{"id":"panda","name":"Panda","focus":"Vlastní barevnost, připsaný znak, paradox černobílého tvora a zrzavý chlup."},{"id":"vlk","name":"Vlk","focus":"Rozdíl mezi přímým vjemem, naučeným pojmenováním a funkční reprezentací; vznik piktogramu."}]},
+    {"id":"motyl","title":"Motýl","sourceFile":"motyl.txt","sourceUrl":"https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/motyl.txt","entities":[{"id":"motyl","name":"Motýl","focus":"Skutečná potřeba versus symbolická nabídka; význam se ověřuje podle účinku."}]},
+    {"id":"drak","title":"Drak","sourceFile":"drak.txt","sourceUrl":"https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/drak.txt","entities":[{"id":"drak","name":"Drak","focus":"Kašel se stává řečí a přestupkem teprve ve vztahu k ceduli."}]},
+    {"id":"kliste","title":"Klíště","sourceFile":"kliste.txt","sourceUrl":"https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/kliste.txt","entities":[{"id":"kliste","name":"Klíště","focus":"Dvojí touha být hostitelem i získat hostitele; společný sen vytváří alternativní realitu."}]}
+  ]
+}
