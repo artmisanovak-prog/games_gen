@@ -10,7 +10,7 @@
  function encodeState(obj){return enc(JSON.stringify(obj))}
  function decodeState(hash=location.hash){try{const m=hash.match(/(?:^#|&)state=([^&]+)/);return m?JSON.parse(dec(m[1])):null}catch{return null}}
  function stateUrl(obj){const u=new URL(location.href);u.hash="state="+encodeState(obj);return u.href}
- async function getCards(){const r=await fetch(new URL("../data/karty.json",document.currentScript?.src||location.href));if(!r.ok)throw Error("Karta API není dostupné: "+r.status);return r.json()}
+ async function getCards(){const r=await fetch("/games_gen/doma/mouse_lab/data/karty.json");if(!r.ok)throw Error("Karta API není dostupné: "+r.status);return r.json()}
  function download(name,data){const blob=new Blob([typeof data==="string"?data:JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)}
  g.MOUSE=Object.freeze({version:VERSION,prefix:PREFIX,read,write,remove,all,encodeState,decodeState,stateUrl,getCards,download});
 })(window);
