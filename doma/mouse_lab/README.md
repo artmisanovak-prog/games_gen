@@ -43,3 +43,13 @@ Toto je pracovní laboratoř, nikoli hotový produkt ani tvrzení, že MOUSE ji�
 - Vizuální model: úhel = směr perspektivy; vrstva = samostatná souřadnice 1–12; poloměr = pracovní odchylka od reference.
 - Počáteční přiřazení vrstev a poloměrů jsou hypotézy odvozené z textů. Nejde o potvrzené autorské souřadnice. Uživatel je může upravit; změny se ukládají lokálně a lze je exportovat do JSON.
 - Každá konfigurace obsahuje všech 12 úhlů a používá každou vrstvu právě jednou.
+
+
+## Sdílená architektura MOUSE
+
+- **Karta API:** `data/karty.json` je společný zdroj karet a entit. Nese zdrojový text, identifikaci entity, její popis a výchozí polární konfiguraci. Panda a Vlk jsou dvě entity nad jedním zdrojovým textem.
+- **Sdílené jádro:** `../shared/mouse-core.js` poskytuje čtení/zápis lokálních dat, načítání karet, URL stav a export. Lze jej připojit do dalších HTML nástrojů.
+- **Sdílená navigace:** `../shared/nav.js` propojuje MOUSE LAB, ÚHLO_GEN, Polární konfiguraci a Paměť.
+- **Paměť / LocalStorage:** samostatný modul pro prohlížení, editaci, import, export, zálohu a obnovu dat: https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/storage/.
+- **URL stav:** Polární konfigurace umí vytvořit odkaz s aktuální entitou a konfiguracemi. ÚHLO_GEN umí exportovat a obnovit vlastní projekt přes URL. URL je přenosný snímek stavu, nikoli synchronizovaná databáze.
+- **Opětovné použití:** nové nástroje mohou připojit `../shared/mouse-core.js` a `../shared/nav.js`; pro ukládání použijí `MOUSE.read`, `MOUSE.write`, `MOUSE.all`, `MOUSE.stateUrl`, `MOUSE.encodeState`, `MOUSE.decodeState` a `MOUSE.download`.
