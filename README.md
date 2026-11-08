@@ -11,6 +11,13 @@ Nástroje pro rozklad konkrétního významu do perspektiv, jejich polární usp
 - [Otevřít ÚHLO_GEN](doma/uhlo_gen/index.html)
 - [Dokumentace ÚHLO_GEN](doma/uhlo_gen/README.md)
 
+## MOUSE LAB · obousměrný generativní pracovní prostor
+
+Pracovní prototyp pro generování ze zdrojového korpusu i zpracování externích problémů prostřednictvím MOUSE. Obsahuje výběr pohádek, tvorbu promptu pro model, záznam výsledků a poznatků pro další instrukce.
+
+- [Otevřít MOUSE LAB](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/)
+- [Dokumentace MOUSE LAB](doma/mouse_lab/README.md)
+
 ## Datový produkt: GAME PHENOMENA 001
 
 Ukázková kolekce herních jevů odvozených z principů generátorů v tomto repozitáři. Obsahuje 10 strukturovaných záznamů, interaktivní katalog, datový slovník a licenční podmínky. Jde o prototyp datového produktu, nikoli o hotovou hru.
