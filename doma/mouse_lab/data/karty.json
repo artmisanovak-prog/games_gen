@@ -183,7 +183,9 @@
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "sourceFile": "vlk.txt",
+          "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/vlk.txt"
         }
       ]
     },
