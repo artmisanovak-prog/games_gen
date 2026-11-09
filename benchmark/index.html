@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171a18">
+<title>BENCHMARK · games_gen</title>
+<style>
+:root{color-scheme:dark;--bg:#171a18;--panel:#222824;--panel2:#29312b;--line:#465248;--ink:#f0f0e8;--muted:#aeb8ad;--accent:#c6d69a;--blue:#a8c4c2;--amber:#d6ad7d;--red:#d18f83}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1120px;margin:auto;padding:24px 16px 60px}
+header{border-bottom:1px solid var(--line);padding:10px 0 22px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.18em;text-transform:uppercase}h1{font-size:clamp(38px,8vw,68px);line-height:.95;letter-spacing:-.05em;margin:12px 0}h2{font-size:21px;margin:0 0 10px}h3{font-size:16px;margin:0 0 7px}.lead{max-width:780px;color:var(--muted);font-size:17px}.tag{display:inline-block;border:1px solid var(--line);border-radius:30px;padding:4px 10px;color:var(--accent);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px;min-width:0}.wide{grid-column:1/-1}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.cardpick{border:1px solid var(--line);border-radius:11px;padding:12px;background:#1b201d;cursor:pointer;min-height:116px}.cardpick.selected{border-color:var(--accent);background:#293126;box-shadow:inset 0 0 0 1px var(--accent)}.cardpick strong{display:block;color:var(--accent);font-size:15px}.cardpick span{display:block;color:var(--muted);font-size:12px;margin-top:5px}
+label{display:block;color:var(--muted);font-size:12px;margin:12px 0 5px}select,input,textarea{width:100%;background:#171d19;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:11px;font:inherit}textarea{min-height:150px;resize:vertical}button{border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:9px;padding:10px 13px;font:600 13px system-ui;cursor:pointer}button.primary{background:var(--accent);border-color:var(--accent);color:#20261d}button:disabled{opacity:.4;cursor:not-allowed}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.muted,.small{color:var(--muted)}.small{font-size:12px}.task{border:1px solid var(--line);border-radius:12px;padding:15px;margin:10px 0;background:#1b211d}.taskhead{display:flex;justify-content:space-between;gap:10px;align-items:start}.taskid{font-size:11px;color:var(--blue);letter-spacing:.1em}.prompt{white-space:pre-wrap;margin:10px 0}.task pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#141916;border:1px solid var(--line);padding:10px;border-radius:8px;font:13px/1.5 ui-monospace,monospace}.hiddenkey{display:none}.keybox{border-left:3px solid var(--amber);padding:9px 12px;background:#2b2820;margin-top:10px;border-radius:0 8px 8px 0}.score{font-size:30px;color:var(--accent);font-weight:700}.notice{border-left:3px solid var(--blue);padding:9px 12px;background:#202a29;border-radius:0 8px 8px 0;font-size:13px;color:#dce7e3}.resultrow{padding:9px 0;border-top:1px solid var(--line)}.ok{color:var(--accent)}.bad{color:var(--red)}footer{margin-top:22px;color:var(--muted);font-size:12px}
+@media(max-width:760px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.wide{grid-column:auto}}
+@media(max-width:390px){main{padding:17px 11px 40px}.panel{padding:13px}.cardpick{padding:9px}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">GAMES_GEN / EXPERIMENTÁLNÍ VĚTEV</div><h1>BENCHMARK</h1><p class="lead">Generátor kontrolovaných testovacích úloh odvozených od konkrétních karet. Každá úloha má zadání pro model, předem známé řešení a automatické vyhodnocení.</p><span class="tag">offline-first · bez API · export JSON</span></header>
+
+<section class="panel" style="margin-top:18px">
+<h2>01 / Vyber kartu</h2><p class="small">Každá karta vytváří jiný druh testu. Nejde o převlečené otázky se stejnou logikou.</p>
+<div class="cards" id="cardPicker">
+<button type="button" class="cardpick selected" data-card="mys"><strong>MYŠ</strong><span>Odvození skrytého pravidla z příkladů</span></button>
+<button type="button" class="cardpick" data-card="pavouk"><strong>PAVOUK</strong><span>Kauzální závislosti a změny stavu</span></button>
+<button type="button" class="cardpick" data-card="kozel"><strong>KOZEL</strong><span>Rozlišení dvou perspektivních pravidel</span></button>
+<button type="button" class="cardpick" data-card="chameleon"><strong>CHAMELEON</strong><span>Invarianty při změně prostředí</span></button>
+</div>
+<div class="grid" style="margin-bottom:0">
+<div><label for="count">Počet úloh v sadě</label><select id="count"><option value="3">3 úlohy</option><option value="5" selected>5 úloh</option><option value="10">10 úloh</option><option value="15">15 úloh</option></select></div>
+<div><label for="seed">Seed / identifikátor sady</label><input id="seed" value="MOUSE-001" maxlength="40"></div>
+</div>
+<div class="actions"><button class="primary" id="generate">Vygenerovat benchmark</button><button id="newSeed">Nový seed</button></div>
+<div class="notice" style="margin-top:13px">Stejná karta + stejný seed + stejný počet úloh vytvoří stejnou sadu. Seed je součástí exportu, takže lze experiment zopakovat.</div>
+</section>
+
+<section class="panel" style="margin-top:14px">
+<div class="taskhead"><div><h2>02 / Vygenerovaná sada</h2><p class="small" id="suiteMeta">Zatím nebyla vytvořena žádná sada.</p></div><span class="tag" id="suiteStatus">čeká</span></div>
+<div id="tasks"><p class="muted">Vyber kartu a spusť generování.</p></div>
+<div class="actions"><button id="copyPrompt" disabled>Kopírovat zadání pro model</button><button id="exportTasks" disabled>Stáhnout úlohy JSON</button><button id="exportKey" disabled>Stáhnout klíč řešení</button><button id="showKeys" disabled>Zobrazit / skrýt řešení</button></div>
+</section>
+
+<section class="panel" style="margin-top:14px">
+<h2>03 / Otestuj model</h2>
+<p class="small">Zkopíruj zadání výše do modelu. Jeho odpověď vlož sem jako JSON. Model nedostává řešení ani hodnoticí klíč.</p>
+<label for="modelAnswer">Odpověď modelu</label>
+<textarea id="modelAnswer" placeholder='{"answers":[{"id":"MYŠ-001-01","answer":3},{"id":"MYŠ-001-02","answer":1}]}'></textarea>
+<div class="actions"><button class="primary" id="evaluate" disabled>Vyhodnotit odpovědi</button><button id="clearAnswer">Vymazat</button></div>
+<div id="evaluation" aria-live="polite"></div>
+</section>
+<footer>BENCHMARK v0.1 · Všechny úlohy a hodnocení běží lokálně v prohlížeči. Neodesílají se žádná data. Výsledky jsou experimentální a před použitím jako vědecký benchmark vyžadují pilotní validaci, kontrolu jednoznačnosti a testování na více modelech.</footer>
+</main>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+let selected='mys',suite=[],keysVisible=false;
+const cardNames={mys:'MYŠ',pavouk:'PAVOUK',kozel:'KOZEL',chameleon:'CHAMELEON'};
+const cardDescriptions={
+mys:'Test indukce: model dostane příklady vstupů a výstupů a musí odvodit skrytou operaci.',
+pavouk:'Test kauzálního uvažování: model sleduje, které stavy se aktivují přes navazující pravidla.',
+kozel:'Test perspektivy: model musí aplikovat dvě odlišná hodnoticí pravidla na stejné možnosti.',
+chameleon:'Test invariance: model musí rozpoznat objekt podle vlastnosti, která přežije změnu prostředí.'
+};
+function hashSeed(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+function rng(seed){let a=seed>>>0;return function(){a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296}}
+function pick(r,a){return a[Math.floor(r()*a.length)]}
+function shuffle(r,a){let b=a.slice();for(let i=b.length-1;i>0;i--){let j=Math.floor(r()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
+function pad(n){return String(n).padStart(2,'0')}
+function makeMysh(r,id){
+ const symbols=shuffle(r,['LUN','VOR','MEK','TAR','SEN']).slice(0,3),vals=shuffle(r,[0,1,2,3,4]),map={};symbols.forEach((s,i)=>map[s]=vals[i]);
+ const pairs=[];for(let i=0;i<3;i++)for(let j=i;j<3;j++)pairs.push([symbols[i],symbols[j]]);
+ const q=pick(r,pairs);const examples=pairs.filter(p=>!(p[0]===q[0]&&p[1]===q[1])).map(p=>({pair:p.join(' + '),result:(map[p[0]]+map[p[1]])%5}));
+ const lines=examples.map(x=>x.pair+' = '+x.result).join('\n');
+ return {id,type:'MYŠ',title:'Odvození neznámé operace',question:'V systému existují tři symboly. Každý symbol má skrytou číselnou hodnotu 0 až 4. Výsledek dvojice je součet hodnot obou symbolů modulo 5.\n\nPozorované příklady:\n'+lines+'\n\nUrči výsledek pro: '+q.join(' + ')+'.\nVrať pouze JSON s číselným polem "value".',expected:{value:(map[q[0]]+map[q[1]])%5},explain:'Každému symbolu je přiřazena skrytá hodnota. Výsledek je součet hodnot modulo 5. Skryté hodnoty: '+symbols.map(s=>s+'='+map[s]).join(', ')+'.'};
+}
+function makePavouk(r,id){
+ const names=shuffle(r,['A','B','C','D','E','F']),a=names[0],b=names[1],c=names[2],d=names[3],e=names[4];
+ const rules=[[a,b],[a,c],[b,d],[c,d],[d,e]];
+ const starts=[a];if(r()>.5)starts.push(pick(r,[b,c]));
+ const blocked=pick(r,rules);
+ const active=new Set(starts);let changed=true;while(changed){changed=false;for(const edge of rules){if(edge[0]===blocked[0]&&edge[1]===blocked[1])continue;if(active.has(edge[0])&&!active.has(edge[1])){active.add(edge[1]);changed=true}}}
+ const ruleText=rules.map(x=>x[0]+' → '+x[1]+(x[0]===blocked[0]&&x[1]===blocked[1]?' (toto vlákno je přerušeno)':'')).join('\n');
+ return {id,type:'PAVOUK',title:'Šíření následků sítí pravidel',question:'Stavy se aktivují podle následujících pravidel. Aktivní stav automaticky aktivuje svůj následující stav. Pravidla se opakovaně uplatňují, dokud se síť nezastaví. Přerušené vlákno nefunguje.\n\nPravidla:\n'+ruleText+'\n\nPočáteční aktivní stavy: '+starts.join(', ')+'.\n\nKteré stavy budou aktivní po ustálení celé sítě? Vrať JSON s polem "active" jako seřazeným polem písmen.',expected:{active:Array.from(active).sort()},explain:'Výchozí stavy: '+starts.join(', ')+'. Pravidlo '+blocked.join(' → ')+' je přerušeno. Po postupném průchodu sítí zůstávají aktivní: '+Array.from(active).sort().join(', ')+'.'};
+}
+function makeKozel(r,id){
+ const ids=['JABLKO','CHLEBA','VODA'];const plans=shuffle(r,ids);
+ const needs={},equal={};plans.forEach((p,i)=>{needs[p]=[1,2,3][Math.floor(r()*3)];equal[p]=[1,2,3][Math.floor(r()*3)]});
+ // Ensure each perspective has a unique maximum.
+ const aBest=plans[0],bBest=plans[1];needs[aBest]=5;plans.filter(x=>x!==aBest).forEach(x=>needs[x]=Math.min(needs[x],3));equal[bBest]=5;plans.filter(x=>x!==bBest).forEach(x=>equal[x]=Math.min(equal[x],3));
+ const rows=plans.map(p=>p+': potřeba '+needs[p]+'/5; rovnost rozdělení '+equal[p]+'/5').join('\n');
+ return {id,type:'KOZEL',title:'Dvě pravidla, dvě volby',question:'Dva správci vybírají jednu možnost ze stejné nabídky. Neshodnou se na tom, co znamená spravedlivé rozhodnutí.\n\nSprávce A používá pouze pravidlo: vyber možnost s nejvyšším skóre POTŘEBY.\nSprávce B používá pouze pravidlo: vyber možnost s nejvyšším skóre ROVNOSTI ROZDĚLENÍ.\n\nSkóre možností:\n'+rows+'\n\nUrči samostatně volbu A a volbu B. Nehodnoť, které pravidlo je lepší. Vrať JSON s poli "A" a "B".',expected:{A:aBest,B:bBest},explain:'A maximalizuje skóre potřeby ('+needs[aBest]+'). B maximalizuje skóre rovnosti ('+equal[bBest]+').'};
+}
+function makeChameleon(r,id){
+ const shapes=shuffle(r,['kruh','trojúhelník','čtverec','šestiúhelník']),patterns=shuffle(r,['tečky','pruhy','mřížka','spirála']),colors=shuffle(r,['modrá','červená','zelená','žlutá']);
+ const target=0,signature=shapes[target]+' / '+patterns[target];
+ const old=shapes.map((s,i)=>'Před změnou: objekt '+String.fromCharCode(65+i)+' = '+s+', vzor '+patterns[i]+', barva '+colors[i]);
+ const transformed=shapes.map((s,i)=>({id:String.fromCharCode(65+i),shape:s,pattern:patterns[i],color:pick(r,['černá','bílá','fialová','oranžová'])}));
+ const newRows=transformed.map(o=>'Po změně: objekt '+o.id+' = '+o.shape+', vzor '+o.pattern+', barva '+o.color);
+ const expected=String.fromCharCode(65+target);
+ return {id,type:'CHAMELEON',title:'Rozpoznání invariantu',question:'Prostředí změnilo barvy všech objektů. Tvar a vzor objektů zůstaly zachovány. Barva proto není spolehlivým znakem identity.\n\nPůvodní záznam:\n'+old.join('\n')+'\n\nNové prostředí:\n'+newRows.join('\n')+'\n\nNajdi objekt, který odpovídá původnímu objektu A. Použij současně tvar a vzor, barvu ignoruj. Vrať JSON s textovým polem "value" obsahujícím písmeno objektu.',expected:{value:expected},explain:'Původní objekt A měl kombinaci '+signature+'. Po změně prostředí ji zachovává objekt '+expected+'. Barvy se změnily a pro identifikaci se nepoužívají.'};
+}
+const makers={mys:makeMysh,pavouk:makePavouk,kozel:makeKozel,chameleon:makeChameleon};
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function generate(){
+ const seed=$('seed').value.trim()||'BENCH-001',n=Number($('count').value),r=rng(hashSeed(seed+'|'+selected));
+ suite=Array.from({length:n},(_,i)=>makers[selected](r,cardNames[selected]+'-'+seed.replace(/[^a-z0-9]/gi,'').slice(0,10)+'-'+pad(i+1)));
+ keysVisible=false;$('modelAnswer').value='';$('evaluation').innerHTML='';
+ $('suiteMeta').textContent=cardNames[selected]+' · '+n+' úloh · seed '+seed+' · '+cardDescriptions[selected];
+ $('suiteStatus').textContent='vygenerováno';$('copyPrompt').disabled=false;$('exportTasks').disabled=false;$('exportKey').disabled=false;$('showKeys').disabled=false;$('evaluate').disabled=false;
+ renderTasks();
+}
+function renderTasks(){
+ $('tasks').innerHTML=suite.map(t=>'<article class="task"><div class="taskhead"><div><div class="taskid">'+esc(t.id)+' / '+esc(t.type)+'</div><h3>'+esc(t.title)+'</h3></div><span class="tag">testovací úloha</span></div><div class="prompt">'+esc(t.question)+'</div>'+(keysVisible?'<div class="keybox"><b>Řešení:</b> <code>'+esc(JSON.stringify(t.expected))+'</code><br><span class="small">'+esc(t.explain)+'</span></div>':'')+'</article>').join('');
+}
+function makePrompt(){
+ return 'Jsi testovaný model v benchmarku games_gen. Vyřeš všechny úlohy samostatně. Nepřidávej vysvětlení ani text mimo JSON. Zachovej přesná ID úloh. Vrať jediný validní JSON objekt ve tvaru {"answers":[{"id":"ID úlohy","answer":{...}}]}. Odpovědi musí odpovídat požadovaným polím v zadání. U polí s více hodnotami zachovej všechny požadované prvky.\n\n'+suite.map(t=>'ÚLOHA '+t.id+'\n'+t.question).join('\n\n--------------------\n\n');
+}
+function download(name,obj){const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+async function copy(text){try{await navigator.clipboard.writeText(text);return true}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();return ok}}
+function canonical(v){if(Array.isArray(v))return JSON.stringify(v.slice().sort());if(v&&typeof v==='object')return JSON.stringify(Object.keys(v).sort().reduce((o,k)=>(o[k]=v[k],o),{}));return JSON.stringify(v)}
+function evaluate(){
+ if(!suite.length)return;let raw=$('modelAnswer').value.trim(),data;
+ try{const match=raw.match(/\{[\s\S]*\}/);if(!match)throw new Error('V textu nebyl nalezen JSON objekt.');data=JSON.parse(match[0])}catch(e){$('evaluation').innerHTML='<div class="keybox bad">JSON se nepodařilo načíst: '+esc(e.message)+'</div>';return}
+ const answers=Array.isArray(data.answers)?data.answers:[];const byId=new Map(answers.map(x=>[x.id,x.answer]));let correct=0,rows=[];
+ suite.forEach(t=>{const got=byId.get(t.id);let ok=false;if(got!==undefined){if(t.type==='PAVOUK'&&got&&Array.isArray(got.active))ok=canonical(got.active)===canonical(t.expected.active);else if(t.type==='KOZEL'&&got&&typeof got==='object')ok=got.A===t.expected.A&&got.B===t.expected.B;else if(got&&typeof got==='object'&&!Array.isArray(got))ok=canonical(got)===canonical(t.expected)}
+ if(ok)correct++;rows.push('<div class="resultrow"><b>'+esc(t.id)+'</b> · <span class="'+(ok?'ok':'bad')+'">'+(ok?'SPRÁVNĚ':'NESPRÁVNĚ / CHYBÍ')+'</span><div class="small">Očekáváno: '+esc(JSON.stringify(t.expected))+' · Odpověď: '+esc(got===undefined?'nenalezena':JSON.stringify(got))+'</div></div>')});
+ const pct=Math.round(correct/suite.length*100);
+ $('evaluation').innerHTML='<div class="panel" style="margin-top:14px"><div class="score">'+correct+' / '+suite.length+' · '+pct+' %</div><p class="small">Přesná shoda strukturovaných odpovědí. Skóre samo o sobě nehodnotí kvalitu vysvětlení ani způsob uvažování.</p>'+rows.join('')+'</div>';
+}
+$('cardPicker').addEventListener('click',e=>{const b=e.target.closest('[data-card]');if(!b)return;selected=b.dataset.card;document.querySelectorAll('.cardpick').forEach(x=>x.classList.toggle('selected',x===b))});
+$('generate').addEventListener('click',generate);
+$('newSeed').addEventListener('click',()=>{$('seed').value='BENCH-'+Math.random().toString(36).slice(2,8).toUpperCase();generate()});
+$('copyPrompt').addEventListener('click',async()=>{const ok=await copy(makePrompt());$('suiteStatus').textContent=ok?'zadání zkopírováno':'kopírování selhalo'});
+$('exportTasks').addEventListener('click',()=>download('games-gen-benchmark-tasks.json',{benchmark:'games_gen',version:'0.1.0',card:selected,seed:$('seed').value,count:suite.length,tasks:suite.map(({expected,explain,...task})=>task)}));
+$('exportKey').addEventListener('click',()=>download('games-gen-benchmark-answer-key.json',{benchmark:'games_gen',version:'0.1.0',card:selected,seed:$('seed').value,answers:suite.map(t=>({id:t.id,expected:t.expected,explain:t.explain}))}));
+$('showKeys').addEventListener('click',()=>{keysVisible=!keysVisible;$('showKeys').textContent=keysVisible?'Skrýt řešení':'Zobrazit / skrýt řešení';renderTasks()});
+$('evaluate').addEventListener('click',evaluate);$('clearAnswer').addEventListener('click',()=>{$('modelAnswer').value='';$('evaluation').innerHTML=''});
+})();
+</script></body></html>
