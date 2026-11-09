@@ -332,3 +332,11 @@ Jednotlivé generátory se vyvíjejí samostatně. Jejich společný index, př�
 - [Polární konfigurace](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/polar.html)
 - [Paměť / LocalStorage](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/storage/)
 - [Karta API a sdílené jádro](doma/mouse_lab/data/karty.json) · [shared core](doma/shared/mouse-core.js) · [shared navigation](doma/shared/nav.js)
+
+
+## BENCHMARK · generátor testovacích úloh
+Experimentální větev pro generování kontrolovaných testovacích úloh odvozených od konkrétních karet. Obsahuje generátor čtyř rodin úloh, zadání pro model, oddělený klíč řešení, export JSON a automatické vyhodnocení strukturovaných odpovědí.
+
+- [Otevřít BENCHMARK](https://artmisanovak-prog.github.io/games_gen/benchmark/)
+- [Dokumentace BENCHMARK](benchmark/README.md)
+- [Zdrojový soubor](benchmark/index.html)
