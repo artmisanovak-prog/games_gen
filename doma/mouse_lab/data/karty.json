@@ -1,6 +1,6 @@
 {
-  "schema": "mouse-card-api/1.0",
-  "description": "Karta je samostatný zdrojový objekt. Nástroje si z ní čtou jen pole, která potřebují. Entity Panda a Vlk sdílejí jeden text, ale mají vlastní entitní pohledy.",
+  "schema": "mouse-card-api/1.1",
+  "description": "Karty odkazují na původní texty. Evidence a mechanismy jsou vytažené z konkrétního znění. Souřadnice polární konfigurace nejsou předvyplněné: zdrojové pohádky samy neurčují přiřazení vrstev ani číselné poloměry.",
   "sourceRepository": "https://github.com/artmisanovak-prog/abstrakce_ai/tree/main/doma/narativy",
   "cards": [
     {
@@ -12,36 +12,23 @@
         {
           "id": "mys",
           "name": "Myš",
-          "focus": "Pozorování přehlíženého, záznam do ticha a skulin. Myš není původce všech jevů.",
+          "focus": "Všímá si toho, co ostatní přehlížejí, a zapisuje to do ticha, koutů a skulin mezi slovy. Nevykládá ostatním, co jejich jevy znamenají.",
+          "evidence": [
+            "„Všímala si věcí, které ostatní přehlíželi.“",
+            "„Do ticha. Do koutů. Do skulin mezi slovama, kde to obvykle nikdo nečte.“",
+            "„Myš neříkala nic. Ale všechno si poznamenala.“",
+            "„Chceš myš?“"
+          ],
+          "mechanisms": [
+            "pozorování přehlížených detailů",
+            "záznam bez vysvětlování a hodnocení",
+            "otázka, která se z konkrétní nabídky rozšiřuje na smysl, jazyk a strach"
+          ],
+          "form": "Vypravěčský text se označuje jako svědectví a výslovně odmítá běžné pohádkové vysvětlování. Myš nejprve zaznamenává a teprve potom položí jedinou otázku.",
           "polar": {
-            "layers": [
-              1,
-              4,
-              7,
-              10,
-              2,
-              5,
-              8,
-              11,
-              3,
-              6,
-              9,
-              12
-            ],
-            "radii": [
-              0.18,
-              0.28,
-              0.34,
-              0.22,
-              0.42,
-              0.31,
-              0.55,
-              0.26,
-              0.38,
-              0.47,
-              0.62,
-              0.51
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         }
       ]
@@ -55,36 +42,25 @@
         {
           "id": "kocour",
           "name": "Kocour",
-          "focus": "Předčasné ukončování cizích vět, návrat spolknutých konců, tečka předběhne větu.",
+          "focus": "Spolkne dvě berušky, tedy jejich čtrnáct teček, a půl hodiny předčasně ukončuje cizí věty. Spolknuté konce nakonec vykrká zpět.",
+          "evidence": [
+            "„dvě - ne tři, ne jednu - dvě - přesně -14 teček“",
+            "„Kocour krkal tečky a dokončoval věty!“",
+            "„Skočil všem do řeči koncem věty“",
+            "„Berušky mají na sobě nedokončené konce vět.“",
+            "„Spolknuté konce ale vykrkal zpátky“"
+          ],
+          "mechanisms": [
+            "fyzické spolknutí konců vět jako teček na beruškách",
+            "předčasné dokončování cizí řeči",
+            "časově ohraničené narušení možnosti dokončit větu",
+            "návrat spolknutých konců a obnova možnosti mluvit"
+          ],
+          "form": "Text napodobuje předbíhání: věty se lámou, končí dříve, než se k jejich konci dostane mluvčí. Přesná čísla 2, 14 a 30 minut se opakují jako součást mechanismu.",
           "polar": {
-            "layers": [
-              3,
-              6,
-              9,
-              12,
-              4,
-              7,
-              10,
-              1,
-              5,
-              8,
-              11,
-              2
-            ],
-            "radii": [
-              0.62,
-              0.48,
-              0.36,
-              0.25,
-              0.73,
-              0.67,
-              0.42,
-              0.31,
-              0.58,
-              0.81,
-              0.52,
-              0.39
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         }
       ]
@@ -98,36 +74,26 @@
         {
           "id": "ryba",
           "name": "Ryba",
-          "focus": "Rytmus a flow mění vlastnosti vody, proudy a kruhy. Zvuk se překládá do vjemu tělem a okem.",
+          "focus": "Rybí rap není hudba určená primárně pro uši. Rytmus a flow působí na vodu, proudy a vodní kruhy; voda na hudbu odpovídá.",
+          "evidence": [
+            "„Je to rytmus proudů.“",
+            "„Je to mezera mezi bublinama.“",
+            "„Každej druh rybí má svůj styl hudební.“",
+            "„Tohle všechno není hudba pro uši, Tohle ovlivňuje různé vodní vlastnosti.“",
+            "„A voda odpověděla. Jinak se zavlnila.“",
+            "„Rybí hudba byla slyšet – ne uchem, ale okem, tělem.“"
+          ],
+          "mechanisms": [
+            "převod rytmu do fyzikálních vlastností vodního prostředí",
+            "odlišné hudební styly jako odlišné účinky na vodu",
+            "zpětná vazba prostředí na rytmus",
+            "vnímání zvuku zrakem a tělem místo sluchem"
+          ],
+          "form": "Rapová dikce, rytmus, flow, rýmy a opakování nejsou jen téma. Text sám používá rapový slovník a rytmickou stavbu.",
           "polar": {
-            "layers": [
-              5,
-              8,
-              11,
-              2,
-              6,
-              9,
-              12,
-              3,
-              7,
-              10,
-              1,
-              4
-            ],
-            "radii": [
-              0.44,
-              0.31,
-              0.52,
-              0.28,
-              0.77,
-              0.83,
-              0.65,
-              0.41,
-              0.56,
-              0.72,
-              0.88,
-              0.61
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         }
       ]
@@ -141,36 +107,25 @@
         {
           "id": "zelva",
           "name": "Želva",
-          "focus": "Trvání, pohlednice jako směry a možnosti, vzájemná motivace dvou činností.",
+          "focus": "Běží závod celé roky a nese pohlednice od zajíce jako důkazy, sny a mapy možných míst. Pohlednice nejsou cíle, ale směry a důvody pokračovat.",
+          "evidence": [
+            "„Želva běží závod. Celé roky. Ne pomalu. Jen důkladně.“",
+            "„Každý otisk je jako razítko.“",
+            "„Každý pohled má jako směr. Ne cíl. Ale důvod.“",
+            "„Zajíc běží, aby mohl psát. A želva běží, aby mohla číst.“",
+            "„A že závod není o čase.“"
+          ],
+          "mechanisms": [
+            "dlouhé trvání bez ztotožnění s pomalostí",
+            "pohlednice převádějí vzdálená místa na možnosti a směry",
+            "vzájemná závislost dvou činností: psaní a čtení",
+            "závod získává smysl z udržované korespondence, ne z pořadí"
+          ],
+          "form": "Krátké řádky a opakované věty vytvářejí rytmus pokračování. Text opakovaně vrací motiv běhu a čtení, čímž sám udržuje dlouhé trvání.",
           "polar": {
-            "layers": [
-              7,
-              10,
-              1,
-              4,
-              8,
-              11,
-              2,
-              5,
-              9,
-              12,
-              3,
-              6
-            ],
-            "radii": [
-              0.25,
-              0.39,
-              0.58,
-              0.33,
-              0.47,
-              0.62,
-              0.71,
-              0.86,
-              0.54,
-              0.42,
-              0.68,
-              0.31
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         }
       ]
@@ -184,71 +139,50 @@
         {
           "id": "panda",
           "name": "Panda",
-          "focus": "Vlastní barevnost, připsaný znak, paradox černobílého tvora a zrzavý chlup.",
+          "focus": "Panda tvrdí, že je barevnější než dalmatin, a ironicky obrací očekávání: černobílý tvor se považuje za barevnější, zatímco vlk, který barvy nerozlišuje, má zrzavý chlup. Její radost z chlupu motivuje Vlka.",
+          "evidence": [
+            "„jsem barevnější, než dalmatin“",
+            "„panda velmi silně podprahově motivovala vlka“",
+            "„vlkovi závidí jediný jeho zrzavý chlup“",
+            "„panda si chlup slavnostně vystaví“",
+            "„byla šťastná, že není zrzavá“"
+          ],
+          "mechanisms": [
+            "rozpor mezi vnějším barevným označením a prožívanou barevností",
+            "ironické přivlastnění jediného zrzavého chlupu",
+            "motivace druhé postavy skrze vlastní reakci a radost",
+            "význam barvy závisí na schopnosti ji vnímat a rozlišovat"
+          ],
+          "form": "Pandin výrok je nejprve podán jako tajemství a následně se ukáže, že jeho smysl závisí na odlišném vnímání Vlka.",
           "polar": {
-            "layers": [
-              9,
-              12,
-              3,
-              6,
-              10,
-              1,
-              4,
-              7,
-              11,
-              2,
-              5,
-              8
-            ],
-            "radii": [
-              0.55,
-              0.43,
-              0.68,
-              0.32,
-              0.49,
-              0.81,
-              0.72,
-              0.58,
-              0.87,
-              0.39,
-              0.63,
-              0.76
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         },
         {
           "id": "vlk",
           "name": "Vlk",
-          "focus": "Rozdíl mezi přímým vjemem, naučeným pojmenováním a funkční reprezentací; vznik piktogramu.",
+          "focus": "Vlk barvy fyzicky nerozlišuje, ale naučil se číst jejich názvy a symboly. Piktogram nakonec obejde závislost na barvě i psaném textu.",
+          "evidence": [
+            "„Vlk nevidí barvy. Žádné. Ani dvě.“",
+            "„každá barva jiná, pro něj písmena jen jinak poskládaná“",
+            "„on vidí odstíny a stíny sice nosem hlavně“",
+            "„zařízení, které poslouchá, co říká a písmena podle toho dělá“",
+            "„bezděky - stvořil piktogtam!“",
+            "„způsob jak obejít každou zasranou barvu a i celej posranej text.“"
+          ],
+          "mechanisms": [
+            "rozdíl mezi vjemem, naučeným názvem a rozpoznáním symbolu",
+            "kompenzace vizuálního rozlišení čichem a znalostí znaků",
+            "technologie převádí řeč na písmo, ale skutečný průlom vzniká kresbou/piktogramem",
+            "piktogram obchází jazykovou i barevnou bariéru"
+          ],
+          "form": "Příručka je paradoxně téměř celá ilustrovaná; obsahuje jen dvě psaná slova, podpis a poděkování. Forma knihy tak řeší problém, který vyprávění popisuje.",
           "polar": {
-            "layers": [
-              11,
-              2,
-              5,
-              8,
-              12,
-              3,
-              6,
-              9,
-              1,
-              4,
-              7,
-              10
-            ],
-            "radii": [
-              0.72,
-              0.58,
-              0.46,
-              0.37,
-              0.88,
-              0.65,
-              0.79,
-              0.51,
-              0.62,
-              0.83,
-              0.69,
-              0.91
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         }
       ]
@@ -262,36 +196,26 @@
         {
           "id": "motyl",
           "name": "Motýl",
-          "focus": "Skutečná potřeba versus symbolická nabídka; význam se ověřuje podle účinku.",
+          "focus": "Motýli jsou nabídnuti jako odpověď na hlad, ale nenahradí jídlo. Rozhovor střetává tělesnou potřebu, symbolickou nabídku a interpretaci.",
+          "evidence": [
+            "„Já mám hlad“",
+            "„A podal jí motýly. Tři.“",
+            "„Já nechci koukat. Já chci jíst.“",
+            "„A ty mi dáváš křídla.“",
+            "„To je umění.“ / „To je hlad.“ / „To je interpretace.“",
+            "„Motýlů v břiše se nenajíš.“"
+          ],
+          "mechanisms": [
+            "záměna skutečné potřeby za symbolickou či estetickou nabídku",
+            "opakované pokusy motýlů napodobit jídlo",
+            "konflikt mezi interpretací a materiálním účinkem",
+            "závěrečné ověření nabídky otázkou na přílohu"
+          ],
+          "form": "Dialog staví vedle sebe krátké protikladné repliky. Motýli se převlékají za jídlo, ale proměna vzhledu neuspokojí hlad.",
           "polar": {
-            "layers": [
-              2,
-              5,
-              8,
-              11,
-              3,
-              6,
-              9,
-              12,
-              4,
-              7,
-              10,
-              1
-            ],
-            "radii": [
-              0.47,
-              0.34,
-              0.61,
-              0.29,
-              0.52,
-              0.73,
-              0.86,
-              0.42,
-              0.69,
-              0.55,
-              0.78,
-              0.64
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         }
       ]
@@ -305,36 +229,26 @@
         {
           "id": "drak",
           "name": "Drak",
-          "focus": "Kašel se stává řečí a přestupkem teprve ve vztahu k ceduli.",
+          "focus": "Dráček místo ohně kašle. Kašel je řeč a zvuk, který se stává přestupkem až ve vztahu k ceduli ZÁKAZ KOUŘENÍ.",
+          "evidence": [
+            "„ZÁKAZ KOUŘENÍ“",
+            "„Kuck. Kuck. Ehl. Eche. Kuck.“",
+            "„Místo ohně – kašel.“",
+            "„Byla to řeč. Byla to onomatopoie.“",
+            "„Bez cedule by to byl jen zvuk. Ale s cedulí to byl přestupek.“",
+            "„Co bylo dřív?“"
+          ],
+          "mechanisms": [
+            "zvuková imitace přechází v řeč",
+            "význam zvuku vzniká ve vztahu k zákazu",
+            "cedule mění status kašle, aniž se mění samotný zvuk",
+            "otáčení příčinného pořadí: drak, vejce, cedule a zákaz"
+          ],
+          "form": "Opakované citoslovce kašle je přímou součástí textu. Rozdělení na krátké úseky a opakování zvuku simuluje chrchlání.",
           "polar": {
-            "layers": [
-              4,
-              7,
-              10,
-              1,
-              5,
-              8,
-              11,
-              2,
-              6,
-              9,
-              12,
-              3
-            ],
-            "radii": [
-              0.63,
-              0.41,
-              0.57,
-              0.82,
-              0.76,
-              0.48,
-              0.35,
-              0.68,
-              0.91,
-              0.72,
-              0.59,
-              0.85
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         }
       ]
@@ -348,36 +262,26 @@
         {
           "id": "kliste",
           "name": "Klíště",
-          "focus": "Dvojí touha být hostitelem i získat hostitele; společný sen vytváří alternativní realitu.",
+          "focus": "Klíšťata společně sní o laních: chtějí pít jejich krev a zároveň se sama stát laněmi. Společný sen může vytvořit druhou realitu, v níž jsou laně jeho výplodem.",
+          "evidence": [
+            "„Někdo musí být půda, aby jiní mohli být příběh.“",
+            "„sní o laních - pít laní krev“",
+            "„sní o laních - přejí si být sami laně“",
+            "„ve chvíli kdy všichni klíšti usnou / probouzí se laně“",
+            "„laně jsou jen živý výplod jejich snů“",
+            "„laň vznikla z klíštěcího pocitu marnosti“"
+          ],
+          "mechanisms": [
+            "závislost predátora a hostitele na existenci druhého",
+            "dvojí touha: konzumovat hostitele a stát se hostitelem",
+            "synchronizovaný společný sen vytváří alternativní realitu",
+            "obrácení vztahu mezi původcem snu a snovým objektem"
+          ],
+          "form": "Opakování a rozdělování slov „sní a / s ní“ narušuje hranici mezi sněním a vztahem k ní. Text nechává vznik laně jako možnost, ne jako uzavřený fakt.",
           "polar": {
-            "layers": [
-              6,
-              9,
-              12,
-              3,
-              7,
-              10,
-              1,
-              4,
-              8,
-              11,
-              2,
-              5
-            ],
-            "radii": [
-              0.68,
-              0.54,
-              0.82,
-              0.43,
-              0.61,
-              0.75,
-              0.91,
-              0.86,
-              0.72,
-              0.58,
-              0.89,
-              0.77
-            ]
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
           }
         }
       ]
