@@ -1,0 +1,508 @@
+{
+  "schema": "mouse-source-analysis/1.0",
+  "language": "cs",
+  "status": "source-grounded-analysis",
+  "method": {
+    "sourceOfTruth": "Přesné texty v artmisanovak-prog/abstrakce_ai/doma/narativy/",
+    "evidenceRule": "Každé tvrzení o ději nebo vlastnosti musí být opřeno o citovaný úryvek. Odvození je odděleno od doslovného dokladu.",
+    "coordinateRule": "Číselné polární souřadnice, vrstvy a poloměry nejsou v pohádkách samy uvedeny. Dokud neexistuje výslovná autorská mapa, nesmějí být vydávány za skutečné souřadnice.",
+    "statusLabels": [
+      "explicitní_doklad",
+      "odvození_z_textu",
+      "otevřená_otázka"
+    ]
+  },
+  "sources": [
+    {
+      "id": "mys",
+      "file": "mys.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/mys.txt",
+      "entities": [
+        {
+          "id": "mys",
+          "name": "Myš",
+          "role": "pozorovatelka a zapisovatelka",
+          "evidence": [
+            {
+              "quote": "Všímala si věcí, které ostatní přehlíželi.",
+              "supports": "Všímání si přehlížených jevů",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Do ticha. Do koutů. Do skulin mezi slovama, kde to obvykle nikdo nečte.",
+              "supports": "Způsob a místo záznamu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Myš neříkala nic. Ale všechno si poznamenala.",
+              "supports": "Pozorování a záznam bez průběžného vysvětlování",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "myš",
+              "to": "přehlížené jevy",
+              "type": "pozoruje",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "myš",
+              "to": "ticho / kouty / skuliny mezi slovy",
+              "type": "zapisuje do",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Text vymezuje myš jako pozorovatelku, která nejprve zaznamenává zvláštní jevy jiných zvířat a teprve později položí otázku „Chceš myš?“.",
+          "openQuestions": [
+            "Jak přesně se záznam v tichu liší od běžného ukládání informací?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kocour",
+      "file": "kocour.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/kocour.txt",
+      "entities": [
+        {
+          "id": "kocour",
+          "name": "Kocour",
+          "role": "předčasně ukončuje cizí věty a vrací spolknuté konce",
+          "evidence": [
+            {
+              "quote": "Kocour krkal tečky a dokončoval věty!",
+              "supports": "Tělesný projev a jazykový účinek",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Skočil všem do řeči koncem věty",
+              "supports": "Předčasné ukončení cizí výpovědi",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Spolknuté konce ale vykrkal zpátky",
+              "supports": "Návrat spolknutých konců",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A že tečka je někdy silnější, než celá věta.",
+              "supports": "Výslovné závěrečné tvrzení textu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "spolknuté tečky",
+              "to": "ukončování cizích vět",
+              "type": "projevují se jako",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "návrat teček",
+              "to": "možnost znovu dokončovat věty",
+              "type": "obnovuje",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Vyprávění samo používá předčasná ukončení, usekané řádky a posunuté konce vět. Tato formální vlastnost odpovídá popsanému jevu.",
+          "openQuestions": [
+            "Je tečka v příběhu pouze interpunkční znak, nebo i přenositelná hranice mezi sděleními?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ryba",
+      "file": "ryba.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/ryba.txt",
+      "entities": [
+        {
+          "id": "ryba",
+          "name": "Ryba",
+          "role": "rapuje pro vodu; rytmus působí na vlastnosti vodního prostředí",
+          "evidence": [
+            {
+              "quote": "Je to rytmus proudů.",
+              "supports": "Rybí rap je definován jako rytmus proudů",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Tohle ovlivňuje různé vodní vlastnosti.",
+              "supports": "Hudební styly ovlivňují vlastnosti vody",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A voda odpověděla. Jinak se zavlnila.",
+              "supports": "Reakce prostředí na rybí rap",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Tvořila verše jako vodní kruhy, v kterých byly další kruhy.",
+              "supports": "Prostorový vzor vytvořený odpovědí vody",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Rybí hudba byla slyšet – ne uchem, ale okem, tělem.",
+              "supports": "Překlad zvuku do zrakového a tělesného vnímání",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "rybí rytmus",
+              "to": "voda",
+              "type": "mění její vlastnosti a proudění",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "voda",
+              "to": "ryba",
+              "type": "odpovídá proměnou",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "rybí hudba",
+              "to": "oko a tělo",
+              "type": "je vnímána také jinak než sluchem",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Text pracuje s rytmem, opakováním, flow a zvukomalebností; současně popisuje, že rytmus přechází do proudění a kruhových obrazců.",
+          "openQuestions": [
+            "Které konkrétní parametry rytmu odpovídají kterým změnám vody? Text to neformalizuje."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zelva",
+      "file": "zelva.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/zelva.txt",
+      "entities": [
+        {
+          "id": "zelva",
+          "name": "Želva",
+          "role": "pokračuje v dlouhém závodě a pohlednice převádí na směry a možnosti",
+          "evidence": [
+            {
+              "quote": "Želva běží závod. Celé roky.",
+              "supports": "Dlouhé trvání závodu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Ale každý pohled jí přistane na krunýři. A ona je nese. Jako důkazy. Jako sny. Jako možnosti. Jako mapy míst, kde nikdy nebyla, ale možná jednou bude.",
+              "supports": "Pohlednice se stávají nesenými možnostmi a mapami",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A každý pohled má jako směr. Ne cíl. Ale důvod.",
+              "supports": "Rozlišení směru, cíle a důvodu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Zajíc běží, aby mohl psát. A želva běží, aby mohla číst.",
+              "supports": "Vzájemná vazba činnosti zajíce a želvy",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "pohlednice",
+              "to": "želva",
+              "type": "přinášejí směry a možnosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "běh želvy",
+              "to": "psaní zajíce",
+              "type": "udržuje důvod pokračovat",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "psaní zajíce",
+              "to": "čtení želvy",
+              "type": "dává obsah a adresáta",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Dlouhé věty a opakované návraty k běhu, čtení a psaní podporují motiv trvání. Závod není měřen rychlostí, ale udržovaným důvodem.",
+          "openQuestions": [
+            "Jak odlišit cíl, směr a důvod v dalších konfiguracích, aniž by se slily?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "panda",
+      "file": "panda.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/panda.txt",
+      "entities": [
+        {
+          "id": "panda",
+          "name": "Panda",
+          "role": "zpochybňuje běžné přiřazení barevnosti a ironicky obrací soucit",
+          "evidence": [
+            {
+              "quote": "jsem barevnější, než dalmatin",
+              "supports": "Pandino tvrzení o vlastní barevnosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "tvor, co barvy nevidí, je jimi celý žíhaný a ona chudák jako černobílý tvor, je považována vlastně za nebarevnou.",
+              "supports": "Paradox mezi viděním barev, vzhledem a společenským označením",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "vlkovi závidí jediný jeho zrzavý chlup.",
+              "supports": "Konkrétní předmět závisti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "panda si chlup slavnostně vystaví",
+              "supports": "Změna vztahu k vlastní barevnosti prostřednictvím jednoho chlupu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "pandino vlastní pojetí barevnosti",
+              "to": "běžné označení černobílosti",
+              "type": "je v rozporu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "zrzavý chlup vlka",
+              "to": "panda",
+              "type": "je darován a stává se vystaveným znakem",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Panda nejprve pronese paradoxní tvrzení, poté se směje vlkovu neporozumění a nakonec ironicky obrací soucit: lituje světa, nikoli vlka.",
+          "openQuestions": [
+            "Jaký přesný význam má pandino tvrzení „barevnější“, když text neposkytuje jednoznačnou definici barevnosti?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vlk",
+      "file": "vlk.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/vlk.txt",
+      "entities": [
+        {
+          "id": "vlk",
+          "name": "Vlk",
+          "role": "rozlišuje vizuální vjem, čichové rozpoznávání, naučené názvy a piktogram",
+          "evidence": [
+            {
+              "quote": "vlk nevidí barvy. žádné. ani dvě.",
+              "supports": "Vlk nerozlišuje barvy zrakem",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "ale že to rozezná, když mu to tam napíšou.",
+              "supports": "Rozpoznání podle napsaného označení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "pruhy a skrvny rozezná od fleků na jedno čuch.",
+              "supports": "Čichové rozlišování znaků prostředí",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "způsob jak obejít každou zasranou barvu a i celej posranej text.",
+              "supports": "Piktogram jako alternativa k barvě a textu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "barva jako zrakový vjem",
+              "to": "napsané slovo barvy",
+              "type": "není pro vlka totožná zkušenost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "čich a grafické rozlišení",
+              "to": "orientace ve světě",
+              "type": "poskytují jiné kanály rozpoznávání",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "piktogram",
+              "to": "barva a text",
+              "type": "nabízí alternativní reprezentaci",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Text střídá slovní popis, vysvětlení a závěrečný obrat k piktogramu. Vlkova příručka je téměř celá ilustrovaná; textově obsahuje hlavně podpis a poděkování.",
+          "openQuestions": [
+            "Je piktogram univerzálně čitelný, nebo jen obchází konkrétní omezení popsané v příběhu?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motyl",
+      "file": "motyl.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/motyl.txt",
+      "entities": [
+        {
+          "id": "motyl",
+          "name": "Motýl",
+          "role": "součást nabídky, která zaměňuje symbolickou hodnotu za uspokojení hladu",
+          "evidence": [
+            {
+              "quote": "Já mám hlad",
+              "supports": "Výslovně pojmenovaná potřeba",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A podal jí motýly. Tři.",
+              "supports": "Nabídnuté řešení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Já nechci koukat. Já chci jíst.",
+              "supports": "Rozpor mezi estetickým vnímáním a tělesnou potřebou",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "To je umění. To je hlad. To je interpretace. To je nesmysl. To je možné.",
+              "supports": "Spor o pojmenování situace",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A pokaždé, když jí někdo chtěl nakrmit láskou, zeptala se: A máš k tomu i přílohu?",
+              "supports": "Přenos zkušenosti do pozdějšího ověřování nabídky",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "hlad",
+              "to": "motýli",
+              "type": "motýli jej neuspokojují",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "symbolická nabídka",
+              "to": "konkrétní potřeba",
+              "type": "není její náhradou",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Dialog opakovaně střetává různé interpretace stejné nabídky: umění, hlad, interpretaci, nesmysl a možnost. Motýli se pokoušejí napodobit jídlo, ale nenahradí ho.",
+          "openQuestions": [
+            "Kdy je symbolická nabídka doplňkem skutečné potřeby a kdy je její chybnou náhradou?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drak",
+      "file": "drak.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/drak.txt",
+      "entities": [
+        {
+          "id": "drak",
+          "name": "Dráček",
+          "role": "kašle místo chrlení ohně; zákazová cedule mění status zvuku",
+          "evidence": [
+            {
+              "quote": "Místo ohně – kašel. Místo hrdinství – přestupek.",
+              "supports": "Záměna očekávaného dračího projevu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Byla to řeč. Byla to onomatopoie. Zvuk, který se stal slovem. A slovo, které se stalo problémem.",
+              "supports": "Přechod zvuku do řeči a problému",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Bez cedule by to byl jen zvuk. Ale s cedulí to byl přestupek.",
+              "supports": "Kontext cedule mění význam kašle",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Ale dráček neplival oheň. Nepálil. Neškodil. Jen kašlal.",
+              "supports": "Výslovné vymezení toho, co dráček nedělá a co dělá",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "kašel",
+              "to": "řeč / onomatopoie",
+              "type": "je interpretován jako",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "cedule ZÁKAZ KOUŘENÍ",
+              "to": "kašel",
+              "type": "mění jeho status na přestupek",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Zvukomalebné „Kuck. Kuck. Ehl. Eche. Kuck.“ je přímo vloženo do textu. Opakování zvuku je zároveň důkazem jevu, který příběh popisuje.",
+          "openQuestions": [
+            "Jak se liší význam zvuku, jeho jazyková interpretace a jeho normativní status?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kliste",
+      "file": "kliste.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/kliste.txt",
+      "entities": [
+        {
+          "id": "kliste",
+          "name": "Klíště",
+          "role": "ve společném snu klíšťat se obrací vztah mezi parazitem a laní",
+          "evidence": [
+            {
+              "quote": "sní o laních - pít laní krev",
+              "supports": "První podoba touhy klíšťat",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "sní o laních - přejí si být sami laně",
+              "supports": "Druhá, odlišná podoba touhy",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "ve chvíli kdy všichni klíšti usnou / probouzí se laně",
+              "supports": "Časová vazba společného snu a probuzení laní",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "laně jsou jen živý výplod jejich snů",
+              "supports": "Možná ontologie laní jako výtvoru snu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "klíšťata",
+              "to": "laně",
+              "type": "touží po krvi i po proměně v ně",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "společný sen klíšťat",
+              "to": "realita laní",
+              "type": "může ji vytvářet",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Text používá opakování a rozpojené slabiky („s ní – sní a – s ní“), které formálně narušují hranici mezi sněním, bytím s někým a sněním o někom.",
+          "openQuestions": [
+            "Je laň ve světě příběhu skutečná, snová, nebo obojí? Text nabízí možnost, nikoli definitivní rozhodnutí."
+          ]
+        }
+      ]
+    }
+  ]
+}
