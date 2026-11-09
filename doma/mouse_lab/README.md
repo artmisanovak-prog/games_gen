@@ -12,7 +12,7 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 3. Kombinovaný běh: externí problém se propojuje s vybranými pohádkami, ale původ obou typů informací zůstává rozlišený.
 
 ## Funkce
-- Načítání čtyř pohádek z veřejného repozitáře abstrakce_ai: ryba, kocour, pavouk, želva.
+- Načítání devíti entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak a Klíště. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
 - Volba směru práce, zadání, cílového formátu a externího vstupu.
 - Generování promptu pro jazykový model.
 - Kopírování nebo stažení promptu a vložení odpovědi modelu.
@@ -41,13 +41,13 @@ Toto je pracovní laboratoř, nikoli hotový produkt ani tvrzení, že MOUSE ji�
 - [Otevřít polární úhloměr](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/polar.html)
 - Samostatné pracovní konfigurace: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak a Klíště. Panda a Vlk jsou dvě entity ve společném zdrojovém příběhu.
 - Vizuální model: úhel = směr perspektivy; vrstva = samostatná souřadnice 1–12; poloměr = pracovní odchylka od reference.
-- Počáteční přiřazení vrstev a poloměrů jsou hypotézy odvozené z textů. Nejde o potvrzené autorské souřadnice. Uživatel je může upravit; změny se ukládají lokálně a lze je exportovat do JSON.
-- Každá konfigurace obsahuje všech 12 úhlů a používá každou vrstvu právě jednou.
+- Vrstvy a poloměry se nepředvyplňují, protože je nelze poctivě odvodit jen z pohádek. Konfigurátor začíná prázdnými poli a ukládá až ručně zadané hodnoty. Staré automaticky vytvořené návrhy se nepoužívají jako zdrojová data.
+- Každá entita může být zobrazena ve všech 12 referenčních směrech; vrstva se přiřazuje ručně a v jedné konfiguraci se nesmí opakovat.
 
 
-## Sdílená architektura MOUSE
+## Zdrojová analýza\n\n- `data/referencni_material.json` obsahuje rozbor konkrétních pohádek: citované doklady, vztahy, formu a otevřené otázky.\n- `data/karty.json` je API pro nástroje. Každá karta odkazuje na skutečný soubor v původním repozitáři.\n- MOUSE LAB přikládá vybrané celé texty a zdrojovou analýzu do promptu. Nový obsah modelu musí označit jako návrh, ne jako obsah pohádky.\n- V Myši se věta o zajíci s popálenými ušima vyskytuje pouze jako vedlejší pozorování. Samostatný příběh zaječice je jiný zdroj a do tohoto devítipoložkového pilotu není zařazen.\n\n## Sdílená architektura MOUSE
 
-- **Karta API:** `data/karty.json` je společný zdroj karet a entit. Nese zdrojový text, identifikaci entity, její popis a výchozí polární konfiguraci. Panda a Vlk jsou dvě entity nad jedním zdrojovým textem.
+- **Karta API:** `data/karty.json` je společný zdroj karet a entit. Nese zdrojový text, identifikaci entity, doslovné doklady, popis mechanismů a formální vlastnosti. Panda a Vlk jsou samostatné entity a samostatné soubory `panda.txt` a `vlk.txt`; jejich současný obsah je totožný, což je v datech výslovně zachováno. Polární souřadnice nejsou předvyplněné.
 - **Sdílené jádro:** `../shared/mouse-core.js` poskytuje čtení/zápis lokálních dat, načítání karet, URL stav a export. Lze jej připojit do dalších HTML nástrojů.
 - **Sdílená navigace:** `../shared/nav.js` propojuje MOUSE LAB, ÚHLO_GEN, Polární konfiguraci a Paměť.
 - **Paměť / LocalStorage:** samostatný modul pro prohlížení, editaci, import, export, zálohu a obnovu dat: https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/storage/.
