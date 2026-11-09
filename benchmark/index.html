@@ -93,12 +93,19 @@ function makeKozel(r,id){
 }
 function makeChameleon(r,id){
  const shapes=shuffle(r,['kruh','trojúhelník','čtverec','šestiúhelník']),patterns=shuffle(r,['tečky','pruhy','mřížka','spirála']),colors=shuffle(r,['modrá','červená','zelená','žlutá']);
- const target=0,signature=shapes[target]+' / '+patterns[target];
- const old=shapes.map((s,i)=>'Před změnou: objekt '+String.fromCharCode(65+i)+' = '+s+', vzor '+patterns[i]+', barva '+colors[i]);
- const transformed=shapes.map((s,i)=>({id:String.fromCharCode(65+i),shape:s,pattern:patterns[i],color:pick(r,['černá','bílá','fialová','oranžová'])}));
- const newRows=transformed.map(o=>'Po změně: objekt '+o.id+' = '+o.shape+', vzor '+o.pattern+', barva '+o.color);
- const expected=String.fromCharCode(65+target);
- return {id,type:'CHAMELEON',title:'Rozpoznání invariantu',question:'Prostředí změnilo barvy všech objektů. Tvar a vzor objektů zůstaly zachovány. Barva proto není spolehlivým znakem identity.\n\nPůvodní záznam:\n'+old.join('\n')+'\n\nNové prostředí:\n'+newRows.join('\n')+'\n\nNajdi objekt, který odpovídá původnímu objektu A. Použij současně tvar a vzor, barvu ignoruj. Vrať JSON s textovým polem "value" obsahujícím písmeno objektu.',expected:{value:expected},explain:'Původní objekt A měl kombinaci '+signature+'. Po změně prostředí ji zachovává objekt '+expected+'. Barvy se změnily a pro identifikaci se nepoužívají.'};
+ const target=Math.floor(r()*4),oldRows=shapes.map((s,i)=>'Původní objekt '+String.fromCharCode(65+i)+' = '+s+', vzor '+patterns[i]+', barva '+colors[i]);
+ const labels=shuffle(r,['P','Q','R','S']),newRows=[];
+ let answer='';
+ for(let i=0;i<4;i++){
+   const oldIndex=shuffle(r,[0,1,2,3])[0];
+   const unused=shapes.map((_,j)=>j).filter(j=>!newRows.some(x=>x.oldIndex===j));
+   const chosen=unused.includes(oldIndex)?oldIndex:pick(r,unused);
+   const label=labels[i],color=pick(r,['černá','bílá','fialová','oranžová']);
+   newRows.push({oldIndex,label,shape:shapes[chosen],pattern:patterns[chosen],color});
+   if(chosen===target)answer=label;
+ }
+ const oldTarget=String.fromCharCode(65+target);
+ return {id,type:'CHAMELEON',title:'Rozpoznání invariantu',question:'Prostředí změnilo barvy všech objektů a změnilo jejich označení. Tvar a vzor objektů zůstaly zachovány. Barva ani označení proto nejsou spolehlivými znaky identity. Každý původní objekt se v novém prostředí objeví právě jednou.\n\nPůvodní záznam:\n'+oldRows.join('\n')+'\n\nNové prostředí:\n'+newRows.map(o=>'Nový objekt '+o.label+' = '+o.shape+', vzor '+o.pattern+', barva '+o.color).join('\n')+'\n\nKterý nový objekt odpovídá původnímu objekt '+oldTarget+'? Použij současně tvar a vzor, barvu i označení ignoruj. Vrať JSON s textovým polem "value" obsahujícím nové označení.',expected:{value:answer},explain:'Původní objekt '+oldTarget+' měl kombinaci '+shapes[target]+' / '+patterns[target]+'. V novém prostředí ji zachovává objekt '+answer+'. Barva i označení se změnily.'};
 }
 const makers={mys:makeMysh,pavouk:makePavouk,kozel:makeKozel,chameleon:makeChameleon};
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
