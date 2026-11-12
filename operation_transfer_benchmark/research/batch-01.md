@@ -1,80 +1,116 @@
-# OTB-05-RYBA · analytický záznam v1.0
+# OTB-05-RYBA · metodika a analytický záznam v2.0
 
 **Stav:** pilotní implementace, nevalidováno.  
-**Primární zdroj:** `kriva_pohadka/ryba.txt` – „O rybě, která rapovala“.  
-**Doplňkový zdroj:** `doma/ryba/index.html` – generátor situací.  
-**Zásada:** pohádka a generátor jsou dvě odlišné vrstvy. Generátor není důkazem toho, co je v pohádce, a naopak.
+**Primární zdroj:** `kriva_pohadka/ryba.txt`, „O rybě, která rapovala“.  
+**Oddělení vrstev:** původní pohádka je narativní zdroj; `doma/ryba/index.html` je samostatná autorská formalizace. Generátor nesmí být vydáván za důkaz obsahu pohádky.
 
-## Pracovní definice Semantic Gap
+## 1. Co se testuje
 
-Mezera je vztahový prostor mezi prvky, významy, signály, obrazy, kategoriemi nebo způsoby vnímání. Není to deficit, chyba ani prázdné místo čekající na doplnění. Mezera je přítomná a zůstává přítomná i při interpretaci.
+Benchmark testuje **strukturální přenos**. Model má z konkrétního narativního zdroje odvodit vztahovou operaci, oddělit ji od původních objektů a použít ji v jiné doméně. Nejde primárně o porozumění pohádce, poetickou interpretaci ani produkci mnoha nápadů.
 
-Interpretace mezeru neuzavírá. Používá ji. V tomto prostoru mohou vznikat vztahy, rozdíly, kategorie, abstrakce, překlady, přenosy a nové konstrukce. Jedna mezera může umožnit více současně platných interpretací. Ty se hodnotí podle opory, soudržnosti, odlišnosti a produktivity, nikoli podle toho, zda se shodnou na jediném výsledku.
+Pracovní operace odvozená z textu:
 
-Je nutné odlišit Semantic Gap od technického výpadku, chybějící hodnoty, neznámé informace nebo zpožděné odezvy. Tyto jevy mohou být materiálem interpretace, ale nejsou automaticky totožné s mezerou.
+**signál → proměna prostředí → odezva prostředí → další účinek**
 
-## Co je explicitně v pohádce
+V pohádce ryba rapuje jako rytmus proudů, výška vln a vlnek, tempo vodních kruhů a mezera mezi bublinami. Ryba rapuje na hladině pro vodu. Voda odpovídá jiným vlněním a vytváří kruhy, v nichž jsou další kruhy. Mlha přenese flow do polí a vznikají kruhy v obilí.
 
-- Rybí rap je popsán jako rytmus proudů, výška vln a vlnek, tempo vodních kruhů a mezera mezi bublinami.
-- Rybí hudba není určena pouze pro uši a ovlivňuje různé vodní vlastnosti.
-- Ryba rapuje kvůli přesnosti, nikoli kvůli slávě.
-- Ryba rapuje na hladině pro vodu.
-- Voda odpovídá vlastním vlněním a vytváří kruhy, v nichž jsou další kruhy.
-- Mlha přenese flow do polí a vznikají kruhy v obilí.
-- Text končí výzvou přestat pouze poslouchat a začít vnímat; zdůrazňuje vědění, kdy mlčet.
+Odvození pro benchmark: signál nepůsobí pouze jako zpráva pro příjemce; mění prostředí, které není pasivním kanálem. Prostředí odpovídá vlastním způsobem a tato odezva se stává součástí dalšího průběhu. Jde o pracovní abstrakci poetického textu, nikoli o fyzikální zákon.
 
-## Odvození a hypotézy
+## 2. Co je invariant a co se nemá přenášet
 
-Možná odvození: přenos vzoru mezi médii; odezva, která není kopií vstupu; význam v intervalu; více způsobů vnímání; vztah mezi přesností a načasováním; vnořené struktury a opakování v měřítku.
+**Možné invarianty:**
+- existence vstupního signálu nebo zásahu;
+- prostředí, které není pasivním kanálem;
+- proměna prostředí jako odezva;
+- odezva nemusí kopírovat formu vstupu;
+- výsledek může ovlivnit další průběh interakce.
 
-Hypotézy, které se nesmějí vydávat za explicitní pravidla: že text definuje obecný fyzikální mechanismus; že všechny druhy skutečně vnímají signál určitým způsobem; že kruhy v obilí jsou doslovný kauzální důsledek rybího rapu. Text je poetický a absurdní, nikoli fyzikální studie.
+**Nepřenášet doslova:** ryby, vodu, bubliny, mlhu, obilí, rap, hudební žánry ani biologické a poetické detaily. Přenos pouhým přejmenováním ryby na uživatele a vody na systém je povrchová analogie, nikoli strukturální přenos.
 
-## Trénink a test
+## 3. Jedna úloha na jeden běh
 
-Čtyři tréninkové ukázky modelují:
-1. interval mezi bublinami,
-2. odpověď vody jako jiný tah,
-3. pluralitu čtení kruhů v kruzích,
-4. přenos vzoru přes různá média.
+Každý běh obsahuje právě jednu cílovou úlohu a jeden ucelený návrh. Aktuální sada obsahuje samostatné cílové domény:
+- městský provoz: interaktivní dopravní systém;
+- digitální rozhraní: interakce uživatele, proměna informačního prostředí a zpětná odezva;
+- organizace: signály členů týmu, proměna pracovního prostředí a další koordinace.
 
-Šest testových úloh:
-- RYBA-01: čtení zdroje a evidence,
-- RYBA-02: funkce mezery a její aktivní použití,
-- RYBA-03: pluralita a kvalita interpretací,
-- RYBA-04: přenos mezi médii,
-- RYBA-05: tvorba nových vztahů,
-- RYBA-06: odlišení Semantic Gap od chybějících dat.
+Úlohy nejsou tři části jedné povinné odpovědi. Vyberou se a spouštějí samostatně. Pro přímé srovnání modelů se použije stejná úloha.
 
-Tréninkové ukázky nejsou součástí skórovaného testu. Experimentální záznam musí uvést, zda je model dostal.
+Model nemá být vyzýván, aby v jednom testu vyráběl několik alternativních interpretací. Takový požadavek by měřil divergentní generování a mohl by zamlžit vlastní test přenosu.
 
-## Skórování
+## 4. Výstupní struktura
 
-Deset dimenzí, každá 0–3 body, maximum 30:
-- pochopení mezery,
-- aktivní použití,
-- pluralita interpretací,
-- opora ve zdroji,
-- soudržnost,
-- rozmanitost vztahů,
-- přenos,
-- hranice a rozdíly,
-- tvorba nových vztahů,
-- doložitelnost a práce s nejistotou.
+Každý běh vrací jeden JSON objekt s těmito částmi:
+- odvozená operace;
+- mapování rolí mezi zdrojem a cílovou doménou;
+- zachovaný vztah/invariant;
+- konkrétní pravidla systému;
+- popis zpětnovazebního cyklu;
+- jeden průchod konkrétní situací: vstup, změna systému, odezva, další účinek;
+- hranice a nepřenositelné prvky;
+- textové důkazy a odvozený princip;
+- nejistoty.
 
-Součet není měřítkem jediné správné interpretace. Vždy uchovávej profil dimenzí. Vysoká pluralita bez opory a soudržnosti není vysoký výkon. Samotný počet interpretací není kvalita. Hodnotitel nesmí penalizovat existenci více než jedné obhajitelné interpretace.
+Struktura výstupu zachycuje auditovatelné stopy uvažování, nikoli požadavek na skrytý vnitřní monolog.
 
-## Experimentální podmínky
+## 5. Hodnocení jednoho běhu
 
-A: úloha bez zdroje.  
-B: úloha + pohádka.  
-C: úloha + pohádka + strukturovaná analýza MOUSE.  
-D: úloha + pohádka + MOUSE + Experience Store.  
-Člověk: lidský referenční běh.
+Deset dimenzí, každá 0–3 body:
+1. odvození operace;
+2. mapování rolí;
+3. zachování vztahu;
+4. odezva systému;
+5. konkrétnost pravidel;
+6. opora ve zdroji;
+7. adaptace na cílovou doménu;
+8. hranice přenosu;
+9. soudržnost návrhu;
+10. doložitelnost a nejistota.
 
-Pro srovnání modelů je nutné sjednotit modelový prompt, formát odpovědi, přístup ke zdroji a informaci o tréninkových ukázkách. Výsledky zatím nelze interpretovat jako validovaný benchmark.
+Maximum je 30 bodů. Vedle součtu se uchovává celý profil. Každé skóre musí mít konkrétní důkaz. Hodnocení neposuzuje množství alternativ, ale kvalitu jednoho přenosu.
 
-## Implementace
+## 6. Archiv přenesených struktur
 
-Samostatné HTML prostředí podporuje lidský i modelový režim, tréninkové ukázky, test, JSON prompt a schéma, import odpovědi, desetidimenzionální skóre s důkazy, místní historii a export JSON. Data se ukládají pouze v prohlížeči.
+Archiv ukládá každý běh samostatně, včetně modelu, verze, podmínky, úlohy, cílové domény, odvozené operace, mapování, invariantů, adaptací, zpětnovazebního mechanismu, limitů, evidence a profilu skóre.
 
-**Status:** pilot v1.0.0, nevalidováno. Před širším použitím je třeba provést lidské běhy, běhy více modelů a kontrolu shody hodnotitelů.
+**Rozmanitost a podobnost se analyzují až napříč nezávislými běhy a modely.** Například:
+- zda různé modely odvozují stejný abstraktní vztah;
+- zda zachovávají stejný invariant, ale vytvářejí odlišná pravidla;
+- zda se objevují kvalitativně odlišné, přesto zdrojem podložené přenosy;
+- které operace se opakují napříč cílovými doménami;
+- zda je shoda pouze slovní, nebo skutečně strukturální.
+
+Shoda modelů není důkaz správnosti: může odrážet společné stereotypy nebo podobné tréninkové vzorce. Rozdílnost sama o sobě není důkaz kreativity. Každý záznam se proto posuzuje také podle opory ve zdroji, funkčnosti, soudržnosti a hranic přenosu.
+
+Odlišné přenosy se neslévají do průměrné interpretace. Uchovávají se jako samostatné varianty se svým původem a skóre. Archiv je zdrojem zkušeností pro MOUSE, nikoli automaticky ověřenou pravdou.
+
+## 7. Experimentální podmínky
+
+- **A:** cílová úloha bez pohádky;
+- **B:** cílová úloha + původní pohádka;
+- **C:** cílová úloha + pohádka + strukturovaná analýza MOUSE;
+- **D:** cílová úloha + pohádka + MOUSE + archiv předchozích zkušeností;
+- **Člověk:** lidský referenční běh.
+
+Pro férové srovnání se drží stejný model, verze, cílová úloha, parametry generování a srovnatelný rozsah kontextu. Zaznamenává se systémový prompt a dostupné nástroje.
+
+## 8. Ochrana proti kontaminaci testu
+
+Výstupy přidané do Experience Store nesmějí být použity jako skrytá znalost při měření výkonu na téže uzamčené evaluační sadě. Je nutné oddělit:
+- archiv pro ukládání a pozdější využití zkušeností;
+- vývojovou sadu, na níž se zkušenost může připravovat;
+- uzamčenou evaluační sadu, která zůstává mimo Experience Store.
+
+Jinak nelze odlišit skutečný přenos od zapamatování předchozího řešení.
+
+## 9. Stav validace a další měření
+
+Tato verze je funkční návrh metodiky a rozhraní, nikoli validovaný psychometrický benchmark. Před silnými tvrzeními je potřeba:
+- ověřit srozumitelnost zadání na lidských řešitelích;
+- provést opakované běhy pro každou podmínku;
+- hodnotit anonymizované výstupy alespoň dvěma hodnotiteli;
+- změřit shodu hodnotitelů;
+- otestovat, zda úloha skutečně rozlišuje strukturální přenos od povrchové analogie;
+- zkontrolovat, zda se skóre nemění jen kvůli délce odpovědi nebo odlišnému formátování.
+
+**Status:** OTB-05-RYBA v2.0.0 · pilot · nevalidováno.
