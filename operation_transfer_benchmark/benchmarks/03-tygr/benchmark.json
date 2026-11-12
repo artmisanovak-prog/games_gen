@@ -1,0 +1,20 @@
+{
+  "id": "OTB-03-TYGR",
+  "title": "Tygr · Operation Transfer Benchmark",
+  "version": "0.1.0",
+  "status": "research_pending",
+  "statusLabel": "ANALÝZA ZDROJŮ ČEKÁ",
+  "operation": "Překlad přání a právo na vlastní podobu",
+  "sourceCard": "Tygr",
+  "sources": [
+    {
+      "label": "Adresář generátoru",
+      "url": "https://github.com/artmisanovak-prog/games_gen/tree/main/doma/tygr"
+    },
+    {
+      "label": "Zdrojový generátor",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/doma/tygr/index.html"
+    }
+  ],
+  "tasks": []
+}
