@@ -1,16 +1,119 @@
 <!doctype html>
-<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Operation Transfer Benchmark · games_gen</title><link rel="stylesheet" href="shared/style.css"></head>
-<body><main><header><div class="eyebrow">GAMES_GEN / MOUSE LAB</div><h1>OPERATION TRANSFER BENCHMARK</h1><p class="lead">Samostatné testy přenosu operací odvozených z konkrétních pohádek a generátorů. Každý test má vlastní zadání a řešení, společný je pouze běhový a vyhodnocovací rámec.</p><span class="tag">offline-first · samostatné testy · společný runner</span></header>
-<section class="panel"><h2>Architektura</h2><p>Každý benchmark se otevírá samostatně. Společný modul zajišťuje technické funkce, nikoli obsah nebo logiku jednotlivých testů. Díky tomu lze přidávat další benchmarky bez kopírování kódu a bez slučování jejich úloh do jedné aplikace.</p></section>
-<section class="panel"><h2>Dávka 01 · deset karet</h2><p class="small">V této revizi jsou založené samostatné stránky a evidence zdrojů. Úlohy se doplní až po důkladném přečtení původních pohádek a generátorů. Stránky proto zatím správně zobrazují stav „analýza čeká“.</p>
-<div class="item"><strong>Myš</strong><p><a href="benchmarks/01-mys/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Netopýr</strong><p><a href="benchmarks/02-netopyr/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Tygr</strong><p><a href="benchmarks/03-tygr/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Dráček</strong><p><a href="benchmarks/04-dracek/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Ryba</strong><p><a href="benchmarks/05-ryba/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Kozel</strong><p><a href="benchmarks/06-kozel/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Mořský koník</strong><p><a href="benchmarks/07-morsky-konik/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Krávy</strong><p><a href="benchmarks/08-kravy/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Krokodýl</strong><p><a href="benchmarks/09-krokodyl/">Otevřít samostatný benchmark →</a></p></div>
-<div class="item"><strong>Jednorožec</strong><p><a href="benchmarks/10-jednorozec/">Otevřít samostatný benchmark →</a></p></div>
-</section><section class="panel"><h2>Výzkumná dokumentace</h2><p><a href="research/batch-01.md" style="color:var(--accent)">Dávka 01 · analytický pracovní list</a></p><p><a href="registry/benchmarks.json" style="color:var(--accent)">Registr benchmarků JSON</a></p><p><a href="README.md" style="color:var(--accent)">Metodika a technická dokumentace</a></p></section><footer>Operation Transfer Benchmark · verze 0.1.0 · Testy nejsou validované, dokud neprojdou analytickou a pilotní fází.</footer></main></body></html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Operation Transfer Benchmark · MOUSE LAB</title>
+<link rel="stylesheet" href="shared/style.css">
+<style>
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}nav a,.jump{border:1px solid var(--line);padding:8px 11px;color:var(--accent);text-decoration:none}nav a:hover,.jump:hover{border-color:var(--accent)}
+.benchgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 18px}.bench{border-top:1px solid var(--line);padding:13px 0}.bench h3{margin:0 0 4px}.bench p{margin:4px 0;color:var(--muted);font-size:13px}
+.docgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.doc{border:1px solid var(--line);padding:12px}.doc h3{color:var(--accent)}
+.manifest{font:12px/1.5 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:330px;overflow:auto;background:#171d19;border:1px solid var(--line);padding:12px}
+.kicker{color:var(--blue);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+</style>
+</head>
+<body><main>
+<header>
+<div class="eyebrow">GAMES_GEN / MOUSE LAB</div>
+<h1>OPERATION TRANSFER BENCHMARK</h1>
+<p class="lead">Výzkumné prostředí pro zkoumání toho, zda lze operaci odvozenou z jednoho zdroje abstrahovat, přenést do jiné domény, zachovat její vztahy a rozpoznat hranice přenosu. Benchmarky jsou přístupné člověku i modelu.</p>
+<span class="tag">offline-first · HTML prostředí · společná metodika · samostatné testy</span>
+<nav aria-label="Navigace benchmarku">
+<a href="#benchmarks">Benchmarky</a><a href="#howto">Jak pracovat</a><a href="#method">Metodika</a><a href="#evaluation">Hodnocení</a><a href="#angles">Úhly a mezera</a><a href="#manifest">Manifest</a><a href="#documentation">Dokumentace</a>
+</nav>
+</header>
+
+<section class="panel" id="about">
+<div class="kicker">01 / Účel</div><h2>Co toto prostředí zkoumá</h2>
+<p>Nejde o test zapamatování pohádky ani o hledání podobných slov. Zkoumáme, zda řešitel rozpozná operaci, oddělí ji od původních objektů, zachová její kauzální a vztahovou strukturu, přenese ji do jiné domény a dokáže popsat, co se při přenosu změnilo nebo ztratilo.</p>
+<p>Stejné úlohy může řešit člověk i model. Člověk odpovídá přímo v HTML. Model dostane zadání ve strojově čitelném exportu nebo zkopírovaném promptu. Obě odpovědi se ukládají do stejného formátu záznamu a lze je hodnotit stejnou rubrikou.</p>
+</section>
+
+<section class="panel" id="benchmarks">
+<div class="kicker">02 / Katalog</div><h2>Vstup do jednotlivých benchmarků</h2>
+<p class="small">Každý benchmark má vlastní stránku a lze jej otevřít přímo. Zde je centrální navigace a přehled jejich stavu.</p>
+<div class="benchgrid">
+<div class="bench"><h3>01 · Myš</h3><p>Přehlédnuté jevy, stopy a následky.</p><a class="jump" href="benchmarks/01-mys/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>02 · Netopýr</h3><p>Dvojí režim, změna kontextu a interpretace.</p><a class="jump" href="benchmarks/02-netopyr/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>03 · Tygr</h3><p>Překlad přání, podmínky a vlastní podoba.</p><a class="jump" href="benchmarks/03-tygr/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>04 · Dráček</h3><p>Pravidlo, klasifikace a vznik přestupku.</p><a class="jump" href="benchmarks/04-dracek/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>05 · Ryba</h3><p>Zásah do prostředí a odezva systému.</p><a class="jump" href="benchmarks/05-ryba/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>06 · Kozel</h3><p>Výměna perspektiv a hranice přenosu.</p><a class="jump" href="benchmarks/06-kozel/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>07 · Mořský koník</h3><p>Nedoručené sdělení a přetrvávající účinek.</p><a class="jump" href="benchmarks/07-morsky-konik/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>08 · Krávy</h3><p>Opakování, zvuk a rozvolnění významu.</p><a class="jump" href="benchmarks/08-kravy/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>09 · Krokodýl</h3><p>Převod prožitku na produkt a změna hodnoty.</p><a class="jump" href="benchmarks/09-krokodyl/">Otevřít benchmark →</a></div>
+<div class="bench"><h3>10 · Jednorožec</h3><p>Původ, důkazy a obrana identity.</p><a class="jump" href="benchmarks/10-jednorozec/">Otevřít benchmark →</a></div>
+</div>
+</section>
+
+<section class="panel" id="howto">
+<div class="kicker">03 / Návod</div><h2>Jak benchmark používat</h2>
+<div class="docgrid">
+<div class="doc"><h3>Člověk</h3><p>Otevři benchmark, vyber úlohu a odpovídej do HTML polí. Ulož odpověď, případně ji uprav. Potom vyplň hodnoticí rubriku a exportuj záznam.</p></div>
+<div class="doc"><h3>Testovaný model</h3><p>Zkopíruj zadání nebo exportuj úlohu. Vlož odpověď modelu do stejného rozhraní. Uchovej přesné znění promptu, model a konfiguraci experimentu.</p></div>
+<div class="doc"><h3>Hodnotitel</h3><p>Posuzuj každé kritérium samostatně. Připoj důkaz z odpovědi a zdůvodnění. Nehodnoť stylistickou podobnost s klíčem, ale splnění požadovaných vztahů.</p></div>
+<div class="doc"><h3>Výzkumný záznam</h3><p>Exportuj odpovědi, skóre, použitý úhel a verzi rubriky. Výsledky různých běhů neprepisuj přes sebe. Uchovávej historii úprav a hodnocení.</p></div>
+</div>
+</section>
+
+<section class="panel" id="method">
+<div class="kicker">04 / Metodika</div><h2>Co se musí u každého zdroje ověřit</h2>
+<ol>
+<li>Najít a přečíst původní pohádku nebo jiný zdrojový materiál.</li>
+<li>Prozkoumat skutečný generátor: parametry, volby, výstupy a pravidla.</li>
+<li>Oddělit explicitní údaje, odvození, interpretace a hypotézy.</li>
+<li>Určit testovatelnou operaci a její nutné vztahy, podmínky a následky.</li>
+<li>Navrhnout přenos do odlišné domény, včetně negativních a hraničních případů.</li>
+<li>Ověřit, že úloha netestuje pouze slovní asociaci, paměť nebo hádání.</li>
+<li>Teprve potom schválit úlohu, řešení a hodnoticí rubriku.</li>
+</ol>
+<p class="notice">Pracovní hypotéza není výsledek analýzy. Benchmark nesmí prezentovat domněnku jako vlastnost pohádky ani generátoru.</p>
+<h3>Experimentální konfigurace</h3>
+<ul><li><b>A:</b> externí úloha bez kontextu.</li><li><b>B:</b> externí úloha + původní zdroj.</li><li><b>C:</b> externí úloha + strukturovaná analýza MOUSE.</li><li><b>D:</b> externí úloha + MOUSE + předchozí zkušenosti.</li></ul>
+<p>Model, testovací úloha a podmínky musí být srovnatelné. Výsledky se sledují po jednotlivých kartách a kritériích, ne pouze jedním souhrnným skóre.</p>
+</section>
+
+<section class="panel" id="evaluation">
+<div class="kicker">05 / Hodnocení</div><h2>Společná rozhodovací rubrika</h2>
+<p>Každé kritérium se hodnotí na stupnici 0–3. Každé skóre musí mít citaci nebo přesně označenou část odpovědi a zdůvodnění.</p>
+<table><thead><tr><th>Dimenze</th><th>Otázka</th></tr></thead><tbody>
+<tr><td>Rozpoznání operace</td><td>Identifikoval řešitel mechanismus, ne pouze téma?</td></tr>
+<tr><td>Kauzální struktura</td><td>Zachoval vstup, změnu stavu, odezvu a následek?</td></tr>
+<tr><td>Mezera a nejistota</td><td>Rozlišil informativní absenci, neznámou a chybějící data?</td></tr>
+<tr><td>Přenos</td><td>Přenesl vztahy do nové domény, nikoli jen původní slovník?</td></tr>
+<tr><td>Adaptace</td><td>Přizpůsobil operaci novým podmínkám?</td></tr>
+<tr><td>Hranice přenosu</td><td>Určil, co nelze přenést nebo doslovně zobecnit?</td></tr>
+<tr><td>Doložitelnost</td><td>Oddělil pozorování, odvození a hypotézu?</td></tr>
+</tbody></table>
+<p>Automatické kontroly se používají pro jednoznačné podmínky a strukturu. Hodnoticí model dostává pevnou rubriku a musí uvést důkazy. Lidské hodnocení zůstává dostupné. Rozdíly mezi hodnotiteli se ukládají, nemažou.</p>
+<p class="small">Skórovací rubrika je společný rámec. Jednotlivý benchmark může přidat specifická kritéria, ale nesmí potichu měnit význam základních dimenzí.</p>
+</section>
+
+<section class="panel" id="angles">
+<div class="kicker">06 / MOUSE · Úhly · mezera · fyzikalizace</div><h2>Úhly jako perspektivy pozorování</h2>
+<p>Dvanáct úhlů není dvanáct známek ani dvanáct správných odpovědí. Jsou to perspektivy, ze kterých lze zkoumat tentýž jev. Úhel se zaznamená jako součást experimentu. Základní skóre zůstává stejné, aby šlo porovnávat odpovědi.</p>
+<p><b>Mezera</b> je oblast, kde zdroj neposkytuje úplnou informaci, kde se signál přeruší, kde se liší záměr a odezva nebo kde vzniká více možných interpretací. Hodnotíme, zda řešitel mezeru rozpozná, pracuje s ní a nepředstírá jistotu.</p>
+<p><b>Fyzikalizace</b> převádí metaforické nebo narativní vztahy na proměnné, stavy, přechody, pozorovatelné stopy, omezení a zpětné vazby. Neznamená vymýšlení fyzikálních zákonů, které zdroj neobsahuje.</p>
+<ul><li>Co je vstup a co stav systému?</li><li>Co se mění a co zůstává invariantní?</li><li>Jaká odezva následuje a s jakým zpožděním?</li><li>Co lze pozorovat a co zůstává skryté?</li><li>Kde se přenos rozpadá a proč?</li></ul>
+</section>
+
+<section class="panel" id="documentation">
+<div class="kicker">07 / Dokumentace</div><h2>Pracovní dokumenty</h2>
+<p><a href="README.md">Technická dokumentace a architektura</a></p>
+<p><a href="research/batch-01.md">Analytický pracovní list dávky 01</a></p>
+<p><a href="registry/benchmarks.json">Strojový registr benchmarků</a></p>
+<p><a href="benchmarks/05-ryba/">Pilot Ryba · HTML prostředí</a></p>
+</section>
+
+<section class="panel" id="manifest">
+<div class="kicker">08 / Manifest</div><h2>Manifest prostředí</h2>
+<p class="small">Tento manifest shrnuje identitu, strukturu a stav projektu. Strojově čitelný registr jednotlivých benchmarků je v <a href="registry/benchmarks.json">registry/benchmarks.json</a>.</p>
+<pre class="manifest" id="manifestText"></pre>
+</section>
+<footer>Operation Transfer Benchmark · MOUSE LAB · hlavní vstup a dokumentace</footer>
+</main>
+<script>
+const manifest={name:"Operation Transfer Benchmark",version:"0.2.0",language:"cs",purpose:"Měření abstrakce a přenosu operací mezi doménami",entry:"index.html",human_interface:"HTML",machine_exchange:"JSON export",evaluation:["deterministické kontroly","modelové hodnocení podle rubriky","lidská anotace"],principles:["oddělení zdroje, odvození a hypotézy","doložitelnost skóre","zachování nejistoty","společná rubrika","samostatně spustitelné benchmarky"],angles:12,benchmark_batch_01:["01-mys","02-netopyr","03-tygr","04-dracek","05-ryba","06-kozel","07-morsky-konik","08-kravy","09-krokodyl","10-jednorozec"],status:"pilotní prostředí; obsah jednotlivých benchmarků se ověřuje po zdrojové analýze"};
+document.getElementById("manifestText").textContent=JSON.stringify(manifest,null,2);
+</script>
+</body></html>
