@@ -1,0 +1,20 @@
+{
+  "id": "OTB-09-KROKODYL",
+  "title": "Krokodýl · Operation Transfer Benchmark",
+  "version": "0.1.0",
+  "status": "research_pending",
+  "statusLabel": "ANALÝZA ZDROJŮ ČEKÁ",
+  "operation": "Komercializace prožitku a výprodej významu",
+  "sourceCard": "Krokodýl",
+  "sources": [
+    {
+      "label": "Adresář generátoru",
+      "url": "https://github.com/artmisanovak-prog/games_gen/tree/main/doma/krokodyl"
+    },
+    {
+      "label": "Zdrojový generátor",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/doma/krokodyl/index.html"
+    }
+  ],
+  "tasks": []
+}
