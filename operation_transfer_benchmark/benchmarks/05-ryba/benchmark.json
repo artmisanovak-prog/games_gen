@@ -1,20 +1,272 @@
 {
   "id": "OTB-05-RYBA",
   "title": "Ryba · Operation Transfer Benchmark",
-  "version": "0.1.0",
-  "status": "research_pending",
-  "statusLabel": "ANALÝZA ZDROJŮ ČEKÁ",
-  "operation": "Hudba jako zásah do prostředí",
-  "sourceCard": "Ryba",
+  "version": "0.2.0",
+  "status": "pilot",
+  "statusLabel": "PILOT · NEVALIDOVÁNO",
+  "operation": "Signál jako zásah do prostředí, odezva systému a vznik dalšího tahu",
+  "sourceStatus": {
+    "generator": "Analyzován doma/ryba/index.html.",
+    "fairyTale": "V tomto souboru pohádka není a jiná cesta k původní pohádce nebyla ověřena. Úlohy proto vycházejí pouze z generátoru.",
+    "limitation": "Jde o narativní scénářový generátor, nikoli fyzikální simulátor. Neobsahuje kvantitativní zákony vody ani akustiky."
+  },
   "sources": [
+    {
+      "label": "Zdrojový generátor Ryba",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/doma/ryba/index.html"
+    },
     {
       "label": "Adresář generátoru",
       "url": "https://github.com/artmisanovak-prog/games_gen/tree/main/doma/ryba"
-    },
-    {
-      "label": "Zdrojový generátor",
-      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/doma/ryba/index.html"
     }
   ],
-  "tasks": []
+  "sourceFacts": [
+    "Zvuk není zpráva pro posluchače, ale zásah do prostředí.",
+    "Voda odpovídá vlastním tahem.",
+    "Generátor rozlišuje akty: proud, barva, rytmus, odpověď, překlad a ticho.",
+    "Mezera mezi bublinami může být součástí rytmického signálu a nést více informace než tón.",
+    "Stejný signál může vyvolat různé reakce u různých druhů; společný signál nezaručuje společný význam.",
+    "Ticho může být aktivním zásahem do podmínek vnímání a odhalit slabý jev."
+  ],
+  "angles": [
+    "Analytický",
+    "Kulturní",
+    "Filozofický",
+    "Naivní",
+    "Jazykový",
+    "Metaforický",
+    "Asociační",
+    "Introspektivní",
+    "Ironický",
+    "Groteskní",
+    "Absurdní",
+    "Surrealistický"
+  ],
+  "gapTypes": [
+    "informativní mezera / pauza",
+    "chybějící pozorování",
+    "ztráta signálu",
+    "zpožděná odezva",
+    "nejednoznačná odezva",
+    "rozdíl mezi záměrem a účinkem",
+    "rozdíl mezi příjemci",
+    "jiné / neurčeno"
+  ],
+  "rubric": [
+    [
+      "operation",
+      "Rozpoznání operace",
+      "Pojmenoval mechanismus a oddělil jej od původních objektů?",
+      [
+        "0: nerozpozná",
+        "1: pouze téma nebo povrchová podobnost",
+        "2: správná operace, neúplné části",
+        "3: přesná operace a její funkční části"
+      ]
+    ],
+    [
+      "causality",
+      "Vztahová a kauzální struktura",
+      "Zachoval vstup, změnu stavu, odezvu a další tah?",
+      [
+        "0: vztahy chybí či si odporují",
+        "1: izolované události",
+        "2: většina řetězce",
+        "3: úplný řetězec včetně zpětné vazby"
+      ]
+    ],
+    [
+      "gap",
+      "Práce s mezerou",
+      "Rozlišil významnou absenci od neznámé či chybějící informace?",
+      [
+        "0: ignoruje nebo bez důkazu vyplní",
+        "1: všimne si, ale nerozliší funkci",
+        "2: rozliší typ mezery",
+        "3: použije mezeru jako proměnnou a uvede alternativy"
+      ]
+    ],
+    [
+      "transfer",
+      "Přenos operace",
+      "Přenesl vztahy do nové domény, ne jen slovník?",
+      [
+        "0: přenos chybí",
+        "1: přejmenování objektů",
+        "2: zachová hlavní vztah",
+        "3: mapování vztahů a ověřitelný příklad"
+      ]
+    ],
+    [
+      "adaptation",
+      "Adaptace na doménu",
+      "Upravil operaci podle nových podmínek?",
+      [
+        "0: ignoruje podmínky",
+        "1: obecná poznámka",
+        "2: upraví některé kroky",
+        "3: přizpůsobí mechanismus a popíše důsledky"
+      ]
+    ],
+    [
+      "boundary",
+      "Hranice přenosu",
+      "Určil, co se přenést nedá a proč?",
+      [
+        "0: úplná ekvivalence",
+        "1: neurčitá výhrada",
+        "2: konkrétní rozdíl",
+        "3: oddělí invariant od nepřenositelných vlastností a uvede hraniční případ"
+      ]
+    ],
+    [
+      "evidence",
+      "Doložitelnost postupu",
+      "Oddělil zdrojová fakta, odvození a hypotézy?",
+      [
+        "0: nepodložená tvrzení",
+        "1: závěr bez opory",
+        "2: doloží hlavní kroky, míchá jistotu",
+        "3: označí pozorování, odvození, alternativy a neznámé"
+      ]
+    ],
+    [
+      "formalization",
+      "Fyzikalizace / operacionalizace",
+      "Převedl popis na stavy, proměnné a přechody bez vymyšlených zákonů?",
+      [
+        "0: pouze metafora nebo vymyšlený zákon",
+        "1: proměnné bez vztahů",
+        "2: stavy a přechod",
+        "3: vstup, stav, zásah, odezva, stopa, omezení a potřebná měření"
+      ]
+    ]
+  ],
+  "tasks": [
+    {
+      "id": "RYBA-01",
+      "title": "Rozložení operace: signál, zásah, odezva",
+      "type": "strukturalizace",
+      "prompt": "Zdrojový generátor Ryba říká: „Zvuk není zpráva pro posluchače, ale zásah do prostředí.“ Voda odpovídá vlastním tahem. Výstup rozlišuje vyslaný signál, proměnu prostředí, odezvu, stopy, herní postup, operační pravidlo a následek. Vysvětli tuto operaci jako obecný mechanismus. Nevyprávěj novou pohádku a nepředstírej, že zdroj obsahuje fyzikální zákony.",
+      "schema": {
+        "operation": "string",
+        "sequence": [
+          "string"
+        ],
+        "stateVariables": [
+          "string"
+        ],
+        "observableTraces": [
+          "string"
+        ],
+        "feedback": "string",
+        "unknowns": [
+          "string"
+        ],
+        "evidence": [
+          {
+            "claim": "string",
+            "sourceOrDerivation": "string",
+            "certainty": "explicit|derived|hypothesis"
+          }
+        ]
+      },
+      "key": [
+        "Signál je zásah do systému, ne pouze sdělení.",
+        "Prostředí mění stav a vytváří vlastní odezvu.",
+        "Odezva může změnit podmínky dalšího tahu.",
+        "Stopy jsou pozorovatelné následky, ne automaticky důkaz jediné interpretace.",
+        "Zdroj neposkytuje kvantitativní fyzikální zákony."
+      ]
+    },
+    {
+      "id": "RYBA-02",
+      "title": "Přenos do řízení městského provozu",
+      "type": "transfer",
+      "prompt": "Přeneste operaci ze zdroje Ryba do řízení městského provozu. Řídicí systém vyšle krátký signál do dopravní sítě. Síť není pasivní: změna jednoho místa ovlivní další místa a jejich odezvy se mohou vracet k řídicímu systému. Navrhněte konkrétní scénář, v němž zachováte strukturu operace, ale nebudete pouze mluvit o autech jako o rybách. Určete mapování prvků, průběh, měřitelné stopy, omezení a případ selhání.",
+      "schema": {
+        "domain": "string",
+        "mapping": [
+          {
+            "sourceElement": "string",
+            "targetElement": "string",
+            "preservedRelation": "string"
+          }
+        ],
+        "scenario": "string",
+        "sequence": [
+          "string"
+        ],
+        "measurableTraces": [
+          "string"
+        ],
+        "adaptations": [
+          "string"
+        ],
+        "transferLimits": [
+          "string"
+        ],
+        "failureCase": "string",
+        "evidence": [
+          {
+            "claim": "string",
+            "sourceOrDerivation": "string",
+            "certainty": "explicit|derived|hypothesis"
+          }
+        ]
+      },
+      "key": [
+        "Zachová se zásah, změna stavu, odezva a zpětná vazba.",
+        "Mapují se funkční vztahy, ne slovní podobnost.",
+        "Fronta, průtok, čekací doba či zatížení jsou možné návrhy měření, nikoli data dodaná zdrojem.",
+        "Mechanismus se upraví podle dopravních omezení.",
+        "Uvede se konkrétní hranice přenosu nebo selhání."
+      ]
+    },
+    {
+      "id": "RYBA-03",
+      "title": "Mezera, ticho a nejednoznačná odezva",
+      "type": "gap",
+      "prompt": "Zdroj Ryba uvádí, že mezera mezi bublinami může být součástí rytmického signálu a nést více informace než tón; aktivní ticho může změnit podmínky vnímání a odhalit slabý jev. Stejný signál mohou různé druhy překládat různě. Rozlište tyto situace od obyčejně chybějících dat. Navrhněte pozorovací protokol, který zabrání tomu, aby řešitel automaticky považoval každou absenci za význam nebo každou odezvu za jednoznačnou.",
+      "schema": {
+        "gapCategories": [
+          {
+            "case": "string",
+            "classification": "string",
+            "why": "string"
+          }
+        ],
+        "protocol": [
+          "string"
+        ],
+        "competingHypotheses": [
+          "string"
+        ],
+        "disambiguatingObservations": [
+          "string"
+        ],
+        "falseInferenceRisks": [
+          "string"
+        ],
+        "decisionRule": "string",
+        "unknowns": [
+          "string"
+        ],
+        "evidence": [
+          {
+            "claim": "string",
+            "sourceOrDerivation": "string",
+            "certainty": "explicit|derived|hypothesis"
+          }
+        ]
+      },
+      "key": [
+        "Rozliší záměrnou pauzu od chybějících dat.",
+        "Rozliší aktivní ticho jako zásah do podmínek pozorování od prosté absence signálu.",
+        "Připustí rozdílné interpretace téhož signálu různými příjemci.",
+        "Navrhne pozorování, které rozliší konkurenční hypotézy.",
+        "Nezamění stopu za jistý význam."
+      ]
+    }
+  ]
 }
