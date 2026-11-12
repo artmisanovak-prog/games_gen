@@ -340,3 +340,9 @@ Experimentální větev pro generování kontrolovaných testovacích úloh odvo
 - [Otevřít BENCHMARK](https://artmisanovak-prog.github.io/games_gen/benchmark/)
 - [Dokumentace BENCHMARK](benchmark/README.md)
 - [Zdrojový soubor](benchmark/index.html)
+
+## Operation Transfer Benchmark · MOUSE LAB
+
+Výzkumné prostředí pro testování abstrakce a přenosu operací mezi doménami. Obsahuje vlastní HTML rozcestník, návod, metodiku, dokumentaci, manifest a vstupy do jednotlivých benchmarků.
+
+- [Otevřít Operation Transfer Benchmark](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/)
