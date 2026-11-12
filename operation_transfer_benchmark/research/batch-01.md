@@ -1,48 +1,80 @@
-# Dávka 01 · analytický pracovní list
+# OTB-05-RYBA · analytický záznam v1.0
 
-**Stav dávky:** probíhá zdrojová analýza; jednotlivé karty mají vlastní stav.  
-**Rozsah:** karty 01–10.  
-**Pravidlo:** návrhy v README repozitáře jsou orientační metadata, nikoli důkaz konkrétní testované schopnosti.
+**Stav:** pilotní implementace, nevalidováno.  
+**Primární zdroj:** `kriva_pohadka/ryba.txt` – „O rybě, která rapovala“.  
+**Doplňkový zdroj:** `doma/ryba/index.html` – generátor situací.  
+**Zásada:** pohádka a generátor jsou dvě odlišné vrstvy. Generátor není důkazem toho, co je v pohádce, a naopak.
 
-| ID | Karta | Pracovní hypotéza z katalogu | Původní pohádka | Generátor | Analýza | Schválení |
-|---|---|---|---|---|---|---|
-| OTB-01-MYS | Myš | Přehlédnutý jev a následky | čeká | čeká | čeká | čeká |
-| OTB-02-NETOPYR | Netopýr | Dvojí režim pravdy | čeká | čeká | čeká | čeká |
-| OTB-03-TYGR | Tygr | Překlad přání a právo na vlastní podobu | čeká | čeká | čeká | čeká |
-| OTB-04-DRACEK | Dráček | Pravidlo vytvářející přestupek | čeká | čeká | čeká | čeká |
-| OTB-05-RYBA | Ryba | Signál jako zásah do prostředí a odezva systému | pohádka v analyzovaném souboru nenalezena | analyzován doma/ryba/index.html | pilotní rozbor generátoru | pilot, nevalidováno |
-| OTB-06-KOZEL | Kozel | Půjčování perspektiv a pohyblivé já | čeká | čeká | čeká | čeká |
-| OTB-07-MORSKY-KONIK | Mořský koník | Účinek nedoručeného sdělení | čeká | čeká | čeká | čeká |
-| OTB-08-KRAVY | Krávy | Rozvolnění významu opakováním a zvukem | čeká | čeká | čeká | čeká |
-| OTB-09-KROKODYL | Krokodýl | Komercializace prožitku a výprodej významu | čeká | čeká | čeká | čeká |
-| OTB-10-JEDNOROZEC | Jednorožec | Obrana identity popřením původu | čeká | čeká | čeká | čeká |
+## Pracovní definice Semantic Gap
 
-## OTB-05-RYBA · analytický záznam
+Mezera je vztahový prostor mezi prvky, významy, signály, obrazy, kategoriemi nebo způsoby vnímání. Není to deficit, chyba ani prázdné místo čekající na doplnění. Mezera je přítomná a zůstává přítomná i při interpretaci.
 
-### Skutečně přečtený zdroj
+Interpretace mezeru neuzavírá. Používá ji. V tomto prostoru mohou vznikat vztahy, rozdíly, kategorie, abstrakce, překlady, přenosy a nové konstrukce. Jedna mezera může umožnit více současně platných interpretací. Ty se hodnotí podle opory, soudržnosti, odlišnosti a produktivity, nikoli podle toho, zda se shodnou na jediném výsledku.
 
-Soubor doma/ryba/index.html je interaktivní generátor situací. Parametry: typ aktu, hudební princip, prostředí, intenzita a vlastní záměr. Generovaný záznam rozlišuje signál, změnu prostředí, odezvu, stopy, herní postup, operační pravidlo a následek.
+Je nutné odlišit Semantic Gap od technického výpadku, chybějící hodnoty, neznámé informace nebo zpožděné odezvy. Tyto jevy mohou být materiálem interpretace, ale nejsou automaticky totožné s mezerou.
 
-### Explicitní principy
-1. Zvuk je zásah do prostředí, nikoli pouze zpráva pro posluchače.
-2. Voda odpovídá vlastním tahem.
-3. Mezera mezi bublinami může být součástí rytmického signálu.
-4. Stejný signál může vyvolat různé reakce u různých druhů.
-5. Ticho může aktivně změnit podmínky vnímání a odhalit slabý jev.
-6. Odezva prostředí může vytvářet další tahy a vedlejší změny.
+## Co je explicitně v pohádce
 
-### Meze zdroje
-- V souboru není původní pohádka; její děj nebyl ověřen.
-- Nejsou definovány kvantitativní zákony akustiky, hydrodynamiky ani proudění.
-- Výstupy jsou narativní konfigurace, nikoli výsledek fyzikální simulace.
+- Rybí rap je popsán jako rytmus proudů, výška vln a vlnek, tempo vodních kruhů a mezera mezi bublinami.
+- Rybí hudba není určena pouze pro uši a ovlivňuje různé vodní vlastnosti.
+- Ryba rapuje kvůli přesnosti, nikoli kvůli slávě.
+- Ryba rapuje na hladině pro vodu.
+- Voda odpovídá vlastním vlněním a vytváří kruhy, v nichž jsou další kruhy.
+- Mlha přenese flow do polí a vznikají kruhy v obilí.
+- Text končí výzvou přestat pouze poslouchat a začít vnímat; zdůrazňuje vědění, kdy mlčet.
 
-### Pilotní úlohy
-- RYBA-01: rozložení operace na vstup, zásah, změnu stavu, odezvu, stopu a zpětnou vazbu.
-- RYBA-02: přenos do řízení městského provozu včetně mapování a hranic.
-- RYBA-03: rozlišení informativní mezery, aktivního ticha, ztráty dat a nejednoznačné odezvy.
+## Odvození a hypotézy
 
-### Hodnocení
-Osm dimenzí 0–3: rozpoznání operace, kauzální struktura, práce s mezerou, přenos, adaptace, hranice přenosu, doložitelnost a fyzikalizace. Každé skóre musí mít důkaz. Úhly jsou perspektivy, nikoli bonusové body. Hodnotí se auditovatelné procesní stopy, nikoli skrytý chain-of-thought.
+Možná odvození: přenos vzoru mezi médii; odezva, která není kopií vstupu; význam v intervalu; více způsobů vnímání; vztah mezi přesností a načasováním; vnořené struktury a opakování v měřítku.
 
-### Validace
-**Pilotní implementace, nevalidováno.** Následují lidské testy, testy několika modelů, kontrola jednoznačnosti zadání a pilotní shoda hodnotitelů. Pohádková část zůstává otevřená do nalezení a přečtení původního textu.
+Hypotézy, které se nesmějí vydávat za explicitní pravidla: že text definuje obecný fyzikální mechanismus; že všechny druhy skutečně vnímají signál určitým způsobem; že kruhy v obilí jsou doslovný kauzální důsledek rybího rapu. Text je poetický a absurdní, nikoli fyzikální studie.
+
+## Trénink a test
+
+Čtyři tréninkové ukázky modelují:
+1. interval mezi bublinami,
+2. odpověď vody jako jiný tah,
+3. pluralitu čtení kruhů v kruzích,
+4. přenos vzoru přes různá média.
+
+Šest testových úloh:
+- RYBA-01: čtení zdroje a evidence,
+- RYBA-02: funkce mezery a její aktivní použití,
+- RYBA-03: pluralita a kvalita interpretací,
+- RYBA-04: přenos mezi médii,
+- RYBA-05: tvorba nových vztahů,
+- RYBA-06: odlišení Semantic Gap od chybějících dat.
+
+Tréninkové ukázky nejsou součástí skórovaného testu. Experimentální záznam musí uvést, zda je model dostal.
+
+## Skórování
+
+Deset dimenzí, každá 0–3 body, maximum 30:
+- pochopení mezery,
+- aktivní použití,
+- pluralita interpretací,
+- opora ve zdroji,
+- soudržnost,
+- rozmanitost vztahů,
+- přenos,
+- hranice a rozdíly,
+- tvorba nových vztahů,
+- doložitelnost a práce s nejistotou.
+
+Součet není měřítkem jediné správné interpretace. Vždy uchovávej profil dimenzí. Vysoká pluralita bez opory a soudržnosti není vysoký výkon. Samotný počet interpretací není kvalita. Hodnotitel nesmí penalizovat existenci více než jedné obhajitelné interpretace.
+
+## Experimentální podmínky
+
+A: úloha bez zdroje.  
+B: úloha + pohádka.  
+C: úloha + pohádka + strukturovaná analýza MOUSE.  
+D: úloha + pohádka + MOUSE + Experience Store.  
+Člověk: lidský referenční běh.
+
+Pro srovnání modelů je nutné sjednotit modelový prompt, formát odpovědi, přístup ke zdroji a informaci o tréninkových ukázkách. Výsledky zatím nelze interpretovat jako validovaný benchmark.
+
+## Implementace
+
+Samostatné HTML prostředí podporuje lidský i modelový režim, tréninkové ukázky, test, JSON prompt a schéma, import odpovědi, desetidimenzionální skóre s důkazy, místní historii a export JSON. Data se ukládají pouze v prohlížeči.
+
+**Status:** pilot v1.0.0, nevalidováno. Před širším použitím je třeba provést lidské běhy, běhy více modelů a kontrolu shody hodnotitelů.
