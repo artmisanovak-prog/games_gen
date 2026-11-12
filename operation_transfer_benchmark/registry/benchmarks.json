@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "project": "Operation Transfer Benchmark",
+  "batches": [
+    {
+      "id": "batch-01",
+      "title": "Dávka 01",
+      "status": "research_pending",
+      "benchmarks": [
+        "OTB-01-MYS",
+        "OTB-02-NETOPYR",
+        "OTB-03-TYGR",
+        "OTB-04-DRACEK",
+        "OTB-05-RYBA",
+        "OTB-06-KOZEL",
+        "OTB-07-MORSKY-KONIK",
+        "OTB-08-KRAVY",
+        "OTB-09-KROKODYL",
+        "OTB-10-JEDNOROZEC"
+      ]
+    }
+  ]
+}
