@@ -1,0 +1,20 @@
+{
+  "id": "OTB-01-MYS",
+  "title": "Myš · Operation Transfer Benchmark",
+  "version": "0.1.0",
+  "status": "research_pending",
+  "statusLabel": "ANALÝZA ZDROJŮ ČEKÁ",
+  "operation": "Přehlédnuté jevy a jejich následky",
+  "sourceCard": "Myš",
+  "sources": [
+    {
+      "label": "Adresář generátoru",
+      "url": "https://github.com/artmisanovak-prog/games_gen/tree/main/doma/mys"
+    },
+    {
+      "label": "Zdrojový generátor",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/doma/mys/index.html"
+    }
+  ],
+  "tasks": []
+}
