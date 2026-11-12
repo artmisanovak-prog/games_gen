@@ -1,0 +1,20 @@
+{
+  "id": "OTB-05-RYBA",
+  "title": "Ryba · Operation Transfer Benchmark",
+  "version": "0.1.0",
+  "status": "research_pending",
+  "statusLabel": "ANALÝZA ZDROJŮ ČEKÁ",
+  "operation": "Hudba jako zásah do prostředí",
+  "sourceCard": "Ryba",
+  "sources": [
+    {
+      "label": "Adresář generátoru",
+      "url": "https://github.com/artmisanovak-prog/games_gen/tree/main/doma/ryba"
+    },
+    {
+      "label": "Zdrojový generátor",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/doma/ryba/index.html"
+    }
+  ],
+  "tasks": []
+}
