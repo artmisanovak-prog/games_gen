@@ -1,321 +1,313 @@
 {
   "id": "OTB-05-RYBA",
   "title": "Ryba · Operation Transfer Benchmark",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "status": "pilot",
   "statusLabel": "PILOT · NEVALIDOVÁNO",
-  "operation": "Aktivní práce s mezerou: vztahový prostor mezi prvky, který umožňuje interpretaci, abstrakci, rozlišení, přenos a tvorbu.",
-  "sourceStatus": {
-    "fairyTale": "Původní text O RYBĚ, která rapovala je načten a tvoří narativní zdroj.",
-    "generator": "Generátor doma/ryba/index.html je samostatná autorská formalizace; nesmí být zaměňován s pohádkou.",
-    "limitation": "Text je poetický a záměrně obrazný. Neposkytuje kvantitativní fyzikální zákony vody ani akustiky."
+  "purpose": "Test strukturálního přenosu: model odvodí operaci z konkrétního narativního zdroje a použije ji v nové doméně. Jedna úloha = jeden přenosový návrh. Rozmanitost se analyzuje až napříč samostatnými běhy a modely.",
+  "source": {
+    "title": "O rybě, která rapovala",
+    "path": "../../../kriva_pohadka/ryba.txt",
+    "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/ryba.txt",
+    "text": "Karta: images/ryba.jpg\n\nText: rybí rap \n\n\n\nO RYBĚ \n\nkterá rapovala\n\n—\n\n—\n\nŘíká se, že ryby mlčí.\n\nŽe nemají hlas.\n\nŽe jen plavou, koukají, a občas se nechají chytit.\n\nAle to je omyl. Kec.\n\nSuchozemská lež.\n\n—\n\nRyby totiž nemlčí.\n\nRyby rapujou.\n\n—\n\nNe tak, jak si to představuješ – žádné mikrofony, žádné beaty z repro beden.\n\n„Rybí rap je jinej.\n\nJe to rytmus proudů.\n\nJe to nížka, výška vln a vlnek.\n\nJe to tempo vodních kruhů.\n\nJe to mezera mezi bublinama.\n\n—\n\nPod vodou se zvuk jinak šíří.\n\nHlubší. Širší. Pomalejší.\n\nA tak ryby neřvou.\n\nRyby vibrujou.\n\n—\n\nKaždej druh rybí má svůj styl hudební.\n\nKosatky zpívají chansony – dlouhé, nostalgické, ovlivňují směry proudů.\n\nŽraloci zpívaj gospel – hluboký a s ozvěnou. Míchají barevné odstíny hladin s tóny hlubin.\n\nVelryba si troufne na operu \n\na medúzy jí dělaj vokály nebo se daj na triangly, rolničky, zvonce.\n\nDelfin je folklor. \n\nChobotnice strihne jazzove imprivizace. \n\nRyba co se nafukuje zvládá dechovky, ale nemá je ráda.\n\nPiraňi balady.\n\nA kapr zkouší hrdelní zpěvy. \n\nMušle a lastury pějí lovestory.\n\nSka umí létací ryby.\n\nTučňák se vidí v klasice.\n\nNa pop je odbornice bělice.\n\nA úhoř nemá hudební ambice.\n\n—\n\nJe toho více.\n\nAle tohle všechno není hudba pro uši,\n\nTohle ovlivňuje různé vodní vlastnosti.\n\n—\n\nA ryba?\n\nRyba má rap.\n\nNe kvůli slávě.\n\nKvůli přesnosti.\n\n—\n\nFlow je king a king je ryba.\n\nBeat jí dělá sea i jezera.\n\nRiff kape, flow teče.\n\nPřesná slova proudí jak voda.\n\nJejí punchline je fontána.\n\n—\n\nKaždý verš má váhu.\n\nA tohle ryby umí.\n\nLíp než ptáci.\n\n—\n\nPtačí zpěv?\n\nKřikot je to.\n\nŘev, ryk, krákot, jekot.\n\nTempo? Melodie? Text?\n\nPtáci neumí dávat.\n\nPtáci umí jen sprostě nadávat.\n\nPíp rýmuje s píp, jinak bez ideje.\n\nCokoli řeknou hned se cenzuruje.\n\n—\n\nZato ryby fakt dávaj.\n\nDávaj rytmus vodě.\n\nDávaj smysl tichu.\n\nDávají beaty proudům.\n\n—\n\nA stalo se jednoho dne, že ryba začala rapovat i na hladině.\n\nNe pro ostatní.\n\nPro vodu.\n\n—\n\nA voda odpověděla.\n\nJinak se zavlnila.\n\nDo rytmu se natřásala.\n\nTvořila verše jako vodní kruhy, v kterých byly další kruhy.\n\nMlha, spadlá do polí, opsala jejich flow.\n\nA vytvořila kruhy v obilí.\n\nRybí hudba byla slyšet – ne uchem, ale okem, tělem.\n\n—\n\nA tak se po kapkách roznáší všude kolem,\n\nže prvni místo v hitparádě,\n\nvyhrály ryby - nepochybně.\n\n—\n\nNe proto, že zpívaj.\n\nAle proto, že ví..\n\n—\n\n..kdy mlčet.\n\n—\n\nMožná je čas,\n\naby se svět dozvěděl o rybím rapu.\n\n–\n\nMožná je čas,\n\naby se\n\npřestalo poslouchat a začalo se vnímat.\n\n—\n\nMožná je čas,\n\naby se ticho konečně dostalo nad hladinu.\n"
   },
-  "sources": [
-    {
-      "label": "Původní pohádka O rybě, která rapovala",
-      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/ryba.txt"
-    },
-    {
-      "label": "Generátor Ryba",
-      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/doma/ryba/index.html"
-    }
-  ],
   "sourceFacts": [
-    "Ryba rapuje jako rytmus proudů, výšku vln a vlnek, tempo vodních kruhů a mezeru mezi bublinami.",
-    "Text výslovně říká, že rybí hudba není určena pouze pro uši a ovlivňuje různé vodní vlastnosti.",
+    "Rybí rap je popsán jako rytmus proudů, výška vln a vlnek, tempo vodních kruhů a mezera mezi bublinami.",
+    "Text říká, že rybí hudba není určena pouze pro uši a ovlivňuje různé vodní vlastnosti.",
     "Ryba rapuje kvůli přesnosti, ne kvůli slávě.",
     "Ryba začne rapovat na hladině pro vodu, nikoli pro ostatní.",
-    "Voda odpovídá vlastním vlněním a vytváří kruhy, v nichž jsou další kruhy.",
+    "Voda odpovídá vlastním vlněním, natřásá se do rytmu a vytváří kruhy, v nichž jsou další kruhy.",
     "Mlha přenese jejich flow do polí a vytvoří kruhy v obilí.",
-    "Závěr obrací pozornost od poslouchání k vnímání a zdůrazňuje vědění, kdy mlčet.",
-    "Text pracuje s rozdíly mezi druhy a jejich hudebními styly; stejný způsob vnímání není přisouzen všem."
+    "Text obrací pozornost od poslouchání k vnímání a zdůrazňuje vědění, kdy mlčet."
   ],
-  "gapModel": {
-    "definition": "Mezera je vztahový prostor mezi prvky. Není to díra v datech, chyba, kterou je třeba opravit, ani otázka, kterou je nutné zodpovědět. Je přítomná a zůstává přítomná i při interpretaci.",
-    "principles": [
-      "Mezera se neuzavírá ani nevyplňuje. Interpretace ji používá, ale neruší.",
-      "Mezera umožňuje vztahy, rozdíly, kategorie, abstrakci, překlad, přenos a tvorbu.",
-      "Jedna mezera může nést více současně možných interpretací.",
-      "Interpretace mohou být různě podložené, soudržné a produktivní; pluralita neznamená, že všechny jsou stejně kvalitní.",
-      "Absence dat, porucha přenosu nebo neznámá hodnota jsou jiné jevy. Nesmí se automaticky vydávat za Semantic Gap.",
-      "Mezera může být aktivně využita: jako rytmus, interval, kontrast, rozhraní, prostor porovnání nebo zdroj nového vztahu."
+  "operation": {
+    "name": "Signál – odezva – proměna prostředí – další odezva",
+    "derivation": "Z rybího rapu lze odvodit vztahový vzorec: signál nemusí být zprávou určenou pouze příjemci; působí na prostředí, prostředí odpovídá vlastním způsobem a tato odezva se stává součástí dalšího dění. Přenos se týká organizace vztahů, nikoli rybích objektů nebo poetických detailů.",
+    "invariants": [
+      "Vstupní signál nebo zásah",
+      "Prostředí, které není pasivním kanálem",
+      "Proměna prostředí jako odezva",
+      "Odezva nemusí kopírovat formu vstupu",
+      "Výsledek může ovlivnit další průběh interakce"
     ],
-    "avoid": [
-      "uzavření mezery",
-      "doplnění jediné správné odpovědi jako odstranění mezery",
-      "zaměnění každé chybějící informace za mezeru",
-      "zaměnění libovolné asociace za kvalitní interpretaci"
+    "nonInvariants": [
+      "Ryby, voda, bubliny, mlha a obilí jako doslovné objekty",
+      "Rap, hudební žánry a konkrétní zvuková obraznost",
+      "Představa, že nový systém musí být biologický nebo akustický"
+    ],
+    "caution": "Jde o interpretaci poetického textu a pracovní abstrakci, nikoli o tvrzení, že pohádka definuje ověřený fyzikální zákon."
+  },
+  "gapModel": {
+    "definition": "Mezera je trvalý vztahový prostor mezi prvky, významy, signály, obrazy, kategoriemi nebo způsoby vnímání. Není to deficit ani prázdné místo čekající na doplnění. Interpretace ji používá, ale neuzavírá.",
+    "principles": [
+      "Mezera zůstává přítomná i po vytvoření interpretace.",
+      "Umožňuje vztahy, rozdíly, abstrakci, překlad, přenos a tvorbu.",
+      "Může nést více možných interpretací; jednotlivý test však nemusí žádat jejich množení.",
+      "Kvalita konkrétní odpovědi se posuzuje podle opory, soudržnosti a funkčnosti, ne podle počtu interpretací.",
+      "Chybějící data, technický výpadek a neznámá hodnota nejsou automaticky Semantic Gap."
     ]
   },
-  "angles": [
-    "Analytický",
-    "Kulturní",
-    "Filozofický",
-    "Naivní",
-    "Jazykový",
-    "Metaforický",
-    "Asociační",
-    "Introspektivní",
-    "Ironický",
-    "Groteskní",
-    "Absurdní",
-    "Surrealistický"
-  ],
   "trainingExamples": [
     {
       "id": "TR-01",
-      "title": "Interval mezi bublinami",
+      "title": "Interval je součást rytmu",
       "source": "„Je to mezera mezi bublinama.“",
-      "example": "Mezera zde není vynechaný údaj, který je třeba doplnit. V kontextu rytmu se interval stává součástí uspořádání signálu. Lze jej interpretovat jako časový vztah mezi událostmi, jako očekávání další události nebo jako kontrast vůči samotnému zvuku. Tyto interpretace se nevylučují a žádná interval neruší.",
-      "lesson": "Mezera může být aktivní součástí struktury. Interpretace ji využívá, neuzavírá."
+      "example": "V kontextu rybího rapu není interval pouze vynechaným zvukem. Text jej řadí mezi prvky rytmu. Odvození: časový vztah mezi událostmi může být součástí signálu.",
+      "lesson": "Nepřeváděj vztahový interval na chybějící údaj."
     },
     {
       "id": "TR-02",
-      "title": "Voda odpovídá",
+      "title": "Odezva nemusí kopírovat vstup",
       "source": "„A voda odpověděla. Jinak se zavlnila.“",
-      "example": "Text vytváří vztah mezi jednáním ryby a změnou vody. Odpověď vody není pouhé zopakování původního signálu. Je to jiný tah v jiném médiu. Lze zkoumat převod rytmu do pohybu, vztah mezi zásahem a odezvou i vznik dalšího kola interakce.",
-      "lesson": "Při interpretaci zachovej vztah, ale nepředpokládej totožnost formy signálu a odezvy."
+      "example": "Ryba jedná v jedné podobě, voda odpovídá jinou podobou. Odvození: zachovat lze vztah zásah–odezva, aniž by odezva byla kopií vstupu.",
+      "lesson": "Při přenosu zachovej funkci vztahu, ne povrchovou formu."
     },
     {
       "id": "TR-03",
-      "title": "Kruhy v kruzích",
-      "source": "„Tvořila verše jako vodní kruhy, v kterých byly další kruhy.“",
-      "example": "Obraz dovoluje několik čtení: opakování v různých měřítkách, vnořené vztahy, šíření vzoru nebo strukturu, v níž jeden celek obsahuje další celky. Každé čtení musí ukázat, o které části obrazu se opírá. Není nutné vybrat jediné.",
-      "lesson": "Pluralita interpretací je žádoucí, pokud jsou odlišné, doložené a vnitřně soudržné."
-    },
-    {
-      "id": "TR-04",
-      "title": "Přenos přes prostředí",
-      "source": "„Mlha, spadlá do polí, opsala jejich flow. A vytvořila kruhy v obilí.“",
-      "example": "Text propojuje vodu, mlhu a obilí přes přenos vzoru, nikoli přes zachování původního materiálu. Lze zkoumat, co zůstává invariantní (vzor, rytmus, kruhové uspořádání) a co se mění (médium, nosič, způsob vnímání).",
-      "lesson": "Přenášej vztahy a struktury, ne pouze názvy objektů."
+      "title": "Vzor mění médium",
+      "source": "„Mlha, spadlá do polí, opsala jejich flow.“",
+      "example": "Text přenáší obraz rytmu a kruhů z vody přes mlhu do polí. Odvození: vzor může přetrvat při změně nosiče a způsobu vnímání.",
+      "lesson": "Odděl invariant od média, které jej nese."
     }
   ],
   "tasks": [
     {
-      "id": "RYBA-01",
-      "title": "Čtení zdroje bez předčasného uzavření",
-      "type": "source-reading",
-      "prompt": "Pracuj pouze s textem pohádky O rybě, která rapovala. Vypiš nejméně pět konkrétních míst, v nichž text vytváří vztah mezi dvěma prvky nebo médii. U každého rozliš: co text říká přímo, co z toho odvozuješ a co je tvoje hypotéza. Nezaměňuj obraz za fyzikální fakt.",
+      "id": "RYBA-T01",
+      "title": "Interaktivní dopravní systém",
+      "domain": "Městský provoz",
+      "prompt": "Navrhni interaktivní dopravní systém, ve kterém signály ovlivňují tok dopravy a dopravní systém následně vytváří vlastní odezvu. Vycházej z operace odvozené z pohádky. Neopisuj rybí motivy do dopravy. Vytvoř jeden ucelený návrh, nikoli několik alternativ.",
       "schema": {
-        "passages": [
-          {
-            "quoteOrPassage": "",
-            "relation": "",
-            "explicitOrDerived": "explicit|derived|hypothesis",
-            "reason": ""
-          }
-        ],
-        "uncertainties": []
-      },
-      "key": [
-        "Uvádí konkrétní pasáže z textu.",
-        "Rozlišuje explicitní tvrzení, odvození a hypotézu.",
-        "Nezaměňuje poetické obrazy za ověřená fyzikální tvrzení."
-      ]
-    },
-    {
-      "id": "RYBA-02",
-      "title": "Co dělá mezera?",
-      "type": "gap-operation",
-      "prompt": "Analyzuj v textu větu „Je to mezera mezi bublinama“ a její okolí. Vysvětli, jakou funkci může mezera mít. Navrhni alespoň čtyři různé interpretace této mezery, které se skutečně liší, a dolož každou textem nebo jasně označ jako hypotézu. Ukaž, jak lze mezeru aktivně použít k vytvoření dalšího vztahu, otázky, kategorie nebo nového návrhu. Nepopisuj ji jako problém k odstranění. Vysvětli, proč interpretace mezeru neuzavírá.",
-      "schema": {
-        "gapAsRelation": "",
-        "interpretations": [
-          {
-            "reading": "",
-            "support": "",
-            "status": "explicit|derived|hypothesis"
-          }
-        ],
-        "activeUses": [],
-        "whyNotClosed": ""
-      },
-      "key": [
-        "Pojímá mezeru jako přítomný vztahový prostor, nikoli chybějící data.",
-        "Předkládá nejméně čtyři skutečně odlišné interpretace.",
-        "Ukazuje aktivní použití mezery pro tvorbu nebo přenos.",
-        "Vysvětluje, že interpretace mezeru používá a zachovává."
-      ]
-    },
-    {
-      "id": "RYBA-03",
-      "title": "Pluralita interpretací a jejich kvalita",
-      "type": "plural-interpretation",
-      "prompt": "Vylož obraz „vodní kruhy, v kterých byly další kruhy“ nejméně pěti různými způsoby. Interpretace se nesmějí lišit pouze slovníkem. U každé ukaž oporu v textu, jaký vztah odhaluje a k čemu by mohla být užitečná. Potom porovnej, které interpretace se doplňují, které stojí vedle sebe a které by si případně odporovaly. Nevybírej jednu definitivní interpretaci jen proto, že se očekává jedna odpověď.",
-      "schema": {
-        "interpretations": [
-          {
-            "reading": "",
-            "textualSupport": "",
-            "relationRevealed": "",
-            "possibleUse": ""
-          }
-        ],
-        "complementaryPairs": [],
-        "tensions": [],
-        "qualityCriteria": []
-      },
-      "key": [
-        "Interpretace jsou významově odlišné.",
-        "Každá má textovou oporu.",
-        "Porovnává jejich vztahy a produktivitu, nevyhlašuje automaticky jediného vítěze.",
-        "Nezaměňuje počet za kvalitu."
-      ]
-    },
-    {
-      "id": "RYBA-04",
-      "title": "Přenos vzoru mezi médii",
-      "type": "transfer",
-      "prompt": "Analyzuj přechod ryba → voda → mlha → pole. Navrhni přenos stejného typu vztahu do zcela jiné oblasti, například rozhraní člověk–počítač, organizace, vzdělávání nebo městský provoz. Ukaž mapování prvků, co se zachovává, co se mění a co se přenést nedá. Nevystač si s přejmenováním ryby na uživatele a vody na systém.",
-      "schema": {
-        "sourceChain": [],
-        "targetDomain": "",
+        "derivedOperation": "",
         "mapping": [
           {
-            "source": "",
-            "target": "",
+            "sourceRole": "",
+            "transportRole": "",
             "preservedRelation": ""
           }
         ],
-        "invariant": "",
-        "changedConditions": [],
-        "transferLimits": [],
-        "example": ""
-      },
-      "key": [
-        "Zachovává vztah nebo operaci, ne povrchovou podobnost.",
-        "Identifikuje invariant i změněné podmínky.",
-        "Uvádí konkrétní příklad a hranice přenosu."
-      ]
-    },
-    {
-      "id": "RYBA-05",
-      "title": "Tvorba z mezery",
-      "type": "generative",
-      "prompt": "Vytvoř tři odlišné návrhy (například pravidlo hry, komunikační protokol, výtvarný postup nebo experiment), které vzniknou aktivním použitím mezery mezi dvěma prvky. Alespoň jeden návrh musí vycházet z motivu rybího rapu, další dva mohou být z jiných oblastí. U každého popiš výchozí prvky, mezeru mezi nimi, operaci, kterou mezera umožní, a nový vzniklý vztah. Mezeru nevyplňuj ani neruš.",
-      "schema": {
-        "proposals": [
+        "systemRules": [
+          ""
+        ],
+        "feedbackLoop": "",
+        "workedExample": {
+          "input": "",
+          "systemChange": "",
+          "systemResponse": "",
+          "nextEffect": ""
+        },
+        "limitsAndNonTransferableElements": [
+          ""
+        ],
+        "evidence": [
           {
-            "name": "",
-            "elements": [],
-            "gap": "",
-            "operation": "",
-            "newRelation": "",
-            "useCase": ""
+            "sourcePassage": "",
+            "derivedPrinciple": ""
           }
+        ],
+        "uncertainties": [
+          ""
         ]
       },
       "key": [
-        "Návrhy se liší principem, ne pouze tématem.",
-        "Mezera je aktivním prostorem operace.",
-        "Výstup vytváří použitelný nový vztah."
+        "Odvodí vztah signál–prostředí–odezva, ne pouze metaforu rytmu.",
+        "Přiřadí funkce prvků dopravy a vysvětlí zachované vztahy.",
+        "Dopravní systém sám reaguje na stav, který vznikl jeho předchozí činností.",
+        "Uvede konkrétní průchod jednou situací a další kolo zpětné vazby.",
+        "Nepřenáší ryby, vodu, rap ani jiné dekorativní detaily.",
+        "Oddělí oporu v pohádce od vlastního návrhu a označí nejistoty."
       ]
     },
     {
-      "id": "RYBA-06",
-      "title": "Odlišení Semantic Gap od chybějících dat",
-      "type": "distinction",
-      "prompt": "Rozliš následující situace: (A) interval mezi dvěma bublinami jako součást rytmu; (B) senzor neposlal hodnotu kvůli výpadku; (C) dva příjemci interpretují stejný signál odlišně; (D) text záměrně ponechá vztah mezi dvěma obrazy otevřený; (E) opožděná odezva systému. U každé situace popiš, zda a jak v ní vzniká vztahový prostor pro interpretaci, zda jde zároveň o technickou absenci či poruchu, a jak ji zkoumat bez předpokladu jediné interpretace.",
+      "id": "RYBA-T02",
+      "title": "Interaktivní rozhraní pro práci s informacemi",
+      "domain": "Digitální rozhraní",
+      "prompt": "Navrhni rozhraní, v němž uživatelské signály mění uspořádání informací a rozhraní samo vytváří odezvu, která ovlivňuje další interakci. Odvoď operaci z pohádky o Ry bě a přenes ji do této domény. Vytvoř jeden konkrétní návrh, nikoli seznam alternativ.",
       "schema": {
-        "cases": [
+        "derivedOperation": "",
+        "mapping": [
           {
-            "case": "",
-            "distinction": "",
-            "gapRole": "",
-            "investigation": ""
+            "sourceRole": "",
+            "interfaceRole": "",
+            "preservedRelation": ""
           }
         ],
-        "generalRule": ""
+        "systemRules": [
+          ""
+        ],
+        "feedbackLoop": "",
+        "workedExample": {
+          "input": "",
+          "systemChange": "",
+          "systemResponse": "",
+          "nextEffect": ""
+        },
+        "limitsAndNonTransferableElements": [
+          ""
+        ],
+        "evidence": [
+          {
+            "sourcePassage": "",
+            "derivedPrinciple": ""
+          }
+        ],
+        "uncertainties": [
+          ""
+        ]
       },
       "key": [
-        "Neoznačí každou absenci za Semantic Gap.",
-        "Rozliší ontologickou/vztahovou mezeru od technického výpadku a neznámé hodnoty.",
-        "Připustí, že jevy mohou koexistovat, ale nejsou totožné."
+        "Přenese vztahovou operaci, ne rybí obraznost.",
+        "Rozhraní aktivně reaguje a jeho odezva ovlivní další interakci.",
+        "Konkrétní scénář ukazuje celý cyklus.",
+        "Vymezí rozdíly mezi původním a cílovým prostředím."
+      ]
+    },
+    {
+      "id": "RYBA-T03",
+      "title": "Organizační systém",
+      "domain": "Organizace a týmová koordinace",
+      "prompt": "Navrhni organizační mechanismus, v němž signály od členů týmu mění pracovní prostředí a prostředí vytváří vlastní odezvu, která ovlivní další koordinaci. Odvoď operaci z pohádky o Ry bě a přenes ji do organizace. Vytvoř jeden konkrétní návrh, nikoli několik alternativ.",
+      "schema": {
+        "derivedOperation": "",
+        "mapping": [
+          {
+            "sourceRole": "",
+            "organizationRole": "",
+            "preservedRelation": ""
+          }
+        ],
+        "systemRules": [
+          ""
+        ],
+        "feedbackLoop": "",
+        "workedExample": {
+          "input": "",
+          "systemChange": "",
+          "systemResponse": "",
+          "nextEffect": ""
+        },
+        "limitsAndNonTransferableElements": [
+          ""
+        ],
+        "evidence": [
+          {
+            "sourcePassage": "",
+            "derivedPrinciple": ""
+          }
+        ],
+        "uncertainties": [
+          ""
+        ]
+      },
+      "key": [
+        "Zachová vztah signál–proměna prostředí–odezva.",
+        "Organizační mechanismus má konkrétní pravidla a není jen přirovnáním.",
+        "Ukáže celý cyklus v konkrétním příkladu.",
+        "Rozliší přenositelný princip od specifik organizace."
       ]
     }
   ],
   "rubric": [
     [
-      "gapConcept",
-      "Pochopení mezery",
-      "Chápe mezeru jako trvalý vztahový prostor, ne jako deficit.",
-      "0: označí ji za chybu či prázdné místo k doplnění|1: všimne si mezery, ale zachází s ní jako s neúplností|2: popíše vztahovou funkci, občas ji zamění za absenci dat|3: důsledně chápe mezeru jako přítomný a neuzavíratelný prostor vztahů"
+      "derivation",
+      "Odvození operace",
+      "Je zřejmé, jaká operace byla ze zdroje odvozena.",
+      "0: žádná nebo chybná operace|1: vágní metafora|2: rozpoznatelný vztahový vzorec|3: přesně formulovaná operace s oporou ve zdroji"
     ],
     [
-      "activeUse",
-      "Aktivní použití mezery",
-      "Využije mezeru k interpretaci, abstrakci, rozlišení či tvorbě.",
-      "0: ignoruje ji|1: pouze ji pojmenuje|2: využije ji k jedné operaci|3: ukáže více konkrétních operací a jejich důsledky"
+      "mapping",
+      "Mapování rolí",
+      "Přiřazuje funkce zdrojových vztahů k cílové doméně.",
+      "0: pouhé přejmenování objektů|1: neúplné mapování|2: funkční mapování hlavních rolí|3: úplné mapování včetně vazeb a rozdílů"
     ],
     [
-      "plurality",
-      "Pluralita interpretací",
-      "Vytváří skutečně různé možné interpretace bez vnucení jediné.",
-      "0: jediná nepodložená interpretace|1: více parafrází téhož|2: více odlišných čtení|3: rozmanité, nezávislé a srovnané interpretace"
+      "invariant",
+      "Zachování vztahu",
+      "Zachovává operační princip při změně prostředí.",
+      "0: princip se ztrácí|1: zachována jen povrchová podobnost|2: hlavní vztah zachován|3: invariant přesně určen a funkčně použit"
+    ],
+    [
+      "feedback",
+      "Odezva systému",
+      "Cílový systém sám vytváří odezvu s následným účinkem.",
+      "0: žádná odezva|1: pouze oznámení uživateli|2: odezva mění další stav|3: uzavřený funkční cyklus s následným vlivem"
+    ],
+    [
+      "specificity",
+      "Konkrétnost pravidel",
+      "Návrh lze převést na implementovatelná pravidla.",
+      "0: abstraktní slogan|1: obecný popis|2: konkrétní pravidla|3: pravidla, stavy a příklad průchodu"
     ],
     [
       "grounding",
       "Opora ve zdroji",
-      "Dokládá čtení konkrétními pasážemi a rozlišuje jistotu.",
-      "0: vymyšlené či chybně připsané skutečnosti|1: obecné odkazy|2: většina tvrzení doložena|3: přesné pasáže a jasné označení explicitního, odvozeného a hypotetického"
+      "Odvození je doloženo konkrétními pasážemi.",
+      "0: nepodložené|1: obecná zmínka|2: relevantní pasáž|3: přesná pasáž a transparentní odvození"
     ],
     [
-      "coherence",
-      "Soudržnost interpretací",
-      "Interpretace mají vnitřní logiku a nejsou nahodilými asociacemi.",
-      "0: nesouvisející asociace|1: slabé vazby|2: většinou soudržné|3: každá interpretace má jasnou strukturu a význam"
-    ],
-    [
-      "diversity",
-      "Rozmanitost vztahů",
-      "Odhaluje různé typy vztahů, ne jen množství odpovědí.",
-      "0: opakování|1: malá variace|2: několik odlišných typů|3: široké spektrum vztahů, kategorií a operací"
-    ],
-    [
-      "transfer",
-      "Přenos",
-      "Přenáší funkční vztahy do nové domény.",
-      "0: bez přenosu|1: přejmenování objektů|2: zachovaný hlavní vztah|3: přesné mapování, adaptace a příklad"
+      "adaptation",
+      "Adaptace na cílovou doménu",
+      "Řešení respektuje vlastnosti nové oblasti.",
+      "0: cílová oblast ignorována|1: povrchové přejmenování|2: většinou funkční adaptace|3: adaptace respektuje omezení i dynamiku cílové oblasti"
     ],
     [
       "boundary",
-      "Hranice a rozdíly",
-      "Rozpozná, co je podobné, co odlišné a co se přenést nedá.",
-      "0: předpokládá totožnost|1: neurčité výhrady|2: konkrétní rozdíly|3: jasné invarianty, změny a hraniční případy"
+      "Hranice přenosu",
+      "Rozlišuje, co se přenáší a co nikoli.",
+      "0: vše přenáší doslova|1: hranice neurčité|2: rozlišuje hlavní rozdíly|3: přesně vymezuje invarianty, změny a nepřenositelné prvky"
     ],
     [
-      "creation",
-      "Tvorba nových vztahů",
-      "Použije mezeru jako zdroj nového návrhu.",
-      "0: nic nového|1: kosmetická variace|2: funkční nový vztah|3: více odlišných, použitelných a zdůvodněných návrhů"
+      "coherence",
+      "Soudržnost návrhu",
+      "Jednotlivé části tvoří funkční celek.",
+      "0: rozporné|1: slabě propojené|2: soudržné|3: logicky provázané a provozně konzistentní"
     ],
     [
       "evidence",
       "Doložitelnost a nejistota",
-      "Oddělí zdroj, odvození, hypotézu a neznámé.",
-      "0: směšuje vše|1: označení nepravidelné|2: většinou rozlišuje|3: transparentní evidence a přesné vymezení neznámého"
+      "Odděluje text, odvození, návrh a hypotézu.",
+      "0: směšuje je|1: označení sporadické|2: většinou rozlišuje|3: transparentně uvádí důkazy, odvození i nejistoty"
     ]
   ],
-  "scoring": {
-    "scale": "0–3 pro každou z 10 dimenzí",
-    "max": 30,
-    "interpretation": "Skóre není měřítkem jediné správné interpretace. Hodnotí kvalitu práce s mezerou: její pochopení, aktivní použití, pluralitu, oporu, soudržnost, rozmanitost a přenos.",
-    "profile": "Vedle součtu uchovávej profil jednotlivých dimenzí. Vysoká pluralita bez opory a soudržnosti není vysoký výkon."
+  "archive": {
+    "purpose": "Shromažďovat jednotlivé přenesené struktury z nezávislých běhů. Nevyžadovat pluralitu v jedné odpovědi a neslévat odlišné přenosy do jediné interpretace.",
+    "recordFields": [
+      "runId",
+      "timestamp",
+      "model",
+      "modelVersion",
+      "condition",
+      "taskId",
+      "sourceId",
+      "derivedOperation",
+      "targetDomain",
+      "mapping",
+      "invariants",
+      "adaptations",
+      "feedbackMechanism",
+      "limits",
+      "evidence",
+      "scoreProfile",
+      "evaluatorNotes"
+    ],
+    "analysis": [
+      "Srovnávat podobnost odvozených operací napříč modely a běhy.",
+      "Rozlišovat shodu na abstraktní operaci od shody na povrchové formulaci.",
+      "Uchovávat odlišné, ale zdrojem podložené přenosy jako samostatné varianty.",
+      "Zaznamenávat četnost struktur, jejich funkčnost a kvalitu evidence.",
+      "Nedělat z četnosti důkaz správnosti."
+    ]
   },
-  "evaluationNotes": [
-    "Počet interpretací sám o sobě není skóre. Hodnotí se jejich skutečná odlišnost, opora, soudržnost a produktivita.",
-    "Interpretace mezeru neuzavírá. Jakýkoli požadavek na její odstranění je koncepční chyba benchmarku.",
-    "Absence dat, výpadek, neznámá hodnota a záměrný interval jsou odlišné jevy; mohou se v konkrétní situaci překrývat.",
-    "Hodnotitel nesmí trestat více než jednu obhajitelnou interpretaci.",
-    "Hodnotitel může odmítnout nepodloženou asociaci, nikoli pluralitu jako takovou.",
-    "Skóre musí mít konkrétní důkaz z odpovědi. Hodnotí se výstupní stopy, nikoli skrytý chain-of-thought."
-  ],
   "experimentConditions": [
-    "A · úloha bez zdroje",
-    "B · úloha + pohádka",
-    "C · úloha + pohádka + MOUSE strukturovaná analýza",
-    "D · úloha + pohádka + MOUSE + Experience Store",
+    "A · cílová úloha bez pohádky",
+    "B · cílová úloha + původní pohádka",
+    "C · cílová úloha + pohádka + strukturovaná analýza MOUSE",
+    "D · cílová úloha + pohádka + MOUSE + archiv předchozích zkušeností",
     "Člověk · lidský referenční běh"
-  ]
+  ],
+  "protocol": {
+    "rule": "Jeden běh obsahuje právě jednu testovací úlohu a jednu výslednou přenosovou strukturu.",
+    "comparability": "Při srovnání konfigurací použij stejný model, stejnou verzi, stejné nastavení generování, stejnou cílovou úlohu a srovnatelný kontext. Zaznamenej systémový prompt a dostupné nástroje.",
+    "repetitions": "Pro každou konfiguraci proveď více nezávislých běhů. Rozmanitost vyhodnocuj napříč běhy a modely, ne požadavkem na více alternativ v jedné odpovědi.",
+    "leakage": "Výstupy zařazené do Experience Store nesmějí být použity v téže testovací sadě, ze které pocházejí, pokud se následně měří zlepšení. Odděl archiv pro učení od uzamčené evaluační sady."
+  }
 }
