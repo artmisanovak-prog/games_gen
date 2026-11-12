@@ -91,7 +91,18 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const download=(name,obj)=>{const blob=new Blob([typeof obj==='string'?obj:JSON.stringify(obj,null,2)],{type:'application/json'});const a=document.createElement('a');const u=URL.createObjectURL(blob);a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)};
 const archive=()=>{try{return JSON.parse(localStorage.getItem(STORE)||'[]')}catch(e){return[]}};
 const task=()=>data.tasks.find(t=>t.id===$('taskSelect').value);
-function promptText(){const t=task();return 'OTB-05-RYBA / '+data.version+'\n\nÚKOL: '+t.title+' ('+t.id+')\nCÍLOVÁ DOMÉNA: '+t.domain+'\n\nINSTRUKCE\n'+t.prompt+'\n\nPRACOVNÍ OPERAČNÍ VZOREC\n'+data.operation.derivation+'\n\nINVARIANTY, KTERÉ JE TŘEBA PROVĚŘIT\n'+data.operation.invariants.map(x=>'- '+x).join('\n')+'\n\nPŮVODNÍ ZDROJ\n'+data.source.text+'\n\nPOŽADOVANÝ VÝSTUP\nVrať jeden JSON objekt podle tohoto schématu. Nevytvářej více alternativ. Odděl tvrzení zdroje, odvozený princip a vlastní návrh. Uveď konkrétní průchod jednou situací, hranice přenosu a nejistoty.\n'+JSON.stringify(t.schema,null,2)}
+function promptText(){
+ const t=task(),cond=$('condition').value;
+ let out='OTB-05-RYBA / '+data.version+'\\nÚLOHA: '+t.title+' ('+t.id+')\\nCÍLOVÁ DOMÉNA: '+t.domain+'\\n\\nZADÁNÍ\\n'+t.prompt+'\\n\\nVÝSTUP\\nVrať právě jeden JSON objekt podle schématu. Nevytvářej alternativní řešení.\\n'+JSON.stringify(t.schema,null,2);
+ if(cond.startsWith('B')||cond.startsWith('C')||cond.startsWith('D')) out+='\\n\\nPŮVODNÍ POHÁDKA\\n'+data.source.text;
+ if(cond.startsWith('C')||cond.startsWith('D')) out+='\\n\\nSTRUKTUROVANÁ ANALÝZA MOUSE\\n'+data.operation.derivation+'\\nInvarianty k prověření:\\n'+data.operation.invariants.map(x=>'- '+x).join('\\n')+'\\nNepřenášej doslova: '+data.operation.nonInvariants.join('; ');
+ if(cond.startsWith('D')){
+  const prior=archive().filter(x=>x.taskId!==t.id&&x.response).slice(-5);
+  out+='\\n\\nPŘEDCHOZÍ ZKUŠENOSTI Z ARCHIVU\\n'+(prior.length?prior.map(x=>'Úloha '+x.taskId+' / doména '+x.targetDomain+' / model '+(x.model||'neuveden')+'\\nVýstupní struktura: '+x.response.slice(0,1800)).join('\\n\\n'):'V archivu zatím nejsou žádné použitelné záznamy z jiných úloh. Tato podmínka proto zatím nemá zkušenostní příklady.');
+ }
+ out+='\\n\\nRozliš, co je přímo ve zdroji, co je odvozený princip a co je tvůj návrh. Uveď jeden konkrétní průchod, hranice přenosu a nejistoty.';
+ return out;
+}
 function renderTask(){const t=task();$('taskBrief').innerHTML='<span class="tag">'+esc(t.id)+' / '+esc(t.domain)+'</span><h3>'+esc(t.title)+'</h3><p>'+esc(t.prompt)+'</p>';$('taskKey').innerHTML='<ul>'+t.key.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'}
 function render(){ $('facts').innerHTML='<ul>'+data.sourceFacts.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';$('operationDetails').innerHTML='<p>'+esc(data.operation.derivation)+'</p><h3>Vztahy, které se mají zachovat</h3><ul>'+data.operation.invariants.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';$('nonInvariants').innerHTML='<ul>'+data.operation.nonInvariants.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><p>'+esc(data.operation.caution)+'</p>';$('gap').innerHTML='<p>'+esc(data.gapModel.definition)+'</p><ul>'+data.gapModel.principles.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
 $('trainingList').innerHTML=data.trainingExamples.map(x=>'<details><summary>'+esc(x.id)+' · '+esc(x.title)+'</summary><div class="detail-body"><p><strong>Zdroj:</strong> '+esc(x.source)+'</p><p>'+esc(x.example)+'</p><p><strong>Princip:</strong> '+esc(x.lesson)+'</p></div></details>').join('');
