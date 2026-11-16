@@ -35,14 +35,6 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 
 Toto je pracovní laboratoř, nikoli hotový produkt ani tvrzení, že MOUSE již automaticky řeší externí problémy.
 
-
-## Propojený pracovní prostor
-
-Deset generátorů je napojeno na společný lokální bridge: Kocour, Ryba, Netopýr, Pavouk, Lemur, Želva, Panda, Vlk, Motýl a Dráček. Výsledky lze ukládat, předávat mezi těmito kartami a exportovat/importovat jako JSON. Paměť je lokální pro stejný prohlížeč a zařízení; sama se nesynchronizuje mezi zařízeními.
-
-- [Katalog všech karet a stav jejich zdrojů / nástrojů](./karty.html)
-- [Audit pokrytí a dalších kroků](./AUDIT_KARET.md)
-
 ## Samostatné generativní operace karet
 
 Každá operace má vlastní generátor a vlastní pravidla. MOUSE LAB je propojuje přes kartu API; polární konfigurace zůstává samostatným pracovním záznamem a není automaticky odvozena z generátoru.
