@@ -201,7 +201,7 @@
       "id": "motyl",
       "title": "Motýl",
       "sourceFile": "motyl.txt",
-      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/motyl.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/motyl.txt",
       "entities": [
         {
           "id": "motyl",
@@ -226,7 +226,8 @@
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "toolUrl": "../motyl/"
         }
       ]
     },
@@ -234,7 +235,7 @@
       "id": "drak",
       "title": "Drak",
       "sourceFile": "drak.txt",
-      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/drak.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/drak.txt",
       "entities": [
         {
           "id": "drak",
@@ -259,7 +260,8 @@
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "toolUrl": "../drak/"
         }
       ]
     },
@@ -524,6 +526,268 @@
             "netopýr zachovává kontinuitu zkušenosti napříč odlišnými interpretačními režimy"
           ],
           "form": "Text staví paralelní krátké věty a opakování „Všechno…“. Noční jazyk je nejprve estetizován a následně konfrontován s ranním hodnocením. Závěr výslovně odmítá redukci noci na lež.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "tygr",
+      "title": "Tygr",
+      "sourceFile": "tygr.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/tygr.txt",
+      "entities": [
+        {
+          "id": "tygr",
+          "name": "Tygr",
+          "toolUrl": "../tygr/",
+          "focus": "Žabí přání být tygrem se nepřekládá do tradičního prince. Polibek funguje jako souhlas s vlastním přáním a proměna jako překlad identity, ne jako naplnění zavedené pohádkové tradice.",
+          "evidence": [
+            "„„Až vyrostu, budu tygr““",
+            "„„Když mě políbíš, nezměním se v prince. Změním se v to, co chci být.““",
+            "„„Ne jako kouzlo. Ale jako souhlas.““",
+            "„„Ne jako proměna. Ale jako překlad přání.““",
+            "„„Přání nejsou rovnice. A láska není tradice.““"
+          ],
+          "mechanisms": [
+            "překlad přání místo převodu do předem dané role",
+            "konflikt mezi tradičním očekáváním a vlastním cílem",
+            "souhlas jako podmínka změny",
+            "identita vzniká z vlastního přání, ne z cizího scénáře"
+          ],
+          "form": "Text staví vedle sebe známou pohádkovou posloupnost princezny, žáby a prince a její odchýlení. Opakuje formulace „Ne jako… ale jako…“ a rozlišuje kouzlo, souhlas, proměnu a překlad.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "osel",
+      "title": "Osel",
+      "sourceFile": "osel.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/osel.txt",
+      "entities": [
+        {
+          "id": "osel",
+          "name": "Osel",
+          "toolUrl": "../osel/",
+          "focus": "Osel se pohybuje mezi protikladnými označeními levá/pravá a seno/sláma, ale pravidla rozlišení zůstávají nevyslovená. Cedulka mu poskytne zdání jistoty, aniž odstraní nejednoznačnost.",
+          "evidence": [
+            "„„Jedna byla seno. Druhá sláma. A nikdo mu neřekl, která je která.““",
+            "„„Levá,“ řekl někdo. „Pravá,“ řekl jiný.“",
+            "„„Správnost. To, co se neřekne nahlas, ale všichni to očekávají.““",
+            "„„Ale písmo bylo stejné.““",
+            "„„Podle cedulky.“ / „To, co si myslíš, že tam je.““"
+          ],
+          "mechanisms": [
+            "orientace podle protikladných štítků bez dostupného rozlišovacího pravidla",
+            "nejistota vzniká z nevyslovených očekávání, ne z nedostatku pohybu",
+            "cedulka přenáší rozhodování z pozorování na autoritu označení",
+            "zdánlivá jistota může být sociálně přesvědčivá, i když neobsahuje znalost"
+          ],
+          "form": "Párové protiklady levá/pravá a seno/sláma se opakují v rytmu říkanky. Stejný nápis na obou stranách cedulky vytváří jazykovou past.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "jednorozec",
+      "title": "Jednorožec",
+      "sourceFile": "jednorozec.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/jednorozec.txt",
+      "entities": [
+        {
+          "id": "jednorozec",
+          "name": "Jednorožec",
+          "toolUrl": "../jednorozec/",
+          "focus": "Jednorožec popírá existenci delfínů a ledních medvědů, přestože z jejich spojení sám vznikl. Popřením původu se pokouší uchovat vlastní kategorii nemožného.",
+          "evidence": [
+            "„„Jednorožec byl. To je první lež.““",
+            "„„Ale akorát ten. jednorožec nevěřil.““",
+            "„„Dva světy, které se nikdy neměly potkat, se navzájem poznaly.““",
+            "„„Pokud je z reálných věcí, může být reálný. A pokud je reálný, přestává být jednorožec.““",
+            "„„Nejspíš právě zachraňuje jednorožce.““"
+          ],
+          "mechanisms": [
+            "vznik nové identity spojením prvků považovaných za neslučitelné",
+            "popření vlastních zdrojů jako obrana kategorie a výjimečnosti",
+            "paradox: důkazy původu současně dokazují možnost existence",
+            "nejistota identity vzniká z konfliktu mezi původem a představou o sobě"
+          ],
+          "form": "Text opakuje negace a krátká jednoslovná slovesa: zapřít, zrušit, zneplatnit, zpochybnit. Vznik tvora je vyprávěn jako řetězec nemožných spojení.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "krokodyl",
+      "title": "Krokodýl",
+      "sourceFile": "krokodyl.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/krokodyl.txt",
+      "entities": [
+        {
+          "id": "krokodyl",
+          "name": "Krokodýl",
+          "toolUrl": "../krokodyl/",
+          "focus": "Krokodýl je převeden ze zvířete a symbolu na prodejní produkt. Jeho skutečné slzy zůstávají, ale marketingový obal mění jejich společenské čtení a cenu.",
+          "evidence": [
+            "„„že je zboží. Ne zvíře. Ne postava. Ne symbol. Ale produkt.““",
+            "„„Tento týden sleva 90 %. Tři za cenu jedné. Krokodýlí slzy.““",
+            "„„To je emoce. Ale levná. Už není čerstvá.““",
+            "„„Tohle není věta. To je výkřik v obalu!!““",
+            "„„Krokodýlí slzy nejsou falešné. Jsou jen snadno dostupné.““"
+          ],
+          "mechanisms": [
+            "převod symbolu a emoce do komerčního produktu",
+            "obal a cenovka mění interpretaci obsahu, nikoli nutně jeho pravost",
+            "opakování reklamního jazyka vytlačuje původní význam",
+            "ztráta jazyka a smyslu je maskována jako dostupnost a sleva"
+          ],
+          "form": "Reklamní slogan, cenovka a jazyk výprodeje pronikají do vyprávění. Text opakovaně staví proti sobě emoci a její komerční obal.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "veverka",
+      "title": "Veverka",
+      "sourceFile": "veverka.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/veverka.txt",
+      "entities": [
+        {
+          "id": "veverka",
+          "name": "Veverka",
+          "toolUrl": "../veverka/",
+          "focus": "Veverka jedná bez vysvětlování a bez potřeby formulovat smysl. Její opakované činy vytvářejí zásoby a důsledky, zatímco napodobitelé vyrábějí komentáře, citáty a únavu.",
+          "evidence": [
+            "„„Běžela, protože to bylo potřeba.““",
+            "„„Oříšek. Díra. Zahrabat. Zamaskovat. Zamrkat. Znovu.““",
+            "„„Modli se činy.““",
+            "„„A odpovědi si nenosí. Jen oříšky.““",
+            "„„A veverka měla zásoby.““"
+          ],
+          "mechanisms": [
+            "opakovaná účelná činnost bez průběžného vysvětlování",
+            "výsledek vzniká z kumulace drobných činů",
+            "napodobování viditelného postupu bez jeho situovaného důvodu selhává",
+            "komentování a symbolické napodobení nenahrazuje praktickou činnost"
+          ],
+          "form": "Text používá krátké slovesné řetězce a opakování „znovu“. Protiklad činů a komentářů se projeví až v pozdějším důsledku, kdy zásoby rozhodují o přežití zimy.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "hvezdice",
+      "title": "Hvězdice",
+      "sourceFile": "hvezdice.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/hvezdice.txt",
+      "entities": [
+        {
+          "id": "hvezdice",
+          "name": "Hvězdice",
+          "toolUrl": "../hvezdice/",
+          "focus": "Hvězdice čte kruhy na vodě nikoli jako pouhou krásnou geometrii, ale jako stopy po dopadech a nevratných událostech. Zklidnění hladiny neznamená, že se nic nestalo.",
+          "evidence": [
+            "„„Ne. To jsou jizvy.““",
+            "„„Po věcech, co dopadly.““",
+            "„„Každý kruh začínal nárazem.““",
+            "„„Ale to neznamená, že se nic nestalo.““",
+            "„„I když to neřekne.““"
+          ],
+          "mechanisms": [
+            "převod viditelného vzoru na stopu jeho příčiny",
+            "rozlišení mezi odezněním účinku a vymazáním události",
+            "šíření následků od bodu dopadu do dalších životů",
+            "paměť prostředí přetrvává i po návratu zdánlivého klidu"
+          ],
+          "form": "Text střídá krátká pojmenování dopadu a rozvíjející se kruhy. Dialog ukazuje několik interpretací téhož jevu a hvězdice je obrací k jeho historii.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "parohy",
+      "title": "Parohy",
+      "sourceFile": "parohy.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/parohy.txt",
+      "entities": [
+        {
+          "id": "parohy",
+          "name": "Parohy",
+          "toolUrl": "../parohy/",
+          "focus": "Každé vyfotografování přidává paroh jako další větev paměti. Blesk fotoaparátu vytváří světelnou stopu bez hromu a obraz se stává archivem okamžiků, jejichž pravdivost nikdo neověřuje.",
+          "evidence": [
+            "„„Každý den do ni uhodil blesk. Ne z nebe. Z foťáku.““",
+            "„„Tisíckrát. Blesk. Ale nikdy hrom. Žádný déšť.““",
+            "„„Parohy ji rostly pokaždé, když ji někdo vyfotil.““",
+            "„„Jedna větev za každou vzpomínku.““",
+            "„„Je to paměť, co se tváří jako přítomnost.““"
+          ],
+          "mechanisms": [
+            "fotografický záblesk je přirovnán k blesku, ale bez následného hromu a deště",
+            "každý záznam přidává větev do vnějšího archivu paměti",
+            "úsměv a fotografování mohou uchovat okamžik bez ověření jeho pravdivosti",
+            "obraz a zvuk se propojují přes slovo „syyyr“"
+          ],
+          "form": "Text opakuje slova „blesk“, „syyyr“ a motiv růstu parohů. Fotografický okamžik se materializuje jako větev a slovo se snaží stát obrazem.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "kozel",
+      "title": "Kozel",
+      "sourceFile": null,
+      "sourceStatus": "tool-only-no-source-story",
+      "entities": [
+        {
+          "id": "kozel",
+          "name": "Kozel",
+          "toolUrl": "../kozel/",
+          "focus": "Existující herní nástroj pracuje s půjčováním perspektiv: dvě bytosti si vymění způsob čtení světa a zkoumají, co se přeneslo, co zůstalo cizí a co nelze vrátit. V repozitáři zatím není nalezen samostatný zdrojový text pohádky o kozlovi.",
+          "evidence": [
+            "„Ty budeš já a já budu tvá.“",
+            "„Nejde o převlek ani napodobování.“",
+            "„Pochopení nedává automaticky právo mluvit za druhého.“"
+          ],
+          "mechanisms": [
+            "dočasná výměna perspektivy",
+            "rozlišení přeneseného a nepřenosného",
+            "hranice zastupování a souhlasu",
+            "zbytkový účinek po návratu"
+          ],
+          "form": "Stávající generátor je založen na vyjednání dvojice, hloubky a hranic výměny. Nejde o doložený rozbor pohádky, protože samostatný text pohádky nebyl v repozitáři nalezen.",
           "polar": {
             "status": "not-authored",
             "layers": null,
