@@ -95,7 +95,8 @@
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "toolUrl": "../ryba/"
         }
       ]
     },
@@ -127,7 +128,8 @@
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "toolUrl": "../zelva/"
         }
       ]
     },
@@ -159,7 +161,8 @@
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "toolUrl": "../panda/"
         },
         {
           "id": "vlk",
@@ -186,7 +189,8 @@
             "radii": null
           },
           "sourceFile": "vlk.txt",
-          "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/vlk.txt"
+          "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/vlk.txt",
+          "toolUrl": "../vlk/"
         }
       ]
     },
