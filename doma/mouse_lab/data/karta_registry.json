@@ -16,7 +16,7 @@
     "illustrations": 37,
     "anglePages": 30,
     "figurePages": 13,
-    "bridgeIntegrated": 5,
+    "bridgeIntegrated": 10,
     "toolOnly": 1,
     "polarAuthored": 0
   },
@@ -190,7 +190,7 @@
       },
       "evidenceCount": 5,
       "mechanismCount": 4,
-      "bridgeIntegrated": false,
+      "bridgeIntegrated": true,
       "sourceStatus": "source-grounded"
     },
     {
@@ -233,7 +233,7 @@
       },
       "evidenceCount": 5,
       "mechanismCount": 4,
-      "bridgeIntegrated": false,
+      "bridgeIntegrated": true,
       "sourceStatus": "source-grounded"
     },
     {
@@ -276,7 +276,7 @@
       },
       "evidenceCount": 6,
       "mechanismCount": 4,
-      "bridgeIntegrated": false,
+      "bridgeIntegrated": true,
       "sourceStatus": "source-grounded"
     },
     {
@@ -319,7 +319,7 @@
       },
       "evidenceCount": 6,
       "mechanismCount": 4,
-      "bridgeIntegrated": false,
+      "bridgeIntegrated": true,
       "sourceStatus": "source-grounded"
     },
     {
@@ -362,7 +362,7 @@
       },
       "evidenceCount": 6,
       "mechanismCount": 4,
-      "bridgeIntegrated": false,
+      "bridgeIntegrated": true,
       "sourceStatus": "source-grounded"
     },
     {
