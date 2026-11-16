@@ -1,4 +1,4 @@
-/* GAMES_GEN · shared bridge for the first five connected cards */
+/* GAMES_GEN · shared bridge for connected card generators */
 (function(){
 "use strict";
 const TOOLS={
@@ -6,22 +6,28 @@ const TOOLS={
  ryba:{title:"Ryba",url:"/games_gen/doma/ryba/",target:"note",run:["make"]},
  netopyr:{title:"Netopýr",url:"/games_gen/doma/netopyr/",target:"constraint",run:["generate","surprise"]},
  pavouk:{title:"Pavouk",url:"/games_gen/doma/pavouk/",target:"note",run:["run"]},
- lemur:{title:"Lemur",url:"/games_gen/doma/lemur/",target:"note",run:["run"]}
+ lemur:{title:"Lemur",url:"/games_gen/doma/lemur/",target:"note",run:["run"]},
+ zelva:{title:"Želva",url:"/games_gen/doma/zelva/",target:"message",run:["run"],placeholder:/Nastav dvojici a spusť operaci/i},
+ panda:{title:"Panda",url:"/games_gen/doma/panda/",target:"note",run:["run"],placeholder:/Nastav parametry a spusť analýzu/i},
+ vlk:{title:"Vlk",url:"/games_gen/doma/vlk/",target:"message",run:["run"],placeholder:/Nastav vstupní vjem, kód a cílový kanál/i},
+ motyl:{title:"Motýl",url:"/games_gen/doma/motyl/",target:"detail",run:["run"],placeholder:/Nastav potřebu a nabídku a spusť analýzu/i},
+ dracek:{cardId:"drak",title:"Dráček",url:"/games_gen/doma/dracek/",target:"note",run:["make","again"]}
 };
 const path=location.pathname.toLowerCase();
 const cardId=Object.keys(TOOLS).find(k=>path.includes("/"+k+"/"));
 if(!cardId)return;
-const tool=TOOLS[cardId], STORE="games_gen:bridge:records:v1", PENDING="games_gen:bridge:pending:v1";
+const tool=TOOLS[cardId], recordCardId=tool.cardId||cardId, STORE="games_gen:bridge:records:v1", PENDING="games_gen:bridge:pending:v1";
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function read(){try{return JSON.parse(localStorage.getItem(STORE)||"[]")}catch(e){return[]}}
 function write(rows){localStorage.setItem(STORE,JSON.stringify(rows));if(window.MOUSE)MOUSE.write("bridge:records",rows)}
 function fieldValues(){const out={};document.querySelectorAll("main input,main select,main textarea").forEach(el=>{if(!el.id||["fileImport"].includes(el.id)||["button","submit","file","hidden"].includes(el.type))return;out[el.id]=el.value});return out}
 function outputText(){const el=$("result")||$("out");if(!el)return "";return (el.innerText||el.textContent||"").trim().slice(0,24000)}
+function isPlaceholder(s){return /Nastav parametry a vytvoř situaci|Zadej stav a spusť simulaci|Nastav situaci a spusť simulaci|Zatím bez/i.test(s)||(tool.placeholder&&tool.placeholder.test(s));}
 function titleFromOutput(s){const lines=s.split("\n").map(x=>x.trim()).filter(Boolean);return (lines[0]||tool.title+" · pracovní výstup").slice(0,110)}
 function saveRecord(){
  const output=outputText();
- if(!output||/Nastav parametry a vytvoř situaci|Zadej stav a spusť simulaci|Nastav situaci a spusť simulaci|Zatím bez/i.test(output)){$("bridgeStatus").textContent="Nejdřív vytvoř výsledek v generátoru.";return null}
+ if(!output||isPlaceholder(output)){$("bridgeStatus").textContent="Nejdřív vytvoř výsledek v generátoru.";return null}
  const rows=read(),rec={schema:"games-gen-connected-run/1.0",id:"B-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7),cardId,cardTitle:tool.title,title:titleFromOutput(output),createdAt:new Date().toISOString(),parentId:localStorage.getItem("games_gen:bridge:parent")||null,inputs:fieldValues(),output};
  rows.push(rec);write(rows);localStorage.removeItem("games_gen:bridge:parent");
  $("bridgeStatus").textContent="Uloženo do společné paměti · "+rows.length+" záznamů.";
@@ -46,7 +52,7 @@ function insertRecord(rec){
 }
 function transferCurrent(){
  const output=outputText();
- if(!output||/Nastav parametry a vytvoř situaci|Zadej stav a spusť simulaci|Nastav situaci a spusť simulaci|Zatím bez/i.test(output)){$("bridgeStatus").textContent="Nejdřív vytvoř výsledek, který chceš předat.";return}
+ if(!output||isPlaceholder(output)){$("bridgeStatus").textContent="Nejdřív vytvoř výsledek, který chceš předat.";return}
  const rec=saveRecord();if(!rec)return;
  const dest=$("bridgeTarget").value;if(!dest||!TOOLS[dest])return;
  localStorage.setItem(PENDING,JSON.stringify({record:rec,target:dest,createdAt:new Date().toISOString()}));
@@ -85,7 +91,7 @@ function mount(){
 #gbridge .gbridge-item small,.gbridge-muted{color:#aeb7aa;font-size:11px}
 @media(max-width:520px){#gbridge{padding:0 10px}#gbridge .gbridge-box{padding:12px}}
 `;document.head.appendChild(style);
- const el=document.createElement("section");el.id="gbridge";el.innerHTML='<div class="gbridge-box"><h2>Propojený pracovní prostor · '+esc(tool.title)+'</h2><p>Výsledky pěti karet sdílejí jednu místní paměť. Výstup můžeš předat dalšímu generátoru a pokračovat v řetězci.</p><div class="gbridge-tools">'+Object.entries(TOOLS).map(([id,t])=>'<a href="'+t.url+'">'+esc(t.title)+'</a>').join("")+'</div><div class="gbridge-grid"><div><label>Výsledek z předchozího běhu<select id="bridgeSource"><option value="">Načítám…</option></select></label><button class="alt" id="bridgeInsert">Vložit jako vstup</button></div><div><label>Předat aktuální výsledek do<select id="bridgeTarget">'+Object.entries(TOOLS).filter(([id])=>id!==cardId).map(([id,t])=>'<option value="'+id+'">'+esc(t.title)+'</option>').join("")+'</select></label><button id="bridgeTransfer">Předat do další karty</button></div></div><div><button id="bridgeSave">Uložit aktuální výsledek</button><button class="alt" id="bridgeExport">Exportovat společnou paměť JSON</button><label>Importovat dříve exportovanou společnou paměť<input id="fileImport" type="file" accept="application/json"></label></div><div id="bridgeStatus" class="gbridge-status" role="status"></div><div id="bridgeRecent" class="gbridge-recent"></div></div>';
+ const el=document.createElement("section");el.id="gbridge";el.innerHTML='<div class="gbridge-box"><h2>Propojený pracovní prostor · '+esc(tool.title)+'</h2><p>Výsledky propojených karet sdílejí jednu místní paměť. Výstup můžeš předat dalšímu generátoru a pokračovat v řetězci.</p><div class="gbridge-tools">'+Object.entries(TOOLS).map(([id,t])=>'<a href="'+t.url+'">'+esc(t.title)+'</a>').join("")+'</div><div class="gbridge-grid"><div><label>Výsledek z předchozího běhu<select id="bridgeSource"><option value="">Načítám…</option></select></label><button class="alt" id="bridgeInsert">Vložit jako vstup</button></div><div><label>Předat aktuální výsledek do<select id="bridgeTarget">'+Object.entries(TOOLS).filter(([id])=>id!==cardId).map(([id,t])=>'<option value="'+id+'">'+esc(t.title)+'</option>').join("")+'</select></label><button id="bridgeTransfer">Předat do další karty</button></div></div><div><button id="bridgeSave">Uložit aktuální výsledek</button><button class="alt" id="bridgeExport">Exportovat společnou paměť JSON</button><label>Importovat dříve exportovanou společnou paměť<input id="fileImport" type="file" accept="application/json"></label></div><div id="bridgeStatus" class="gbridge-status" role="status"></div><div id="bridgeRecent" class="gbridge-recent"></div></div>';
  const main=document.querySelector("main");if(main)main.parentNode.insertBefore(el,main);else document.body.prepend(el);
  $("bridgeInsert").addEventListener("click",()=>insertRecord(selectedRecord()));
  $("bridgeTransfer").addEventListener("click",transferCurrent);
