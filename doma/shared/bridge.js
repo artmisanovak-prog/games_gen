@@ -4,10 +4,10 @@
 const TOOLS={
  kocour:{title:"Kocour",url:"/games_gen/doma/kocour/",target:"note",run:["run"]},
  ryba:{title:"Ryba",url:"/games_gen/doma/ryba/",target:"intent",run:["generate"]},
- netopyr:{title:"Netopýr",url:"/games_gen/doma/netopyr/",target:"constraint",run:["generate","surprise"]},
+ netopyr:{title:"Netopýr",url:"/games_gen/doma/netopyr/",target:"bridgeInput",run:["generate","surprise"]},
  pavouk:{title:"Pavouk",url:"/games_gen/doma/pavouk/",target:"note",run:["run"]},
  lemur:{title:"Lemur",url:"/games_gen/doma/lemur/",target:"note",run:["run"]},
- zelva:{title:"Želva",url:"/games_gen/doma/zelva/",target:"message",run:["run"],placeholder:"Nastav dvojici a spusť operaci"},
+ zelva:{title:"Želva",url:"/games_gen/doma/zelva/",target:"memory",run:["run"],placeholder:"Nastav dvojici a spusť operaci"},
  panda:{title:"Panda",url:"/games_gen/doma/panda/",target:"note",run:["run"],placeholder:"Nastav parametry a spusť analýzu"},
  vlk:{title:"Vlk",url:"/games_gen/doma/vlk/",target:"message",run:["run"],placeholder:"Nastav vstupní vjem, kód a cílový kanál"},
  motyl:{title:"Motýl",url:"/games_gen/doma/motyl/",target:"detail",run:["run"],placeholder:"Nastav potřebu a nabídku a spusť analýzu"},
