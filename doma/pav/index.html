@@ -47,5 +47,4 @@ $('reset').addEventListener('click',()=>{const v={observer:'páv',marker:'oko na
 $('export').addEventListener('click',()=>{const u=URL.createObjectURL(new Blob([JSON.stringify(read(),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download='pav-projekcni-denik.json';a.click();URL.revokeObjectURL(u)});
 $('clear').addEventListener('click',()=>{if(confirm('Vymazat celý místní archiv?')){localStorage.removeItem(KEY);archive()}});
 archive();
-</script><script src="../shared/mouse-core.js"></script><script src="../shared/nav.js"></script>
-</body></html>
+</script><script src="../shared/mouse-core.js"></script><script src="../shared/game-nav.js"></script></body></html>
