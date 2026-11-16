@@ -39,4 +39,5 @@ function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;',
 function history(){const h=read();$('history').innerHTML=h.length?h.slice().reverse().map(x=>'<div class="entry"><b>'+esc(x.type)+'</b> · '+esc(x.title)+'<br>'+esc(x.premise)+'</div>').join(''):'Zatím bez záznamů.'}
 function download(x,n){const a=document.createElement('a'),u=URL.createObjectURL(new Blob([JSON.stringify(x,null,2)],{type:'application/json'}));a.href=u;a.download=n;a.click();URL.revokeObjectURL(u)}
 $('make').onclick=make;$('again').onclick=make;$('clear').onclick=()=>$('note').value='';$('save').onclick=()=>{if(!current)return;const h=read();h.push(current);localStorage.setItem('dracek_denik',JSON.stringify(h));history();$('save').textContent='Uloženo'};$('export').onclick=()=>current&&download(current,'dracek-situace.json');$('exportAll').onclick=()=>download(read(),'dracek-denik.json');$('wipe').onclick=()=>{if(confirm('Smazat celý místní deník?')){localStorage.removeItem('dracek_denik');history()}};history();make();
-</script></body></html>
+</script><script src="../shared/mouse-core.js"></script><script src="../shared/nav.js"></script>
+</body></html>
