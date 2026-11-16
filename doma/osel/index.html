@@ -48,4 +48,5 @@ $('reset').addEventListener('click',()=>{const vals={actor:'osel',task:'vybrat s
 $('export').addEventListener('click',()=>{const b=new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='osel-denik-orientace.json';a.click();URL.revokeObjectURL(u)});
 $('clear').addEventListener('click',()=>{if(confirm('Smazat celý místní deník?')){localStorage.removeItem(KEY);archive()}});
 archive();
-</script></body></html>
+</script><script src="../shared/mouse-core.js"></script><script src="../shared/nav.js"></script>
+</body></html>
