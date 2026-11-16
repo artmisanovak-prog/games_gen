@@ -294,7 +294,8 @@
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "toolUrl": "../kliste/"
         }
       ]
     },
@@ -788,6 +789,226 @@
             "zbytkový účinek po návratu"
           ],
           "form": "Stávající generátor je založen na vyjednání dvojice, hloubky a hranic výměny. Nejde o doložený rozbor pohádky, protože samostatný text pohádky nebyl v repozitáři nalezen.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "vrabec",
+      "title": "Vrabec",
+      "sourceFile": "vrabec.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/vrabec.txt",
+      "entities": [
+        {
+          "id": "vrabec",
+          "name": "Vrabec",
+          "toolUrl": "../vrabec/",
+          "focus": "Přísloví slibuje jistotu vrabce v hrsti oproti nedosažitelnému holubovi na střeše. Vrabec však z hrsti unikne na hlavu a promění se z vlastněné jistoty v trvalou, vtíravou myšlenku.",
+          "evidence": [
+            "„„Lepší vrabec v hrsti než holub na střeše.““",
+            "„„Ale byl její.““",
+            "„„vyskočil z hrsti rovnou na hlavu.““",
+            "„„Ne jako trofej. Jako názor. Jako myšlenka, co se nedá setřást.““",
+            "„„Možná je lepší holub na střeše než vrabec na hlavě.““"
+          ],
+          "mechanisms": [
+            "převrácení přísloví a změna jeho výhodnosti",
+            "jistota vlastnictví přechází v neovladatelnou přítomnost",
+            "záměna vnějšího držení za vnitřní obsazení pozornosti",
+            "opakovaná metafora vrabčího hnízda materializuje myšlenku"
+          ],
+          "form": "Text přepisuje známé přísloví do děje. Krátké věty, opakování a posun vrabce z hrsti na hlavu mění původní význam jistoty.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "zizala",
+      "title": "Žížala",
+      "sourceFile": "zizala.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/zizala.txt",
+      "entities": [
+        {
+          "id": "zizala",
+          "name": "Žížala",
+          "toolUrl": "../zizala/",
+          "focus": "Žížala se roztrhne na dvě části, které se považují za původní celek a vydají se různými směry. Rozpad je popsán jako pokračování a rozmnožení, nikoli prostý konec.",
+          "evidence": [
+            "„„Žížala se jednoho dne roztrhla.““",
+            "„„Z jedné byly dvě.““",
+            "„„A obě si myslely, že jsou ta původní.““",
+            "„„Jedna k dešti. Druhá ke kořenům.““",
+            "„„Rozpad není konec. Je to rozmnožení ticha.““"
+          ],
+          "mechanisms": [
+            "rozdělení jednoho subjektu na dvě pokračující identity",
+            "konflikt o původnost po rozdělení",
+            "divergence trajektorií po společném původu",
+            "přerámování rozpadu jako růstu a rozmnožení"
+          ],
+          "form": "Krátký text používá paralelní konstrukce a protikladné směry deště a kořenů. Závěrečná věta přepisuje očekávaný význam roztržení.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "zralok",
+      "title": "Žralok",
+      "sourceFile": "zralok.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/zralok.txt",
+      "entities": [
+        {
+          "id": "zralok",
+          "name": "Žralok",
+          "toolUrl": "../zralok/",
+          "focus": "Žralok si hlídá poměr času nad hladinou a pod ní v poměru 1:1. Viditelnost mu přináší uznání existence, ale současně vyvolává strach, a proto nesmí změnit poměr.",
+          "evidence": [
+            "„„nad : pod = 1 : 1““",
+            "„„Jednou nahoře. Jednou dole.““",
+            "„„Aby si mě všimli. Aby věděli, že jsem.““",
+            "„„Ale pak se bojí.““",
+            "„„Pak bych byl víc nad než pod. A to už nejsem já.““"
+          ],
+          "mechanisms": [
+            "převod životního rytmu na explicitní poměr",
+            "rovnováha mezi viditelností a skrytostí",
+            "uznání existence je vykoupeno reakcí pozorovatele",
+            "změna poměru ohrožuje identitu, která je na něm založena"
+          ],
+          "form": "Text začíná matematickým zápisem 1:1 a rozvíjí jej do rytmického střídání nahoře/dole, viděn/skryt. Dialog zpochybňuje, zda je poměr skutečně spravedlivý.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "had",
+      "title": "Had",
+      "sourceFile": "had.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/had.txt",
+      "entities": [
+        {
+          "id": "had",
+          "name": "Had",
+          "toolUrl": "../had/",
+          "focus": "Hadův jazyk se ohýbá a syčí, takže okolí nejprve přehlíží obsah jeho řeči. Trest a roztržení jazyka promění způsob mluvení, ale had si uchová schopnost vyprávět o rovnováze a věcech mezi protiklady.",
+          "evidence": [
+            "„„Ďáblové jsssou původem z nebesss““",
+            "„„Některé věci padají vzhůru.““",
+            "„„Každé ‘ano’ je zároveň ‘možná’. A každé ‘ne’ je jen ‘zatím ne’.““",
+            "„„Ale jazyk… jazyk mi roztrhl.““",
+            "„„žije had, který si pamatuje celek.““"
+          ],
+          "mechanisms": [
+            "forma výslovnosti ovlivňuje přijetí obsahu",
+            "jazyková deformace se stává stopou zásahu a trestu",
+            "protiklady se skládají do kontinuálního prostoru mezi ano/ne a nahoře/dole",
+            "řeč přežívá změnu orgánu i způsobu artikulace"
+          ],
+          "form": "Syčení je zapsáno přímo v pravopisu opakováním písmena s. Text kombinuje slovní deformaci, dialog s autoritou a paradoxní výroky.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "hyeny",
+      "title": "Hyeny",
+      "sourceFile": "hyeny.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/hyeny.txt",
+      "entities": [
+        {
+          "id": "hyeny",
+          "name": "Hyeny",
+          "toolUrl": "../hyeny/",
+          "focus": "Hyeny se smějí ne proto, že jsou veselé, ale protože smích funguje jako obranná stěna. Pokus jedné hyeny ztichnout vyvolá zesílení smíchu ostatních.",
+          "evidence": [
+            "„„Smějí se. Vždycky.““",
+            "„„Smích je jejich jazyk. Jejich zbraň. Jejich výmluva.““",
+            "„„Ale ticho je nebezpečné. Ticho je otázka. Ticho je zrcadlo.““",
+            "„„A tak se ta hyena znovu rozesmála. Nahlas. Falešně. Ale bezpečně.““",
+            "„„Ale to neznamená, že se smějí rády.““"
+          ],
+          "mechanisms": [
+            "opakovaný projev zakrývá odlišný vnitřní stav",
+            "smích funguje jako obrana a sociální stěna",
+            "individuální přerušení vzorce spustí kolektivní zesílení",
+            "vnější interpretace veselí se rozchází s funkcí projevu"
+          ],
+          "form": "Text používá krátké opakované věty a anaforu „Smějí se“. Závěrečný paradox odděluje viditelný projev od jeho příčiny.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "husy",
+      "title": "Husy",
+      "sourceFile": "husy.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/husy.txt",
+      "entities": [
+        {
+          "id": "husy",
+          "name": "Husy",
+          "toolUrl": "../husy/",
+          "focus": "Každá husa nese vlastní „já“, ale identita se v hejnu násobí, opakuje a ztrácí hranice. Let v kruhu a opakování „já ja jajaja“ vytvářejí kolektivní singularitu a gramatickou krizi.",
+          "evidence": [
+            "„„Každá z nich nesla jedno ‚já‘.““",
+            "„„A tak husy nelétaly v klínu. Létaly v kruhu.““",
+            "„„Já jsem já, ale jen když ja slyšíš.““",
+            "„„To byla gramatická krize.““",
+            "„„Aha. Kolektivní singular. To znám.““"
+          ],
+          "mechanisms": [
+            "množení osobního zájmena do kolektivního hlasu",
+            "rozostření hranice mezi individuálním a skupinovým já",
+            "kruhová organizace hejna místo běžného klínového uspořádání",
+            "opakování zvuku mění gramatickou jednotku v rytmický projev identity"
+          ],
+          "form": "Text staví identitu na fonetickém řetězci „já / jaja / jajaja“. Rytmické opakování a kolektivní odpověď proměňují gramatiku v událost.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "morsky-konik",
+      "title": "Mořský koník",
+      "sourceFile": null,
+      "sourceStatus": "tool-only-no-source-story",
+      "entities": [
+        {
+          "id": "morsky-konik",
+          "name": "Mořský koník",
+          "toolUrl": "../morsky-konik/",
+          "focus": "Samostatný herní generátor „Zprávy pro vodu“. V kartovém API je evidován jako herní entita bez dohledaného zdrojového textu pohádky; nelze mu proto připsat citované doklady ani mechanismus zdrojového příběhu.",
+          "evidence": [],
+          "mechanisms": [],
+          "form": "Zdrojový příběh nebyl v repozitáři nalezen. Význam a operace se zatím berou výhradně z existujícího generátoru.",
           "polar": {
             "status": "not-authored",
             "layers": null,
