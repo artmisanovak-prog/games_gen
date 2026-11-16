@@ -29,7 +29,8 @@
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "toolUrl": "../mys/"
         }
       ]
     },
@@ -280,6 +281,72 @@
             "obrácení vztahu mezi původcem snu a snovým objektem"
           ],
           "form": "Opakování a rozdělování slov „sní a / s ní“ narušuje hranici mezi sněním a vztahem k ní. Text nechává vznik laně jako možnost, ne jako uzavřený fakt.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "plamenak",
+      "title": "Plameňák",
+      "sourceFile": "plamenak.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/plamenak.txt",
+      "entities": [
+        {
+          "id": "plamenak",
+          "name": "Plameňák",
+          "toolUrl": "../plamenak/",
+          "focus": "Zpěv a radost z pohybu zakrývají záměnu letu za pád. Plameňák nezná cíl ani orientaci, ale považuje samotný směr za dostačující; po dosažení neexistujícího dna si vytvoří nové.",
+          "evidence": [
+            "„A nikdo mu neřekl, že vesmír žádné dno nemá.“",
+            "„Tohle není let,“ řeklo mu kíště. „To je pád.“",
+            "„Hlavně že to má směr!“",
+            "„Nevím!“ smál se plameňák. „Ale letí se mi krásně!“",
+            "„Tak si vymyslím nové dno.“"
+          ],
+          "mechanisms": [
+            "záměna směru pohybu za orientaci a znalost cíle",
+            "přejmenování pádu na let mění interpretaci, nikoli trajektorii",
+            "odmítnutí korekční zpětné vazby od klíštěte",
+            "posouvání hranice vytvořením nového dna, které udržuje pohyb bez dosažitelného cíle"
+          ],
+          "form": "Opakovaný zpěv „lalalá“ vytváří refrén, který překrývá obsah sdělení. Text střídá vzletné pojmenování s konkrétními důsledky pádu a končí návratem ke zpěvu.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "lemur",
+      "title": "Lemur",
+      "sourceFile": "lemur.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/lemur.txt",
+      "entities": [
+        {
+          "id": "lemur",
+          "name": "Lemur",
+          "toolUrl": "../lemur/",
+          "focus": "Snahou o nenápadnost zesiluje vlastní nápadnost. Uvolnění kontroly neodstraní jeho viditelné vlastnosti, ale odstraní dodatečný signál vytvářený jejich potlačováním.",
+          "evidence": [
+            "„Budu tak nenápadný, že mě ani moje vlastní stín nepozná.“",
+            "„Ocas vztyčený jak vykřičník.“",
+            "„Jsem jen… výrazně nenápadný.“",
+            "„Teď jsi konečně neviditelný.“",
+            "„Protože už se nesnažíš.“"
+          ],
+          "mechanisms": [
+            "paradoxní zesílení viditelnosti prostřednictvím jejího potlačování",
+            "rozdělení přirozených vlastností a dodatečného výkonu skrývání",
+            "přesun pozornosti pozorovatele od vlastnosti k úsilí o její skrytí",
+            "uvolnění kontroly mění sociální čtení situace, nikoli samotné viditelné vlastnosti"
+          ],
+          "form": "Text opakuje motivy svítících očí, vztyčeného ocasu a zářící srsti. Hyperbolická přirovnání a dialog s mlčící postavou postupně vystavují paradox nenápadnosti.",
           "polar": {
             "status": "not-authored",
             "layers": null,
