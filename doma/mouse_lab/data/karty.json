@@ -1005,31 +1005,15 @@
           "id": "morsky-konik",
           "name": "Mořský koník",
           "toolUrl": "../morsky-konik/",
-          "focus": "Mořský koník píše zprávy, které neodesílá: nejprve do bublin, které praskají, nakonec do vlny, kterou nikdo nepřečte, ale každý ji cítí. Sbírá nesmysly a skládá je do soukromé pointy; probdělý sen promění kruhy na hladině ve stopu po něčem, co neudělal.",
-          "evidence": [
-            "„psal zprávy, které nikdy neodeslal.“",
-            "„Psával je do bublin. A bubliny praskaly dřív, než se kdokoli dozvěděl, co v nich bylo.“",
-            "„Tohle je stopa po něčem, co jsem neudělal.“",
-            "„Když nevíš proč, udělej to stejně. Zbytečný důvod je pořád důvod.“",
-            "„A vlna ji vzala. A nikdo ji nepřečetl. A přesto ji každý cítil.“",
-            "„A nic se nezměnilo. A přesto bylo všechno jinak.“"
-          ],
-          "mechanisms": [
-            "neodeslaná zpráva zůstává účinná, přestože nedojde k adresátovi",
-            "změna nosiče zprávy z praskající bubliny na vlnu mění způsob jejího působení",
-            "stopa může odkazovat na neuskutečněnou událost, nikoli pouze na vykonaný čin",
-            "nesmyslné fragmenty se skládají do soukromé pointy, jejíž smysl není sdílený",
-            "zbytečný důvod spouští jednání bez běžného účelového ospravedlnění",
-            "návrat beze změny může koexistovat s proměnou významu"
-          ],
-          "form": "Text je rozdělen do čtyř pojmenovaných částí: neposlaná zpráva, probdělý sen, pointa nesmyslů a zbytečný důvod. Opakování negací („Ne do lahve. Ne do písku. Ne do proudu.“) nejprve vymezuje odmítnuté nosiče a poté zvýrazňuje přechod od bubliny k vlně. Závěr opakuje nezměněný návrat a současně změnu.",
+          "focus": "Samostatný herní generátor „Zprávy pro vodu“. V kartovém API je evidován jako herní entita bez dohledaného zdrojového textu pohádky; nelze mu proto připsat citované doklady ani mechanismus zdrojového příběhu.",
+          "evidence": [],
+          "mechanisms": [],
+          "form": "Zdrojový příběh nebyl v repozitáři nalezen. Význam a operace se zatím berou výhradně z existujícího generátoru.",
           "polar": {
             "status": "not-authored",
             "layers": null,
             "radii": null
-          },
-          "sourceFile": "morsky_konik.txt",
-          "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/abstrakce_ai/main/doma/narativy/morsky_konik.txt"
+          }
         }
       ]
     },
