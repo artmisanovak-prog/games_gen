@@ -53,4 +53,4 @@ $('reset').addEventListener('click',()=>{const vals={subject:'lemur',setting:'ti
 $('export').addEventListener('click',()=>{const b=new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='lemur-paradox-archiv.json';a.click();URL.revokeObjectURL(u)});
 $('clear').addEventListener('click',()=>{if(confirm('Smazat celý místní archiv?')){localStorage.removeItem(KEY);archive()}});
 archive();
-</script><script src="../shared/mouse-core.js"></script><script src="../shared/nav.js"></script><script src="../shared/bridge.js"></script></body></html>
+</script><script src="../shared/mouse-core.js"></script><script src="../shared/bridge.js"></script><script src="../shared/game-nav.js"></script></body></html>
