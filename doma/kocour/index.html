@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#201b20">
+<title>Kocour · předčasná tečka</title>
+<style>
+:root{color-scheme:dark;--bg:#201b20;--panel:#30272e;--line:#66515d;--ink:#f4eee8;--muted:#c4b4bb;--accent:#e3a0a7;--gold:#e4c28c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#50343f,#201b20 60%);color:var(--ink);font:16px/1.55 Georgia,serif}
+main{max-width:1050px;margin:auto;padding:28px 17px 65px}.eyebrow{font:11px Arial;letter-spacing:.18em;color:var(--accent)}
+h1{font-size:clamp(44px,8vw,76px);font-weight:400;line-height:.95;margin:14px 0}h2{font-size:23px;font-weight:400;margin:0 0 14px}
+.lead{max-width:850px;color:var(--muted);font-size:18px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;margin-top:25px}
+.panel{background:#30272eee;border:1px solid var(--line);padding:19px;border-radius:5px}.wide{grid-column:1/-1}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{display:block;font:12px Arial;color:var(--accent);margin:0 0 6px}
+input,select,textarea{width:100%;padding:11px;background:#201b20;color:var(--ink);border:1px solid var(--line);border-radius:3px;font:15px Georgia}textarea{min-height:75px;resize:vertical}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}button{padding:11px 15px;background:var(--accent);border:1px solid var(--accent);color:#2a2024;font-weight:bold;cursor:pointer;border-radius:3px}button.alt{background:transparent;color:var(--ink);border-color:var(--line)}
+.muted{font-size:13px;color:var(--muted)}.stage{padding:13px 15px;margin:10px 0;background:#261f25;border-left:3px solid var(--gold)}.stage h3{font-size:17px;font-weight:400;color:var(--gold);margin:0 0 5px}.stage p{margin:0}
+.entry{border-top:1px solid var(--line);padding:11px 0}.entry p{margin:4px 0}.entry small{color:var(--muted)}
+.counter{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.count{padding:12px;border:1px solid var(--line);text-align:center}.count b{display:block;font-size:27px;color:var(--gold)}
+@media(max-width:720px){.grid,.fields{grid-template-columns:1fr}.wide{grid-column:auto}main{padding:21px 13px 50px}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">GAMES_GEN / NARATIVNÍ OPERACE · KOCOUR</div>
+<h1>Kocour:<br>předčasná tečka</h1>
+<p class="lead">Kocour nespolkne celé věty. Spolkne jejich konce: dvě berušky, čtrnáct teček, přesně na třicet minut. Pak začne dokončovat cizí výpovědi dřív, než k nim jejich mluvčí dojdou. Tato laboratoř zkoumá, co se stane, když někdo převezme právo ukončovat cizí řeč, a jak se toto právo vrací zpět.</p>
+<div class="grid">
+<section class="panel">
+<h2>Konfigurace narušení řeči</h2>
+<div class="counter"><div class="count"><b>2</b><small>berušky</small></div><div class="count"><b>14</b><small>teček</small></div><div class="count"><b>30</b><small>minut</small></div></div>
+<div class="fields">
+<div><label for="speaker">Kdo právě mluví?</label><input id="speaker" value="člověk, který vysvětluje svůj nápad"></div>
+<div><label for="cat">Jak kocour vstoupí do řeči?</label><select id="cat"><option>ukončí větu těsně před pointou</option><option>dokončí souvětí dřív, než zazní hlavní myšlenka</option><option>uzavře větu jiným významem, než mluvčí zamýšlel</option><option>ukončí několik hlasů současně</option></select></div>
+<div><label for="early">Jak velký předstih má tečka?</label><select id="early"><option>o jedno slovo</option><option selected>o několik slov</option><option>o celou vedlejší větu</option><option>ještě před vyslovením podstatné informace</option></select></div>
+<div><label for="effect">Co se stane s nedokončenou myšlenkou?</label><select id="effect"><option>zůstane viset a čeká na návrat</option><option>posluchači si ji domyslí nesprávně</option><option>mluvčí ji zkusí začít znovu</option><option>změní se v jinou, cizí výpověď</option></select></div>
+<div><label for="duration">Doba narušení</label><select id="duration"><option selected>30 minut · podle původní pohádky</option><option>kratší interval · experimentální varianta</option><option>delší interval · experimentální varianta</option></select></div>
+<div><label for="return">Jak se konce vrátí?</label><select id="return"><option>kocour je vykrká zpět</option><option>tečky se vrátí na původní místa</option><option>mluvčí si musí konec znovu vybojovat</option><option>návrat je neúplný a část vět zůstane otevřená</option></select></div>
+</div>
+<label for="note" style="margin-top:12px">Konkrétní situace / vlastní vstup</label><textarea id="note" placeholder="Například porada, rozhovor, vyprávění, instrukce…"></textarea>
+<div class="actions"><button id="run">Vytvořit situaci</button><button class="alt" id="reset">Obnovit původní nastavení</button></div>
+</section>
+<section class="panel">
+<h2>Mechanismus původní pohádky</h2>
+<div class="stage"><h3>Vstupní událost</h3><p>Dvě berušky mají dohromady čtrnáct teček. Kocour je spolkne.</p></div>
+<div class="stage"><h3>Projev poruchy</h3><p>Kocour krká tečky a dokončuje cizí věty. Nikdo nemůže dojít k vlastnímu konci.</p></div>
+<div class="stage"><h3>Časové omezení</h3><p>Porucha trvá přesně půl hodiny, tedy třicet minut.</p></div>
+<div class="stage"><h3>Obnova</h3><p>Kocour vykrká spolknuté konce. Lidé znovu mohou dokončovat vlastní věty.</p></div>
+<p class="muted">Přesná čísla a návrat teček jsou zdrojové prvky. Ostatní varianty v konfiguraci jsou experimentální zásahy do mechanismu, ne tvrzení o původní pohádce.</p>
+</section>
+<section class="panel wide" id="result" aria-live="polite"><h2>Výstup operace</h2><p class="muted">Nastav parametry a vytvoř situaci.</p></section>
+<section class="panel wide"><h2>Deník pokusů</h2><div id="archive"><p class="muted">Zatím bez záznamů.</p></div><div class="actions"><button class="alt" id="export">Exportovat JSON</button><button class="alt" id="clear">Vymazat deník</button></div><p class="muted">Deník se ukládá lokálně v tomto prohlížeči. Exportuj jej, pokud chceš přenést záznamy na jiné zařízení.</p></section>
+</div></main>
+<script src="../shared/mouse-core.js"></script><script src="../shared/nav.js" defer></script>
+<script>
+const $=id=>document.getElementById(id),KEY="kocour_predcasna_tecka_v1";
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function read(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch{return[]}}
+function save(items){localStorage.setItem(KEY,JSON.stringify(items));if(window.MOUSE)MOUSE.write("kocour:journal",items)}
+function archive(){const a=read();$("archive").innerHTML=a.length?a.slice().reverse().map(x=>'<div class="entry"><small>'+esc(x.created)+'</small><p><b>'+esc(x.speaker)+'</b> · '+esc(x.cat)+'</p><p>'+esc(x.conclusion)+'</p></div>').join(""):'<p class="muted">Zatím bez záznamů.</p>'}
+function run(){
+ const d={speaker:$("speaker").value.trim()||"mluvčí",cat:$("cat").value,early:$("early").value,effect:$("effect").value,duration:$("duration").value,returnMode:$("return").value,note:$("note").value.trim()};
+ const fixed=d.duration==="30 minut · podle původní pohádky";
+ const event="Kocour vstoupí do řeči mluvčího („"+d.speaker+"“) a "+d.cat+". Tečka přichází "+d.early+".";
+ const interruption="Nedokončená myšlenka "+d.effect+". Mluvčí ztrácí kontrolu nad okamžikem, kdy jeho výpověď končí. Posluchač slyší hotovou tečku, ale ne nutně zamýšlený význam.";
+ const timing=fixed?"Časový rámec odpovídá pohádce: dvě berušky, čtrnáct teček a přesně třicet minut.":"Časový rámec je experimentální odchylka od pohádky. Původní příběh uvádí třicet minut.";
+ const restoration="Obnova proběhne takto: "+d.returnMode+". Sleduj, zda se vrací jen možnost vyslovit poslední slovo, nebo také právo mluvčího určit vlastní význam.";
+ const consequence="Po odeznění poruchy mohou lidé znovu dokončovat své věty. Zkušenost ale zůstává: konec výpovědi není pouhá interpunkce, je to hranice, kterou někdo může převzít.";
+ const conclusion="Mechanismus: převzetí konce věty znamená převzetí části řečové autonomie. Narušení je časově omezené a vratné; návrat teček obnovuje možnost samostatného dokončení.";
+ const question="Kdo má právo rozhodnout, kdy je výpověď dokončená? A co se stane s významem, když někdo dodá tečku dřív, než se k ní autor dostane?";
+ const rec={schema:"mouse-kocour-operation/1.0",created:new Date().toLocaleString("cs-CZ"),source:{cardId:"kocour",sourceFile:"kocour.txt",groundedFacts:{ladybugs:2,dots:14,durationMinutes:30,return:"kocour vykrká spolknuté konce"}},...d,event,interruption,timing,restoration,consequence,conclusion,question};
+ $("result").innerHTML='<h2>Průběh narušení a obnovy</h2>'+[['01 / Vstup do řeči',event],['02 / Předčasná tečka',interruption],['03 / Časový rámec',timing],['04 / Návrat konců',restoration],['05 / Následek',consequence],['06 / Operační princip',conclusion],['07 / Otázka pro další tah',question]].map(([h,p])=>'<div class="stage"><h3>'+h+'</h3><p>'+esc(p)+'</p></div>').join("")+(d.note?'<div class="stage"><h3>Vlastní vstup</h3><p>'+esc(d.note)+'</p></div>':"");
+ const a=read();a.push(rec);save(a);archive();window.currentKocour=rec;
+}
+function download(data,name){const u=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"})),a=document.createElement("a");a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+$("run").onclick=run;
+$("reset").onclick=()=>{$("speaker").value="člověk, který vysvětluje svůj nápad";$("cat").selectedIndex=0;$("early").selectedIndex=1;$("effect").selectedIndex=0;$("duration").selectedIndex=0;$("return").selectedIndex=0;$("note").value="";$("result").innerHTML='<h2>Výstup operace</h2><p class="muted">Nastav parametry a vytvoř situaci.</p>'};
+$("export").onclick=()=>download({schema:"mouse-kocour-journal/1.0",entries:read()},"kocour-denik.json");
+$("clear").onclick=()=>{if(confirm("Vymazat místní deník Kocoura?")){save([]);archive()}};
+archive();run();
+</script></body></html>
