@@ -361,6 +361,176 @@
           }
         }
       ]
+    },
+    {
+      "id": "pavouk",
+      "title": "Pavouk",
+      "sourceFile": "pavouk.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/pavouk.txt",
+      "entities": [
+        {
+          "id": "pavouk",
+          "name": "Pavouk",
+          "toolUrl": "../pavouk/",
+          "focus": "Zavěšuje nevyřčené věty, neuzavřené události a nevyřešené pocity do sítě, aby zůstaly možností. Dlouhé setrvání však může možnost zatvrdit a změnit v minulost.",
+          "evidence": [
+            "„Pavouk měl nitě.“",
+            "„Věci, co se nedají držet. Slova, co se neřekla.“",
+            "„Protože když to visí, ještě to může být“",
+            "„Pak to ztvrdne“",
+            "„Možná je tohle ten největší pád. Když se nic nezmění.“"
+          ],
+          "mechanisms": [
+            "zavěšení abstraktních a nedokončených obsahů do sítě jako uchování možnosti",
+            "nehybnost chrání zavěšené obsahy před pádem, ale zároveň brání jejich změně",
+            "časová prodleva může proměnit otevřený stav v zatvrdlou, nerozmotatelnou minulost",
+            "vnější podnět (vítr) rozkmitá síť, aniž by nutně způsobil pád",
+            "paradox nečinnosti: nic nespadne, ale právě neproměna může být největším pádem"
+          ],
+          "form": "Text opakuje „Jen tak. Tak.“ a motiv zavěšení. Nedokončené věty a předměty zůstávají ve vzduchu; síť funguje jako prostor odkladu. Závěr obrací očekávání, že nehybnost je bezpečí.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "pav",
+      "title": "Páv",
+      "sourceFile": "pav.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/pav.txt",
+      "entities": [
+        {
+          "id": "pav",
+          "name": "Páv",
+          "toolUrl": "../pav/",
+          "focus": "Páv používá vlastní oči na ocase jako projekční filtr a začne podle sebe klasifikovat celý svět. Postupně odstraňuje pera, aby přestal být pávem, až rozpozná, že je pohádkou.",
+          "evidence": [
+            "„že se mu začaly dívat zpátky“",
+            "„všechno vypadá jako ty“",
+            "„A tak začal pávy počítat.“",
+            "„Každé zvíře je páv v jiném stádiu rozpadu.“",
+            "„A když mu zbylo jen jedno oko, konečně uviděl: Že není páv. Že je pohádka.“"
+          ],
+          "mechanisms": [
+            "projekce vlastního rozpoznávacího vzoru na okolní svět",
+            "klasifikace ostatních podle vlastního znaku místo jejich vlastností",
+            "sebezesilující interpretační smyčka: filtr vytváří potvrzení filtru",
+            "odečítání vlastních znaků jako pokus uniknout vlastní kategorii",
+            "změna sebepojetí po redukci projekčního aparátu"
+          ],
+          "form": "Text rozvíjí řetězec absurdních klasifikací a opakování „páv za pávem“. Obraz oka na peru se mění z ozdoby na interpretační filtr a nakonec v nástroj sebereflexe.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "cap",
+      "title": "Čáp",
+      "sourceFile": "cap.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/cap.txt",
+      "entities": [
+        {
+          "id": "cap",
+          "name": "Čáp",
+          "toolUrl": "../cap/",
+          "focus": "Čáp nenese očekávaný hmotný náklad, ale neuskutečněné možnosti, nápady a nedokončené věty. To, co se objeví, nelze vlastnit ani prodat; jeho příchod rozvolňuje očekávání, co má být doručeno.",
+          "evidence": [
+            "„Bez uzlíku. Bez cíle. Jen tak.“",
+            "„Nesl nápady. Nesl možnosti. Nesl to, co se nestalo, ale mohlo.“",
+            "„Sedm osm – NEprodáme.“",
+            "„z nich vypadly věty. Nedokončené. Neprodané. Nepřijaté.“",
+            "„čáp, který nic nenosí, je ten, který nese všechno.“"
+          ],
+          "mechanisms": [
+            "obrácení kulturního očekávání od doručování dětí k nesení možností",
+            "rozlišení mezi viditelným nákladem a potenciálem, který nelze zvážit",
+            "vznik dětí bez očekávaného nositele narušuje zavedené vysvětlení původu",
+            "odmítnutí prodeje a vlastnictví odděluje hodnotu od směnitelnosti",
+            "rozprostření křídel uvolní nedokončené a nepřijaté věty, které si příjemci skládají po svém"
+          ],
+          "form": "Úvodní říkanka s číselným rytmem a důrazem na „NEprodáme“ se vrací jako refrén. Text kombinuje opakování, paralelní hlasy a motiv nedokončených vět.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "slon",
+      "title": "Slon",
+      "sourceFile": "slon.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/slon.txt",
+      "entities": [
+        {
+          "id": "slon",
+          "name": "Slon",
+          "toolUrl": "../slon/",
+          "focus": "Slon běží za příslibem jediné třešně, kterou nikdy nedohoní. Malý cíl se mění v motor pohybu, protože jeho dosažení by ukončilo honbu i smysl, který jí slon přisuzuje.",
+          "evidence": [
+            "„Jednu třešeň ti dám, slone, když mě dohoníš.“",
+            "„A pak se rozběhl. Ne rychle. Ale srdcem.“",
+            "„Třešeň byla víc než ovoce.“",
+            "„Ale nikdy ji nedostal. A právě proto běžel.“",
+            "„Protože kdyby ji dostal, co by zbylo?“"
+          ],
+          "mechanisms": [
+            "podmíněný příslib vytváří cíl a spouští pohyb",
+            "malý konkrétní objekt získává symbolickou hodnotu přesahující svou materiální podobu",
+            "nedosažitelnost udržuje motivaci a prodlužuje činnost",
+            "dosažení cíle představuje hrozbu zániku samotného motivačního systému",
+            "běh je nesen touhou a významem, nikoli rychlostí nebo jistotou výsledku"
+          ],
+          "form": "Krátké řádky, opakovaný příslib a stupňování významu třešně posouvají obyčejné ovoce do role výzvy, hry a touhy.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "netopyr",
+      "title": "Netopýr",
+      "sourceFile": "netopyr.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/netopyr.txt",
+      "entities": [
+        {
+          "id": "netopyr",
+          "name": "Netopýr",
+          "toolUrl": "../netopyr/",
+          "focus": "Netopýr žije v nočním režimu, v němž krása a význam vznikají jinak než ve dne. Ranní změna kontextu je nezneplatní; odhaluje pouze jiný jazyk a jiný režim pravdy.",
+          "evidence": [
+            "„V noci bylo všechno správně.“",
+            "„Všechno bylo trochu nepravdivé – ale o dost pravdivější.“",
+            "„A pak přišlo ráno. A všechno se nehodilo.“",
+            "„Ale netopýr věděl, že byl.“",
+            "„Noc není lež. Je to jiný jazyk.“"
+          ],
+          "mechanisms": [
+            "kontextově podmíněná estetická a významová platnost",
+            "změna časového režimu mění interpretaci stejného prožitku, nikoli jeho historickou skutečnost",
+            "kontrast nočního a denního čtení vytváří dvojí režim pravdy",
+            "ranní stud nebo nepatřičnost může vést k popření dřívějšího prožitku",
+            "netopýr zachovává kontinuitu zkušenosti napříč odlišnými interpretačními režimy"
+          ],
+          "form": "Text staví paralelní krátké věty a opakování „Všechno…“. Noční jazyk je nejprve estetizován a následně konfrontován s ranním hodnocením. Závěr výslovně odmítá redukci noci na lež.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
     }
   ]
 }
