@@ -48,4 +48,5 @@ $('reset').addEventListener('click',()=>{const v={carrier:'čáp kroužící nad
 $('export').addEventListener('click',()=>{const u=URL.createObjectURL(new Blob([JSON.stringify(read(),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download='cap-denik-moznosti.json';a.click();URL.revokeObjectURL(u)});
 $('clear').addEventListener('click',()=>{if(confirm('Vymazat celý místní deník?')){localStorage.removeItem(KEY);archive()}});
 archive();
-</script></body></html>
+</script><script src="../shared/mouse-core.js"></script><script src="../shared/nav.js"></script>
+</body></html>
