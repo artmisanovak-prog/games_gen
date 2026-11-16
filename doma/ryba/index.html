@@ -236,7 +236,7 @@ const fields=[["Vyslaný signál",current.result.signal],["Proměna prostředí"
 $("outBody").innerHTML=fields.map(x=>'<div class="op-label">'+esc(x[0])+'</div><p>'+esc(x[1])+'</p>').join("");
 $("status").textContent="Situace vytvořena · "+a.deg+"° / "+a.name;return current}
 function read(){try{return JSON.parse(localStorage.getItem(STORE)||"[]")}catch(e){return[]}}
-function save(){if(!current)make();const rows=read();rows.push(current);localStorage.setItem(STORE,JSON.stringify(rows));localStorage.setItem("games_gen:ryba:parent",current.id);drawHistory();$("status").textContent="Běh uložen do místní paměti · "+rows.length+" záznamů.";return current}
+function save(){if(!current)make();const rows=read();rows.push(current);localStorage.setItem(STORE,JSON.stringify(rows));if(window.MOUSE)MOUSE.write("ryba:records",rows);localStorage.setItem("games_gen:ryba:parent",current.id);drawHistory();$("status").textContent="Běh uložen do místní paměti · "+rows.length+" záznamů.";return current}
 function download(data,name){const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1200)}
 function drawHistory(){const rows=read().slice().reverse();$("history").innerHTML=rows.length?rows.map(r=>'<div class="record"><strong>'+esc(r.angle.name)+' · '+r.angle.deg+'°</strong><div>'+esc(r.result.title)+' · '+esc(r.inputs.environment)+'</div><small>'+new Date(r.createdAt).toLocaleString("cs-CZ")+'</small></div>').join(""):'<p class="muted">Zatím nejsou uložené žádné běhy.</p>'}
 function renderStory(){const c=$("storyText");c.innerHTML=rawPohadka.split("\n").map(line=>{if(!line.trim())return'<span> </span>';let t=esc(line);figuryDef.forEach(f=>f.fraze.forEach(phrase=>{const q=esc(phrase);if(t.includes(q))t=t.split(q).join('<span class="mark" data-figure="'+f.id+'" title="'+esc(f.nazev)+'">'+q+'</span>')}));return'<span>'+t+'</span>'}).join("\n");c.querySelectorAll("[data-figure]").forEach(el=>el.addEventListener("click",()=>toggleFigure(el.dataset.figure)))}
@@ -256,8 +256,9 @@ $("prevAngle").onclick=()=>setAngle(active-1);$("nextAngle").onclick=()=>setAngl
 $("generate").onclick=make;$("save").onclick=save;$("export").onclick=()=>download(current||api.exportJSON(),"ryba-run.json");$("exportAll").onclick=()=>api.download();
 $("copyState").onclick=()=>{const u=new URL(location.href);u.hash="state="+encodeURIComponent(JSON.stringify(state()));if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u.href).then(()=>$("status").textContent="URL se stavem zkopírována.");else $("status").textContent=u.href};
 $("allFigures").onclick=()=>{allOn=true;applyFigures()};$("clearFigures").onclick=()=>{allOn=false;activeFigures.clear();applyFigures()};
-$("clearHistory").onclick=()=>{if(confirm("Opravdu vymazat místní deník této karty?")){localStorage.removeItem(STORE);localStorage.removeItem("games_gen:ryba:parent");drawHistory()}};
+$("clearHistory").onclick=()=>{if(confirm("Opravdu vymazat místní deník této karty?")){localStorage.removeItem(STORE);if(window.MOUSE)MOUSE.remove("ryba:records");localStorage.removeItem("games_gen:ryba:parent");drawHistory()}};
 const hash=new URLSearchParams(location.hash.slice(1));const initial=Number(hash.get("angle"));setAngle(Number.isFinite(initial)&&angleByDeg(initial)>=0?angleByDeg(initial):0,false);make();
 })();
 </script>
+<script src="../shared/mouse-core.js"></script>
 </body></html>
