@@ -75,4 +75,5 @@ $('reset').addEventListener('click',()=>{['whole','part','value','actor','transf
 $('export').addEventListener('click',()=>{let b=new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='liska-denik.json';a.click();URL.revokeObjectURL(u)});
 $('clear').addEventListener('click',()=>{if(confirm('Opravdu smazat všechny místní záznamy?')){localStorage.removeItem(KEY);renderArchive()}});
 renderArchive();
-</script></body></html>
+</script><script src="../shared/mouse-core.js"></script><script src="../shared/nav.js"></script>
+</body></html>
