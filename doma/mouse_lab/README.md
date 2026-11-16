@@ -12,7 +12,7 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 3. Kombinovaný běh: externí problém se propojuje s vybranými pohádkami, ale původ obou typů informací zůstává rozlišený.
 
 ## Funkce
-- Načítání třiceti šesti zdrojových entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
+- Načítání zdrojových entit dynamicky z `data/karty.json`. V aktuálním registru je 38 entit: 37 má zdrojový text a 37 má zdrojovou analýzu s doklady, vztahy, formou a otevřenými otázkami. Kozel zůstává nástrojem bez dohledané zdrojové pohádky. Přehled dostupnosti zdrojů, ilustrací, úhlových stránek, figur a propojení je v [Katalogu karet](./karty.html).
 - Volba směru práce, zadání, cílového formátu a externího vstupu.
 - Generování promptu pro jazykový model.
 - Kopírování nebo stažení promptu a vložení odpovědi modelu.
@@ -81,7 +81,7 @@ Každá entita má vlastní herní operaci a samostatný generátor. MOUSE je so
 
 ## Další herní generátory
 
-- [Mořský koník](../morsky-konik/) — zprávy pro vodu; zatím bez samostatného zdrojového textu
+- [Mořský koník](../morsky-konik/) — zprávy pro vodu; zdrojový text `abstrakce_ai/doma/narativy/morsky_konik.txt` je nyní připojen v kartovém API a zdrojové analýze
 - [Klíště](../kliste/) — společný sen klíšťat, laň jako hostitel a projekce touhy
 - [Vrabec](../vrabec/) — jistota v hrsti se mění v myšlenku na hlavě
 - [Žížala](../zizala/) — rozklad, rozdělení identity a pokračování
