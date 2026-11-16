@@ -80,5 +80,4 @@ $("exportAll").addEventListener("click",()=>download(readLog(),"kozel-denik.json
 $("clear").addEventListener("click",()=>{if(confirm("Opravdu smazat všechny místní záznamy?")){localStorage.removeItem("kozel_denik");render();}});
 $("reset").addEventListener("click",()=>{$("a").value="";$("b").value="";$("scene").value="";$("note").value="";$("mode").value="eyes";$("depth").value="2";$("consent").value="both";$("duration").value="Jeden okamžik";$("imbalance").value="equal";make();});
 make();render();
-</script><script src="../shared/mouse-core.js"></script><script src="../shared/nav.js"></script>
-</body></html>
+</script><script src="../shared/mouse-core.js"></script><script src="../shared/game-nav.js"></script></body></html>
