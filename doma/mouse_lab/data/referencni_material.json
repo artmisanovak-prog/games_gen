@@ -2323,6 +2323,223 @@
           ]
         }
       ]
+    },
+    {
+      "id": "lemur",
+      "file": "lemur.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/lemur.txt",
+      "entities": [
+        {
+          "id": "lemur",
+          "name": "Lemur",
+          "role": "usiluje o nenápadnost, ale vlastní snahou zvyšuje nápadnost svého projevu",
+          "evidence": [
+            {
+              "quote": "Budu tak nenápadný, že mě ani moje vlastní stín nepozná.",
+              "supports": "Snaha o neviditelnost je formulována jako aktivní výkon",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Ocas vztyčený jak vykřičník.",
+              "supports": "Viditelný tělesný znak odporuje záměru splynout",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Jsem jen… výrazně nenápadný.",
+              "supports": "Jazyk sám zvýrazňuje rozpor mezi záměrem a projevem",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Teď jsi konečně neviditelný.",
+              "supports": "Pozorovatel přisoudí neviditelnost i bez fyzického zmizení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Protože už se nesnažíš.",
+              "supports": "Změna nastává ukončením dodatečného úsilí",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "snaha o nenápadnost",
+              "to": "viditelné projevy",
+              "type": "zesiluje",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "přirozené vlastnosti těla",
+              "to": "úsilí o jejich potlačení",
+              "type": "jsou překryty",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "ukončení snahy",
+              "to": "změna čtení pozorovatelem",
+              "type": "umožňuje",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Text opakuje fyzické znaky lemura: svítící oči, vztyčený ocas a zářící srst. Krátké výroky postupně stupňují rozpor mezi deklarovanou nenápadností a skutečným projevem. Závěr nemění tělesné vlastnosti, ale způsob, jakým je lemur předvádí a jak je čte okolí.",
+          "openQuestions": [
+            "Která část nápadnosti patří tělu a která dodatečnému výkonu skrývání?",
+            "Je závěrečná neviditelnost vlastností lemura, nebo změnou pozornosti pozorovatele?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plamenak",
+      "file": "plamenak.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/plamenak.txt",
+      "entities": [
+        {
+          "id": "plamenak",
+          "name": "Plameňák",
+          "role": "udržuje pohyb a zpěv, přestože zaměňuje směr pádu za let a odmítá korekci",
+          "evidence": [
+            {
+              "quote": "A nikdo mu neřekl, že vesmír žádné dno nemá.",
+              "supports": "Představa cílového dna je chybným předpokladem prostředí",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Tohle není let. To je pád.",
+              "supports": "Jiná postava nabídne korekci interpretace pohybu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Hlavně že to má směr!",
+              "supports": "Směr je zaměněn za orientaci a znalost cíle",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Nevím! Ale letí se mi krásně!",
+              "supports": "Příjemnost prožitku nahrazuje znalost cíle",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Tak si vymyslím nové dno.",
+              "supports": "Nedosažitelná hranice je nahrazena novou hranicí",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "pohyb dolů",
+              "to": "výklad jako let",
+              "type": "je přejmenován",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "upozornění na pád",
+              "to": "plameňák",
+              "type": "je odmítnuto",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "neexistující dno",
+              "to": "nové dno",
+              "type": "je nahrazeno v představě",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "refrén lalalá",
+              "to": "obsah sdělení",
+              "type": "překrývá",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Opakovaný refrén „Lalalá“ udržuje rytmus a radostný tón, zatímco děj ukazuje pád. Text staví proti sobě vzletná pojmenování a konkrétní fyzické důsledky pohybu. Závěr obnovuje stejný vzorec s novým, posunutým cílem.",
+          "openQuestions": [
+            "Jak poznat rozdíl mezi směrem pohybu a orientací k cíli?",
+            "Kdy přejmenování události mění pouze interpretaci a kdy i další jednání?",
+            "Jaký signál by mohl přimět aktéra přijmout korekci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morsky-konik",
+      "file": "morsky_konik.txt",
+      "url": "https://github.com/artmisanovak-prog/abstrakce_ai/blob/main/doma/narativy/morsky_konik.txt",
+      "entities": [
+        {
+          "id": "morsky-konik",
+          "name": "Mořský koník",
+          "role": "píše a uchovává neodeslané zprávy; sbírá nesmysly a nakonec svěří zprávu vodě",
+          "evidence": [
+            {
+              "quote": "psal zprávy, které nikdy neodeslal.",
+              "supports": "Základní opakovaný akt psaní bez odeslání",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Psával je do bublin. A bubliny praskaly dřív, než se kdokoli dozvěděl, co v nich bylo.",
+              "supports": "Nosič zprávy zaniká dříve, než je obsah přijat",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Tohle je stopa po něčem, co jsem neudělal.",
+              "supports": "Stopa odkazuje na neuskutečněný čin",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Když nevíš proč, udělej to stejně. Zbytečný důvod je pořád důvod.",
+              "supports": "Jednání může být spuštěno důvodem bez běžného účelu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A vlna ji vzala. A nikdo ji nepřečetl. A přesto ji každý cítil.",
+              "supports": "Zpráva působí bez přečtení a bez běžného doručení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A nic se nezměnilo. A přesto bylo všechno jinak.",
+              "supports": "Závěr odděluje viditelnou změnu od změny významu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "neodeslaná zpráva",
+              "to": "praskající bublina",
+              "type": "je dočasně nesena",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "zpráva",
+              "to": "vlna",
+              "type": "mění nosič",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "vlna",
+              "to": "příjemci",
+              "type": "přenáší účinek bez přečtení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "nesmyslné fragmenty",
+              "to": "soukromá pointa",
+              "type": "skládají se do",
+              "status": "explicitní_doklad"
+            },
+            {
+              "from": "zbytečný důvod",
+              "to": "jednání",
+              "type": "spouští",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "form": "Čtyři pojmenované části skládají motiv neodeslané zprávy, probdělého snu, soukromé pointy a jednání ze zbytečného důvodu. Opakované negace vymezují nosiče, které zpráva nepoužije; závěr staví vedle sebe nezměněný návrat a proměněný význam.",
+          "openQuestions": [
+            "Jak lze odlišit účinek zprávy od jejího přečtení nebo doručení?",
+            "Kdy se stopa po neudálosti stává interpretací a kdy důkazem?",
+            "Je soukromá pointa přenositelná, nebo zůstává závislá na svém autorovi?"
+          ]
+        }
+      ]
     }
   ]
 }
