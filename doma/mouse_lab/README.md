@@ -36,6 +36,21 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 Toto je pracovní laboratoř, nikoli hotový produkt ani tvrzení, že MOUSE již automaticky řeší externí problémy.
 
 
+## Samostatné generativní operace karet
+
+Každá operace má vlastní generátor a vlastní pravidla. MOUSE LAB je propojuje přes kartu API; polární konfigurace zůstává samostatným pracovním záznamem a není automaticky odvozena z generátoru.
+
+- [Myš](../mys/) — pozorování a záznam přehlížených jevů
+- [Kocour](../kocour/) — předčasné ukončování vět a návrat řečových konců
+- [Ryba](../ryba/) — signál mění prostředí a voda odpovídá
+- [Želva](../zelva/) — oběh pohybu, pohlednic a důvodů pokračovat
+- [Panda](../panda/) — barevnost jako vztah vzhledu, pozorovatele a kritéria
+- [Vlk](../vlk/) — překlad mezi smyslovým vjemem, symbolem a jednáním
+- [Plameňák](../plamenak/) — směr, pád, orientace a posouvání cíle
+- [Lemur](../lemur/) — paradox nápadnosti při snaze být neviditelný
+
+Kocourův generátor je nově vytvořená samostatná operace podle původního textu. Experimentální varianty v jeho formuláři jsou odlišeny od pevných údajů pohádky (dvě berušky, čtrnáct teček, třicet minut a návrat spolknutých konců).
+
 ## Polární konfigurace entit
 
 - [Otevřít polární úhloměr](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/polar.html)
