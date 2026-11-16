@@ -16,6 +16,7 @@ Nástroje pro rozklad konkrétního významu do perspektiv, jejich polární usp
 Pracovní prototyp pro generování ze zdrojového korpusu i zpracování externích problémů prostřednictvím MOUSE. Obsahuje výběr pohádek, tvorbu promptu pro model, záznam výsledků a poznatků pro další instrukce.
 
 - [Otevřít MOUSE LAB](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/)
+- [Katalog karet a stav propojení](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/karty.html)
 - [Dokumentace MOUSE LAB](doma/mouse_lab/README.md)
 
 ## Datový produkt: GAME PHENOMENA 001
