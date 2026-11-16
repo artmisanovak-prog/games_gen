@@ -16,14 +16,15 @@
 | Ilustrace | 37/38 |
 | Původní stránky úhlů | 30/38 |
 | Stránky jazykových figur | 13/38 |
-| Propojené generátory přes bridge | 5/38 |
+| Propojené generátory přes bridge | 10/38 |
 
 ## Opraveno
 
 - Mořský koník měl v API chybně uvedeno, že zdrojová pohádka neexistuje. Soubor `abstrakce_ai/doma/narativy/morsky_konik.txt` existuje. API nyní odkazuje na tento text.
 - Doplněna zdrojově ukotvená analýza Mořského koníka, Lemura a Plameňáka. Každá obsahuje doslovné doklady, vztahy, formální vlastnosti a otevřené otázky.
 - Kozel zůstává výslovně označený jako nástroj bez dohledané zdrojové pohádky. Jeho obsah se nevydává za analýzu neexistujícího textu.
-- Vytvořen strojově čitelný registr `data/karta_registry.json` a jeho prohlížecí katalog `karty.html`.
+- Vytvořen strojově čitelný registr `data/karta_registry.json` a jeho prohlížecí katalog `karty.html`, dostupný také přímo z MOUSE LAB.
+- Bridge je rozšířen z pěti na deset karet. Nově jsou propojené Želva, Panda, Vlk, Motýl a Dráček. U každé je určeno skutečné vstupní pole; Dráček je v registru veden pod kartovým ID `drak`.
 
 ## Zjištěné mezery
 
@@ -40,7 +41,7 @@ Chybí samostatná původní úhlová stránka pro: Vlk, Klíště, Kozel, Ží�
 Stránka figur existuje jen u části karet. Absence stránky neznamená, že karta žádné jazykové jevy nemá; znamená pouze, že samostatná stránka nebyla v původním repozitáři nalezena.
 
 ### Propojení
-Bridge je nyní evidován u pěti karet: Kocour, Ryba, Netopýr, Pavouk a Lemur. Ostatní generátory zůstávají samostatné.
+Bridge je nyní připojen ke kartám: Kocour, Ryba, Netopýr, Pavouk, Lemur, Želva, Panda, Vlk, Motýl a Dráček. Zbytek generátorů zůstává samostatný. Přenos ukládá návaznost běhů do lokální paměti stejného prohlížeče.
 
 ## Pravidla pro další dokončování
 
