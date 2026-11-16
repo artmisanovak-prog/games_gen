@@ -12,7 +12,7 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 3. Kombinovaný běh: externí problém se propojuje s vybranými pohádkami, ale původ obou typů informací zůstává rozlišený.
 
 ## Funkce
-- Načítání šestnácti entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
+- Načítání dvaceti šesti entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
 - Volba směru práce, zadání, cílového formátu a externího vstupu.
 - Generování promptu pro jazykový model.
 - Kopírování nebo stažení promptu a vložení odpovědi modelu.
@@ -55,6 +55,21 @@ Každá operace má vlastní generátor a vlastní pravidla. MOUSE LAB je propoj
 - [Netopýr](../netopyr/) — dvojí režim pravdy v nočním a denním kontextu
 
 Kocourův generátor je nově vytvořená samostatná operace podle původního textu. Experimentální varianty v jeho formuláři jsou odlišeny od pevných údajů pohádky (dvě berušky, čtrnáct teček, třicet minut a návrat spolknutých konců).
+
+## Herní generátory zvířecích karet
+
+Každá entita má vlastní herní operaci a samostatný generátor. MOUSE je součástí herního prostředí a slouží jako aktivní nástroj práce s kartami, nikoli jako testovaný subjekt.
+
+- [Tygr](../tygr/) — překlad přání a odmítnutí předepsané proměny
+- [Osel](../osel/) — orientace mezi protiklady a nevyslovenými pravidly
+- [Jednorožec](../jednorozec/) — popírání vlastního původu a hranice možného
+- [Krokodýl](../krokodyl/) — výprodej významu a komercializace emocí
+- [Motýl](../motyl/) — záměna skutečné potřeby za symbolickou nabídku
+- [Drak / Dráček](../drak/) — zvuk, zákaz a vznik přestupku
+- [Kozel](../kozel/) — půjčovna perspektiv; samostatný zdrojový text pohádky zatím chybí
+- [Veverka](../veverka/) — jednání, opakování a praktický výsledek
+- [Hvězdice](../hvezdice/) — paměť dopadu a stopa nevratné události
+- [Parohy](../parohy/) — fotografický blesk a paměť, která se tváří jako přítomnost
 
 ## Polární konfigurace entit
 
