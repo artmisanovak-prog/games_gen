@@ -503,6 +503,386 @@
           ]
         }
       ]
+    },
+    {
+      "id": "pavouk",
+      "file": "pavouk.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/pavouk.txt",
+      "entities": [
+        {
+          "id": "pavouk",
+          "name": "Pavouk",
+          "role": "Zavěšuje nevyřčené věty, neuzavřené události a nevyřešené pocity do sítě, aby zůstaly možností. Dlouhé setrvání však může možnost zatvrdit a změnit v minulost.",
+          "evidence": [
+            {
+              "quote": "„Pavouk měl nitě.“",
+              "supports": "zavěšení abstraktních a nedokončených obsahů do sítě jako uchování možnosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Věci, co se nedají držet. Slova, co se neřekla.“",
+              "supports": "nehybnost chrání zavěšené obsahy před pádem, ale zároveň brání jejich změně",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Protože když to visí, ještě to může být“",
+              "supports": "časová prodleva může proměnit otevřený stav v zatvrdlou, nerozmotatelnou minulost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Pak to ztvrdne“",
+              "supports": "vnější podnět (vítr) rozkmitá síť, aniž by nutně způsobil pád",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Možná je tohle ten největší pád. Když se nic nezmění.“",
+              "supports": "paradox nečinnosti: nic nespadne, ale právě neproměna může být největším pádem",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Pavouk",
+              "to": "zavěšení abstraktních a nedokončených obsahů do sítě jako uchování možnosti",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Pavouk",
+              "to": "nehybnost chrání zavěšené obsahy před pádem, ale zároveň brání jejich změně",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Pavouk",
+              "to": "časová prodleva může proměnit otevřený stav v zatvrdlou, nerozmotatelnou minulost",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Pavouk",
+              "to": "vnější podnět (vítr) rozkmitá síť, aniž by nutně způsobil pád",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Pavouk",
+              "to": "paradox nečinnosti: nic nespadne, ale právě neproměna může být největším pádem",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text opakuje „Jen tak. Tak.“ a motiv zavěšení. Nedokončené věty a předměty zůstávají ve vzduchu; síť funguje jako prostor odkladu. Závěr obrací očekávání, že nehybnost je bezpečí.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které jsou až interpretací?",
+            "Za jakých podmínek by šlo tento mechanismus přenést do jiné domény, aniž by se ztratila jeho struktura?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pav",
+      "file": "pav.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/pav.txt",
+      "entities": [
+        {
+          "id": "pav",
+          "name": "Páv",
+          "role": "Páv používá vlastní oči na ocase jako projekční filtr a začne podle sebe klasifikovat celý svět. Postupně odstraňuje pera, aby přestal být pávem, až rozpozná, že je pohádkou.",
+          "evidence": [
+            {
+              "quote": "„že se mu začaly dívat zpátky“",
+              "supports": "projekce vlastního rozpoznávacího vzoru na okolní svět",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„všechno vypadá jako ty“",
+              "supports": "klasifikace ostatních podle vlastního znaku místo jejich vlastností",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A tak začal pávy počítat.“",
+              "supports": "sebezesilující interpretační smyčka: filtr vytváří potvrzení filtru",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Každé zvíře je páv v jiném stádiu rozpadu.“",
+              "supports": "odečítání vlastních znaků jako pokus uniknout vlastní kategorii",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A když mu zbylo jen jedno oko, konečně uviděl: Že není páv. Že je pohádka.“",
+              "supports": "změna sebepojetí po redukci projekčního aparátu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Páv",
+              "to": "projekce vlastního rozpoznávacího vzoru na okolní svět",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Páv",
+              "to": "klasifikace ostatních podle vlastního znaku místo jejich vlastností",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Páv",
+              "to": "sebezesilující interpretační smyčka: filtr vytváří potvrzení filtru",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Páv",
+              "to": "odečítání vlastních znaků jako pokus uniknout vlastní kategorii",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Páv",
+              "to": "změna sebepojetí po redukci projekčního aparátu",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text rozvíjí řetězec absurdních klasifikací a opakování „páv za pávem“. Obraz oka na peru se mění z ozdoby na interpretační filtr a nakonec v nástroj sebereflexe.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které jsou až interpretací?",
+            "Za jakých podmínek by šlo tento mechanismus přenést do jiné domény, aniž by se ztratila jeho struktura?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap",
+      "file": "cap.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/cap.txt",
+      "entities": [
+        {
+          "id": "cap",
+          "name": "Čáp",
+          "role": "Čáp nenese očekávaný hmotný náklad, ale neuskutečněné možnosti, nápady a nedokončené věty. To, co se objeví, nelze vlastnit ani prodat; jeho příchod rozvolňuje očekávání, co má být doručeno.",
+          "evidence": [
+            {
+              "quote": "„Bez uzlíku. Bez cíle. Jen tak.“",
+              "supports": "obrácení kulturního očekávání od doručování dětí k nesení možností",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Nesl nápady. Nesl možnosti. Nesl to, co se nestalo, ale mohlo.“",
+              "supports": "rozlišení mezi viditelným nákladem a potenciálem, který nelze zvážit",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Sedm osm – NEprodáme.“",
+              "supports": "vznik dětí bez očekávaného nositele narušuje zavedené vysvětlení původu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„z nich vypadly věty. Nedokončené. Neprodané. Nepřijaté.“",
+              "supports": "odmítnutí prodeje a vlastnictví odděluje hodnotu od směnitelnosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„čáp, který nic nenosí, je ten, který nese všechno.“",
+              "supports": "rozprostření křídel uvolní nedokončené a nepřijaté věty, které si příjemci skládají po svém",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Čáp",
+              "to": "obrácení kulturního očekávání od doručování dětí k nesení možností",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Čáp",
+              "to": "rozlišení mezi viditelným nákladem a potenciálem, který nelze zvážit",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Čáp",
+              "to": "vznik dětí bez očekávaného nositele narušuje zavedené vysvětlení původu",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Čáp",
+              "to": "odmítnutí prodeje a vlastnictví odděluje hodnotu od směnitelnosti",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Čáp",
+              "to": "rozprostření křídel uvolní nedokončené a nepřijaté věty, které si příjemci skládají po svém",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Úvodní říkanka s číselným rytmem a důrazem na „NEprodáme“ se vrací jako refrén. Text kombinuje opakování, paralelní hlasy a motiv nedokončených vět.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které jsou až interpretací?",
+            "Za jakých podmínek by šlo tento mechanismus přenést do jiné domény, aniž by se ztratila jeho struktura?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slon",
+      "file": "slon.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/slon.txt",
+      "entities": [
+        {
+          "id": "slon",
+          "name": "Slon",
+          "role": "Slon běží za příslibem jediné třešně, kterou nikdy nedohoní. Malý cíl se mění v motor pohybu, protože jeho dosažení by ukončilo honbu i smysl, který jí slon přisuzuje.",
+          "evidence": [
+            {
+              "quote": "„Jednu třešeň ti dám, slone, když mě dohoníš.“",
+              "supports": "podmíněný příslib vytváří cíl a spouští pohyb",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A pak se rozběhl. Ne rychle. Ale srdcem.“",
+              "supports": "malý konkrétní objekt získává symbolickou hodnotu přesahující svou materiální podobu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Třešeň byla víc než ovoce.“",
+              "supports": "nedosažitelnost udržuje motivaci a prodlužuje činnost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale nikdy ji nedostal. A právě proto běžel.“",
+              "supports": "dosažení cíle představuje hrozbu zániku samotného motivačního systému",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Protože kdyby ji dostal, co by zbylo?“",
+              "supports": "běh je nesen touhou a významem, nikoli rychlostí nebo jistotou výsledku",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Slon",
+              "to": "podmíněný příslib vytváří cíl a spouští pohyb",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Slon",
+              "to": "malý konkrétní objekt získává symbolickou hodnotu přesahující svou materiální podobu",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Slon",
+              "to": "nedosažitelnost udržuje motivaci a prodlužuje činnost",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Slon",
+              "to": "dosažení cíle představuje hrozbu zániku samotného motivačního systému",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Slon",
+              "to": "běh je nesen touhou a významem, nikoli rychlostí nebo jistotou výsledku",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Krátké řádky, opakovaný příslib a stupňování významu třešně posouvají obyčejné ovoce do role výzvy, hry a touhy.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které jsou až interpretací?",
+            "Za jakých podmínek by šlo tento mechanismus přenést do jiné domény, aniž by se ztratila jeho struktura?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "netopyr",
+      "file": "netopyr.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/netopyr.txt",
+      "entities": [
+        {
+          "id": "netopyr",
+          "name": "Netopýr",
+          "role": "Netopýr žije v nočním režimu, v němž krása a význam vznikají jinak než ve dne. Ranní změna kontextu je nezneplatní; odhaluje pouze jiný jazyk a jiný režim pravdy.",
+          "evidence": [
+            {
+              "quote": "„V noci bylo všechno správně.“",
+              "supports": "kontextově podmíněná estetická a významová platnost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Všechno bylo trochu nepravdivé – ale o dost pravdivější.“",
+              "supports": "změna časového režimu mění interpretaci stejného prožitku, nikoli jeho historickou skutečnost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A pak přišlo ráno. A všechno se nehodilo.“",
+              "supports": "kontrast nočního a denního čtení vytváří dvojí režim pravdy",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale netopýr věděl, že byl.“",
+              "supports": "ranní stud nebo nepatřičnost může vést k popření dřívějšího prožitku",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Noc není lež. Je to jiný jazyk.“",
+              "supports": "netopýr zachovává kontinuitu zkušenosti napříč odlišnými interpretačními režimy",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Netopýr",
+              "to": "kontextově podmíněná estetická a významová platnost",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Netopýr",
+              "to": "změna časového režimu mění interpretaci stejného prožitku, nikoli jeho historickou skutečnost",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Netopýr",
+              "to": "kontrast nočního a denního čtení vytváří dvojí režim pravdy",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Netopýr",
+              "to": "ranní stud nebo nepatřičnost může vést k popření dřívějšího prožitku",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Netopýr",
+              "to": "netopýr zachovává kontinuitu zkušenosti napříč odlišnými interpretačními režimy",
+              "type": "mechanismus popsaný ve zdroji",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text staví paralelní krátké věty a opakování „Všechno…“. Noční jazyk je nejprve estetizován a následně konfrontován s ranním hodnocením. Závěr výslovně odmítá redukci noci na lež.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které jsou až interpretací?",
+            "Za jakých podmínek by šlo tento mechanismus přenést do jiné domény, aniž by se ztratila jeho struktura?"
+          ]
+        }
+      ]
     }
   ]
 }
