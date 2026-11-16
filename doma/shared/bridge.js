@@ -47,8 +47,7 @@ function insertRecord(rec){
 function transferCurrent(){
  const output=outputText();
  if(!output||/Nastav parametry a vytvoř situaci|Zadej stav a spusť simulaci|Nastav situaci a spusť simulaci|Zatím bez/i.test(output)){$("bridgeStatus").textContent="Nejdřív vytvoř výsledek, který chceš předat.";return}
- let rows=read(),rec=rows.find(r=>r.cardId===cardId&&r.output===output);
- if(!rec)rec=saveRecord();if(!rec)return;
+ const rec=saveRecord();if(!rec)return;
  const dest=$("bridgeTarget").value;if(!dest||!TOOLS[dest])return;
  localStorage.setItem(PENDING,JSON.stringify({record:rec,target:dest,createdAt:new Date().toISOString()}));
  location.href=TOOLS[dest].url;
