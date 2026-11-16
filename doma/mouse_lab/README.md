@@ -12,7 +12,7 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 3. Kombinovaný běh: externí problém se propojuje s vybranými pohádkami, ale původ obou typů informací zůstává rozlišený.
 
 ## Funkce
-- Načítání dvaceti devíti zdrojových entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
+- Načítání třiceti šesti zdrojových entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
 - Volba směru práce, zadání, cílového formátu a externího vstupu.
 - Generování promptu pro jazykový model.
 - Kopírování nebo stažení promptu a vložení odpovědi modelu.
@@ -70,6 +70,14 @@ Každá entita má vlastní herní operaci a samostatný generátor. MOUSE je so
 - [Veverka](../veverka/) — jednání, opakování a praktický výsledek
 - [Hvězdice](../hvezdice/) — paměť dopadu a stopa nevratné události
 - [Parohy](../parohy/) — fotografický blesk a paměť, která se tváří jako přítomnost
+
+- [Liška](../liska/) — Liška je postupně zbavována částí těla a vlastností, které okolí oceňuje jako zboží. Zůstává přítomná i bez nich; věci získané násilím se novým vlastníkům rozpadají a ztrácejí hodnotu.
+- [Prasátko](../prase/) — Prasátko spojuje tělesnou potřebu s funkcí pokladničky. Otázka po záchodě je okolím vyhodnocena jako faux pas, ale prasátko ji myslí doslova a jeho drobné se stanou nečekaným řešením.
+- [Kohout](../kohout/) — Kohout se dostává do sázky o Slunce, kterou vyhlásí faraon. Faraon zamění symbolickou moc za skutečnou kontrolu; kohout dál kokrhá, budík selže kvůli bateriím a faraon prohraje svůj obzor.
+- [Berani](../beran/) — Stádo běží vpřed ze setrvačnosti. Jednotlivci pochybují o směru, ale domnívají se, že pochybují sami; náraz do překážky se vykládá jako důvod běžet ještě silněji.
+- [Šnek](../snek/) — Šnekův pohyb je tak pomalý, že se stává měřítkem času a vyžaduje blízkost pozorovatele. Ulita je spirálové uspořádání prostoru; stopa je paměť dotyku.
+- [Chameleon](../chameleon/) — Chameleon se přizpůsobuje každému zrcadlu, až nedokáže rozlišit vlastní podobu od odrazů okolí. Identita se nakonec přesouvá z barvy k tvaru, pohybu a otázce.
+- [Moucha](../moucha/) — Moucha přistane na místě, které lidé považují za katastrofu a nepořádek, ale pro ni je zdrojem potravy a příležitostí. Její přítomnost zviditelní problém vznikající dlouhým odkládáním.
 
 ## Další herní generátory
 
