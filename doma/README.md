@@ -1,8 +1,6 @@
-# Doma · pracovní nástroje
+# Herní generátory
 
-## ÚHLO_GEN
-Polární pracovní prostor pro rozklad významu do relevantních perspektiv, jejich prostorové uspořádání, vztahy a nové postřehy.
+Hlavní rozcestník všech samostatných herních generátorů je na [GAMES_GEN](https://artmisanovak-prog.github.io/games_gen/). Každá karta má vlastní generativní operaci, vstupy a výstup. Přehled umožňuje vyhledávání a filtrování podle typu.
 
-- [Otevřít ÚHLO_GEN](./uhlo_gen/index.html)
-- [Dokumentace a pravidla práce](./uhlo_gen/README.md)
-
+- [Otevřít všechny herní generátory](https://artmisanovak-prog.github.io/games_gen/)
+- [Zdrojový katalog](../README.md)
