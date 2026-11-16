@@ -883,6 +883,496 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tygr",
+      "file": "tygr.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/tygr.txt",
+      "entities": [
+        {
+          "id": "tygr",
+          "name": "Tygr",
+          "role": "Žabí přání být tygrem se nepřekládá do tradičního prince. Polibek funguje jako souhlas s vlastním přáním a proměna jako překlad identity, ne jako naplnění zavedené pohádkové tradice.",
+          "evidence": [
+            {
+              "quote": "„Až vyrostu, budu tygr“",
+              "supports": "překlad přání místo převodu do předem dané role",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Když mě políbíš, nezměním se v prince. Změním se v to, co chci být.“",
+              "supports": "konflikt mezi tradičním očekáváním a vlastním cílem",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ne jako kouzlo. Ale jako souhlas.“",
+              "supports": "souhlas jako podmínka změny",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ne jako proměna. Ale jako překlad přání.“",
+              "supports": "identita vzniká z vlastního přání, ne z cizího scénáře",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Přání nejsou rovnice. A láska není tradice.“",
+              "supports": "identita vzniká z vlastního přání, ne z cizího scénáře",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Tygr",
+              "to": "překlad přání místo převodu do předem dané role",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Tygr",
+              "to": "konflikt mezi tradičním očekáváním a vlastním cílem",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Tygr",
+              "to": "souhlas jako podmínka změny",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Tygr",
+              "to": "identita vzniká z vlastního přání, ne z cizího scénáře",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text staví vedle sebe známou pohádkovou posloupnost princezny, žáby a prince a její odchýlení. Opakuje formulace „Ne jako… ale jako…“ a rozlišuje kouzlo, souhlas, proměnu a překlad.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osel",
+      "file": "osel.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/osel.txt",
+      "entities": [
+        {
+          "id": "osel",
+          "name": "Osel",
+          "role": "Osel se pohybuje mezi protikladnými označeními levá/pravá a seno/sláma, ale pravidla rozlišení zůstávají nevyslovená. Cedulka mu poskytne zdání jistoty, aniž odstraní nejednoznačnost.",
+          "evidence": [
+            {
+              "quote": "„Jedna byla seno. Druhá sláma. A nikdo mu neřekl, která je která.“",
+              "supports": "orientace podle protikladných štítků bez dostupného rozlišovacího pravidla",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Levá,“ řekl někdo. „Pravá,“ řekl jiný.",
+              "supports": "nejistota vzniká z nevyslovených očekávání, ne z nedostatku pohybu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Správnost. To, co se neřekne nahlas, ale všichni to očekávají.“",
+              "supports": "cedulka přenáší rozhodování z pozorování na autoritu označení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale písmo bylo stejné.“",
+              "supports": "zdánlivá jistota může být sociálně přesvědčivá, i když neobsahuje znalost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Podle cedulky.“ / „To, co si myslíš, že tam je.“",
+              "supports": "zdánlivá jistota může být sociálně přesvědčivá, i když neobsahuje znalost",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Osel",
+              "to": "orientace podle protikladných štítků bez dostupného rozlišovacího pravidla",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Osel",
+              "to": "nejistota vzniká z nevyslovených očekávání, ne z nedostatku pohybu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Osel",
+              "to": "cedulka přenáší rozhodování z pozorování na autoritu označení",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Osel",
+              "to": "zdánlivá jistota může být sociálně přesvědčivá, i když neobsahuje znalost",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Párové protiklady levá/pravá a seno/sláma se opakují v rytmu říkanky. Stejný nápis na obou stranách cedulky vytváří jazykovou past.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jednorozec",
+      "file": "jednorozec.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/jednorozec.txt",
+      "entities": [
+        {
+          "id": "jednorozec",
+          "name": "Jednorožec",
+          "role": "Jednorožec popírá existenci delfínů a ledních medvědů, přestože z jejich spojení sám vznikl. Popřením původu se pokouší uchovat vlastní kategorii nemožného.",
+          "evidence": [
+            {
+              "quote": "„Jednorožec byl. To je první lež.“",
+              "supports": "vznik nové identity spojením prvků považovaných za neslučitelné",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale akorát ten. jednorožec nevěřil.“",
+              "supports": "popření vlastních zdrojů jako obrana kategorie a výjimečnosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Dva světy, které se nikdy neměly potkat, se navzájem poznaly.“",
+              "supports": "paradox: důkazy původu současně dokazují možnost existence",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Pokud je z reálných věcí, může být reálný. A pokud je reálný, přestává být jednorožec.“",
+              "supports": "nejistota identity vzniká z konfliktu mezi původem a představou o sobě",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Nejspíš právě zachraňuje jednorožce.“",
+              "supports": "nejistota identity vzniká z konfliktu mezi původem a představou o sobě",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Jednorožec",
+              "to": "vznik nové identity spojením prvků považovaných za neslučitelné",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Jednorožec",
+              "to": "popření vlastních zdrojů jako obrana kategorie a výjimečnosti",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Jednorožec",
+              "to": "paradox: důkazy původu současně dokazují možnost existence",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Jednorožec",
+              "to": "nejistota identity vzniká z konfliktu mezi původem a představou o sobě",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text opakuje negace a krátká jednoslovná slovesa: zapřít, zrušit, zneplatnit, zpochybnit. Vznik tvora je vyprávěn jako řetězec nemožných spojení.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "krokodyl",
+      "file": "krokodyl.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/krokodyl.txt",
+      "entities": [
+        {
+          "id": "krokodyl",
+          "name": "Krokodýl",
+          "role": "Krokodýl je převeden ze zvířete a symbolu na prodejní produkt. Jeho skutečné slzy zůstávají, ale marketingový obal mění jejich společenské čtení a cenu.",
+          "evidence": [
+            {
+              "quote": "„že je zboží. Ne zvíře. Ne postava. Ne symbol. Ale produkt.“",
+              "supports": "převod symbolu a emoce do komerčního produktu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Tento týden sleva 90 %. Tři za cenu jedné. Krokodýlí slzy.“",
+              "supports": "obal a cenovka mění interpretaci obsahu, nikoli nutně jeho pravost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„To je emoce. Ale levná. Už není čerstvá.“",
+              "supports": "opakování reklamního jazyka vytlačuje původní význam",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Tohle není věta. To je výkřik v obalu!!“",
+              "supports": "ztráta jazyka a smyslu je maskována jako dostupnost a sleva",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Krokodýlí slzy nejsou falešné. Jsou jen snadno dostupné.“",
+              "supports": "ztráta jazyka a smyslu je maskována jako dostupnost a sleva",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Krokodýl",
+              "to": "převod symbolu a emoce do komerčního produktu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Krokodýl",
+              "to": "obal a cenovka mění interpretaci obsahu, nikoli nutně jeho pravost",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Krokodýl",
+              "to": "opakování reklamního jazyka vytlačuje původní význam",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Krokodýl",
+              "to": "ztráta jazyka a smyslu je maskována jako dostupnost a sleva",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Reklamní slogan, cenovka a jazyk výprodeje pronikají do vyprávění. Text opakovaně staví proti sobě emoci a její komerční obal.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "veverka",
+      "file": "veverka.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/veverka.txt",
+      "entities": [
+        {
+          "id": "veverka",
+          "name": "Veverka",
+          "role": "Veverka jedná bez vysvětlování a bez potřeby formulovat smysl. Její opakované činy vytvářejí zásoby a důsledky, zatímco napodobitelé vyrábějí komentáře, citáty a únavu.",
+          "evidence": [
+            {
+              "quote": "„Běžela, protože to bylo potřeba.“",
+              "supports": "opakovaná účelná činnost bez průběžného vysvětlování",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Oříšek. Díra. Zahrabat. Zamaskovat. Zamrkat. Znovu.“",
+              "supports": "výsledek vzniká z kumulace drobných činů",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Modli se činy.“",
+              "supports": "napodobování viditelného postupu bez jeho situovaného důvodu selhává",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A odpovědi si nenosí. Jen oříšky.“",
+              "supports": "komentování a symbolické napodobení nenahrazuje praktickou činnost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A veverka měla zásoby.“",
+              "supports": "komentování a symbolické napodobení nenahrazuje praktickou činnost",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Veverka",
+              "to": "opakovaná účelná činnost bez průběžného vysvětlování",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Veverka",
+              "to": "výsledek vzniká z kumulace drobných činů",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Veverka",
+              "to": "napodobování viditelného postupu bez jeho situovaného důvodu selhává",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Veverka",
+              "to": "komentování a symbolické napodobení nenahrazuje praktickou činnost",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text používá krátké slovesné řetězce a opakování „znovu“. Protiklad činů a komentářů se projeví až v pozdějším důsledku, kdy zásoby rozhodují o přežití zimy.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hvezdice",
+      "file": "hvezdice.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/hvezdice.txt",
+      "entities": [
+        {
+          "id": "hvezdice",
+          "name": "Hvězdice",
+          "role": "Hvězdice čte kruhy na vodě nikoli jako pouhou krásnou geometrii, ale jako stopy po dopadech a nevratných událostech. Zklidnění hladiny neznamená, že se nic nestalo.",
+          "evidence": [
+            {
+              "quote": "„Ne. To jsou jizvy.“",
+              "supports": "převod viditelného vzoru na stopu jeho příčiny",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Po věcech, co dopadly.“",
+              "supports": "rozlišení mezi odezněním účinku a vymazáním události",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Každý kruh začínal nárazem.“",
+              "supports": "šíření následků od bodu dopadu do dalších životů",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale to neznamená, že se nic nestalo.“",
+              "supports": "paměť prostředí přetrvává i po návratu zdánlivého klidu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„I když to neřekne.“",
+              "supports": "paměť prostředí přetrvává i po návratu zdánlivého klidu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Hvězdice",
+              "to": "převod viditelného vzoru na stopu jeho příčiny",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Hvězdice",
+              "to": "rozlišení mezi odezněním účinku a vymazáním události",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Hvězdice",
+              "to": "šíření následků od bodu dopadu do dalších životů",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Hvězdice",
+              "to": "paměť prostředí přetrvává i po návratu zdánlivého klidu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text střídá krátká pojmenování dopadu a rozvíjející se kruhy. Dialog ukazuje několik interpretací téhož jevu a hvězdice je obrací k jeho historii.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parohy",
+      "file": "parohy.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/parohy.txt",
+      "entities": [
+        {
+          "id": "parohy",
+          "name": "Parohy",
+          "role": "Každé vyfotografování přidává paroh jako další větev paměti. Blesk fotoaparátu vytváří světelnou stopu bez hromu a obraz se stává archivem okamžiků, jejichž pravdivost nikdo neověřuje.",
+          "evidence": [
+            {
+              "quote": "„Každý den do ni uhodil blesk. Ne z nebe. Z foťáku.“",
+              "supports": "fotografický záblesk je přirovnán k blesku, ale bez následného hromu a deště",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Tisíckrát. Blesk. Ale nikdy hrom. Žádný déšť.“",
+              "supports": "každý záznam přidává větev do vnějšího archivu paměti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Parohy ji rostly pokaždé, když ji někdo vyfotil.“",
+              "supports": "úsměv a fotografování mohou uchovat okamžik bez ověření jeho pravdivosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Jedna větev za každou vzpomínku.“",
+              "supports": "obraz a zvuk se propojují přes slovo „syyyr“",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Je to paměť, co se tváří jako přítomnost.“",
+              "supports": "obraz a zvuk se propojují přes slovo „syyyr“",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Parohy",
+              "to": "fotografický záblesk je přirovnán k blesku, ale bez následného hromu a deště",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Parohy",
+              "to": "každý záznam přidává větev do vnějšího archivu paměti",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Parohy",
+              "to": "úsměv a fotografování mohou uchovat okamžik bez ověření jeho pravdivosti",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Parohy",
+              "to": "obraz a zvuk se propojují přes slovo „syyyr“",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text opakuje slova „blesk“, „syyyr“ a motiv růstu parohů. Fotografický okamžik se materializuje jako větev a slovo se snaží stát obrazem.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
     }
   ]
 }
