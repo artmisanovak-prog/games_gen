@@ -50,8 +50,7 @@ input,select,textarea{width:100%;padding:11px;background:#201b20;color:var(--ink
 <section class="panel wide" id="result" aria-live="polite"><h2>Výstup operace</h2><p class="muted">Nastav parametry a vytvoř situaci.</p></section>
 <section class="panel wide"><h2>Deník pokusů</h2><div id="archive"><p class="muted">Zatím bez záznamů.</p></div><div class="actions"><button class="alt" id="export">Exportovat JSON</button><button class="alt" id="clear">Vymazat deník</button></div><p class="muted">Deník se ukládá lokálně v tomto prohlížeči. Exportuj jej, pokud chceš přenést záznamy na jiné zařízení.</p></section>
 </div></main>
-<script src="../shared/mouse-core.js"></script><script src="../shared/nav.js" defer></script>
-<script>
+<script src="../shared/mouse-core.js"></script><script>
 const $=id=>document.getElementById(id),KEY="kocour_predcasna_tecka_v1";
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function read(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch{return[]}}
