@@ -1793,6 +1793,536 @@
           ]
         }
       ]
+    },
+    {
+      "id": "liska",
+      "file": "liska.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/liska.txt",
+      "entities": [
+        {
+          "id": "liska",
+          "name": "Liška",
+          "role": "Liška je postupně zbavována částí těla a vlastností, které okolí oceňuje jako zboží. Zůstává přítomná i bez nich; věci získané násilím se novým vlastníkům rozpadají a ztrácejí hodnotu.",
+          "evidence": [
+            {
+              "quote": "Ale svět si všiml. A jakmile si svět všimne, začne chtít.",
+              "supports": "postupné odebírání částí celku a jeho vlastností",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A tak lišce vzali srst.",
+              "supports": "převod živých vlastností na obchodní hodnoty",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Zůstaly jí jen vzpomínky na stopy.",
+              "supports": "přetrvání identity po ztrátě jednotlivých částí",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Nakonec přišel někdo, kdo se neptal.",
+              "supports": "ztráta hodnoty při násilném přenosu vlastnictví",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Protože to, co se vezme násilím, se neudrží.",
+              "supports": "ztráta hodnoty při násilném přenosu vlastnictví",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A to, co se vezme z lišky, se nehodí nikomu jinému.",
+              "supports": "ztráta hodnoty při násilném přenosu vlastnictví",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Liška",
+              "to": "postupné odebírání částí celku a jeho vlastností",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Liška",
+              "to": "převod živých vlastností na obchodní hodnoty",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Liška",
+              "to": "přetrvání identity po ztrátě jednotlivých částí",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Liška",
+              "to": "ztráta hodnoty při násilném přenosu vlastnictví",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Stupňující se série odebrání srsti, chodidel, zubů a srdce. Rozpad odcizených věcí obrací původní logiku zisku.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prase",
+      "file": "prase.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/prase.txt",
+      "entities": [
+        {
+          "id": "prase",
+          "name": "Prasátko",
+          "role": "Prasátko spojuje tělesnou potřebu s funkcí pokladničky. Otázka po záchodě je okolím vyhodnocena jako faux pas, ale prasátko ji myslí doslova a jeho drobné se stanou nečekaným řešením.",
+          "evidence": [
+            {
+              "quote": "„Tady není záchod?“",
+              "supports": "kolize tělesného významu a společenského výkladu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Já jen… jsem plné.“",
+              "supports": "překrytí živého těla funkcí předmětu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Prase?“ „Pokladnička?“ „Obojí,“ řeklo prasátko.",
+              "supports": "záměna vyprazdňování a vydávání mincí",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Drobnéma se přece platí za záchod,“ řeklo prasátko.",
+              "supports": "přebytek jako tělesný i peněžní stav",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A záchod nikde.“",
+              "supports": "přebytek jako tělesný i peněžní stav",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A drobný jsou jen jinej druh přebytku",
+              "supports": "přebytek jako tělesný i peněžní stav",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Prasátko",
+              "to": "kolize tělesného významu a společenského výkladu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Prasátko",
+              "to": "překrytí živého těla funkcí předmětu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Prasátko",
+              "to": "záměna vyprazdňování a vydávání mincí",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Prasátko",
+              "to": "přebytek jako tělesný i peněžní stav",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Dvojznačnost prasete a pokladničky. Krátké dialogy nechávají společenský stud střetnout s doslovnou potřebou.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kohout",
+      "file": "kohout.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/kohout.txt",
+      "entities": [
+        {
+          "id": "kohout",
+          "name": "Kohout",
+          "role": "Kohout se dostává do sázky o Slunce, kterou vyhlásí faraon. Faraon zamění symbolickou moc za skutečnou kontrolu; kohout dál kokrhá, budík selže kvůli bateriím a faraon prohraje svůj obzor.",
+          "evidence": [
+            {
+              "quote": "Faraon se prohlásil za syna samotného Slunce",
+              "supports": "záměna symbolického nároku za faktickou moc",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A tak, místo aby se ptal, vyhlásil válku spánku.",
+              "supports": "sázka jako pokus ovládat kosmický řád",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Slunce.",
+              "supports": "řetězení aktérů a přenosu odpovědnosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "50 : 50",
+              "supports": "mechanický výpadek budíku mění výsledek konfliktu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "A v tom - budik crrrrr CINK Cinky BRNK cinkycink..a dal se line z nej jen ticho",
+              "supports": "mechanický výpadek budíku mění výsledek konfliktu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "v budíku došly baterie?",
+              "supports": "mechanický výpadek budíku mění výsledek konfliktu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Faraon na kohouta / Kohout na Budíka / Budík na Slunce",
+              "supports": "mechanický výpadek budíku mění výsledek konfliktu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Kohout",
+              "to": "záměna symbolického nároku za faktickou moc",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Kohout",
+              "to": "sázka jako pokus ovládat kosmický řád",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Kohout",
+              "to": "řetězení aktérů a přenosu odpovědnosti",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Kohout",
+              "to": "mechanický výpadek budíku mění výsledek konfliktu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Fragmentární, rytmický a zvukově vrstvený text. Opakuje poměr 50:50 a staví proti sobě kokrhání, budík a Slunce.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beran",
+      "file": "beran.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/beran.txt",
+      "entities": [
+        {
+          "id": "beran",
+          "name": "Berani",
+          "role": "Stádo běží vpřed ze setrvačnosti. Jednotlivci pochybují o směru, ale domnívají se, že pochybují sami; náraz do překážky se vykládá jako důvod běžet ještě silněji.",
+          "evidence": [
+            {
+              "quote": "Ale nikdo neřekl, že je to síla bez směru.",
+              "supports": "setrvačnost kolektivního pohybu bez sdíleného cíle",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Nikdo nevěděl, proč vlastně běží.",
+              "supports": "záměna pokračování za důkaz správnosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Protože zastavit by byla slabost.",
+              "supports": "potlačení odchylky kolektivní dynamikou",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Ale než to stačil říct nahlas, stádo ho vtáhlo zpět.",
+              "supports": "převrácení nárazu z varování na motivaci",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Protože náraz není signál k zastavení, náraz je důkaz, že se nesnažili dost.",
+              "supports": "převrácení nárazu z varování na motivaci",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "každý si myslel, že je sám, kdo pochybuje.",
+              "supports": "převrácení nárazu z varování na motivaci",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Berani",
+              "to": "setrvačnost kolektivního pohybu bez sdíleného cíle",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Berani",
+              "to": "záměna pokračování za důkaz správnosti",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Berani",
+              "to": "potlačení odchylky kolektivní dynamikou",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Berani",
+              "to": "převrácení nárazu z varování na motivaci",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Opakování běhu, dunění a prachu vytváří rytmus setrvačnosti. Individuální otázku pohlcuje pohyb stáda.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snek",
+      "file": "snek.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/snek.txt",
+      "entities": [
+        {
+          "id": "snek",
+          "name": "Šnek",
+          "role": "Šnekův pohyb je tak pomalý, že se stává měřítkem času a vyžaduje blízkost pozorovatele. Ulita je spirálové uspořádání prostoru; stopa je paměť dotyku.",
+          "evidence": [
+            {
+              "quote": "Šnek se pohybuje tak pomalu, že z dálky není vidět vůbec nic.",
+              "supports": "pozorovatelnost závisí na vzdálenosti a měřítku",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Jen když se k němu skloníš, začne existovat.",
+              "supports": "převod rychlosti pohybu na prožívání času",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Ulita není dům.",
+              "supports": "spirála jako komprese prostoru",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Ulita je způsob, jak se svět stáčí do spirály",
+              "supports": "stopa jako paměť kontaktu, nikoli navigační směr",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Jeho stopa není směr - je to paměť dotyku",
+              "supports": "stopa jako paměť kontaktu, nikoli navigační směr",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Déšť zpomalí všechno a najednou je šnek nejrychlejší věc v krajině.",
+              "supports": "stopa jako paměť kontaktu, nikoli navigační směr",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Šnek",
+              "to": "pozorovatelnost závisí na vzdálenosti a měřítku",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Šnek",
+              "to": "převod rychlosti pohybu na prožívání času",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Šnek",
+              "to": "spirála jako komprese prostoru",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Šnek",
+              "to": "stopa jako paměť kontaktu, nikoli navigační směr",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Meditativní text staví na protikladech z dálky/zblízka, pohyb/stání a kruh/spirála. Pomalost je vlastní časová soustava.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chameleon",
+      "file": "chameleon.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/chameleon.txt",
+      "entities": [
+        {
+          "id": "chameleon",
+          "name": "Chameleon",
+          "role": "Chameleon se přizpůsobuje každému zrcadlu, až nedokáže rozlišit vlastní podobu od odrazů okolí. Identita se nakonec přesouvá z barvy k tvaru, pohybu a otázce.",
+          "evidence": [
+            {
+              "quote": "Chameleon byl mistr přizpůsobení.",
+              "supports": "přizpůsobení podle vnějších referencí",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Zrcadlo vlevo – modré.",
+              "supports": "konflikt mezi vlastním stavem a odrazem prostředí",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Zrcadlo vpravo – červené.",
+              "supports": "opakovaná adaptace vede ke ztrátě rozlišitelnosti identity",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Změnil se. Zrcadlově. Zrcadlově. Zrcadlově.",
+              "supports": "zrcadlo vrací podobu, ale neověřuje pravdu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Až už nevěděl, co je odraz a co je on.",
+              "supports": "zrcadlo vrací podobu, ale neověřuje pravdu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Možná nejsem barva. Možná jsem tvar. Možná jsem pohyb. Možná jsem otázka.",
+              "supports": "zrcadlo vrací podobu, ale neověřuje pravdu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Chameleon",
+              "to": "přizpůsobení podle vnějších referencí",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Chameleon",
+              "to": "konflikt mezi vlastním stavem a odrazem prostředí",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Chameleon",
+              "to": "opakovaná adaptace vede ke ztrátě rozlišitelnosti identity",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Chameleon",
+              "to": "zrcadlo vrací podobu, ale neověřuje pravdu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Čtyři zrcadla s různými barvami a opakování slova zrcadlově vyjadřují eskalaci přizpůsobení.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moucha",
+      "file": "moucha.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/moucha.txt",
+      "entities": [
+        {
+          "id": "moucha",
+          "name": "Moucha",
+          "role": "Moucha přistane na místě, které lidé považují za katastrofu a nepořádek, ale pro ni je zdrojem potravy a příležitostí. Její přítomnost zviditelní problém vznikající dlouhým odkládáním.",
+          "evidence": [
+            {
+              "quote": "Pro bordeláře: katastrofa.",
+              "supports": "stejné prostředí má odlišnou hodnotu pro různé aktéry",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Pro mouchu: švédský stůl existence.",
+              "supports": "odpad je pro jednoho problémem, pro jiného zdrojem",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Ne mouchu. Sebe.",
+              "supports": "moucha spouští pozornost k již existujícímu stavu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Otisky vytvářely vrstvy. Vrstvy vytvářely historii. Historie vytvářela past.",
+              "supports": "odkládání vytváří materiální vrstvy a historii problému",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Ne proto, že by byl nový. Ale protože začal bzučet.",
+              "supports": "odkládání vytváří materiální vrstvy a historii problému",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "Protože pro mouchu není hovno problém. Je to příležitost.",
+              "supports": "odkládání vytváří materiální vrstvy a historii problému",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Moucha",
+              "to": "stejné prostředí má odlišnou hodnotu pro různé aktéry",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Moucha",
+              "to": "odpad je pro jednoho problémem, pro jiného zdrojem",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Moucha",
+              "to": "moucha spouští pozornost k již existujícímu stavu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Moucha",
+              "to": "odkládání vytváří materiální vrstvy a historii problému",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Kontrast mezi odporem lidí a blahobytem mouchy. Skvrny, otisky a vrstvy proměňují nepořádek v geologii odkládaných rozhodnutí.",
+          "openQuestions": [
+            "Které části mechanismu jsou výslovně potvrzené textem a které vznikají až interpretací?",
+            "Jak se tento mechanismus projeví při jeho použití v nové herní situaci?"
+          ]
+        }
+      ]
     }
   ]
 }
