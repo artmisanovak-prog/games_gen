@@ -45,24 +45,27 @@
           "name": "Kocour",
           "focus": "Spolkne dvě berušky, tedy jejich čtrnáct teček, a půl hodiny předčasně ukončuje cizí věty. Spolknuté konce nakonec vykrká zpět.",
           "evidence": [
-            "„dvě - ne tři, ne jednu - dvě - přesně -14 teček“",
+            "„Sležral dvě - ne tři, ne jednu - dvě - přesně -14 teček“",
+            "„Půl hodiny - 30 minut - přesně.“",
             "„Kocour krkal tečky a dokončoval věty!“",
-            "„Skočil všem do řeči koncem věty“",
-            "„Berušky mají na sobě nedokončené konce vět.“",
-            "„Spolknuté konce ale vykrkal zpátky“"
+            "„všem kocour větu ukončil“",
+            "„Spolknuté konce ale vykrkal zpátky“",
+            "„lidé se naučili, že všechno se spolknout nedá.“"
           ],
           "mechanisms": [
             "fyzické spolknutí konců vět jako teček na beruškách",
-            "předčasné dokončování cizí řeči",
-            "časově ohraničené narušení možnosti dokončit větu",
-            "návrat spolknutých konců a obnova možnosti mluvit"
+            "předčasné dokončování cizí řeči, které mluvčím bere možnost dokončit vlastní větu",
+            "časově omezené narušení řečové autonomie trvající třicet minut",
+            "návrat spolknutých konců obnovuje možnost samostatného dokončení",
+            "přesná čísla a opakování slova „přesně“ tvoří součást formálního rytmu příběhu"
           ],
           "form": "Text napodobuje předbíhání: věty se lámou, končí dříve, než se k jejich konci dostane mluvčí. Přesná čísla 2, 14 a 30 minut se opakují jako součást mechanismu.",
           "polar": {
             "status": "not-authored",
             "layers": null,
             "radii": null
-          }
+          },
+          "toolUrl": "../kocour/"
         }
       ]
     },
