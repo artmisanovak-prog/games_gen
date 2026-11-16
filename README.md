@@ -2,7 +2,7 @@
 
 Pracovní katalog samostatných herních generátorů. Každý generátor vychází z konkrétní pohádky, karty nebo narativní poruchy a z její vlastní operace.
 
-**[Otevřít hlavní rozcestník herních generátorů](https://artmisanovak-prog.github.io/games_gen/)** · Vyhledávání, filtrování a přímé spuštění všech 41 herních generátorů.
+**[Otevřít hlavní rozcestník herních generátorů](https://artmisanovak-prog.github.io/games_gen/)** · Vyhledávání, filtrování a přímé spuštění všech 42 herních generátorů.
 
 ## ÚHLO_GEN · polární pracovní prostor MOUSE
 
