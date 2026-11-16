@@ -12,7 +12,7 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 3. Kombinovaný běh: externí problém se propojuje s vybranými pohádkami, ale původ obou typů informací zůstává rozlišený.
 
 ## Funkce
-- Načítání jedenácti entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
+- Načítání šestnácti entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
 - Volba směru práce, zadání, cílového formátu a externího vstupu.
 - Generování promptu pro jazykový model.
 - Kopírování nebo stažení promptu a vložení odpovědi modelu.
@@ -48,6 +48,11 @@ Každá operace má vlastní generátor a vlastní pravidla. MOUSE LAB je propoj
 - [Vlk](../vlk/) — překlad mezi smyslovým vjemem, symbolem a jednáním
 - [Plameňák](../plamenak/) — směr, pád, orientace a posouvání cíle
 - [Lemur](../lemur/) — paradox nápadnosti při snaze být neviditelný
+- [Pavouk](../pavouk/) — síť odložených a nevyřčených stavů
+- [Páv](../pav/) — projekce vlastního rozpoznávacího vzoru na svět
+- [Čáp](../cap/) — nesení možností, které nelze vlastnit ani prodat
+- [Slon](../slon/) — motivační běh udržovaný nedosažitelným cílem
+- [Netopýr](../netopyr/) — dvojí režim pravdy v nočním a denním kontextu
 
 Kocourův generátor je nově vytvořená samostatná operace podle původního textu. Experimentální varianty v jeho formuláři jsou odlišeny od pevných údajů pohádky (dvě berušky, čtrnáct teček, třicet minut a návrat spolknutých konců).
 
