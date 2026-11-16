@@ -1373,6 +1373,426 @@
           ]
         }
       ]
+    },
+    {
+      "id": "vrabec",
+      "file": "vrabec.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/vrabec.txt",
+      "entities": [
+        {
+          "id": "vrabec",
+          "name": "Vrabec",
+          "role": "Přísloví slibuje jistotu vrabce v hrsti oproti nedosažitelnému holubovi na střeše. Vrabec však z hrsti unikne na hlavu a promění se z vlastněné jistoty v trvalou, vtíravou myšlenku.",
+          "evidence": [
+            {
+              "quote": "„Lepší vrabec v hrsti než holub na střeše.“",
+              "supports": "převrácení přísloví a změna jeho výhodnosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale byl její.“",
+              "supports": "jistota vlastnictví přechází v neovladatelnou přítomnost",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„vyskočil z hrsti rovnou na hlavu.“",
+              "supports": "záměna vnějšího držení za vnitřní obsazení pozornosti",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ne jako trofej. Jako názor. Jako myšlenka, co se nedá setřást.“",
+              "supports": "opakovaná metafora vrabčího hnízda materializuje myšlenku",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Možná je lepší holub na střeše než vrabec na hlavě.“",
+              "supports": "opakovaná metafora vrabčího hnízda materializuje myšlenku",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Vrabec",
+              "to": "převrácení přísloví a změna jeho výhodnosti",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Vrabec",
+              "to": "jistota vlastnictví přechází v neovladatelnou přítomnost",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Vrabec",
+              "to": "záměna vnějšího držení za vnitřní obsazení pozornosti",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Vrabec",
+              "to": "opakovaná metafora vrabčího hnízda materializuje myšlenku",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text přepisuje známé přísloví do děje. Krátké věty, opakování a posun vrabce z hrsti na hlavu mění původní význam jistoty.",
+          "openQuestions": [
+            "Jak se tato operace mění při použití v nové herní situaci?",
+            "Který detail musí zůstat zachován, aby se neztratil specifický mechanismus pohádky?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zizala",
+      "file": "zizala.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/zizala.txt",
+      "entities": [
+        {
+          "id": "zizala",
+          "name": "Žížala",
+          "role": "Žížala se roztrhne na dvě části, které se považují za původní celek a vydají se různými směry. Rozpad je popsán jako pokračování a rozmnožení, nikoli prostý konec.",
+          "evidence": [
+            {
+              "quote": "„Žížala se jednoho dne roztrhla.“",
+              "supports": "rozdělení jednoho subjektu na dvě pokračující identity",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Z jedné byly dvě.“",
+              "supports": "konflikt o původnost po rozdělení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A obě si myslely, že jsou ta původní.“",
+              "supports": "divergence trajektorií po společném původu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Jedna k dešti. Druhá ke kořenům.“",
+              "supports": "přerámování rozpadu jako růstu a rozmnožení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Rozpad není konec. Je to rozmnožení ticha.“",
+              "supports": "přerámování rozpadu jako růstu a rozmnožení",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Žížala",
+              "to": "rozdělení jednoho subjektu na dvě pokračující identity",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Žížala",
+              "to": "konflikt o původnost po rozdělení",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Žížala",
+              "to": "divergence trajektorií po společném původu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Žížala",
+              "to": "přerámování rozpadu jako růstu a rozmnožení",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Krátký text používá paralelní konstrukce a protikladné směry deště a kořenů. Závěrečná věta přepisuje očekávaný význam roztržení.",
+          "openQuestions": [
+            "Jak se tato operace mění při použití v nové herní situaci?",
+            "Který detail musí zůstat zachován, aby se neztratil specifický mechanismus pohádky?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zralok",
+      "file": "zralok.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/zralok.txt",
+      "entities": [
+        {
+          "id": "zralok",
+          "name": "Žralok",
+          "role": "Žralok si hlídá poměr času nad hladinou a pod ní v poměru 1:1. Viditelnost mu přináší uznání existence, ale současně vyvolává strach, a proto nesmí změnit poměr.",
+          "evidence": [
+            {
+              "quote": "„nad : pod = 1 : 1“",
+              "supports": "převod životního rytmu na explicitní poměr",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Jednou nahoře. Jednou dole.“",
+              "supports": "rovnováha mezi viditelností a skrytostí",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Aby si mě všimli. Aby věděli, že jsem.“",
+              "supports": "uznání existence je vykoupeno reakcí pozorovatele",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale pak se bojí.“",
+              "supports": "změna poměru ohrožuje identitu, která je na něm založena",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Pak bych byl víc nad než pod. A to už nejsem já.“",
+              "supports": "změna poměru ohrožuje identitu, která je na něm založena",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Žralok",
+              "to": "převod životního rytmu na explicitní poměr",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Žralok",
+              "to": "rovnováha mezi viditelností a skrytostí",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Žralok",
+              "to": "uznání existence je vykoupeno reakcí pozorovatele",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Žralok",
+              "to": "změna poměru ohrožuje identitu, která je na něm založena",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text začíná matematickým zápisem 1:1 a rozvíjí jej do rytmického střídání nahoře/dole, viděn/skryt. Dialog zpochybňuje, zda je poměr skutečně spravedlivý.",
+          "openQuestions": [
+            "Jak se tato operace mění při použití v nové herní situaci?",
+            "Který detail musí zůstat zachován, aby se neztratil specifický mechanismus pohádky?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "had",
+      "file": "had.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/had.txt",
+      "entities": [
+        {
+          "id": "had",
+          "name": "Had",
+          "role": "Hadův jazyk se ohýbá a syčí, takže okolí nejprve přehlíží obsah jeho řeči. Trest a roztržení jazyka promění způsob mluvení, ale had si uchová schopnost vyprávět o rovnováze a věcech mezi protiklady.",
+          "evidence": [
+            {
+              "quote": "„Ďáblové jsssou původem z nebesss“",
+              "supports": "forma výslovnosti ovlivňuje přijetí obsahu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Některé věci padají vzhůru.“",
+              "supports": "jazyková deformace se stává stopou zásahu a trestu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Každé ‘ano’ je zároveň ‘možná’. A každé ‘ne’ je jen ‘zatím ne’.“",
+              "supports": "protiklady se skládají do kontinuálního prostoru mezi ano/ne a nahoře/dole",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale jazyk… jazyk mi roztrhl.“",
+              "supports": "řeč přežívá změnu orgánu i způsobu artikulace",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„žije had, který si pamatuje celek.“",
+              "supports": "řeč přežívá změnu orgánu i způsobu artikulace",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Had",
+              "to": "forma výslovnosti ovlivňuje přijetí obsahu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Had",
+              "to": "jazyková deformace se stává stopou zásahu a trestu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Had",
+              "to": "protiklady se skládají do kontinuálního prostoru mezi ano/ne a nahoře/dole",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Had",
+              "to": "řeč přežívá změnu orgánu i způsobu artikulace",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Syčení je zapsáno přímo v pravopisu opakováním písmena s. Text kombinuje slovní deformaci, dialog s autoritou a paradoxní výroky.",
+          "openQuestions": [
+            "Jak se tato operace mění při použití v nové herní situaci?",
+            "Který detail musí zůstat zachován, aby se neztratil specifický mechanismus pohádky?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hyeny",
+      "file": "hyeny.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/hyeny.txt",
+      "entities": [
+        {
+          "id": "hyeny",
+          "name": "Hyeny",
+          "role": "Hyeny se smějí ne proto, že jsou veselé, ale protože smích funguje jako obranná stěna. Pokus jedné hyeny ztichnout vyvolá zesílení smíchu ostatních.",
+          "evidence": [
+            {
+              "quote": "„Smějí se. Vždycky.“",
+              "supports": "opakovaný projev zakrývá odlišný vnitřní stav",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Smích je jejich jazyk. Jejich zbraň. Jejich výmluva.“",
+              "supports": "smích funguje jako obrana a sociální stěna",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale ticho je nebezpečné. Ticho je otázka. Ticho je zrcadlo.“",
+              "supports": "individuální přerušení vzorce spustí kolektivní zesílení",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A tak se ta hyena znovu rozesmála. Nahlas. Falešně. Ale bezpečně.“",
+              "supports": "vnější interpretace veselí se rozchází s funkcí projevu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Ale to neznamená, že se smějí rády.“",
+              "supports": "vnější interpretace veselí se rozchází s funkcí projevu",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Hyeny",
+              "to": "opakovaný projev zakrývá odlišný vnitřní stav",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Hyeny",
+              "to": "smích funguje jako obrana a sociální stěna",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Hyeny",
+              "to": "individuální přerušení vzorce spustí kolektivní zesílení",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Hyeny",
+              "to": "vnější interpretace veselí se rozchází s funkcí projevu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text používá krátké opakované věty a anaforu „Smějí se“. Závěrečný paradox odděluje viditelný projev od jeho příčiny.",
+          "openQuestions": [
+            "Jak se tato operace mění při použití v nové herní situaci?",
+            "Který detail musí zůstat zachován, aby se neztratil specifický mechanismus pohádky?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "husy",
+      "file": "husy.txt",
+      "url": "https://github.com/artmisanovak-prog/games_gen/blob/main/kriva_pohadka/husy.txt",
+      "entities": [
+        {
+          "id": "husy",
+          "name": "Husy",
+          "role": "Každá husa nese vlastní „já“, ale identita se v hejnu násobí, opakuje a ztrácí hranice. Let v kruhu a opakování „já ja jajaja“ vytvářejí kolektivní singularitu a gramatickou krizi.",
+          "evidence": [
+            {
+              "quote": "„Každá z nich nesla jedno ‚já‘.“",
+              "supports": "množení osobního zájmena do kolektivního hlasu",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„A tak husy nelétaly v klínu. Létaly v kruhu.“",
+              "supports": "rozostření hranice mezi individuálním a skupinovým já",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Já jsem já, ale jen když ja slyšíš.“",
+              "supports": "kruhová organizace hejna místo běžného klínového uspořádání",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„To byla gramatická krize.“",
+              "supports": "opakování zvuku mění gramatickou jednotku v rytmický projev identity",
+              "status": "explicitní_doklad"
+            },
+            {
+              "quote": "„Aha. Kolektivní singular. To znám.“",
+              "supports": "opakování zvuku mění gramatickou jednotku v rytmický projev identity",
+              "status": "explicitní_doklad"
+            }
+          ],
+          "relations": [
+            {
+              "from": "Husy",
+              "to": "množení osobního zájmena do kolektivního hlasu",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Husy",
+              "to": "rozostření hranice mezi individuálním a skupinovým já",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Husy",
+              "to": "kruhová organizace hejna místo běžného klínového uspořádání",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            },
+            {
+              "from": "Husy",
+              "to": "opakování zvuku mění gramatickou jednotku v rytmický projev identity",
+              "type": "mechanismus odvozený z textu",
+              "status": "odvození_z_textu"
+            }
+          ],
+          "form": "Text staví identitu na fonetickém řetězci „já / jaja / jajaja“. Rytmické opakování a kolektivní odpověď proměňují gramatiku v událost.",
+          "openQuestions": [
+            "Jak se tato operace mění při použití v nové herní situaci?",
+            "Který detail musí zůstat zachován, aby se neztratil specifický mechanismus pohádky?"
+          ]
+        }
+      ]
     }
   ]
 }
