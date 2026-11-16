@@ -3,7 +3,7 @@
 "use strict";
 const TOOLS={
  kocour:{title:"Kocour",url:"/games_gen/doma/kocour/",target:"note",run:["run"]},
- ryba:{title:"Ryba",url:"/games_gen/doma/ryba/",target:"note",run:["make"]},
+ ryba:{title:"Ryba",url:"/games_gen/doma/ryba/",target:"intent",run:["generate"]},
  netopyr:{title:"Netopýr",url:"/games_gen/doma/netopyr/",target:"constraint",run:["generate","surprise"]},
  pavouk:{title:"Pavouk",url:"/games_gen/doma/pavouk/",target:"note",run:["run"]},
  lemur:{title:"Lemur",url:"/games_gen/doma/lemur/",target:"note",run:["run"]},
