@@ -12,7 +12,7 @@ První pracovní prototyp pro práci s korpusem pohádek, externími vstupy a re
 3. Kombinovaný běh: externí problém se propojuje s vybranými pohádkami, ale původ obou typů informací zůstává rozlišený.
 
 ## Funkce
-- Načítání dvaceti šesti entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
+- Načítání dvaceti čtyř zdrojových entit z původních textů v `abstrakce_ai/doma/narativy/`: Myš, Kocour, Ryba, Želva, Panda, Vlk, Motýl, Drak, Klíště, Plameňák a Lemur. MOUSE LAB přikládá celý vybraný zdrojový text i strukturovanou analýzu s citovanými doklady, vztahy, formou a otevřenými otázkami.
 - Volba směru práce, zadání, cílového formátu a externího vstupu.
 - Generování promptu pro jazykový model.
 - Kopírování nebo stažení promptu a vložení odpovědi modelu.
@@ -65,7 +65,7 @@ Každá entita má vlastní herní operaci a samostatný generátor. MOUSE je so
 - [Jednorožec](../jednorozec/) — popírání vlastního původu a hranice možného
 - [Krokodýl](../krokodyl/) — výprodej významu a komercializace emocí
 - [Motýl](../motyl/) — záměna skutečné potřeby za symbolickou nabídku
-- [Drak / Dráček](../drak/) — zvuk, zákaz a vznik přestupku
+- [Drak / Dráček](../dracek/) — zvuk, zákaz a vznik přestupku
 - [Kozel](../kozel/) — půjčovna perspektiv; samostatný zdrojový text pohádky zatím chybí
 - [Veverka](../veverka/) — jednání, opakování a praktický výsledek
 - [Hvězdice](../hvezdice/) — paměť dopadu a stopa nevratné události
