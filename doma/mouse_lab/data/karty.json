@@ -1016,6 +1016,245 @@
           }
         }
       ]
+    },
+    {
+      "id": "liska",
+      "title": "Liška",
+      "sourceFile": "liska.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/liska.txt",
+      "entities": [
+        {
+          "id": "liska",
+          "name": "Liška",
+          "toolUrl": "../liska/",
+          "focus": "Liška je postupně zbavována částí těla a vlastností, které okolí oceňuje jako zboží. Zůstává přítomná i bez nich; věci získané násilím se novým vlastníkům rozpadají a ztrácejí hodnotu.",
+          "evidence": [
+            "„Ale svět si všiml. A jakmile si svět všimne, začne chtít.“",
+            "„A tak lišce vzali srst.“",
+            "„Zůstaly jí jen vzpomínky na stopy.“",
+            "„Nakonec přišel někdo, kdo se neptal.“",
+            "„Protože to, co se vezme násilím, se neudrží.“",
+            "„A to, co se vezme z lišky, se nehodí nikomu jinému.“"
+          ],
+          "mechanisms": [
+            "postupné odebírání částí celku a jeho vlastností",
+            "převod živých vlastností na obchodní hodnoty",
+            "přetrvání identity po ztrátě jednotlivých částí",
+            "ztráta hodnoty při násilném přenosu vlastnictví"
+          ],
+          "form": "Stupňující se série odebrání srsti, chodidel, zubů a srdce. Rozpad odcizených věcí obrací původní logiku zisku.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "prase",
+      "title": "Prasátko",
+      "sourceFile": "prase.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/prase.txt",
+      "entities": [
+        {
+          "id": "prase",
+          "name": "Prasátko",
+          "toolUrl": "../prase/",
+          "focus": "Prasátko spojuje tělesnou potřebu s funkcí pokladničky. Otázka po záchodě je okolím vyhodnocena jako faux pas, ale prasátko ji myslí doslova a jeho drobné se stanou nečekaným řešením.",
+          "evidence": [
+            "„„Tady není záchod?““",
+            "„„Já jen… jsem plné.““",
+            "„„Prase?“ „Pokladnička?“ „Obojí,“ řeklo prasátko.“",
+            "„„Drobnéma se přece platí za záchod,“ řeklo prasátko.“",
+            "„„A záchod nikde.““",
+            "„A drobný jsou jen jinej druh přebytku“"
+          ],
+          "mechanisms": [
+            "kolize tělesného významu a společenského výkladu",
+            "překrytí živého těla funkcí předmětu",
+            "záměna vyprazdňování a vydávání mincí",
+            "přebytek jako tělesný i peněžní stav"
+          ],
+          "form": "Dvojznačnost prasete a pokladničky. Krátké dialogy nechávají společenský stud střetnout s doslovnou potřebou.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "kohout",
+      "title": "Kohout",
+      "sourceFile": "kohout.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/kohout.txt",
+      "entities": [
+        {
+          "id": "kohout",
+          "name": "Kohout",
+          "toolUrl": "../kohout/",
+          "focus": "Kohout se dostává do sázky o Slunce, kterou vyhlásí faraon. Faraon zamění symbolickou moc za skutečnou kontrolu; kohout dál kokrhá, budík selže kvůli bateriím a faraon prohraje svůj obzor.",
+          "evidence": [
+            "„Faraon se prohlásil za syna samotného Slunce“",
+            "„A tak, místo aby se ptal, vyhlásil válku spánku.“",
+            "„Slunce.“",
+            "„50 : 50“",
+            "„A v tom - budik crrrrr CINK Cinky BRNK cinkycink..a dal se line z nej jen ticho“",
+            "„v budíku došly baterie?“",
+            "„Faraon na kohouta / Kohout na Budíka / Budík na Slunce“"
+          ],
+          "mechanisms": [
+            "záměna symbolického nároku za faktickou moc",
+            "sázka jako pokus ovládat kosmický řád",
+            "řetězení aktérů a přenosu odpovědnosti",
+            "mechanický výpadek budíku mění výsledek konfliktu"
+          ],
+          "form": "Fragmentární, rytmický a zvukově vrstvený text. Opakuje poměr 50:50 a staví proti sobě kokrhání, budík a Slunce.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "beran",
+      "title": "Berani",
+      "sourceFile": "beran.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/beran.txt",
+      "entities": [
+        {
+          "id": "beran",
+          "name": "Berani",
+          "toolUrl": "../beran/",
+          "focus": "Stádo běží vpřed ze setrvačnosti. Jednotlivci pochybují o směru, ale domnívají se, že pochybují sami; náraz do překážky se vykládá jako důvod běžet ještě silněji.",
+          "evidence": [
+            "„Ale nikdo neřekl, že je to síla bez směru.“",
+            "„Nikdo nevěděl, proč vlastně běží.“",
+            "„Protože zastavit by byla slabost.“",
+            "„Ale než to stačil říct nahlas, stádo ho vtáhlo zpět.“",
+            "„Protože náraz není signál k zastavení, náraz je důkaz, že se nesnažili dost.“",
+            "„každý si myslel, že je sám, kdo pochybuje.“"
+          ],
+          "mechanisms": [
+            "setrvačnost kolektivního pohybu bez sdíleného cíle",
+            "záměna pokračování za důkaz správnosti",
+            "potlačení odchylky kolektivní dynamikou",
+            "převrácení nárazu z varování na motivaci"
+          ],
+          "form": "Opakování běhu, dunění a prachu vytváří rytmus setrvačnosti. Individuální otázku pohlcuje pohyb stáda.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "snek",
+      "title": "Šnek",
+      "sourceFile": "snek.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/snek.txt",
+      "entities": [
+        {
+          "id": "snek",
+          "name": "Šnek",
+          "toolUrl": "../snek/",
+          "focus": "Šnekův pohyb je tak pomalý, že se stává měřítkem času a vyžaduje blízkost pozorovatele. Ulita je spirálové uspořádání prostoru; stopa je paměť dotyku.",
+          "evidence": [
+            "„Šnek se pohybuje tak pomalu, že z dálky není vidět vůbec nic.“",
+            "„Jen když se k němu skloníš, začne existovat.“",
+            "„Ulita není dům.“",
+            "„Ulita je způsob, jak se svět stáčí do spirály“",
+            "„Jeho stopa není směr - je to paměť dotyku“",
+            "„Déšť zpomalí všechno a najednou je šnek nejrychlejší věc v krajině.“"
+          ],
+          "mechanisms": [
+            "pozorovatelnost závisí na vzdálenosti a měřítku",
+            "převod rychlosti pohybu na prožívání času",
+            "spirála jako komprese prostoru",
+            "stopa jako paměť kontaktu, nikoli navigační směr"
+          ],
+          "form": "Meditativní text staví na protikladech z dálky/zblízka, pohyb/stání a kruh/spirála. Pomalost je vlastní časová soustava.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "chameleon",
+      "title": "Chameleon",
+      "sourceFile": "chameleon.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/chameleon.txt",
+      "entities": [
+        {
+          "id": "chameleon",
+          "name": "Chameleon",
+          "toolUrl": "../chameleon/",
+          "focus": "Chameleon se přizpůsobuje každému zrcadlu, až nedokáže rozlišit vlastní podobu od odrazů okolí. Identita se nakonec přesouvá z barvy k tvaru, pohybu a otázce.",
+          "evidence": [
+            "„Chameleon byl mistr přizpůsobení.“",
+            "„Zrcadlo vlevo – modré.“",
+            "„Zrcadlo vpravo – červené.“",
+            "„Změnil se. Zrcadlově. Zrcadlově. Zrcadlově.“",
+            "„Až už nevěděl, co je odraz a co je on.“",
+            "„Možná nejsem barva. Možná jsem tvar. Možná jsem pohyb. Možná jsem otázka.“"
+          ],
+          "mechanisms": [
+            "přizpůsobení podle vnějších referencí",
+            "konflikt mezi vlastním stavem a odrazem prostředí",
+            "opakovaná adaptace vede ke ztrátě rozlišitelnosti identity",
+            "zrcadlo vrací podobu, ale neověřuje pravdu"
+          ],
+          "form": "Čtyři zrcadla s různými barvami a opakování slova zrcadlově vyjadřují eskalaci přizpůsobení.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "moucha",
+      "title": "Moucha",
+      "sourceFile": "moucha.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/artmisanovak-prog/games_gen/main/kriva_pohadka/moucha.txt",
+      "entities": [
+        {
+          "id": "moucha",
+          "name": "Moucha",
+          "toolUrl": "../moucha/",
+          "focus": "Moucha přistane na místě, které lidé považují za katastrofu a nepořádek, ale pro ni je zdrojem potravy a příležitostí. Její přítomnost zviditelní problém vznikající dlouhým odkládáním.",
+          "evidence": [
+            "„Pro bordeláře: katastrofa.“",
+            "„Pro mouchu: švédský stůl existence.“",
+            "„Ne mouchu. Sebe.“",
+            "„Otisky vytvářely vrstvy. Vrstvy vytvářely historii. Historie vytvářela past.“",
+            "„Ne proto, že by byl nový. Ale protože začal bzučet.“",
+            "„Protože pro mouchu není hovno problém. Je to příležitost.“"
+          ],
+          "mechanisms": [
+            "stejné prostředí má odlišnou hodnotu pro různé aktéry",
+            "odpad je pro jednoho problémem, pro jiného zdrojem",
+            "moucha spouští pozornost k již existujícímu stavu",
+            "odkládání vytváří materiální vrstvy a historii problému"
+          ],
+          "form": "Kontrast mezi odporem lidí a blahobytem mouchy. Skvrny, otisky a vrstvy proměňují nepořádek v geologii odkládaných rozhodnutí.",
+          "polar": {
+            "status": "not-authored",
+            "layers": null,
+            "radii": null
+          }
+        }
+      ]
     }
   ]
 }
