@@ -6,6 +6,7 @@
 <div class="top"><span>GAMES_GEN / OBRAZOVÁ HRA 14</span><a href="./">← Generátor Lemur</a></div>
 <h1>Lemur a výroba<br>neviditelnosti</h1>
 <p class="intro">Tichá místnost. Kout. Skupina, která očekává výkon. Lemur má svítící oči, vztyčený ocas a výraznou srst. Jeho úkolem je nebýt pozorován. Jenže pokaždé, když začne svou nápadnost potlačovat, přidá do místnosti další signál.</p>
+<section class="log" style="margin-top:18px"><h2>Výchozí export / 18. 11. 2026</h2><p>Hra vychází ze dvou po sobě uložených záznamů stejné konfigurace. Oba nesou stejný paradox: pozornost 100, úsilí 3/3, tlak 3/3 a skupina očekávající výkon. Herní tahy umožňují znovu projít cestu k tomuto stavu i vyzkoušet uvolnění kontroly.</p><p class="muted">Subjekt: lemur · prostředí: tichá místnost, kout · vlastnost: svítící oči, vztyčený ocas, výrazná srst · cíl: nebýt pozorován · strategie: neustálá kontrola vlastního chování</p><button id="loadExport" style="min-height:0">Zobrazit stav z exportu (100 / 100)</button></section>
 <div class="layout">
 <section class="scene" aria-label="Ilustrovaná herní místnost">
 <div class="scenehead">Místnost 01 / pozorovací pole</div>
@@ -70,6 +71,7 @@ release:{a:-23,e:-48,focus:"místnost",msg:"Lemur přestal hlídat každý pohyb
 const m=moves[kind];if(!m)return;state.turns++;state.attention=clamp(state.attention+m.a);state.effort=clamp(state.effort+m.e);state.focus=m.focus;state.released=kind==="release";state.history.push({turn:state.turns,action:kind,attention:state.attention,effort:state.effort});$("feedback").innerHTML="<b>Tah "+state.turns+":</b> "+m.msg;draw();
 }
 document.querySelectorAll("[data-action]").forEach(b=>b.addEventListener("click",()=>act(b.dataset.action)));
+$("loadExport").addEventListener("click",()=>{state={...initial,attention:100,effort:100,turns:2,focus:"výkon nenápadnosti",released:false,history:[{turn:1,action:"export",attention:100,effort:100},{turn:2,action:"export",attention:100,effort:100}]};$("feedback").innerHTML="<b>Načtený export:</b> Dva záznamy z 17:38:44 a 17:38:46 zachytily stejný stav. Pozornost skupiny dosáhla 100. Teď můžeš začít znovu a hledat tah, který tento výsledek obrátí.";draw()});
 function encode(){return btoa(unescape(encodeURIComponent(JSON.stringify(state)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
 function decode(s){try{return JSON.parse(decodeURIComponent(escape(atob(s.replace(/-/g,"+").replace(/_/g,"/")))))}catch(e){return null}}
 function shareUrl(){const u=new URL(location.href);u.hash="stav="+encode();return u.toString()}
