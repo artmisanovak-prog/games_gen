@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e9e5dc"><title>Lemur: Neviditelný výkon — obrazová hra</title>
+<style>
+:root{--paper:#e9e5dc;--ink:#171615;--muted:#6d6962;--red:#9c3930;--line:#aaa49a;--white:#f7f4ed}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.45 Georgia,serif}main{max-width:1120px;margin:auto;padding:22px 18px 60px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:3px solid var(--ink);padding:0 0 12px;font:11px Arial;letter-spacing:.17em;text-transform:uppercase}.top a{color:var(--ink)}h1{font-size:clamp(38px,7vw,76px);line-height:.88;font-weight:400;letter-spacing:-.055em;margin:24px 0 12px;max-width:760px}.intro{max-width:700px;color:#514d47;font-size:18px}.layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:16px;margin-top:24px}.scene,.side,.log{border:2px solid var(--ink);background:var(--white);box-shadow:5px 5px 0 var(--ink)}.scene{position:relative;min-height:480px;overflow:hidden;background:linear-gradient(#f8f6f0 0 72%,#d9d4ca 72%)}.scenehead{position:absolute;z-index:2;top:14px;left:16px;font:11px Arial;letter-spacing:.13em;text-transform:uppercase}.room{position:absolute;inset:0;width:100%;height:100%}.scene-caption{position:absolute;bottom:12px;left:16px;right:16px;background:#f7f4eddd;padding:10px 12px;border-left:4px solid var(--red);font-size:15px}.side{padding:18px}.side h2,.log h2{font-size:24px;font-weight:400;margin:0 0 8px}.muted{color:var(--muted);font-size:13px}.meter{margin:18px 0}.meterline{display:flex;justify-content:space-between;font:12px Arial;margin-bottom:5px}.track{height:12px;border:1.5px solid var(--ink);background:#e2ded5}.fill{height:100%;width:0;background:var(--red);transition:width .3s}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}button{font:14px Georgia;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);padding:12px 10px;cursor:pointer;text-align:left;min-height:60px}button:hover{background:#ded8ce}button:focus-visible{outline:3px solid var(--red);outline-offset:2px}button small{display:block;font:11px Arial;color:var(--muted);margin-top:5px}.primary{background:var(--ink);color:var(--white)}.primary small{color:#d3cec5}.feedback{margin-top:16px;padding:12px;border:1px dashed var(--ink);min-height:90px}.feedback b{color:var(--red)}.log{margin-top:18px;padding:18px}.loggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.stat{border-top:2px solid var(--ink);padding-top:7px}.stat strong{font-size:28px;font-weight:400;display:block}.ending{font-size:19px;margin-top:12px}.foot{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.foot button{min-height:0;text-align:center}.foot a{color:var(--ink)}@media(max-width:760px){.layout{grid-template-columns:1fr}.scene{min-height:400px}.loggrid{grid-template-columns:1fr 1fr}.top{font-size:9px}}
+</style></head><body><main>
+<div class="top"><span>GAMES_GEN / OBRAZOVÁ HRA 14</span><a href="./">← Generátor Lemur</a></div>
+<h1>Lemur a výroba<br>neviditelnosti</h1>
+<p class="intro">Tichá místnost. Kout. Skupina, která očekává výkon. Lemur má svítící oči, vztyčený ocas a výraznou srst. Jeho úkolem je nebýt pozorován. Jenže pokaždé, když začne svou nápadnost potlačovat, přidá do místnosti další signál.</p>
+<div class="layout">
+<section class="scene" aria-label="Ilustrovaná herní místnost">
+<div class="scenehead">Místnost 01 / pozorovací pole</div>
+<svg class="room" viewBox="0 0 760 500" role="img" aria-label="Černobílá kresba lemura v rohu místnosti s pozorovateli a pruhovaným ocasem">
+<defs><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 8L8 0" stroke="#aaa49a" stroke-width="1"/></pattern></defs>
+<path d="M38 48H720V414H38Z" fill="none" stroke="#171615" stroke-width="4"/><path d="M38 414L720 414" stroke="#171615" stroke-width="6"/><path d="M38 48L110 105M720 48L652 105" stroke="#aaa49a" stroke-width="2"/>
+<path id="gaze1" d="M580 105L365 250L620 330Z" fill="#9c3930" opacity=".08"/><path id="gaze2" d="M665 165L360 255L670 350Z" fill="#9c3930" opacity=".06"/>
+<g fill="none" stroke="#171615" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M115 414Q135 365 185 350L225 300Q246 264 285 271Q331 280 337 329L350 414"/>
+<path d="M184 350Q170 300 190 255Q205 212 248 206Q292 199 317 235Q337 263 327 294"/>
+<path d="M205 220Q178 175 202 133Q225 91 277 102Q322 111 331 160Q337 192 315 226"/>
+<path d="M215 137Q196 91 235 80L255 99Q279 76 304 98L325 83L328 125"/>
+<path d="M223 155Q241 130 260 150M281 151Q299 127 316 150"/>
+<path d="M229 163Q245 177 262 164M286 164Q302 179 317 161"/>
+<path d="M261 190Q276 202 291 188"/>
+<path d="M223 226Q190 272 180 326M309 224Q346 273 359 317"/>
+<path d="M186 325L165 414M333 326L350 414"/>
+<path d="M334 307Q395 255 438 300Q486 350 535 315Q589 277 558 226Q536 187 492 207" stroke-width="18"/>
+<path d="M352 294L367 313M382 279L399 299M415 281L432 301M449 293L464 314M480 300L495 321M515 285L530 305M548 258L563 273M545 229L560 237" stroke-width="8"/>
+</g>
+<g fill="#171615"><ellipse cx="245" cy="157" rx="9" ry="13"/><ellipse cx="301" cy="157" rx="9" ry="13"/><circle cx="248" cy="154" r="3" fill="#fff"/><circle cx="304" cy="154" r="3" fill="#fff"/><path d="M266 179l8 6 8-6-8-5z"/></g>
+<g transform="translate(585 285)" stroke="#171615" stroke-width="4" fill="none" stroke-linecap="round"><path d="M-16 22Q-22-10 0-12Q22-10 17 22L26 54L8 62L-4 43L-18 62L-30 55Z"/><path d="M-12-12L-18-30L-2-23M12-12L19-30L5-23"/><circle cx="-7" cy="1" r="4" fill="#171615"/><circle cx="8" cy="1" r="4" fill="#171615"/><path d="M-4 12L2 16L8 12"/></g>
+<g fill="none" stroke="#171615" stroke-width="2"><path d="M530 70l-25 30 38-8-25 31"/><path d="M88 170q22-30 45 0q-23 31-45 0Z"/><path d="M95 170h32M111 155v30"/></g>
+<g font-family="Georgia,serif" font-size="21" fill="#171615"><text x="435" y="80" transform="rotate(-7 435 80)">NEVIDĚT?</text><text x="65" y="385" transform="rotate(-8 65 385)">kout</text></g>
+<g id="alertMarks" fill="none" stroke="#9c3930" stroke-width="5" stroke-linecap="round" opacity=".0"><path d="M260 70l-8-20m25 18l3-23m-40 34l-19-13"/><path d="M470 160l15-18m-3 35l22-5"/></g>
+</svg>
+<div class="scene-caption" id="sceneCaption">Lemur se snaží splynout s koutem. Pozorovatelé zatím sledují místnost, ne jeho.</div>
+</section>
+<aside class="side">
+<h2>Tvůj tah</h2><p class="muted">Vyber, co lemur udělá. Každý tah změní pozornost skupiny i to, co vlastně pozoruje.</p>
+<div class="meter"><div class="meterline"><span>POZORNOST SKUPINY</span><b id="attentionText">20 / 100</b></div><div class="track"><div class="fill" id="attentionBar"></div></div></div>
+<div class="meter"><div class="meterline"><span>VÝKON SKRÝVÁNÍ</span><b id="effortText">0 / 100</b></div><div class="track"><div class="fill" id="effortBar"></div></div></div>
+<div class="actions">
+<button data-action="hide">Schovat ocas<small>Zakryje znak, přidá gesto</small></button>
+<button data-action="explain">Vysvětlit, že není nápadný<small>Vyrobí další sdělení</small></button>
+<button data-action="freeze">Znehybnět<small>Kontrolovat každý pohyb</small></button>
+<button data-action="release" class="primary">Přestat se hlídat<small>Uvolnit výkon nenápadnosti</small></button>
+</div>
+<div class="feedback" id="feedback" aria-live="polite"><b>Začátek:</b> Místnost je tichá. Lemur může jednat.</div>
+</aside></div>
+<section class="log"><h2>Co se právě změnilo?</h2><div class="loggrid"><div class="stat"><span class="muted">PŘIROZENÁ VLASTNOST</span><strong>zůstává</strong><span class="muted">Oči, ocas, srst</span></div><div class="stat"><span class="muted">DODATEČNÝ SIGNÁL</span><strong id="signal">0</strong><span class="muted">Pozorovatelné úsilí</span></div><div class="stat"><span class="muted">POZOROVANÝ OBJEKT</span><strong id="focus">místnost</strong><span class="muted">Na co se skupina soustředí</span></div></div><p class="ending" id="ending">Zatím není rozhodnuto, co skupina uvidí.</p><div class="foot"><button id="restart">Začít znovu</button><button id="copy">Kopírovat stav hry</button><button id="share">Sdílet URL se stavem</button></div><p class="muted" id="shareStatus">Stav hry lze přenést v adrese URL. Nic se neposílá na server.</p></section>
+</main><script>
+const initial={attention:20,effort:0,turns:0,focus:"místnost",released:false,history:[]};
+let state={...initial};
+const $=id=>document.getElementById(id);
+function clamp(n){return Math.max(0,Math.min(100,n))}
+function draw(){
+$("attentionText").textContent=state.attention+" / 100";$("attentionBar").style.width=state.attention+"%";$("effortText").textContent=state.effort+" / 100";$("effortBar").style.width=state.effort+"%";$("signal").textContent=state.effort;$("focus").textContent=state.focus;
+$("alertMarks").style.opacity=String(Math.min(.9,state.attention/100));$("gaze1").style.opacity=String(.03+state.attention/180);$("gaze2").style.opacity=String(.02+state.attention/220);
+if(state.attention>70){$("sceneCaption").textContent="Skupina už nesleduje kout. Sleduje, jak moc se lemur snaží nebýt vidět."}
+else if(state.released){$("sceneCaption").textContent="Lemur přestal vyrábět nenápadnost. Jeho vlastnosti nezmizely, ale přestal k nim přidávat další signál."}
+else if(state.turns){$("sceneCaption").textContent="Každá kontrola zanechává stopu. Pozornost se pomalu přesouvá od lemura k jeho strategii."}
+$("ending").textContent=state.attention>=75?"Paradox se uzavřel: potlačování je výraznější než původní vlastnost.":state.released?"Uvolnění kontroly odstranilo dodatečný signál. Skupina může přesunout pozornost jinam.":"Zatím můžeš změnit strategii. Přirozená vlastnost se nemění.";
+}
+function act(kind){
+const moves={
+hide:{a:13,e:24,focus:"zakrývání",msg:"Lemur zakryl ocas. Samotné gesto ale upozornilo na to, že je co skrývat."},
+explain:{a:21,e:31,focus:"vysvětlování",msg:"Lemur oznámil, že není nápadný. Skupina teď poslouchá hlavně jeho vysvětlení."},
+freeze:{a:16,e:27,focus:"kontrola pohybu",msg:"Lemur znehybněl. Napětí a kontrola se staly viditelným dějem."},
+release:{a:-23,e:-48,focus:"místnost",msg:"Lemur přestal hlídat každý pohyb. Oči, ocas i srst zůstaly stejné. Zmizel však dodatečný signál, že se musí skrýt."}
+};
+const m=moves[kind];if(!m)return;state.turns++;state.attention=clamp(state.attention+m.a);state.effort=clamp(state.effort+m.e);state.focus=m.focus;state.released=kind==="release";state.history.push({turn:state.turns,action:kind,attention:state.attention,effort:state.effort});$("feedback").innerHTML="<b>Tah "+state.turns+":</b> "+m.msg;draw();
+}
+document.querySelectorAll("[data-action]").forEach(b=>b.addEventListener("click",()=>act(b.dataset.action)));
+function encode(){return btoa(unescape(encodeURIComponent(JSON.stringify(state)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function decode(s){try{return JSON.parse(decodeURIComponent(escape(atob(s.replace(/-/g,"+").replace(/_/g,"/")))))}catch(e){return null}}
+function shareUrl(){const u=new URL(location.href);u.hash="stav="+encode();return u.toString()}
+$("copy").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(JSON.stringify(state,null,2));$("shareStatus").textContent="Stav hry zkopírován jako JSON."}catch(e){$("shareStatus").textContent="Kopírování není v tomto prohlížeči povolené."}});
+$("share").addEventListener("click",async()=>{const u=shareUrl();try{await navigator.clipboard.writeText(u);$("shareStatus").textContent="URL se stavem zkopírována. Otevřením odkazu se obnoví tato hra."}catch(e){location.hash="stav="+encode();$("shareStatus").textContent="Stav je uložen v adrese této stránky. Zkopíruj adresu prohlížeče."}});
+$("restart").addEventListener("click",()=>{state={...initial,history:[]};location.hash="";$("feedback").innerHTML="<b>Nová hra:</b> Místnost je znovu tichá.";draw()});
+const encoded=location.hash.match(/stav=([^&]+)/);if(encoded){const restored=decode(encoded[1]);if(restored&&typeof restored.attention==="number"){state={...initial,...restored};$("feedback").innerHTML="<b>Obnovený stav:</b> Hra pokračuje z přeneseného tahu."}}
+draw();
+</script></body></html>
