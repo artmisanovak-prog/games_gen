@@ -4,6 +4,125 @@ Pracovní katalog samostatných herních generátorů. Každý generátor vychá
 
 **[Otevřít hlavní rozcestník herních generátorů](https://artmisanovak-prog.github.io/games_gen/)** · Vyhledávání, filtrování a přímé spuštění všech 42 herních generátorů.
 
+## RYCHLÁ NAVIGACE · celý repozitář na jednom místě
+
+Všechny hlavní části projektu jsou dostupné přímo přes GitHub Pages. Odkazy **Otevřít** spouštějí nástroje; odkazy **Zdroj / dokumentace** vedou k souborům v repozitáři.
+
+### Hlavní rozcestníky
+
+| Část | Otevřít |
+|---|---|
+| Herní generátory – katalog všech karet, vyhledávání a filtrování | [Spustit katalog](https://artmisanovak-prog.github.io/games_gen/) |
+| MOUSE LAB – generativní pracovní prostor | [Otevřít MOUSE LAB](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/) · [Dokumentace](doma/mouse_lab/README.md) |
+| MOUSE LAB · GRAPH – mapa uzlů a vztahů | [Otevřít GRAPH](https://artmisanovak-prog.github.io/games_gen/mouse_-lab/) · [Dokumentace](mouse_-lab/README.md) |
+| ÚHLO_GEN – polární pracovní prostor | [Otevřít ÚHLO_GEN](https://artmisanovak-prog.github.io/games_gen/doma/uhlo_gen/) · [Dokumentace](doma/uhlo_gen/README.md) |
+| BENCHMARK – generátor testovacích úloh | [Otevřít BENCHMARK](https://artmisanovak-prog.github.io/games_gen/benchmark/) · [Dokumentace](benchmark/README.md) |
+| Operation Transfer Benchmark – přenos operací | [Otevřít rozcestník](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/) · [Dokumentace](operation_transfer_benchmark/README.md) |
+| GAME PHENOMENA 001 – katalog datového produktu | [Otevřít katalog](https://artmisanovak-prog.github.io/games_gen/produkty/game-phenomena-001/) · [Dataset JSON](produkty/game-phenomena-001/dataset.json) |
+| Křivá pohádka – textový korpus | [Otevřít složku textů](https://github.com/artmisanovak-prog/games_gen/tree/main/kriva_pohadka) |
+| Ilustrace – obrazové podklady karet | [Otevřít galerii souborů](https://github.com/artmisanovak-prog/games_gen/tree/main/doma/ilustrace) |
+
+### MOUSE LAB · jednotlivé moduly
+
+- [MOUSE LAB – hlavní pracovní prostředí](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/)
+- [Polární konfigurace](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/polar.html)
+- [Paměť / LocalStorage](https://artmisanovak-prog.github.io/games_gen/doma/mouse_lab/storage/)
+- [Karta API – datový registr karet](doma/mouse_lab/data/karty.json)
+- [Referenční materiál](doma/mouse_lab/data/referencni_material.json)
+- [Sdílené jádro MOUSE](doma/shared/README.md)
+
+### ÚHLO_GEN · samostatné pracovní nástroje
+
+- [ÚHLO_GEN – hlavní rozhraní](https://artmisanovak-prog.github.io/games_gen/doma/uhlo_gen/)
+- [Mapa](https://artmisanovak-prog.github.io/games_gen/doma/uhlo_gen/mapa.html)
+- [Objevy](https://artmisanovak-prog.github.io/games_gen/doma/uhlo_gen/objevy.html)
+- [Rozklad](https://artmisanovak-prog.github.io/games_gen/doma/uhlo_gen/rozklad.html)
+- [Vztahy](https://artmisanovak-prog.github.io/games_gen/doma/uhlo_gen/vztahy.html)
+- [Datové schéma](doma/uhlo_gen/data-schema.json)
+
+### Všechny samostatné generátory a hry
+
+Každá položka vede přímo na vlastní stránku nástroje. Nejde o odkazy na zdrojový kód.
+
+**Zvířecí a narativní generátory**
+
+- [Myš](https://artmisanovak-prog.github.io/games_gen/doma/mys/)
+- [Netopýr](https://artmisanovak-prog.github.io/games_gen/doma/netopyr/)
+- [Tygr](https://artmisanovak-prog.github.io/games_gen/doma/tygr/)
+- [Dráček](https://artmisanovak-prog.github.io/games_gen/doma/dracek/)
+- [Drak](https://artmisanovak-prog.github.io/games_gen/doma/drak/)
+- [Ryba](https://artmisanovak-prog.github.io/games_gen/doma/ryba/)
+- [Kozel](https://artmisanovak-prog.github.io/games_gen/doma/kozel/)
+- [Mořský koník](https://artmisanovak-prog.github.io/games_gen/doma/morsky-konik/)
+- [Krávy](https://artmisanovak-prog.github.io/games_gen/doma/kravy/)
+- [Krokodýl](https://artmisanovak-prog.github.io/games_gen/doma/krokodyl/)
+- [Jednorožec](https://artmisanovak-prog.github.io/games_gen/doma/jednorozec/)
+- [Liška](https://artmisanovak-prog.github.io/games_gen/doma/liska/)
+- [Zaječice](https://artmisanovak-prog.github.io/games_gen/doma/zajic/)
+- [Pavouk](https://artmisanovak-prog.github.io/games_gen/doma/pavouk/)
+- [Lemur](https://artmisanovak-prog.github.io/games_gen/doma/lemur/)
+- [Osel](https://artmisanovak-prog.github.io/games_gen/doma/osel/)
+- [Páv](https://artmisanovak-prog.github.io/games_gen/doma/pav/)
+- [Čáp](https://artmisanovak-prog.github.io/games_gen/doma/cap/)
+- [Slon](https://artmisanovak-prog.github.io/games_gen/doma/slon/)
+- [Želva](https://artmisanovak-prog.github.io/games_gen/doma/zelva/)
+- [Motýl](https://artmisanovak-prog.github.io/games_gen/doma/motyl/)
+- [Plameňák](https://artmisanovak-prog.github.io/games_gen/doma/plamenak/)
+- [Žralok](https://artmisanovak-prog.github.io/games_gen/doma/zralok/)
+- [Veverka](https://artmisanovak-prog.github.io/games_gen/doma/veverka/)
+- [Had](https://artmisanovak-prog.github.io/games_gen/doma/had/)
+- [Prasátko](https://artmisanovak-prog.github.io/games_gen/doma/prase/)
+- [Hvězdice](https://artmisanovak-prog.github.io/games_gen/doma/hvezdice/)
+- [Hyeny](https://artmisanovak-prog.github.io/games_gen/doma/hyeny/)
+- [Husy](https://artmisanovak-prog.github.io/games_gen/doma/husy/)
+- [Panda](https://artmisanovak-prog.github.io/games_gen/doma/panda/)
+- [Vlk](https://artmisanovak-prog.github.io/games_gen/doma/vlk/)
+- [Klíště](https://artmisanovak-prog.github.io/games_gen/doma/kliste/)
+- [Žížala](https://artmisanovak-prog.github.io/games_gen/doma/zizala/)
+- [Parohy](https://artmisanovak-prog.github.io/games_gen/doma/parohy/)
+- [Vrabec](https://artmisanovak-prog.github.io/games_gen/doma/vrabec/)
+- [Kohout](https://artmisanovak-prog.github.io/games_gen/doma/kohout/)
+- [Beran](https://artmisanovak-prog.github.io/games_gen/doma/beran/)
+- [Chameleon](https://artmisanovak-prog.github.io/games_gen/doma/chameleon/)
+- [Šnek](https://artmisanovak-prog.github.io/games_gen/doma/snek/)
+- [Moucha](https://artmisanovak-prog.github.io/games_gen/doma/moucha/)
+- [Kocour](https://artmisanovak-prog.github.io/games_gen/doma/kocour/)
+
+**Samostatné hry a rozšířené režimy**
+
+- [Chyby nehledej! Nejsou.](https://artmisanovak-prog.github.io/games_gen/doma/chyby-nejsou/)
+- [Psí smečka](https://artmisanovak-prog.github.io/games_gen/doma/psi-smecka/)
+- [Lemur – herní režim](https://artmisanovak-prog.github.io/games_gen/doma/lemur/hra.html)
+- [Lemur – laboratoř](https://artmisanovak-prog.github.io/games_gen/doma/lemur/laborator.html)
+- [Osel – laboratoř](https://artmisanovak-prog.github.io/games_gen/doma/osel/laborator.html)
+
+### Benchmarky · jednotlivé testovací prostředí
+
+- [BENCHMARK – hlavní nástroj](https://artmisanovak-prog.github.io/games_gen/benchmark/)
+- [Operation Transfer Benchmark – katalog](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/)
+- [01 · Myš](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/01-mys/)
+- [02 · Netopýr](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/02-netopyr/)
+- [03 · Tygr](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/03-tygr/)
+- [04 · Dráček](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/04-dracek/)
+- [05 · Ryba](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/05-ryba/)
+- [06 · Kozel](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/06-kozel/)
+- [07 · Mořský koník](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/07-morsky-konik/)
+- [08 · Krávy](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/08-kravy/)
+- [09 · Krokodýl](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/09-krokodyl/)
+- [10 · Jednorožec](https://artmisanovak-prog.github.io/games_gen/operation_transfer_benchmark/benchmarks/10-jednorozec/)
+
+### Korpus, data a dokumentace
+
+- [Křivá pohádka – všechny texty](https://github.com/artmisanovak-prog/games_gen/tree/main/kriva_pohadka)
+- [Audio – složka nahrávek](https://github.com/artmisanovak-prog/games_gen/tree/main/kriva_pohadka/audio)
+- [GAME PHENOMENA 001 – katalog](https://artmisanovak-prog.github.io/games_gen/produkty/game-phenomena-001/)
+- [Dataset JSON](produkty/game-phenomena-001/dataset.json)
+- [Datový slovník](produkty/game-phenomena-001/DATA_DICTIONARY.md)
+- [Licence datového produktu](produkty/game-phenomena-001/LICENSE.md)
+- [Ilustrace karet](https://github.com/artmisanovak-prog/games_gen/tree/main/doma/ilustrace)
+
+---
+
 ## ÚHLO_GEN · polární pracovní prostor MOUSE
 
 Nástroje pro rozklad konkrétního významu do perspektiv, jejich polární uspořádání, mapování vztahů a zachycení toho, co se ukáže až díky nové konfiguraci. Nejde o detektor chyb ani o pevnou taxonomii 12 úhlů.
